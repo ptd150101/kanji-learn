@@ -1,32 +1,35 @@
-# Kanji N4 Quiz — Full book
+# Kanji N5 / N4 Quiz
 
-Website tĩnh, không cần backend.
+- N5: 26 bài, 366 mục từ.
+- N4: 24 bài, 449 mục từ.
+- Tổng: 815 mục từ.
+- Chuyển N5/N4 ngay ở màn hình thiết lập.
+- Trắc nghiệm 4 đáp án + viết furigana.
+- Sau khi trả lời hiện nghĩa Việt + Hán Việt từng chữ.
+- Tự động Edge/Browser TTS bằng trường reading/furigana.
+- Tốc độ mặc định 1.00x + nút nghe thử.
 
-## Dữ liệu
-- 24 bài trong tài liệu Kanji N4 đã cung cấp.
-- 449 mục từ vựng.
-- 321 chữ Kanji duy nhất trong các mục từ.
-- Kanji + cách đọc được bóc theo các ô On/Kun của sách.
-- Nghĩa tiếng Việt và Hán Việt của các chữ phụ trong từ ghép được bổ sung để phục vụ ôn tập.
+Files:
+- data.json: N5 + N4
+- data_n5.json: riêng N5
+- data_n4.json: riêng N4
+- han_viet.json: Hán Việt
 
-## Chế độ
-- Trắc nghiệm 4 đáp án: Kanji → chọn furigana.
-- Sau khi chọn: hiện furigana + Kanji + nghĩa Việt + Hán Việt từng chữ của cả 4 đáp án.
-- Viết furigana: nhập cách đọc bằng hiragana/katakana.
-- Edge / Browser TTS: `window.speechSynthesis`, ưu tiên voice `ja-JP`.
+- Tên bài của cả N5 và N4 đều hiển thị bằng tiếng Việt để giao diện đồng nhất.
 
-## Cách chạy
-1. Mở `index.html` bằng Microsoft Edge.
-2. Chọn một hoặc nhiều bài trong 24 bài.
-3. Chọn chế độ, số câu và voice TTS.
-4. Bấm **Bắt đầu kiểm tra**.
+- Chế độ **Tiếng Việt → Kanji**: hiện nghĩa tiếng Việt và yêu cầu chọn từ Kanji đúng trong 4 đáp án; sau khi trả lời mới hiện furigana, nghĩa và Hán Việt rồi tự phát âm.
 
-## File dữ liệu
-- `data.json`: toàn bộ dữ liệu từ vựng.
-- `han_viet.json`: bảng Hán Việt dùng trong giao diện.
+## Cấu trúc chế độ kiểm tra
+Website có 2 chiều lựa chọn độc lập:
+- Kiểu câu hỏi: **Kanji / tiếng Nhật** hoặc **Tiếng Việt**.
+- Cách trả lời: **Trắc nghiệm 4 đáp án** hoặc **Tự luận**.
 
-- Sau khi chọn một đáp án trắc nghiệm, website tự động phát âm từ đúng bằng Edge/Browser TTS.
+Tạo thành 4 tổ hợp:
+1. Kanji → chọn furigana.
+2. Kanji → tự viết furigana.
+3. Tiếng Việt → chọn Kanji / từ tiếng Nhật.
+4. Tiếng Việt → tự viết furigana **hoặc** Kanji / từ tiếng Nhật; cả hai đều được chấp nhận.
 
-- Tốc độ TTS mặc định: **1.00×**; có nút **Nghe thử giọng** ngay ở màn hình thiết lập.
+- Số câu mặc định là **Toàn bộ từ đã chọn**.
 
-- TTS đọc trường **reading/furigana** thay vì đọc trực tiếp Kanji, tránh các trường hợp Edge tự chọn sai âm như `八百屋` → phải đọc `やおや`.
+- Ở mode **Tự luận**, có nút **Xem đáp án**. Nếu bấm nút này, câu đó sẽ được tính là sai, hiện đáp án đầy đủ và tự phát âm cách đọc đúng.

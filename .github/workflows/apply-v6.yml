@@ -1,0 +1,57 @@
+name: Apply Kanji Learn v6
+
+on:
+  push:
+    branches:
+      - update-v6-n5-n4-20260810
+
+permissions:
+  contents: write
+
+jobs:
+  apply-v6:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: update-v6-n5-n4-20260810
+          fetch-depth: 0
+
+      - name: Download and verify uploaded v6 archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://filebin.net/kanji-v6-ptd150101-20260810-1736-7c3f9d/kanji-n5-n4-quiz-full-v6.zip'
+          curl --retry 5 --retry-delay 2 -fsSL "$URL" -o /tmp/kanji-v6.zip
+          unzip -t /tmp/kanji-v6.zip >/dev/null
+          rm -rf /tmp/kanji-v6
+          mkdir -p /tmp/kanji-v6
+          unzip -q /tmp/kanji-v6.zip -d /tmp/kanji-v6
+          SRC="$(find /tmp/kanji-v6 -type f -name index.html -printf '%h\n' | head -n1)"
+          test -n "$SRC"
+          for f in index.html README.md data.json han_viet.json data_n5.json data_n4.json; do
+            test -f "$SRC/$f"
+          done
+          python - <<'PY'
+          import json, pathlib
+          src = next(pathlib.Path('/tmp/kanji-v6').rglob('index.html')).parent
+          for name in ('data.json','han_viet.json','data_n5.json','data_n4.json'):
+              with (src / name).open('r', encoding='utf-8') as f:
+                  json.load(f)
+          PY
+          for f in index.html README.md data.json han_viet.json data_n5.json data_n4.json; do
+            cp "$SRC/$f" "$f"
+          done
+
+      - name: Commit exactly the v6 site files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -- .github/workflows/apply-v6.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- index.html README.md data.json han_viet.json data_n5.json data_n4.json .github/workflows/apply-v6.yml
+          git diff --cached --name-only
+          git commit -m 'Update Kanji Learn with N5 and N4 quiz v6'
+          git push origin HEAD:update-v6-n5-n4-20260810

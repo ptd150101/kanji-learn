@@ -3,7 +3,7 @@ name: Apply Kanji Learn v6
 on:
   push:
     branches:
-      - update-v6-n5-n4-20260810
+      - main
 
 permissions:
   contents: write
@@ -12,10 +12,10 @@ jobs:
   apply-v6:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout branch
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
-          ref: update-v6-n5-n4-20260810
+          ref: main
           fetch-depth: 0
 
       - name: Download and verify uploaded v6 archive
@@ -52,6 +52,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- index.html README.md data.json han_viet.json data_n5.json data_n4.json .github/workflows/apply-v6.yml
+          printf 'Files to publish:\n'
           git diff --cached --name-only
           git commit -m 'Update Kanji Learn with N5 and N4 quiz v6'
-          git push origin HEAD:update-v6-n5-n4-20260810
+          git push origin HEAD:main

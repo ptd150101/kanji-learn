@@ -1,0 +1,51 @@
+name: Repair Kanji Quiz static files
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Restore original files from verified payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .upload/payload_part_* > /tmp/site_payload.b64
+          base64 --decode /tmp/site_payload.b64 > /tmp/site_payload.tgz
+          mkdir -p /tmp/kanji-site
+          tar -xzf /tmp/site_payload.tgz -C /tmp/kanji-site
+
+          echo "8aa4a84f52e04009cd2c2e7df5cf5d0b0e565fc7283c1905a35ef2a2fd9dfdbc  /tmp/kanji-site/index.html" | sha256sum -c -
+          echo "f9c1ee99bb892a1d1d7b9c6fc0dc1cdbcef170b1f05db813a44b59ad5349defd  /tmp/kanji-site/data.json" | sha256sum -c -
+
+          cp /tmp/kanji-site/index.html ./index.html
+          cp /tmp/kanji-site/data.json ./data.json
+          touch .nojekyll
+
+      - name: Commit clean static site
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .upload
+          rm -f .github/workflows/repair-site.yml
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- index.html data.json .nojekyll
+          git add -u -- .upload .github/workflows/repair-site.yml
+
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+
+          git commit -m "Restore original static site files"
+          git push origin HEAD:main

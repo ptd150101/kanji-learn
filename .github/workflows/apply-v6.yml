@@ -24,7 +24,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .upload/v6.part* | base64 -d > /tmp/kanji-v6.zip
+          cat .upload/v6.part00 .upload/v6.part01 .upload/v6.part02 .upload/v6.part03 .upload/v6.part04 .upload/v6.part05 .upload/v6.part06a .upload/v6.part06b .upload/v6.part06c .upload/v6.part07 | base64 -d > /tmp/kanji-v6.zip
           echo 'e31d3256e139508be758f35ccd87b2ab4603adbea077923dd7806d596d70d698  /tmp/kanji-v6.zip' | sha256sum -c -
           unzip -t /tmp/kanji-v6.zip >/dev/null
           rm -rf /tmp/kanji-v6

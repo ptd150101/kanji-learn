@@ -1,0 +1,52 @@
+name: Rename Kanji Learn site
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Rename site title
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old_title = '<title>Kanji N4 Quiz — Bài 1–5</title>'
+          old_h1 = '<h1>漢字 N4 Quiz</h1>'
+          assert old_title in s, 'Old <title> not found'
+          assert old_h1 in s, 'Old <h1> not found'
+          s = s.replace(old_title, '<title>Kanji Learn</title>', 1)
+          s = s.replace(old_h1, '<h1>Kanji Learn</h1>', 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit rename and remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f .github/workflows/rename-site.yml
+          git add -- index.html
+          git add -u -- .github/workflows/rename-site.yml
+          git commit -m "Rename website to Kanji Learn"
+          git push origin HEAD:main
+
+      - name: Request GitHub Pages rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" || true

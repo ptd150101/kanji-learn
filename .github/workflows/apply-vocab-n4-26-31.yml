@@ -22,18 +22,40 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          base64 -d .upload/vocab_patch.xz.b64 | xz -d > /tmp/vocab.patch
-          patch --dry-run -p5 < /tmp/vocab.patch
-          patch -p5 < /tmp/vocab.patch
-          base64 -d .upload/vocab_json.xz.b64 | xz -d > vocab_n4_26_31.json
+          cat \
+            .upload/vocab_payload.part00 \
+            .upload/vocab_payload.part01 \
+            .upload/vocab_payload.part02 \
+            .upload/vocab_payload.part03 \
+            .upload/vocab_payload.part04 \
+            .upload/vocab_payload.part05 \
+            > /tmp/vocab_payload.b64
+          base64 -d /tmp/vocab_payload.b64 > /tmp/vocab_payload.tar.xz
+          echo 'e8abb61843789cc2048a495f67c0e365f9266cff234042dcf28c3f7b4fd30d38  /tmp/vocab_payload.tar.xz' | sha256sum -c -
 
-          echo '166d5aa2f445fe194c72641e1d8249b18b5c91b918c27f7a3c116a019d2196c3  index.html' | sha256sum -c -
-          echo '2dab0f910340539b8984cf10718ce5bf36d7e031573662e0b1334f1f3d7df7ae  README.md' | sha256sum -c -
-          echo '1ca6ffceabd8c8cdd84950383dd8b2d58deece449b3c5322506d1739d8dcc583  vocab_n4_26_31.json' | sha256sum -c -
+          mkdir -p /tmp/vocab_payload
+          tar -xJf /tmp/vocab_payload.tar.xz -C /tmp/vocab_payload
+
+          echo '166d5aa2f445fe194c72641e1d8249b18b5c91b918c27f7a3c116a019d2196c3  /tmp/vocab_payload/index.html' | sha256sum -c -
+          echo '2dab0f910340539b8984cf10718ce5bf36d7e031573662e0b1334f1f3d7df7ae  /tmp/vocab_payload/README.md' | sha256sum -c -
+          echo '1ca6ffceabd8c8cdd84950383dd8b2d58deece449b3c5322506d1739d8dcc583  /tmp/vocab_payload/vocab_n4_26_31.json' | sha256sum -c -
+
+          cp /tmp/vocab_payload/index.html ./index.html
+          cp /tmp/vocab_payload/README.md ./README.md
+          cp /tmp/vocab_payload/vocab_n4_26_31.json ./vocab_n4_26_31.json
 
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- index.html README.md vocab_n4_26_31.json
-          git rm -- .upload/vocab_patch.xz.b64 .upload/vocab_json.xz.b64 .github/workflows/apply-vocab-n4-26-31.yml
+          git rm -- \
+            .upload/vocab_patch.xz.b64 \
+            .upload/vocab_json.xz.b64 \
+            .upload/vocab_payload.part00 \
+            .upload/vocab_payload.part01 \
+            .upload/vocab_payload.part02 \
+            .upload/vocab_payload.part03 \
+            .upload/vocab_payload.part04 \
+            .upload/vocab_payload.part05 \
+            .github/workflows/apply-vocab-n4-26-31.yml
           git commit -m 'Add N4 vocabulary review mode for lessons 26-31'
           git push origin HEAD:integrate-vocab-n4-26-31

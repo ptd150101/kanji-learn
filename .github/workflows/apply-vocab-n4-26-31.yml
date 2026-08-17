@@ -1,0 +1,39 @@
+name: Apply N4 vocab lessons 26-31
+
+on:
+  push:
+    branches:
+      - integrate-vocab-n4-26-31
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: integrate-vocab-n4-26-31
+          fetch-depth: 0
+
+      - name: Apply verified integration payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 -d .upload/vocab_patch.xz.b64 | xz -d > /tmp/vocab.patch
+          patch --dry-run -p5 < /tmp/vocab.patch
+          patch -p5 < /tmp/vocab.patch
+          base64 -d .upload/vocab_json.xz.b64 | xz -d > vocab_n4_26_31.json
+
+          echo '166d5aa2f445fe194c72641e1d8249b18b5c91b918c27f7a3c116a019d2196c3  index.html' | sha256sum -c -
+          echo '2dab0f910340539b8984cf10718ce5bf36d7e031573662e0b1334f1f3d7df7ae  README.md' | sha256sum -c -
+          echo '1ca6ffceabd8c8cdd84950383dd8b2d58deece449b3c5322506d1739d8dcc583  vocab_n4_26_31.json' | sha256sum -c -
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- index.html README.md vocab_n4_26_31.json
+          git rm -- .upload/vocab_patch.xz.b64 .upload/vocab_json.xz.b64 .github/workflows/apply-vocab-n4-26-31.yml
+          git commit -m 'Add N4 vocabulary review mode for lessons 26-31'
+          git push origin HEAD:integrate-vocab-n4-26-31

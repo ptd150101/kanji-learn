@@ -33,3 +33,13 @@ Tạo thành 4 tổ hợp:
 - Số câu mặc định là **Toàn bộ từ đã chọn**.
 
 - Ở mode **Tự luận**, có nút **Xem đáp án**. Nếu bấm nút này, câu đó sẽ được tính là sai, hiện đáp án đầy đủ và tự phát âm cách đọc đúng.
+
+## Kiểm tra từ mới N4 — bài 26–31
+- Tích hợp thêm **184 từ mới** từ app tham khảo, chia theo bài: 26 (22 từ), 27 (23), 28 (39), 29 (47), 30 (34), 31 (19).
+- Đây là một nội dung kiểm tra riêng, không làm thay đổi quiz Kanji hiện tại.
+- Có 3 mode:
+  1. **Luyện viết**: hiện nghĩa tiếng Việt → tự viết Kanji/Kana trên canvas → xem đáp án và tự chấm Đúng/Sai.
+  2. **Hỏi từ tiếng Nhật**: hiện từ tiếng Nhật + furigana → chọn nghĩa tiếng Việt trong 4 đáp án.
+  3. **Hỏi tiếng Việt**: hiện nghĩa tiếng Việt → gõ từ tiếng Nhật; chấp nhận từ tiếng Nhật hoặc furigana.
+- Có thể chọn riêng từng bài 26–31 hoặc chọn nhiều bài; vẫn dùng số câu, thứ tự, TTS, điểm số, ôn câu sai và giao diện responsive hiện tại.
+- Dữ liệu nguồn được lưu ở `vocab_n4_26_31.json`.

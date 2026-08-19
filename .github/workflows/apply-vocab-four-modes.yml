@@ -1,0 +1,37 @@
+name: Apply four vocab quiz modes
+
+on:
+  push:
+    branches:
+      - vocab-n4-four-modes
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: vocab-n4-four-modes
+          fetch-depth: 0
+
+      - name: Apply verified patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 -d .upload/vocab4.patch.xz.b64 | xz -d > /tmp/vocab4.patch
+          patch --dry-run -p1 < /tmp/vocab4.patch
+          patch -p1 < /tmp/vocab4.patch
+
+          echo 'ef750b5af82ca037962c3a85ecd676fae3192a08c97a9f42fbccc34c99dba8cf  index.html' | sha256sum -c -
+          echo '2e1efc3220a5f8c065e3bcff2339cad44efe32521da572fc12976aa2703aebfe  README.md' | sha256sum -c -
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- index.html README.md
+          git rm -- .upload/vocab4.patch.xz.b64 .github/workflows/apply-vocab-four-modes.yml
+          git commit -m 'Use four quiz modes for N4 vocabulary review'
+          git push origin HEAD:vocab-n4-four-modes

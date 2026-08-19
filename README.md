@@ -37,9 +37,13 @@ Tạo thành 4 tổ hợp:
 ## Kiểm tra từ mới N4 — bài 26–31
 - Tích hợp thêm **184 từ mới** từ app tham khảo, chia theo bài: 26 (22 từ), 27 (23), 28 (39), 29 (47), 30 (34), 31 (19).
 - Đây là một nội dung kiểm tra riêng, không làm thay đổi quiz Kanji hiện tại.
-- Có 3 mode:
-  1. **Luyện viết**: hiện nghĩa tiếng Việt → tự viết Kanji/Kana trên canvas → xem đáp án và tự chấm Đúng/Sai.
-  2. **Hỏi từ tiếng Nhật**: hiện từ tiếng Nhật + furigana → chọn nghĩa tiếng Việt trong 4 đáp án.
-  3. **Hỏi tiếng Việt**: hiện nghĩa tiếng Việt → gõ từ tiếng Nhật; chấp nhận từ tiếng Nhật hoặc furigana.
+- Mode **Từ mới N4** dùng đúng cấu trúc 2 × 2 như kiểm tra Kanji:
+  - Kiểu câu hỏi: **Tiếng Nhật** hoặc **Tiếng Việt**.
+  - Cách trả lời: **Trắc nghiệm 4 đáp án** hoặc **Tự luận**.
+- Tạo thành 4 tổ hợp:
+  1. Tiếng Nhật → chọn nghĩa tiếng Việt.
+  2. Tiếng Nhật → tự nhập nghĩa tiếng Việt.
+  3. Tiếng Việt → chọn từ tiếng Nhật.
+  4. Tiếng Việt → tự nhập từ tiếng Nhật hoặc furigana; cả hai đều được chấp nhận.
 - Có thể chọn riêng từng bài 26–31 hoặc chọn nhiều bài; vẫn dùng số câu, thứ tự, TTS, điểm số, ôn câu sai và giao diện responsive hiện tại.
 - Dữ liệu nguồn được lưu ở `vocab_n4_26_31.json`.

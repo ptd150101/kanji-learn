@@ -466,76 +466,6 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
 
 
 .setup-section[hidden]{display:none!important}
-.vocab-mode-grid{grid-template-columns:1fr}
-.drawing-area{
-  width:100%;
-  max-width:520px;
-  margin:18px auto 0;
-  display:none;
-  gap:var(--space-3);
-}
-.drawing-area.show{display:grid}
-.drawing-canvas-wrap{
-  position:relative;
-  width:100%;
-  max-width:400px;
-  margin:0 auto;
-  border:1px solid var(--border);
-  border-radius:14px;
-  overflow:hidden;
-  background:#0d1117;
-}
-#drawCanvas{
-  display:block;
-  width:100%;
-  height:auto;
-  aspect-ratio:8/5;
-  touch-action:none;
-  cursor:crosshair;
-}
-#clearDrawingBtn{
-  position:absolute;
-  top:8px;
-  right:8px;
-  min-height:36px;
-  padding:6px 10px;
-  font-size:12px;
-}
-.drawing-answer{
-  display:none;
-  max-width:400px;
-  width:100%;
-  margin:0 auto;
-  padding:14px;
-  border:1px solid rgba(47,158,158,.45);
-  border-radius:12px;
-  background:rgba(47,158,158,.10);
-  line-height:1.5;
-  text-align:center;
-  overflow-wrap:anywhere;
-}
-.drawing-answer.show{display:block}
-.drawing-answer .answer-word{
-  display:block;
-  font-family:var(--font-ja);
-  font-size:clamp(28px,9vw,40px);
-  font-weight:800;
-  margin-top:4px;
-}
-.self-eval-actions{
-  display:none;
-  grid-template-columns:1fr 1fr;
-  gap:var(--space-2);
-  width:100%;
-  max-width:400px;
-  margin:0 auto;
-}
-.self-eval-actions.show{display:grid}
-.self-eval-actions button{min-height:52px}
-@media (min-width:600px){
-  .vocab-mode-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
-
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{
     scroll-behavior:auto !important;
@@ -583,34 +513,16 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
       <div class="lessons" id="lessonList"></div>
     </div>
 
-    <div id="kanjiQuestionModeSection" class="setup-section">
+    <div id="questionModeSection" class="setup-section">
       <div class="label">3. Kiểu câu hỏi</div>
       <div class="mode-grid question-mode-grid">
         <button class="mode-btn question-mode-btn active" data-question-mode="kanji" type="button">
-          <strong>Kanji / tiếng Nhật</strong>
-          <small>Hiện từ tiếng Nhật → trả lời cách đọc furigana.</small>
+          <strong id="questionModeJaTitle">Kanji / tiếng Nhật</strong>
+          <small id="questionModeJaDesc">Hiện từ tiếng Nhật → trả lời cách đọc furigana.</small>
         </button>
         <button class="mode-btn question-mode-btn" data-question-mode="vi" type="button">
-          <strong>Tiếng Việt</strong>
-          <small>Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng.</small>
-        </button>
-      </div>
-    </div>
-
-    <div id="vocabReviewModeSection" class="setup-section" hidden>
-      <div class="label">3. Kiểu kiểm tra từ mới</div>
-      <div class="mode-grid vocab-mode-grid">
-        <button class="mode-btn vocab-mode-btn" data-vocab-mode="drawing" type="button">
-          <strong>Mode 1: Luyện viết</strong>
-          <small>Vẽ chữ tiếng Nhật dựa trên nghĩa tiếng Việt.</small>
-        </button>
-        <button class="mode-btn vocab-mode-btn active" data-vocab-mode="ja-to-vi" type="button">
-          <strong>Mode 2: Hỏi từ tiếng Nhật</strong>
-          <small>Chọn nghĩa tiếng Việt cho từ tiếng Nhật.</small>
-        </button>
-        <button class="mode-btn vocab-mode-btn" data-vocab-mode="vi-to-ja" type="button">
-          <strong>Mode 3: Hỏi tiếng Việt</strong>
-          <small>Gõ từ tiếng Nhật dựa trên nghĩa tiếng Việt.</small>
+          <strong id="questionModeViTitle">Tiếng Việt</strong>
+          <small id="questionModeViDesc">Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng.</small>
         </button>
       </div>
     </div>
@@ -699,23 +611,7 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
             <button class="primary" id="checkBtn">Kiểm tra</button>
             <button class="secondary" id="showAnswerBtn" type="button">Xem đáp án</button>
           </div>
-          <div class="source-note" style="margin-top:9px">Chấp nhận hiragana hoặc katakana. Ở mode tự luận, có thể bấm <b>Xem đáp án</b> nếu không nhớ; trường hợp này sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.</div>
-        </div>
-
-        <div class="drawing-area" id="drawingArea">
-          <div class="source-note">Hãy viết từ này bằng tiếng Nhật (Kanji/Kana), sau đó bấm <b>Kiểm tra</b> và tự đánh giá.</div>
-          <div class="drawing-canvas-wrap">
-            <canvas id="drawCanvas" width="800" height="500" aria-label="Vùng luyện viết từ tiếng Nhật"></canvas>
-            <button class="secondary" id="clearDrawingBtn" type="button">Xóa</button>
-          </div>
-          <div class="quiz-actions" id="drawingCheckActions">
-            <button class="primary" id="checkDrawingBtn" type="button">Kiểm tra</button>
-          </div>
-          <div class="drawing-answer" id="drawingAnswer"></div>
-          <div class="self-eval-actions" id="selfEvalActions">
-            <button class="secondary" id="drawingWrongBtn" type="button">Sai</button>
-            <button class="primary" id="drawingCorrectBtn" type="button">Đúng</button>
-          </div>
+          <div class="source-note" id="writeHelp" style="margin-top:9px">Chấp nhận hiragana hoặc katakana. Ở mode tự luận, có thể bấm <b>Xem đáp án</b> nếu không nhớ; trường hợp này sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.</div>
         </div>
 
         <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
@@ -749,7 +645,6 @@ const HAN_VIET = {"上":"THƯỢNG","下":"HẠ","不":"BẤT","両":"LƯỠNG",
 let contentMode = "kanji";
 let questionMode = "kanji";
 let answerMode = "mcq";
-let vocabReviewMode = "ja-to-vi";
 let quiz = [];
 let index = 0;
 let correct = 0;
@@ -757,8 +652,6 @@ let answered = false;
 let missed = [];
 let lastSettings = null;
 let voices = [];
-let drawingActive = false;
-let drawingLastPoint = null;
 
 const $ = (id) => document.getElementById(id);
 
@@ -771,8 +664,8 @@ function currentDataset() {
 function updateHeaderSummary() {
   if (contentMode === "vocab") {
     document.querySelector(".subtitle").textContent =
-      `N4 từ mới: ${NEW_VOCAB.length} từ vựng • Bài 26–31 • 3 chế độ kiểm tra`;
-    $("dataNote").innerHTML = `Bộ <b>từ mới N4 bài 26–31</b> gồm <b>${NEW_VOCAB.length} từ</b>, lấy nguyên từ danh sách trong app tham khảo bạn cung cấp. Có thể chọn từng bài hoặc nhiều bài để kiểm tra.`;
+      `N4 từ mới: ${NEW_VOCAB.length} từ vựng • Bài 26–31 • 4 chế độ kiểm tra`;
+    $("dataNote").innerHTML = `Bộ <b>từ mới N4 bài 26–31</b> gồm <b>${NEW_VOCAB.length} từ</b>. Giống kiểm tra Kanji, có 2 kiểu câu hỏi (<b>Tiếng Nhật / Tiếng Việt</b>) × 2 cách trả lời (<b>Trắc nghiệm / Tự luận</b>) = <b>4 chế độ</b>. Có thể chọn từng bài hoặc nhiều bài để kiểm tra.`;
     return;
   }
   const count = VOCAB.filter(v => v.level === selectedLevel).length;
@@ -827,9 +720,18 @@ function setContentMode(mode) {
   });
   const isVocab = mode === "vocab";
   $("levelSection").hidden = isVocab;
-  $("kanjiQuestionModeSection").hidden = isVocab;
-  $("vocabReviewModeSection").hidden = !isVocab;
-  $("answerModeSection").hidden = isVocab;
+  $("questionModeSection").hidden = false;
+  $("answerModeSection").hidden = false;
+
+  $("questionModeJaTitle").textContent = isVocab ? "Tiếng Nhật" : "Kanji / tiếng Nhật";
+  $("questionModeJaDesc").textContent = isVocab
+    ? "Hiện từ tiếng Nhật → trả lời nghĩa tiếng Việt."
+    : "Hiện từ tiếng Nhật → trả lời cách đọc furigana.";
+  $("questionModeViTitle").textContent = "Tiếng Việt";
+  $("questionModeViDesc").textContent = isVocab
+    ? "Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng."
+    : "Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng.";
+
   renderLessonPicker();
 }
 
@@ -868,6 +770,29 @@ function normalizeJapaneseWord(s) {
     .trim()
     .replace(/[\s　]/g, "")
     .normalize("NFKC");
+}
+
+function normalizeVietnameseAnswer(s) {
+  return (s || "")
+    .normalize("NFKC")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .replace(/[.!?]+$/g, "");
+}
+
+function acceptedMeanings(item) {
+  const raw = item.meaning || "";
+  const variants = new Set();
+  const add = value => {
+    const normalized = normalizeVietnameseAnswer(value);
+    if (normalized) variants.add(normalized);
+    const withoutBrackets = normalizeVietnameseAnswer(value.replace(/\[[^\]]*\]/g, ""));
+    if (withoutBrackets) variants.add(withoutBrackets);
+  };
+  add(raw);
+  raw.split(/[;,/]/).forEach(add);
+  return [...variants];
 }
 
 function hanVietForWord(word) {
@@ -958,13 +883,6 @@ document.querySelectorAll(".answer-mode-btn").forEach(btn => {
   });
 });
 
-document.querySelectorAll(".vocab-mode-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".vocab-mode-btn").forEach(x => x.classList.remove("active"));
-    btn.classList.add("active");
-    vocabReviewMode = btn.dataset.vocabMode;
-  });
-});
 
 $("selectAllBtn").addEventListener("click", () => {
   const boxes = [...document.querySelectorAll('.lessons input')];
@@ -980,10 +898,6 @@ $("testVoiceBtn").addEventListener("click", () => speak("こんにちは。日�
 $("checkBtn").addEventListener("click", checkWritten);
 $("showAnswerBtn").addEventListener("click", showWrittenAnswer);
 $("nextBtn").addEventListener("click", nextQuestion);
-$("clearDrawingBtn").addEventListener("click", clearDrawingCanvas);
-$("checkDrawingBtn").addEventListener("click", showDrawingAnswer);
-$("drawingWrongBtn").addEventListener("click", () => finishDrawingEvaluation(false));
-$("drawingCorrectBtn").addEventListener("click", () => finishDrawingEvaluation(true));
 $("retryBtn").addEventListener("click", () => startQuiz(lastSettings));
 $("retryWrongBtn").addEventListener("click", () => {
   if (!missed.length) return;
@@ -1002,7 +916,6 @@ function startQuiz(forced = null) {
   const runContentMode = forced?.contentMode || contentMode;
   const level = forced?.level || selectedLevel;
   const lessons = forced?.lessons || selectedLessons();
-  const runVocabMode = forced?.vocabReviewMode || vocabReviewMode;
   const runQuestionMode = forced?.questionMode || questionMode;
   const runAnswerMode = forced?.answerMode || answerMode;
 
@@ -1022,7 +935,6 @@ function startQuiz(forced = null) {
   if (!pool.length) return;
 
   contentMode = runContentMode;
-  vocabReviewMode = runVocabMode;
   questionMode = runQuestionMode;
   answerMode = runAnswerMode;
 
@@ -1037,7 +949,6 @@ function startQuiz(forced = null) {
 
   lastSettings = forced?.explicitPool ? lastSettings : {
     contentMode: runContentMode,
-    vocabReviewMode: runVocabMode,
     questionMode: runQuestionMode,
     answerMode: runAnswerMode,
     level,
@@ -1065,43 +976,47 @@ function hideAnswerAreas() {
   $("options").style.display = "none";
   $("options").innerHTML = "";
   $("writeArea").classList.remove("show");
-  $("drawingArea").classList.remove("show");
 }
 
 function renderQuestion() {
   answered = false;
   const item = quiz[index];
   hideAnswerAreas();
-  resetDrawingUI();
 
   if (contentMode === "vocab") {
     $("lessonTag").textContent = `N4 · Từ mới · Bài ${item.lesson}`;
-    if (vocabReviewMode === "ja-to-vi") {
-      $("word").classList.remove("is-vietnamese");
+    $("word").classList.toggle("is-vietnamese", questionMode === "vi");
+
+    if (questionMode === "vi") {
+      $("word").textContent = item.meaning;
+      $("prompt").textContent = answerMode === "mcq"
+        ? "Chọn từ tiếng Nhật đúng với nghĩa trên"
+        : "Tự nhập từ tiếng Nhật hoặc furigana tương ứng";
+      $("speakBtn").style.display = "none";
+    } else {
       $("word").textContent = item.word;
-      $("prompt").textContent = item.reading && item.reading !== item.word
-        ? `${item.reading} · Chọn nghĩa tiếng Việt đúng`
-        : "Chọn nghĩa tiếng Việt đúng";
+      const readingHint = item.reading && item.reading !== item.word ? `${item.reading} · ` : "";
+      $("prompt").textContent = answerMode === "mcq"
+        ? `${readingHint}Chọn nghĩa tiếng Việt đúng`
+        : `${readingHint}Tự nhập nghĩa tiếng Việt của từ này`;
       $("speakBtn").style.display = "inline-flex";
+    }
+
+    if (answerMode === "mcq") {
       $("options").style.display = "grid";
       renderOptions(item);
-    } else if (vocabReviewMode === "vi-to-ja") {
-      $("word").classList.add("is-vietnamese");
-      $("word").textContent = item.meaning;
-      $("prompt").textContent = "Gõ từ tiếng Nhật tương ứng";
-      $("speakBtn").style.display = "none";
+    } else {
       $("writeArea").classList.add("show");
       $("writeInput").disabled = false;
       $("writeInput").value = "";
-      $("writeInput").placeholder = "Nhập tiếng Nhật (Hiragana/Katakana/Kanji)...";
+      $("writeInput").lang = questionMode === "vi" ? "ja" : "vi";
+      $("writeInput").placeholder = questionMode === "vi"
+        ? "Nhập tiếng Nhật hoặc furigana..."
+        : "Nhập nghĩa tiếng Việt...";
+      $("writeHelp").innerHTML = questionMode === "vi"
+        ? 'Chấp nhận <b>từ tiếng Nhật hoặc furigana</b>. Có thể bấm <b>Xem đáp án</b> nếu không nhớ; câu đó sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.'
+        : 'Nhập <b>nghĩa tiếng Việt</b>. Với từ có nhiều nghĩa ngăn cách bằng dấu phẩy/chấm phẩy, có thể nhập một nghĩa tương ứng. Có thể bấm <b>Xem đáp án</b>; câu đó sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.';
       setTimeout(() => $("writeInput").focus(), 50);
-    } else {
-      $("word").classList.add("is-vietnamese");
-      $("word").textContent = item.meaning;
-      $("prompt").textContent = "Viết từ này bằng tiếng Nhật (Kanji/Kana)";
-      $("speakBtn").style.display = "none";
-      $("drawingArea").classList.add("show");
-      setTimeout(clearDrawingCanvas, 30);
     }
   } else {
     $("lessonTag").textContent = `${item.level} · Bài ${item.lesson} · ${LESSON_NAMES[item.level][item.lesson]}`;
@@ -1128,9 +1043,11 @@ function renderQuestion() {
       $("writeArea").classList.add("show");
       $("writeInput").disabled = false;
       $("writeInput").value = "";
+      $("writeInput").lang = "ja";
       $("writeInput").placeholder = questionMode === "vi"
         ? "Nhập furigana hoặc Kanji, ví dụ: やおや / 八百屋"
         : "Nhập furigana, ví dụ: かぞく";
+      $("writeHelp").innerHTML = 'Chấp nhận hiragana hoặc katakana. Ở mode tự luận, có thể bấm <b>Xem đáp án</b> nếu không nhớ; trường hợp này sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.';
       setTimeout(() => $("writeInput").focus(), 50);
     }
   }
@@ -1166,22 +1083,51 @@ function candidatePoolFor(item) {
 function renderOptions(item) {
   const candidates = candidatePoolFor(item);
 
-  if (contentMode === "vocab" && vocabReviewMode === "ja-to-vi") {
-    const seenMeanings = new Set([item.meaning.trim().toLowerCase()]);
+  if (contentMode === "vocab") {
+    const root = $("options");
+    root.innerHTML = "";
+
+    if (questionMode === "kanji") {
+      const seenMeanings = new Set([normalizeVietnameseAnswer(item.meaning)]);
+      const uniqueCandidates = shuffle(candidates).filter(v => {
+        const key = normalizeVietnameseAnswer(v.meaning);
+        if (seenMeanings.has(key)) return false;
+        seenMeanings.add(key);
+        return true;
+      });
+      const optionItems = shuffle([item, ...uniqueCandidates.slice(0,3)]);
+      optionItems.forEach(optionItem => {
+        const btn = document.createElement("button");
+        btn.className = "option";
+        btn.innerHTML = `
+          <span>${optionItem.meaning}</span>
+          <span class="option-detail">
+            <span class="kanji">${optionItem.word}（${optionItem.reading}）</span>
+            <span class="meaning">${optionItem.meaning}</span>
+          </span>
+        `;
+        btn.dataset.optionId = optionItem.id;
+        btn.dataset.word = optionItem.word;
+        btn.dataset.reading = optionItem.reading;
+        btn.addEventListener("click", () => checkMCQ(btn, optionItem));
+        root.appendChild(btn);
+      });
+      return;
+    }
+
+    const seenWords = new Set([normalizeJapaneseWord(item.word)]);
     const uniqueCandidates = shuffle(candidates).filter(v => {
-      const key = v.meaning.trim().toLowerCase();
-      if (seenMeanings.has(key)) return false;
-      seenMeanings.add(key);
+      const key = normalizeJapaneseWord(v.word);
+      if (seenWords.has(key)) return false;
+      seenWords.add(key);
       return true;
     });
     const optionItems = shuffle([item, ...uniqueCandidates.slice(0,3)]);
-    const root = $("options");
-    root.innerHTML = "";
     optionItems.forEach(optionItem => {
       const btn = document.createElement("button");
       btn.className = "option";
       btn.innerHTML = `
-        <span>${optionItem.meaning}</span>
+        <span class="option-reading option-word">${optionItem.word}</span>
         <span class="option-detail">
           <span class="kanji">${optionItem.word}（${optionItem.reading}）</span>
           <span class="meaning">${optionItem.meaning}</span>
@@ -1259,7 +1205,9 @@ function checkMCQ(btn, chosenItem) {
     : chosenItem.word === item.word && normalizeKana(chosenItem.reading) === normalizeKana(item.reading);
 
   if (ok) correct++;
-  else missed.push({item, user: contentMode === "vocab" ? chosenItem.meaning : chosenItem.reading});
+  else missed.push({item, user: contentMode === "vocab"
+    ? (questionMode === "kanji" ? chosenItem.meaning : chosenItem.word)
+    : chosenItem.reading});
 
   [...$("options").children].forEach(b => {
     b.disabled = true;
@@ -1274,7 +1222,9 @@ function checkMCQ(btn, chosenItem) {
 
   if (!ok) btn.classList.add("wrong");
   $("correctText").textContent = correct;
-  revealFeedback(ok, item, contentMode === "vocab" ? chosenItem.meaning : chosenItem.reading);
+  revealFeedback(ok, item, contentMode === "vocab"
+    ? (questionMode === "kanji" ? chosenItem.meaning : chosenItem.word)
+    : chosenItem.reading);
   $("speakBtn").style.display = "inline-flex";
   speak(item.reading);
 }
@@ -1311,9 +1261,13 @@ function checkWritten() {
 
   let ok;
   if (contentMode === "vocab") {
-    const matchesReading = normalizeKana(item.reading) === normalizedReading;
-    const matchesWord = normalizeJapaneseWord(input) === normalizeJapaneseWord(item.word);
-    ok = matchesReading || matchesWord;
+    if (questionMode === "vi") {
+      const matchesReading = normalizeKana(item.reading) === normalizedReading;
+      const matchesWord = normalizeJapaneseWord(input) === normalizeJapaneseWord(item.word);
+      ok = matchesReading || matchesWord;
+    } else {
+      ok = acceptedMeanings(item).includes(normalizeVietnameseAnswer(input));
+    }
   } else if (questionMode === "vi") {
     const matchesReading = acceptedReadings(item).includes(normalizedReading);
     const matchesWord = normalizeJapaneseWord(input) === normalizeJapaneseWord(item.word);
@@ -1332,101 +1286,9 @@ function checkWritten() {
   speak(item.reading);
 }
 
-function resetDrawingUI() {
-  drawingActive = false;
-  drawingLastPoint = null;
-  $("drawingAnswer").classList.remove("show");
-  $("drawingAnswer").innerHTML = "";
-  $("selfEvalActions").classList.remove("show");
-  $("drawingCheckActions").style.display = "flex";
-  $("checkDrawingBtn").disabled = false;
-  $("clearDrawingBtn").disabled = false;
-}
-
-function clearDrawingCanvas() {
-  const canvas = $("drawCanvas");
-  const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawingLastPoint = null;
-}
-
-function drawingPointFromEvent(event) {
-  const canvas = $("drawCanvas");
-  const rect = canvas.getBoundingClientRect();
-  const source = event.touches?.[0] || event.changedTouches?.[0] || event;
-  return {
-    x: (source.clientX - rect.left) * (canvas.width / rect.width),
-    y: (source.clientY - rect.top) * (canvas.height / rect.height)
-  };
-}
-
-function startDrawing(event) {
-  if (answered || vocabReviewMode !== "drawing") return;
-  event.preventDefault();
-  drawingActive = true;
-  drawingLastPoint = drawingPointFromEvent(event);
-}
-
-function moveDrawing(event) {
-  if (!drawingActive || answered || !drawingLastPoint) return;
-  event.preventDefault();
-  const canvas = $("drawCanvas");
-  const ctx = canvas.getContext("2d");
-  const p = drawingPointFromEvent(event);
-  ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue("--text").trim() || "#f0f6fc";
-  ctx.lineWidth = 9;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
-  ctx.beginPath();
-  ctx.moveTo(drawingLastPoint.x, drawingLastPoint.y);
-  ctx.lineTo(p.x, p.y);
-  ctx.stroke();
-  drawingLastPoint = p;
-}
-
-function stopDrawing(event) {
-  if (event?.cancelable) event.preventDefault();
-  drawingActive = false;
-  drawingLastPoint = null;
-}
-
-function showDrawingAnswer() {
-  if (answered || contentMode !== "vocab" || vocabReviewMode !== "drawing") return;
-  const item = quiz[index];
-  $("drawingAnswer").innerHTML = `Đáp án đúng:<span class="answer-word">${item.word}</span><span>${item.reading}</span>`;
-  $("drawingAnswer").classList.add("show");
-  $("selfEvalActions").classList.add("show");
-  $("drawingCheckActions").style.display = "none";
-  $("clearDrawingBtn").disabled = true;
-  $("speakBtn").style.display = "inline-flex";
-  speak(item.reading);
-}
-
-function finishDrawingEvaluation(isCorrect) {
-  if (answered || contentMode !== "vocab" || vocabReviewMode !== "drawing") return;
-  answered = true;
-  const item = quiz[index];
-  if (isCorrect) correct++;
-  else missed.push({item, user:"(tự đánh giá: sai)"});
-  $("correctText").textContent = correct;
-  revealFeedback(isCorrect, item, "(tự đánh giá)");
-  $("selfEvalActions").classList.remove("show");
-}
-
-const drawCanvas = $("drawCanvas");
-drawCanvas.addEventListener("mousedown", startDrawing);
-drawCanvas.addEventListener("mousemove", moveDrawing);
-drawCanvas.addEventListener("mouseup", stopDrawing);
-drawCanvas.addEventListener("mouseleave", stopDrawing);
-drawCanvas.addEventListener("touchstart", startDrawing, {passive:false});
-drawCanvas.addEventListener("touchmove", moveDrawing, {passive:false});
-drawCanvas.addEventListener("touchend", stopDrawing, {passive:false});
-drawCanvas.addEventListener("touchcancel", stopDrawing, {passive:false});
-
 function nextQuestion() {
   if (!answered) return;
-  if (answerMode === "write" || (contentMode === "vocab" && vocabReviewMode === "vi-to-ja")) $("writeInput").disabled = false;
-  resetDrawingUI();
+  if (answerMode === "write") $("writeInput").disabled = false;
   index++;
   if (index >= quiz.length) endQuiz();
   else renderQuestion();
@@ -1455,7 +1317,7 @@ function endQuiz() {
 
   try {
     localStorage.setItem("kanjiN4LastScore", JSON.stringify({
-      at: Date.now(), correct, total: quiz.length, contentMode, questionMode, answerMode, vocabReviewMode
+      at: Date.now(), correct, total: quiz.length, contentMode, questionMode, answerMode
     }));
   } catch (e) {}
 

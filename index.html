@@ -103,7 +103,7 @@ h1{
 .label{font-weight:700;margin-bottom:9px}
 .level-tabs{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:var(--space-2);
   margin-top:var(--space-1);
 }
@@ -119,6 +119,9 @@ h1{
   white-space:normal;
 }
 .level-btn.active{border-color:var(--accent);background:rgba(47,158,158,.16);color:var(--text);box-shadow:0 0 0 1px var(--accent) inset}
+.level-btn:disabled{opacity:.42;cursor:not-allowed}
+.content-mode-grid .mode-btn{min-height:58px;text-align:center}
+.content-mode-grid .mode-btn:disabled{opacity:.42;cursor:not-allowed}
 .lessons{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -486,25 +489,26 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
   </header>
 
   <section class="panel setup" id="setupPanel">
-    <div>
-      <div class="label">0. Nội dung kiểm tra</div>
-      <div class="mode-grid content-mode-grid">
-        <button class="mode-btn content-mode-btn active" data-content-mode="kanji" type="button">
-          <strong>Kanji</strong>
-          <small>Giữ nguyên bài kiểm tra Kanji N5 / N4 hiện tại.</small>
-        </button>
-        <button class="mode-btn content-mode-btn" data-content-mode="vocab" type="button">
-          <strong>Từ mới N4 · Bài 26–31</strong>
-          <small>Kiểm tra 184 từ mới theo từng bài, tích hợp từ bộ dữ liệu bạn cung cấp.</small>
-        </button>
+    <div id="levelSection" class="setup-section">
+      <div class="label">0. Chọn cấp độ</div>
+      <div class="level-tabs">
+        <button class="level-btn active" data-level="N5" type="button">N5</button>
+        <button class="level-btn" data-level="N4" type="button">N4</button>
+        <button class="level-btn" data-level="N3" type="button" disabled title="Chưa có dữ liệu N3">N3</button>
+        <button class="level-btn" data-level="N2" type="button" disabled title="Chưa có dữ liệu N2">N2</button>
+        <button class="level-btn" data-level="N1" type="button" disabled title="Chưa có dữ liệu N1">N1</button>
       </div>
     </div>
 
-    <div id="levelSection" class="setup-section">
-      <div class="label">1. Chọn cấp độ</div>
-      <div class="level-tabs">
-        <button class="level-btn active" data-level="N5" type="button">N5 · 26 bài</button>
-        <button class="level-btn" data-level="N4" type="button">N4 · 24 bài</button>
+    <div>
+      <div class="label">1. Nội dung kiểm tra</div>
+      <div class="mode-grid content-mode-grid">
+        <button class="mode-btn content-mode-btn active" data-content-mode="kanji" type="button">
+          <strong>Kanji</strong>
+        </button>
+        <button class="mode-btn content-mode-btn" data-content-mode="vocab" type="button">
+          <strong>Từ mới</strong>
+        </button>
       </div>
     </div>
 
@@ -716,13 +720,25 @@ function renderLessonPicker() {
   updateHeaderSummary();
 }
 
+function syncContentModeAvailability() {
+  const vocabBtn = document.querySelector('.content-mode-btn[data-content-mode="vocab"]');
+  const vocabAvailable = selectedLevel === "N4";
+  if (vocabBtn) {
+    vocabBtn.disabled = !vocabAvailable;
+    vocabBtn.title = vocabAvailable ? "" : `Chưa có dữ liệu từ mới ${selectedLevel}`;
+  }
+  if (!vocabAvailable && contentMode === "vocab") contentMode = "kanji";
+}
+
 function setContentMode(mode) {
+  if (mode === "vocab" && selectedLevel !== "N4") return;
   contentMode = mode;
+  syncContentModeAvailability();
   document.querySelectorAll(".content-mode-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.contentMode === mode);
+    btn.classList.toggle("active", btn.dataset.contentMode === contentMode);
   });
-  const isVocab = mode === "vocab";
-  $("levelSection").hidden = isVocab;
+  const isVocab = contentMode === "vocab";
+  $("levelSection").hidden = false;
   $("questionModeSection").hidden = false;
   $("answerModeSection").hidden = false;
 
@@ -731,9 +747,7 @@ function setContentMode(mode) {
     ? "Hiện từ tiếng Nhật → trả lời nghĩa tiếng Việt."
     : "Hiện từ tiếng Nhật → trả lời cách đọc furigana.";
   $("questionModeViTitle").textContent = "Tiếng Việt";
-  $("questionModeViDesc").textContent = isVocab
-    ? "Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng."
-    : "Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng.";
+  $("questionModeViDesc").textContent = "Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng.";
 
   renderLessonPicker();
 }
@@ -744,10 +758,12 @@ document.querySelectorAll(".content-mode-btn").forEach(btn => {
 
 document.querySelectorAll(".level-btn").forEach(btn => {
   btn.addEventListener("click", () => {
+    if (btn.disabled) return;
     selectedLevel = btn.dataset.level;
     document.querySelectorAll(".level-btn").forEach(x => x.classList.remove("active"));
     btn.classList.add("active");
-    renderLessonPicker();
+    syncContentModeAvailability();
+    setContentMode(contentMode);
   });
 });
 

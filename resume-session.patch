@@ -1,0 +1,185 @@
+--- index.before-resume.html	2026-08-20 17:37:44.664726600 +0000
++++ index.html	2026-08-20 17:38:26.636222187 +0000
+@@ -653,6 +653,9 @@
+ let lastSettings = null;
+ let voices = [];
+ 
++const ACTIVE_SESSION_KEY = "kanjiLearnActiveSessionV1";
++const ACTIVE_SESSION_VERSION = 1;
++
+ const $ = (id) => document.getElementById(id);
+ 
+ let selectedLevel = "N5";
+@@ -912,6 +915,103 @@
+   }
+ });
+ 
++function clearActiveSession() {
++  try { localStorage.removeItem(ACTIVE_SESSION_KEY); } catch (e) {}
++}
++
++function saveActiveSession({resumeNext = false} = {}) {
++  if (!quiz.length || !quizPanel.classList.contains("show")) return;
++  if ($("questionView").style.display === "none" || $("endView").classList.contains("show")) return;
++
++  const resumeIndex = resumeNext ? index + 1 : index;
++  try {
++    localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify({
++      version: ACTIVE_SESSION_VERSION,
++      savedAt: Date.now(),
++      contentMode,
++      questionMode,
++      answerMode,
++      selectedLevel,
++      quiz,
++      resumeIndex,
++      correct,
++      missed,
++      lastSettings
++    }));
++  } catch (e) {}
++}
++
++function syncSetupFromSession(session) {
++  selectedLevel = session.selectedLevel || session.lastSettings?.level || selectedLevel;
++  document.querySelectorAll(".level-btn").forEach(btn => {
++    btn.classList.toggle("active", btn.dataset.level === selectedLevel);
++  });
++
++  setContentMode(session.contentMode === "vocab" ? "vocab" : "kanji");
++
++  questionMode = session.questionMode === "vi" ? "vi" : "kanji";
++  document.querySelectorAll(".question-mode-btn").forEach(btn => {
++    btn.classList.toggle("active", btn.dataset.questionMode === questionMode);
++  });
++
++  answerMode = session.answerMode === "write" ? "write" : "mcq";
++  document.querySelectorAll(".answer-mode-btn").forEach(btn => {
++    btn.classList.toggle("active", btn.dataset.answerMode === answerMode);
++  });
++
++  const settings = session.lastSettings || {};
++  if (settings.order && $("orderSelect")) $("orderSelect").value = settings.order;
++  if (settings.countSetting && $("countSelect")) $("countSelect").value = settings.countSetting;
++
++  if (Array.isArray(settings.lessons)) {
++    const selected = new Set(settings.lessons.map(Number));
++    document.querySelectorAll('.lessons input[type="checkbox"]').forEach(box => {
++      box.checked = selected.has(Number(box.value));
++    });
++  }
++}
++
++function restoreActiveSession() {
++  let session;
++  try {
++    session = JSON.parse(localStorage.getItem(ACTIVE_SESSION_KEY) || "null");
++  } catch (e) {
++    clearActiveSession();
++    return false;
++  }
++
++  if (!session || session.version !== ACTIVE_SESSION_VERSION || !Array.isArray(session.quiz) || !session.quiz.length) {
++    if (session) clearActiveSession();
++    return false;
++  }
++
++  const resumeIndex = Number(session.resumeIndex);
++  if (!Number.isInteger(resumeIndex) || resumeIndex < 0 || resumeIndex > session.quiz.length) {
++    clearActiveSession();
++    return false;
++  }
++
++  syncSetupFromSession(session);
++  quiz = session.quiz;
++  index = resumeIndex;
++  correct = Number.isFinite(Number(session.correct)) ? Number(session.correct) : 0;
++  missed = Array.isArray(session.missed) ? session.missed : [];
++  lastSettings = session.lastSettings || null;
++  answered = false;
++
++  setupPanel.style.display = "none";
++  quizPanel.classList.add("show");
++  $("questionView").style.display = "block";
++  $("endView").classList.remove("show");
++
++  if (index >= quiz.length) {
++    endQuiz();
++  } else {
++    renderQuestion();
++  }
++  return true;
++}
++
+ function startQuiz(forced = null) {
+   const runContentMode = forced?.contentMode || contentMode;
+   const level = forced?.level || selectedLevel;
+@@ -963,10 +1063,12 @@
+   $("questionView").style.display = "block";
+   $("endView").classList.remove("show");
+   renderQuestion();
++  saveActiveSession();
+ }
+ 
+ function showSetup() {
+   speechSynthesis?.cancel?.();
++  clearActiveSession();
+   quizPanel.classList.remove("show");
+   setupPanel.style.display = "grid";
+   requestAnimationFrame(() => setupPanel.scrollIntoView({behavior:"auto", block:"start"}));
+@@ -1064,6 +1166,7 @@
+   requestAnimationFrame(() => {
+     quizPanel.scrollIntoView({behavior:"auto", block:"start"});
+   });
++  saveActiveSession();
+ }
+ 
+ function candidatePoolFor(item) {
+@@ -1227,6 +1330,7 @@
+     : chosenItem.reading);
+   $("speakBtn").style.display = "inline-flex";
+   speak(item.reading);
++  saveActiveSession({resumeNext:true});
+ }
+ 
+ function showWrittenAnswer() {
+@@ -1245,6 +1349,7 @@
+   // Sau khi lộ đáp án thì cho nghe lại và tự phát âm luôn.
+   $("speakBtn").style.display = "inline-flex";
+   speak(item.reading);
++  saveActiveSession({resumeNext:true});
+ }
+ 
+ function checkWritten() {
+@@ -1284,6 +1389,7 @@
+   revealFeedback(ok, item, input);
+   $("speakBtn").style.display = "inline-flex";
+   speak(item.reading);
++  saveActiveSession({resumeNext:true});
+ }
+ 
+ function nextQuestion() {
+@@ -1295,6 +1401,7 @@
+ }
+ 
+ function endQuiz() {
++  clearActiveSession();
+   $("questionView").style.display = "none";
+   $("endView").classList.add("show");
+   $("progressBar").style.width = "100%";
+@@ -1335,6 +1442,15 @@
+ if (window.visualViewport) {
+   window.visualViewport.addEventListener("resize", () => keepWriteInputVisible(60));
+ }
++
++// iOS/PWA có thể đóng tiến trình khi app chuyển nền; lưu thêm ở lifecycle events.
++window.addEventListener("pagehide", () => saveActiveSession({resumeNext:answered}));
++document.addEventListener("visibilitychange", () => {
++  if (document.visibilityState === "hidden") saveActiveSession({resumeNext:answered});
++});
++
++// Nếu còn bài đang làm, tự động mở đúng câu tiếp theo khi vào lại web/PWA.
++restoreActiveSession();
+ </script>
+ </body>
+ </html>

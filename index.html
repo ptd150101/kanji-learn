@@ -638,15 +638,15 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
           <input id="writeInput" class="write-input" type="text" lang="ja" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Nhập furigana, ví dụ: かぞく">
           <div class="quiz-actions">
             <button class="primary" id="checkBtn">Kiểm tra</button>
-            <button class="secondary" id="showAnswerBtn" type="button">Xem đáp án</button>
+            <button class="secondary" id="showAnswerBtn" type="button" title="Phím tắt: Shift + Enter">Xem đáp án</button>
           </div>
-          <div class="source-note" id="writeHelp" style="margin-top:9px">Chấp nhận hiragana hoặc katakana. Ở mode tự luận, có thể bấm <b>Xem đáp án</b> nếu không nhớ; trường hợp này sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.</div>
+          <div class="source-note" id="writeHelp" style="margin-top:9px">Chấp nhận hiragana hoặc katakana. Ở mode tự luận, có thể bấm <b>Xem đáp án</b> nếu không nhớ; trường hợp này sẽ được tính là sai. <kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để sang câu tiếp.</div>
         </div>
 
         <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
 
         <div class="quiz-actions">
-          <button class="primary" id="nextBtn" style="display:none">Câu tiếp →</button>
+          <button class="primary" id="nextBtn" style="display:none" title="Phím tắt: Enter">Câu tiếp →</button>
         </div>
       </div>
     </div>
@@ -956,11 +956,23 @@ $("retryWrongBtn").addEventListener("click", () => {
   startQuiz({...lastSettings, explicitPool: missed.map(x => x.item)});
 });
 
-$("writeInput").addEventListener("keydown", e => {
-  if (e.key === "Enter") {
+document.addEventListener("keydown", e => {
+  if (e.key !== "Enter" || e.repeat || e.isComposing) return;
+  if (!quizPanel.classList.contains("show")) return;
+  if ($("questionView").style.display === "none" || $("endView").classList.contains("show")) return;
+
+  if (e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey) {
+    if (answerMode === "write" && !answered) {
+      e.preventDefault();
+      showWrittenAnswer();
+    }
+    return;
+  }
+
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  if (answered) {
     e.preventDefault();
-    if (!answered) checkWritten();
-    else nextQuestion();
+    nextQuestion();
   }
 });
 
@@ -1165,8 +1177,8 @@ function renderQuestion() {
         ? "Nhập tiếng Nhật hoặc furigana..."
         : "Nhập nghĩa tiếng Việt...";
       $("writeHelp").innerHTML = questionMode === "vi"
-        ? 'Chấp nhận <b>từ tiếng Nhật hoặc furigana</b>. Có thể bấm <b>Xem đáp án</b> nếu không nhớ; câu đó sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.'
-        : 'Nhập <b>nghĩa tiếng Việt</b>. Với từ có nhiều nghĩa ngăn cách bằng dấu phẩy/chấm phẩy, có thể nhập một nghĩa tương ứng. Có thể bấm <b>Xem đáp án</b>; câu đó sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.';
+        ? 'Chấp nhận <b>từ tiếng Nhật hoặc furigana</b>. Có thể bấm <b>Xem đáp án</b> nếu không nhớ; câu đó sẽ được tính là sai. <kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để sang câu tiếp.'
+        : 'Nhập <b>nghĩa tiếng Việt</b>. Với từ có nhiều nghĩa ngăn cách bằng dấu phẩy/chấm phẩy, có thể nhập một nghĩa tương ứng. Có thể bấm <b>Xem đáp án</b>; câu đó sẽ được tính là sai. <kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để sang câu tiếp.';
       setTimeout(() => $("writeInput").focus(), 50);
     }
   } else {
@@ -1198,7 +1210,7 @@ function renderQuestion() {
       $("writeInput").placeholder = questionMode === "vi"
         ? "Nhập furigana hoặc Kanji, ví dụ: やおや / 八百屋"
         : "Nhập furigana, ví dụ: かぞく";
-      $("writeHelp").innerHTML = 'Chấp nhận hiragana hoặc katakana. Ở mode tự luận, có thể bấm <b>Xem đáp án</b> nếu không nhớ; trường hợp này sẽ được tính là sai. <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.';
+      $("writeHelp").innerHTML = 'Chấp nhận hiragana hoặc katakana. Ở mode tự luận, có thể bấm <b>Xem đáp án</b> nếu không nhớ; trường hợp này sẽ được tính là sai. <kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để sang câu tiếp.';
       setTimeout(() => $("writeInput").focus(), 50);
     }
   }

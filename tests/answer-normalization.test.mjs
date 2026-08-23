@@ -61,6 +61,17 @@ test("mọi mẫu từ vựng chứa 〜 đều chấp nhận câu trả lời k
   }
 });
 
+test("mọi từ bài 32 đều chấp nhận furigana, từ tiếng Nhật và nghĩa đầy đủ", () => {
+  const lesson32 = newVocab.filter(item => item.lesson === 32);
+
+  assert.equal(lesson32.length, 44);
+  for (const item of lesson32) {
+    assert.equal(isWrittenAnswerCorrect(item, item.reading, "vocab", "vi"), true, item.id);
+    assert.equal(isWrittenAnswerCorrect(item, item.word, "vocab", "vi"), true, item.id);
+    assert.equal(isWrittenAnswerCorrect(item, item.meaning, "vocab", "ja"), true, item.id);
+  }
+});
+
 test("giữ nguyên các ký hiệu phát âm thật và mọi cách đọc được chấp nhận", () => {
   assert.equal(normalizeKana("ボール"), "ぼーる");
   assert.equal(normalizeJapaneseWord("ボール"), "ボール");

@@ -61,8 +61,8 @@ jobs:
           old_hint = '<kbd>Enter</kbd> để kiểm tra / sang câu tiếp.'
           new_hint = '<kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để sang câu tiếp.'
           hint_count = html.count(old_hint)
-          if hint_count != 3:
-              raise SystemExit(f'Expected 3 old shortcut hints, found {hint_count}')
+          if hint_count != 4:
+              raise SystemExit(f'Expected 4 old shortcut hints, found {hint_count}')
           html = html.replace(old_hint, new_hint)
 
           old_show = '<button class="secondary" id="showAnswerBtn" type="button">Xem đáp án</button>'
@@ -80,15 +80,15 @@ jobs:
           path.write_text(html, encoding='utf-8')
 
           updated = path.read_text(encoding='utf-8')
-          assert 'if (e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey)' in updated
+          assert updated.count('Shift</kbd> + <kbd>Enter') == 4
+          assert 'document.addEventListener("keydown", e =>' in updated
           assert 'answerMode === "write" && !answered' in updated
           assert 'showWrittenAnswer();' in updated
           assert 'if (answered) {' in updated and 'nextQuestion();' in updated
-          assert updated.count('Shift</kbd> + <kbd>Enter') == 3
           assert 'Phím tắt: Shift + Enter' in updated
           assert 'Phím tắt: Enter' in updated
           assert old_listener not in updated
-          print('Validated keyboard shortcuts: Shift+Enter = show answer, Enter = next after answer')
+          print('Validated: Shift+Enter reveals answer; Enter advances only after answering')
           PY
 
       - name: Commit final file only
@@ -103,4 +103,4 @@ jobs:
           git commit -m "Add keyboard shortcuts for answer and next question"
           git push origin HEAD:keyboard-answer-next-shortcuts
 
-# trigger
+# trigger fixed

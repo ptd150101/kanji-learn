@@ -809,19 +809,35 @@ function normalizeKana(s) {
     .trim()
     .replace(/[\s　]/g, "")
     .normalize("NFKC")
+    // 〜/~ chỉ đánh dấu phần từ còn thiếu (ví dụ: 〜中), không phải cách đọc.
+    .replace(/[~〜～]/g, "")
     .replace(/[ァ-ヶ]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0x60))
     .toLowerCase();
 }
 
 function acceptedReadings(item) {
-  return (item.accepted || [item.reading]).map(normalizeKana);
+  return [...new Set([item.reading, ...(item.accepted || [])]
+    .map(normalizeKana)
+    .filter(Boolean))];
 }
 
 function normalizeJapaneseWord(s) {
   return (s || "")
     .trim()
     .replace(/[\s　]/g, "")
-    .normalize("NFKC");
+    .normalize("NFKC")
+    // Cho phép nhập 中 thay cho dạng mẫu 〜中, tương tự あと〜 và 〜ほど.
+    .replace(/[~〜～]/g, "");
+}
+
+function matchesReading(item, input) {
+  const normalized = normalizeKana(input);
+  return Boolean(normalized) && acceptedReadings(item).includes(normalized);
+}
+
+function matchesJapaneseWord(item, input) {
+  const normalized = normalizeJapaneseWord(input);
+  return Boolean(normalized) && normalized === normalizeJapaneseWord(item.word);
 }
 
 function normalizeVietnameseAnswer(s) {
@@ -845,6 +861,18 @@ function acceptedMeanings(item) {
   add(raw);
   raw.split(/[;,/]/).forEach(add);
   return [...variants];
+}
+
+function isWrittenAnswerCorrect(item, input, activeContentMode, activeQuestionMode) {
+  if (activeContentMode === "vocab") {
+    return activeQuestionMode === "vi"
+      ? matchesReading(item, input) || matchesJapaneseWord(item, input)
+      : acceptedMeanings(item).includes(normalizeVietnameseAnswer(input));
+  }
+
+  return activeQuestionMode === "vi"
+    ? matchesReading(item, input) || matchesJapaneseWord(item, input)
+    : matchesReading(item, input);
 }
 
 function hanVietForWord(word) {
@@ -1428,24 +1456,7 @@ function checkWritten() {
 
   answered = true;
   const item = quiz[index];
-  const normalizedReading = normalizeKana(input);
-
-  let ok;
-  if (contentMode === "vocab") {
-    if (questionMode === "vi") {
-      const matchesReading = normalizeKana(item.reading) === normalizedReading;
-      const matchesWord = normalizeJapaneseWord(input) === normalizeJapaneseWord(item.word);
-      ok = matchesReading || matchesWord;
-    } else {
-      ok = acceptedMeanings(item).includes(normalizeVietnameseAnswer(input));
-    }
-  } else if (questionMode === "vi") {
-    const matchesReading = acceptedReadings(item).includes(normalizedReading);
-    const matchesWord = normalizeJapaneseWord(input) === normalizeJapaneseWord(item.word);
-    ok = matchesReading || matchesWord;
-  } else {
-    ok = acceptedReadings(item).includes(normalizedReading);
-  }
+  const ok = isWrittenAnswerCorrect(item, input, contentMode, questionMode);
 
   if (ok) correct++;
   else missed.push({item, user:input});

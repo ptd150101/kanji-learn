@@ -79,7 +79,6 @@ jobs:
 
           path.write_text(html, encoding='utf-8')
 
-          # Static validation of the requested behavior.
           updated = path.read_text(encoding='utf-8')
           assert 'if (e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey)' in updated
           assert 'answerMode === "write" && !answered' in updated
@@ -103,3 +102,5 @@ jobs:
           git diff --cached --check
           git commit -m "Add keyboard shortcuts for answer and next question"
           git push origin HEAD:keyboard-answer-next-shortcuts
+
+# trigger

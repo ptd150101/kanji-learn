@@ -1,0 +1,105 @@
+name: Apply keyboard answer and next shortcuts
+
+on:
+  push:
+    branches:
+      - keyboard-answer-next-shortcuts
+    paths:
+      - .github/workflows/apply-keyboard-answer-next.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: keyboard-answer-next-shortcuts
+          fetch-depth: 0
+
+      - name: Apply keyboard shortcuts
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('index.html')
+          html = path.read_text(encoding='utf-8')
+
+          old_listener = '''$("writeInput").addEventListener("keydown", e => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              if (!answered) checkWritten();
+              else nextQuestion();
+            }
+          });'''
+          new_listener = '''document.addEventListener("keydown", e => {
+            if (e.key !== "Enter" || e.repeat || e.isComposing) return;
+            if (!quizPanel.classList.contains("show")) return;
+            if ($("questionView").style.display === "none" || $("endView").classList.contains("show")) return;
+
+            if (e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey) {
+              if (answerMode === "write" && !answered) {
+                e.preventDefault();
+                showWrittenAnswer();
+              }
+              return;
+            }
+
+            if (e.altKey || e.ctrlKey || e.metaKey) return;
+            if (answered) {
+              e.preventDefault();
+              nextQuestion();
+            }
+          });'''
+          if old_listener not in html:
+              raise SystemExit('Existing writeInput Enter handler not found')
+          html = html.replace(old_listener, new_listener, 1)
+
+          old_hint = '<kbd>Enter</kbd> để kiểm tra / sang câu tiếp.'
+          new_hint = '<kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để sang câu tiếp.'
+          hint_count = html.count(old_hint)
+          if hint_count != 3:
+              raise SystemExit(f'Expected 3 old shortcut hints, found {hint_count}')
+          html = html.replace(old_hint, new_hint)
+
+          old_show = '<button class="secondary" id="showAnswerBtn" type="button">Xem đáp án</button>'
+          new_show = '<button class="secondary" id="showAnswerBtn" type="button" title="Phím tắt: Shift + Enter">Xem đáp án</button>'
+          if old_show not in html:
+              raise SystemExit('showAnswerBtn markup not found')
+          html = html.replace(old_show, new_show, 1)
+
+          old_next = '<button class="primary" id="nextBtn" style="display:none">Câu tiếp →</button>'
+          new_next = '<button class="primary" id="nextBtn" style="display:none" title="Phím tắt: Enter">Câu tiếp →</button>'
+          if old_next not in html:
+              raise SystemExit('nextBtn markup not found')
+          html = html.replace(old_next, new_next, 1)
+
+          path.write_text(html, encoding='utf-8')
+
+          # Static validation of the requested behavior.
+          updated = path.read_text(encoding='utf-8')
+          assert 'if (e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey)' in updated
+          assert 'answerMode === "write" && !answered' in updated
+          assert 'showWrittenAnswer();' in updated
+          assert 'if (answered) {' in updated and 'nextQuestion();' in updated
+          assert updated.count('Shift</kbd> + <kbd>Enter') == 3
+          assert 'Phím tắt: Shift + Enter' in updated
+          assert 'Phím tắt: Enter' in updated
+          assert old_listener not in updated
+          print('Validated keyboard shortcuts: Shift+Enter = show answer, Enter = next after answer')
+          PY
+
+      - name: Commit final file only
+        shell: bash
+        run: |
+          rm -f .github/workflows/apply-keyboard-answer-next.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- index.html
+          git add -u -- .github/workflows/apply-keyboard-answer-next.yml
+          git diff --cached --check
+          git commit -m "Add keyboard shortcuts for answer and next question"
+          git push origin HEAD:keyboard-answer-next-shortcuts

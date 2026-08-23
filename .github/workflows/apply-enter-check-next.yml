@@ -52,8 +52,8 @@ jobs:
           old_hint = '<kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để sang câu tiếp.'
           new_hint = '<kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.'
           count = html.count(old_hint)
-          if count != 3:
-              raise SystemExit(f'Expected 3 shortcut hints, found {count}')
+          if count != 4:
+              raise SystemExit(f'Expected 4 shortcut hints, found {count}')
           html = html.replace(old_hint, new_hint)
 
           path.write_text(html, encoding='utf-8')
@@ -62,7 +62,7 @@ jobs:
           assert 'answerMode === "write" && !answered' in updated
           assert 'checkWritten();' in updated
           assert 'if (answered)' in updated and 'nextQuestion();' in updated
-          assert updated.count('Enter</kbd> để kiểm tra / sang câu tiếp') == 3
+          assert updated.count('Enter</kbd> để kiểm tra / sang câu tiếp') == 4
           print('Validated: Shift+Enter shows answer; Enter checks unanswered written response or advances after answer')
           PY
 
@@ -77,5 +77,3 @@ jobs:
           git diff --cached --check
           git commit -m "Restore Enter to check written answers"
           git push origin HEAD:fix-enter-check-next
-
-# trigger

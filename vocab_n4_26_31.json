@@ -1104,6 +1104,270 @@
     "furigana": "ずっと"
   },
   {
+    "lesson": 32,
+    "vi": "vận động",
+    "ja": "運動します",
+    "furigana": "うんどうします"
+  },
+  {
+    "lesson": 32,
+    "vi": "đỗ [kì thi]",
+    "ja": "合格します",
+    "furigana": "ごうかくします"
+  },
+  {
+    "lesson": 32,
+    "vi": "thành công",
+    "ja": "成功します",
+    "furigana": "せいこうします"
+  },
+  {
+    "lesson": 32,
+    "vi": "thất bại, trượt [kì thi]",
+    "ja": "失敗します",
+    "furigana": "しっぱいします"
+  },
+  {
+    "lesson": 32,
+    "vi": "tạnh [mưa]",
+    "ja": "やみます",
+    "furigana": "やみます"
+  },
+  {
+    "lesson": 32,
+    "vi": "[sốt] kéo dài, liên tục",
+    "ja": "続きます",
+    "furigana": "つづきます"
+  },
+  {
+    "lesson": 32,
+    "vi": "quang đãng, có nắng",
+    "ja": "晴れます",
+    "furigana": "はれます"
+  },
+  {
+    "lesson": 32,
+    "vi": "có mây, âm u",
+    "ja": "曇ります",
+    "furigana": "くもります"
+  },
+  {
+    "lesson": 32,
+    "vi": "bị cảm",
+    "ja": "ひきます",
+    "furigana": "ひきます"
+  },
+  {
+    "lesson": 32,
+    "vi": "làm mát, làm lạnh",
+    "ja": "冷やします",
+    "furigana": "ひやします"
+  },
+  {
+    "lesson": 32,
+    "vi": "[đường] đông, ùn tắc",
+    "ja": "込みます",
+    "furigana": "こみます"
+  },
+  {
+    "lesson": 32,
+    "vi": "[đường] vắng",
+    "ja": "すきます",
+    "furigana": "すきます"
+  },
+  {
+    "lesson": 32,
+    "vi": "tham gia [trận đấu]",
+    "ja": "出ます",
+    "furigana": "でます"
+  },
+  {
+    "lesson": 32,
+    "vi": "quá sức",
+    "ja": "無理をします",
+    "furigana": "むりをします"
+  },
+  {
+    "lesson": 32,
+    "vi": "giáo viên, bác sĩ",
+    "ja": "先生",
+    "furigana": "せんせい"
+  },
+  {
+    "lesson": 32,
+    "vi": "bị thương",
+    "ja": "けが",
+    "furigana": "けが"
+  },
+  {
+    "lesson": 32,
+    "vi": "bị bỏng",
+    "ja": "やけど",
+    "furigana": "やけど"
+  },
+  {
+    "lesson": 32,
+    "vi": "dạ dày",
+    "ja": "胃",
+    "furigana": "い"
+  },
+  {
+    "lesson": 32,
+    "vi": "cúm",
+    "ja": "インフルエンザ",
+    "furigana": "インフルエンザ"
+  },
+  {
+    "lesson": 32,
+    "vi": "gió",
+    "ja": "風",
+    "furigana": "かぜ"
+  },
+  {
+    "lesson": 32,
+    "vi": "ngôi sao",
+    "ja": "星",
+    "furigana": "ほし"
+  },
+  {
+    "lesson": 32,
+    "vi": "căng thẳng, áp lực",
+    "ja": "ストレス",
+    "furigana": "ストレス"
+  },
+  {
+    "lesson": 32,
+    "vi": "bị ho",
+    "ja": "せき",
+    "furigana": "せき"
+  },
+  {
+    "lesson": 32,
+    "vi": "mặt trời",
+    "ja": "太陽",
+    "furigana": "たいよう"
+  },
+  {
+    "lesson": 32,
+    "vi": "bầu trời",
+    "ja": "空",
+    "furigana": "そら"
+  },
+  {
+    "lesson": 32,
+    "vi": "đêm nay",
+    "ja": "今夜",
+    "furigana": "こんや"
+  },
+  {
+    "lesson": 32,
+    "vi": "chiều tối",
+    "ja": "夕方",
+    "furigana": "ゆうがた"
+  },
+  {
+    "lesson": 32,
+    "vi": "đông",
+    "ja": "東",
+    "furigana": "ひがし"
+  },
+  {
+    "lesson": 32,
+    "vi": "tây",
+    "ja": "西",
+    "furigana": "にし"
+  },
+  {
+    "lesson": 32,
+    "vi": "nam",
+    "ja": "南",
+    "furigana": "みなみ"
+  },
+  {
+    "lesson": 32,
+    "vi": "bắc",
+    "ja": "北",
+    "furigana": "きた"
+  },
+  {
+    "lesson": 32,
+    "vi": "quốc tế",
+    "ja": "国際",
+    "furigana": "こくさい"
+  },
+  {
+    "lesson": 32,
+    "vi": "nước máy",
+    "ja": "水道",
+    "furigana": "すいどう"
+  },
+  {
+    "lesson": 32,
+    "vi": "đội, nhóm",
+    "ja": "チーム",
+    "furigana": "チーム"
+  },
+  {
+    "lesson": 32,
+    "vi": "động cơ",
+    "ja": "エンジン",
+    "furigana": "エンジン"
+  },
+  {
+    "lesson": 32,
+    "vi": "đầy đủ",
+    "ja": "十分",
+    "furigana": "じゅうぶん"
+  },
+  {
+    "lesson": 32,
+    "vi": "kỳ lạ",
+    "ja": "おかしい",
+    "furigana": "おかしい"
+  },
+  {
+    "lesson": 32,
+    "vi": "ồn ào",
+    "ja": "うるさい",
+    "furigana": "うるさい"
+  },
+  {
+    "lesson": 32,
+    "vi": "như thế này",
+    "ja": "こんなに",
+    "furigana": "こんなに"
+  },
+  {
+    "lesson": 32,
+    "vi": "như thế đó",
+    "ja": "そんなに",
+    "furigana": "そんなに"
+  },
+  {
+    "lesson": 32,
+    "vi": "như thế kia",
+    "ja": "あんなに",
+    "furigana": "あんなに"
+  },
+  {
+    "lesson": 32,
+    "vi": "muộn",
+    "ja": "遅く",
+    "furigana": "おそく"
+  },
+  {
+    "lesson": 32,
+    "vi": "chắc chắn",
+    "ja": "たしかに",
+    "furigana": "たしかに"
+  },
+  {
+    "lesson": 32,
+    "vi": "có thể",
+    "ja": "もしかしたら",
+    "furigana": "もしかしたら"
+  },
+  {
     "lesson": 33,
     "vi": "chạy trốn",
     "ja": "逃げます",

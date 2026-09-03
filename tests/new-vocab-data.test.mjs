@@ -19,10 +19,10 @@ test("dữ liệu nguồn và dữ liệu nhúng luôn đồng bộ", () => {
 test("bài 32 có đủ 44 từ và ID liên tục", () => {
   const lesson32 = embedded.filter(item => item.lesson === 32);
 
-  assert.equal(embedded.length, 322);
+  assert.equal(embedded.length, 705);
   assert.deepEqual(
     [...new Set(embedded.map(item => item.lesson))],
-    [26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+    [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, "MR1", "MR2"]
   );
   assert.equal(lesson32.length, 44);
   assert.deepEqual(
@@ -41,6 +41,15 @@ test("bài 32 có đủ 44 từ và ID liên tục", () => {
     }
   );
   assert.equal(lesson32.at(-1).word, "もしかしたら");
+});
+
+test("bài 36–48, MR1 và MR2 có đúng số lượng và ID liên tục", () => {
+  const expectedCounts = new Map([[36,21],[37,27],[38,24],[39,36],[40,33],[41,43],[42,34],[43,21],[44,28],[45,14],[46,19],[47,33],[48,14],["MR1",16],["MR2",20]]);
+  for (const [lesson, expectedCount] of expectedCounts) {
+    const items = embedded.filter(item => item.lesson === lesson);
+    assert.equal(items.length, expectedCount, String(lesson));
+    assert.deepEqual(items.map(item => item.id), Array.from({ length: expectedCount }, (_, index) => `v${lesson}-${index + 1}`), String(lesson));
+  }
 });
 
 test("bài 34 và 35 có đủ dữ liệu và ID liên tục", () => {

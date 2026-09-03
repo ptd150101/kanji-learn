@@ -34,8 +34,8 @@ Tạo thành 4 tổ hợp:
 
 - Ở mode **Tự luận**, có nút **Xem đáp án**. Nếu bấm nút này, câu đó sẽ được tính là sai, hiện đáp án đầy đủ và tự phát âm cách đọc đúng.
 
-## Kiểm tra từ mới N4 — bài 26–35
-- Tích hợp **322 từ mới**, chia theo bài: 26 (22 từ), 27 (23), 28 (39), 29 (47), 30 (34), 31 (19), 32 (44), 33 (37), 34 (27), 35 (30).
+## Kiểm tra từ mới N4 — bài 26–48 + MR1–MR2
+- Tích hợp **705 từ mới**: bài 26–48 và 2 mục ôn tập MR1, MR2.
 - Đây là một nội dung kiểm tra riêng, không làm thay đổi quiz Kanji hiện tại.
 - Mode **Từ mới N4** dùng đúng cấu trúc 2 × 2 như kiểm tra Kanji:
   - Kiểu câu hỏi: **Tiếng Nhật** hoặc **Tiếng Việt**.
@@ -45,6 +45,6 @@ Tạo thành 4 tổ hợp:
   2. Tiếng Nhật → tự nhập nghĩa tiếng Việt.
   3. Tiếng Việt → chọn từ tiếng Nhật.
   4. Tiếng Việt → tự nhập từ tiếng Nhật hoặc furigana; cả hai đều được chấp nhận.
-- Có thể chọn riêng từng bài 26–35 hoặc chọn nhiều bài; vẫn dùng số câu, thứ tự, TTS, điểm số, ôn câu sai và giao diện responsive hiện tại.
+- Có thể chọn riêng từng bài 26–48, MR1, MR2 hoặc chọn nhiều bài; vẫn dùng số câu, thứ tự, TTS, điểm số, ôn câu sai và giao diện responsive hiện tại.
 - Dữ liệu nguồn được lưu ở `vocab_n4_26_31.json`.
 - Sau khi chỉnh dữ liệu nguồn, chạy `node scripts/sync-new-vocab.mjs` để đồng bộ dữ liệu nhúng trong `index.html`.

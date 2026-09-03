@@ -1,0 +1,111 @@
+name: Apply Han-Viet and TTS fixes
+on:
+  push:
+    branches: [fix/hanviet-tts]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download Han-Viet source
+        run: |
+          curl -L --fail --retry 3 -o /tmp/kdict.zip https://github.com/trungnt2910/KanjiDictVN/releases/latest/download/KANJIDIC_vietnamese.zip
+          mkdir -p /tmp/kdict
+          unzip -q /tmp/kdict.zip -d /tmp/kdict
+      - name: Expand Han-Viet coverage and harden TTS input
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const vocab = JSON.parse(fs.readFileSync('vocab_n4_26_31.json', 'utf8'));
+          const hanViet = JSON.parse(fs.readFileSync('han_viet.json', 'utf8'));
+          const bankFiles = fs.readdirSync('/tmp/kdict').filter(f => /^kanji_bank_.*\.json$/i.test(f));
+          const source = {};
+
+          for (const file of bankFiles) {
+            const rows = JSON.parse(fs.readFileSync(path.join('/tmp/kdict', file), 'utf8'));
+            for (const row of rows) {
+              if (!Array.isArray(row) || typeof row[0] !== 'string') continue;
+              const raw = Array.isArray(row[1]) ? row[1].join(' ') : String(row[1] || '');
+              const readings = [...new Set(raw.split(/[\s,;]+/u).map(x => x.trim()).filter(Boolean))];
+              if (readings.length) source[row[0]] = readings;
+            }
+          }
+
+          const usedHan = new Set();
+          for (const row of vocab) {
+            for (const ch of (row.ja.match(/\p{Script=Han}/gu) || [])) usedHan.add(ch);
+          }
+          const missing = [...usedHan].filter(ch => !hanViet[ch]).sort((a,b) => a.localeCompare(b, 'ja'));
+          const unresolved = [];
+          for (const ch of missing) {
+            const readings = source[ch];
+            if (!readings?.length) {
+              unresolved.push(ch);
+              continue;
+            }
+            hanViet[ch] = readings
+              .map(x => x.normalize('NFC').toLocaleUpperCase('vi-VN'))
+              .join(' / ');
+          }
+          if (unresolved.length) throw new Error(`Không tìm được Hán-Việt cho: ${unresolved.join(' ')}`);
+
+          fs.writeFileSync('han_viet.json', JSON.stringify(hanViet, null, 2) + '\n');
+
+          let html = fs.readFileSync('index.html', 'utf8');
+          const hvMarker = /const HAN_VIET = \{[^\n]*\};/g;
+          const hvMatches = html.match(hvMarker) || [];
+          if (hvMatches.length !== 1) throw new Error(`Cần đúng 1 HAN_VIET inline, tìm thấy ${hvMatches.length}`);
+          html = html.replace(hvMarker, `const HAN_VIET = ${JSON.stringify(hanViet)};`);
+
+          const oldVoiceScore = `    const score = v =>\n      (/microsoft/i.test(v.name) ? 20 : 0) +\n      (/nanami|keita/i.test(v.name) ? 10 : 0) +\n      (v.default ? 2 : 0);`;
+          const newVoiceScore = `    const score = v =>\n      (/microsoft/i.test(v.name) ? 24 : 0) +\n      (/google/i.test(v.name) ? 20 : 0) +\n      (/nanami|keita|kyoko|otoya/i.test(v.name) ? 12 : 0) +\n      (v.localService ? 3 : 0) +\n      (v.default ? 2 : 0);`;
+          if (!html.includes(oldVoiceScore)) throw new Error('Không tìm thấy block xếp hạng giọng TTS');
+          html = html.replace(oldVoiceScore, newVoiceScore);
+
+          const oldSpeak = `function speak(text) {\n  if (!("speechSynthesis" in window)) {\n    alert("Trình duyệt này không hỗ trợ Speech Synthesis.");\n    return;\n  }\n  speechSynthesis.cancel();\n  const u = new SpeechSynthesisUtterance(text);\n  u.lang = "ja-JP";\n  u.rate = Number($("rateSelect").value || 1);\n  const chosen = voices.find(v => v.name === $("voiceSelect").value);\n  if (chosen) u.voice = chosen;\n  speechSynthesis.speak(u);\n}`;
+          const newSpeak = `function cleanJapaneseSpeechText(text) {\n  return (text || "")\n    .normalize("NFKC")\n    .replace(/\\[[^\\]]*\\]/g, "")\n    .replace(/[~〜～]/g, "")\n    .replace(/[\\s　]+/g, " ")\n    .trim();\n}\n\nfunction ttsTextForItem(item) {\n  return cleanJapaneseSpeechText(item?.tts || item?.reading || item?.word || "");\n}\n\nfunction speak(text) {\n  if (!("speechSynthesis" in window)) {\n    alert("Trình duyệt này không hỗ trợ Speech Synthesis.");\n    return;\n  }\n  const speechText = cleanJapaneseSpeechText(text);\n  if (!speechText) return;\n  speechSynthesis.cancel();\n  const u = new SpeechSynthesisUtterance(speechText);\n  u.rate = Number($("rateSelect").value || 1);\n  const chosen = voices.find(v => v.name === $("voiceSelect").value);\n  if (chosen) {\n    u.voice = chosen;\n    u.lang = chosen.lang || "ja-JP";\n  } else {\n    u.lang = "ja-JP";\n  }\n  speechSynthesis.speak(u);\n}`;
+          if (!html.includes(oldSpeak)) throw new Error('Không tìm thấy hàm speak hiện tại');
+          html = html.replace(oldSpeak, newSpeak);
+
+          const oldSpeakListener = `$("speakBtn").addEventListener("click", () => quiz[index] && speak(quiz[index].reading));`;
+          const newSpeakListener = `$("speakBtn").addEventListener("click", () => {\n  const item = quiz[index];\n  if (item) speak(ttsTextForItem(item));\n});`;
+          if (!html.includes(oldSpeakListener)) throw new Error('Không tìm thấy listener speakBtn');
+          html = html.replace(oldSpeakListener, newSpeakListener);
+
+          fs.writeFileSync('index.html', html);
+
+          const testSource = `import assert from "node:assert/strict";\nimport test from "node:test";\nimport { readFileSync } from "node:fs";\n\nconst html = readFileSync(new URL("../index.html", import.meta.url), "utf8");\nconst vocabMatch = html.match(/const NEW_VOCAB = (\\[[^\\n]*\\]);/);\nconst hvMatch = html.match(/const HAN_VIET = (\\{[^\\n]*\\});/);\nassert.ok(vocabMatch, "Không tìm thấy NEW_VOCAB");\nassert.ok(hvMatch, "Không tìm thấy HAN_VIET");\nconst vocab = JSON.parse(vocabMatch[1]);\nconst hanViet = JSON.parse(hvMatch[1]);\n\nconst ttsStart = html.indexOf("function cleanJapaneseSpeechText");\nconst ttsEnd = html.indexOf("if (\\\"speechSynthesis\\\" in window)");\nassert.notEqual(ttsStart, -1, "Không tìm thấy helper TTS");\nassert.notEqual(ttsEnd, -1, "Không tìm thấy cuối helper TTS");\nconst { cleanJapaneseSpeechText, ttsTextForItem } = new Function(\`\n  \\${html.slice(ttsStart, ttsEnd)}\n  return { cleanJapaneseSpeechText, ttsTextForItem };\n\`)();\n\ntest("mọi Kanji trong bộ từ mới đều có Hán-Việt", () => {\n  const missing = new Set();\n  for (const item of vocab) {\n    for (const ch of (item.word.match(/\\p{Script=Han}/gu) || [])) {\n      if (!hanViet[ch]) missing.add(ch);\n    }\n  }\n  assert.deepEqual([...missing], []);\n});\n\ntest("TTS bỏ ghi chú ngữ cảnh và ký hiệu mẫu", () => {\n  assert.equal(cleanJapaneseSpeechText("つとめます [かいしゃに〜]"), "つとめます");\n  assert.equal(cleanJapaneseSpeechText("〜ちゅう"), "ちゅう");\n  assert.equal(cleanJapaneseSpeechText("いれます [コーヒーを〜]"), "いれます");\n});\n\ntest("TTS giữ nguyên âm ghép và âm ngắt nhỏ", () => {\n  assert.equal(cleanJapaneseSpeechText("きゅう"), "きゅう");\n  assert.equal(cleanJapaneseSpeechText("しゅっせきします"), "しゅっせきします");\n  assert.equal(cleanJapaneseSpeechText("はっぴょう"), "はっぴょう");\n  assert.equal(ttsTextForItem({ reading: "きょういく", word: "教育" }), "きょういく");\n});\n`;
+          fs.writeFileSync('tests/hanviet-tts.test.mjs', testSource);
+
+          console.log(`Đã bổ sung ${missing.length} Kanji, tổng Hán-Việt: ${Object.keys(hanViet).length}`);
+          NODE
+      - name: Run tests
+        run: |
+          node --test tests/*.test.mjs
+          node --check scripts/sync-new-vocab.mjs
+          node <<'NODE'
+          const fs = require('fs');
+          const html = fs.readFileSync('index.html','utf8');
+          const matches = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
+          if (!matches.length) throw new Error('Không tìm thấy inline script');
+          fs.writeFileSync('/tmp/kanji-inline.js', matches.at(-1)[1]);
+          NODE
+          node --check /tmp/kanji-inline.js
+      - name: Remove diagnostics and commit final fix
+        run: |
+          rm -f diagnostics-han-tts.txt unihan-hv-report.json kanjidictvn-hv-report.json
+          rm .github/workflows/apply-hanviet-tts-fix.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m "Complete Han-Viet coverage and clean TTS pronunciation input"
+          git push

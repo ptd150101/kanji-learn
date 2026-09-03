@@ -1588,5 +1588,347 @@
     "vi": "khoảng ~",
     "ja": "〜ほど",
     "furigana": "〜ほど"
+  },
+  {
+    "lesson": 34,
+    "vi": "đánh [răng]",
+    "ja": "磨きます",
+    "furigana": "みがきます"
+  },
+  {
+    "lesson": 34,
+    "vi": "lắp ráp",
+    "ja": "組み立てます",
+    "furigana": "くみたてます"
+  },
+  {
+    "lesson": 34,
+    "vi": "bẻ, gấp [giấy]",
+    "ja": "折ります",
+    "furigana": "おります"
+  },
+  {
+    "lesson": 34,
+    "vi": "phát hiện, nhận ra [đồ để quên]",
+    "ja": "気が付きます",
+    "furigana": "きがつきます"
+  },
+  {
+    "lesson": 34,
+    "vi": "chấm [nước tương]",
+    "ja": "つけます",
+    "furigana": "つけます"
+  },
+  {
+    "lesson": 34,
+    "vi": "đặt câu hỏi",
+    "ja": "質問します",
+    "furigana": "しつもんします"
+  },
+  {
+    "lesson": 34,
+    "vi": "tìm ra [chìa khóa]",
+    "ja": "見つかります",
+    "furigana": "みつかります"
+  },
+  {
+    "lesson": 34,
+    "vi": "che [ô]",
+    "ja": "さします",
+    "furigana": "さします"
+  },
+  {
+    "lesson": 34,
+    "vi": "câu lạc bộ thể thao",
+    "ja": "スポーツクラブ",
+    "furigana": "スポーツクラブ"
+  },
+  {
+    "lesson": 34,
+    "vi": "tòa thành, lâu đài",
+    "ja": "お城",
+    "furigana": "おしろ"
+  },
+  {
+    "lesson": 34,
+    "vi": "sách hướng dẫn",
+    "ja": "説明書",
+    "furigana": "せつめいしょ"
+  },
+  {
+    "lesson": 34,
+    "vi": "hình minh họa",
+    "ja": "図",
+    "furigana": "ず"
+  },
+  {
+    "lesson": 34,
+    "vi": "đường kẻ, tuyến (đường ray)",
+    "ja": "線",
+    "furigana": "せん"
+  },
+  {
+    "lesson": 34,
+    "vi": "mũi tên",
+    "ja": "矢印",
+    "furigana": "やじるし"
+  },
+  {
+    "lesson": 34,
+    "vi": "màu đen",
+    "ja": "黒",
+    "furigana": "くろ"
+  },
+  {
+    "lesson": 34,
+    "vi": "màu xanh",
+    "ja": "青",
+    "furigana": "あお"
+  },
+  {
+    "lesson": 34,
+    "vi": "màu trắng",
+    "ja": "白",
+    "furigana": "しろ"
+  },
+  {
+    "lesson": 34,
+    "vi": "màu đỏ",
+    "ja": "赤",
+    "furigana": "あか"
+  },
+  {
+    "lesson": 34,
+    "vi": "màu xanh thẫm",
+    "ja": "紺",
+    "furigana": "こん"
+  },
+  {
+    "lesson": 34,
+    "vi": "màu vàng",
+    "ja": "黄色",
+    "furigana": "きいろ"
+  },
+  {
+    "lesson": 34,
+    "vi": "màu nâu",
+    "ja": "茶色",
+    "furigana": "ちゃいろ"
+  },
+  {
+    "lesson": 34,
+    "vi": "xì dầu, nước tương",
+    "ja": "しょうゆ",
+    "furigana": "しょうゆ"
+  },
+  {
+    "lesson": 34,
+    "vi": "nước sốt",
+    "ja": "ソース",
+    "furigana": "ソース"
+  },
+  {
+    "lesson": 34,
+    "vi": "khách",
+    "ja": "お客さん",
+    "furigana": "おきゃくさん"
+  },
+  {
+    "lesson": 34,
+    "vi": "tối qua",
+    "ja": "ゆうべ",
+    "furigana": "ゆうべ"
+  },
+  {
+    "lesson": 34,
+    "vi": "đắng",
+    "ja": "苦い",
+    "furigana": "にがい"
+  },
+  {
+    "lesson": 34,
+    "vi": "lúc nãy",
+    "ja": "さっき",
+    "furigana": "さっき"
+  },
+  {
+    "lesson": 35,
+    "vi": "[hoa] nở",
+    "ja": "咲きます",
+    "furigana": "さきます"
+  },
+  {
+    "lesson": 35,
+    "vi": "[màu sắc] thay đổi",
+    "ja": "変わります",
+    "furigana": "かわります"
+  },
+  {
+    "lesson": 35,
+    "vi": "khó khăn",
+    "ja": "困ります",
+    "furigana": "こまります"
+  },
+  {
+    "lesson": 35,
+    "vi": "đánh [dấu tròn]",
+    "ja": "つけます",
+    "furigana": "つけます"
+  },
+  {
+    "lesson": 35,
+    "vi": "khỏi [bệnh]",
+    "ja": "治ります",
+    "furigana": "なおります"
+  },
+  {
+    "lesson": 35,
+    "vi": "[hỏng hóc, trục trặc] được sửa chữa",
+    "ja": "直します",
+    "furigana": "なおします"
+  },
+  {
+    "lesson": 35,
+    "vi": "click chuột",
+    "ja": "クリックします",
+    "furigana": "クリックします"
+  },
+  {
+    "lesson": 35,
+    "vi": "nhập vào",
+    "ja": "入力します",
+    "furigana": "にゅうりょくします"
+  },
+  {
+    "lesson": 35,
+    "vi": "đằng kia, phía đối diện",
+    "ja": "向こう",
+    "furigana": "むこう"
+  },
+  {
+    "lesson": 35,
+    "vi": "hòn đảo",
+    "ja": "島",
+    "furigana": "しま"
+  },
+  {
+    "lesson": 35,
+    "vi": "bến cảng",
+    "ja": "港",
+    "furigana": "みなと"
+  },
+  {
+    "lesson": 35,
+    "vi": "hàng xóm, lân cận",
+    "ja": "近所",
+    "furigana": "きんじょ"
+  },
+  {
+    "lesson": 35,
+    "vi": "tầng thượng",
+    "ja": "屋上",
+    "furigana": "おくじょう"
+  },
+  {
+    "lesson": 35,
+    "vi": "nước ngoài",
+    "ja": "海外",
+    "furigana": "かいがい"
+  },
+  {
+    "lesson": 35,
+    "vi": "leo núi",
+    "ja": "山登り",
+    "furigana": "やまのぼり"
+  },
+  {
+    "lesson": 35,
+    "vi": "lịch sử",
+    "ja": "歴史",
+    "furigana": "れきし"
+  },
+  {
+    "lesson": 35,
+    "vi": "cơ hội",
+    "ja": "機会",
+    "furigana": "きかい"
+  },
+  {
+    "lesson": 35,
+    "vi": "[nhận được] sự cho phép",
+    "ja": "許可",
+    "furigana": "きょか"
+  },
+  {
+    "lesson": 35,
+    "vi": "hình tròn",
+    "ja": "まる",
+    "furigana": "まる"
+  },
+  {
+    "lesson": 35,
+    "vi": "cần số (ô tô), cần gạt",
+    "ja": "レバー",
+    "furigana": "レバー"
+  },
+  {
+    "lesson": 35,
+    "vi": "lá",
+    "ja": "葉",
+    "furigana": "は"
+  },
+  {
+    "lesson": 35,
+    "vi": "phím",
+    "ja": "キー",
+    "furigana": "キー"
+  },
+  {
+    "lesson": 35,
+    "vi": "rèm cửa",
+    "ja": "カーテン",
+    "furigana": "カーテン"
+  },
+  {
+    "lesson": 35,
+    "vi": "thiết bị",
+    "ja": "設備",
+    "furigana": "せつび"
+  },
+  {
+    "lesson": 35,
+    "vi": "sợi dây",
+    "ja": "ひも",
+    "furigana": "ひも"
+  },
+  {
+    "lesson": 35,
+    "vi": "nồi cơm điện",
+    "ja": "炊飯器",
+    "furigana": "すいはんき"
+  },
+  {
+    "lesson": 35,
+    "vi": "ngày xưa",
+    "ja": "昔",
+    "furigana": "むかし"
+  },
+  {
+    "lesson": 35,
+    "vi": "máy bán hàng tự động",
+    "ja": "自動販売機",
+    "furigana": "じどうはんばいき"
+  },
+  {
+    "lesson": 35,
+    "vi": "đúng, chính xác",
+    "ja": "正しい",
+    "furigana": "ただしい"
+  },
+  {
+    "lesson": 35,
+    "vi": "hơn nữa",
+    "ja": "もっと",
+    "furigana": "もっと"
   }
 ]

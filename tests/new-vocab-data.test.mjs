@@ -19,10 +19,10 @@ test("dữ liệu nguồn và dữ liệu nhúng luôn đồng bộ", () => {
 test("bài 32 có đủ 44 từ và ID liên tục", () => {
   const lesson32 = embedded.filter(item => item.lesson === 32);
 
-  assert.equal(embedded.length, 265);
+  assert.equal(embedded.length, 322);
   assert.deepEqual(
     [...new Set(embedded.map(item => item.lesson))],
-    [26, 27, 28, 29, 30, 31, 32, 33]
+    [26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
   );
   assert.equal(lesson32.length, 44);
   assert.deepEqual(
@@ -41,6 +41,26 @@ test("bài 32 có đủ 44 từ và ID liên tục", () => {
     }
   );
   assert.equal(lesson32.at(-1).word, "もしかしたら");
+});
+
+test("bài 34 và 35 có đủ dữ liệu và ID liên tục", () => {
+  const lesson34 = embedded.filter(item => item.lesson === 34);
+  const lesson35 = embedded.filter(item => item.lesson === 35);
+
+  assert.equal(lesson34.length, 27);
+  assert.equal(lesson35.length, 30);
+  assert.deepEqual(
+    lesson34.map(item => item.id),
+    Array.from({ length: 27 }, (_, index) => `v34-${index + 1}`)
+  );
+  assert.deepEqual(
+    lesson35.map(item => item.id),
+    Array.from({ length: 30 }, (_, index) => `v35-${index + 1}`)
+  );
+  assert.equal(lesson34[0].word, "磨きます");
+  assert.equal(lesson34.at(-1).word, "さっき");
+  assert.equal(lesson35[0].word, "咲きます");
+  assert.equal(lesson35.at(-1).word, "もっと");
 });
 
 test("mọi từ bài 32 có đủ dữ liệu và không trùng ID", () => {

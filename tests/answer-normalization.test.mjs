@@ -72,6 +72,17 @@ test("mọi từ bài 32 đều chấp nhận furigana, từ tiếng Nhật và 
   }
 });
 
+test("mọi từ bài 34 và 35 đều chấp nhận furigana, từ tiếng Nhật và nghĩa đầy đủ", () => {
+  const lessons = newVocab.filter(item => item.lesson === 34 || item.lesson === 35);
+
+  assert.equal(lessons.length, 57);
+  for (const item of lessons) {
+    assert.equal(isWrittenAnswerCorrect(item, item.reading, "vocab", "vi"), true, item.id);
+    assert.equal(isWrittenAnswerCorrect(item, item.word, "vocab", "vi"), true, item.id);
+    assert.equal(isWrittenAnswerCorrect(item, item.meaning, "vocab", "ja"), true, item.id);
+  }
+});
+
 test("giữ nguyên các ký hiệu phát âm thật và mọi cách đọc được chấp nhận", () => {
   assert.equal(normalizeKana("ボール"), "ぼーる");
   assert.equal(normalizeJapaneseWord("ボール"), "ボール");

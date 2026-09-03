@@ -54,7 +54,7 @@ test("bỏ ký hiệu chỗ trống khi so sánh từ tiếng Nhật", () => {
 test("mọi mẫu từ vựng chứa 〜 đều chấp nhận câu trả lời không có ký hiệu mẫu", () => {
   const templateItems = newVocab.filter(item => /[~〜～]/u.test(item.word + item.reading));
 
-  assert.equal(templateItems.length, 8);
+  assert.equal(templateItems.length, 21);
   for (const item of templateItems) {
     assert.equal(matchesReading(item, item.reading.replace(/[~〜～]/g, "")), true, item.id);
     assert.equal(matchesJapaneseWord(item, item.word.replace(/[~〜～]/g, "")), true, item.id);
@@ -69,6 +69,24 @@ test("mọi từ bài 32 đều chấp nhận furigana, từ tiếng Nhật và 
     assert.equal(isWrittenAnswerCorrect(item, item.reading, "vocab", "vi"), true, item.id);
     assert.equal(isWrittenAnswerCorrect(item, item.word, "vocab", "vi"), true, item.id);
     assert.equal(isWrittenAnswerCorrect(item, item.meaning, "vocab", "ja"), true, item.id);
+  }
+});
+
+test("mọi từ bài 36–48, MR1 và MR2 chấp nhận đáp án ở cả hai chiều", () => {
+  const addedLessons = new Set([36,37,38,39,40,41,42,43,44,45,46,47,48,"MR1","MR2"]);
+  const added = newVocab.filter(item => addedLessons.has(item.lesson));
+  assert.equal(added.length, 383);
+  for (const item of added) {
+    assert.equal(isWrittenAnswerCorrect(item, item.reading, "vocab", "vi"), true, item.id);
+    assert.equal(isWrittenAnswerCorrect(item, item.word, "vocab", "vi"), true, item.id);
+    assert.equal(isWrittenAnswerCorrect(item, item.meaning, "vocab", "ja"), true, item.id);
+  }
+  const withUsageNotes = added.filter(item => /\[[^\]]*\]/u.test(item.word + item.reading));
+  for (const item of withUsageNotes) {
+    const baseWord = item.word.replace(/\s*\[[^\]]*\]/g, "");
+    const baseReading = item.reading.replace(/\s*\[[^\]]*\]/g, "");
+    assert.equal(isWrittenAnswerCorrect(item, baseWord, "vocab", "vi"), true, item.id);
+    assert.equal(isWrittenAnswerCorrect(item, baseReading, "vocab", "vi"), true, item.id);
   }
 });
 

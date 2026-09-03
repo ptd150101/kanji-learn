@@ -15,8 +15,10 @@ export function buildEmbeddedVocab(sourceRows) {
   const ids = new Set();
 
   return sourceRows.map((row, index) => {
-    const lesson = Number(row.lesson);
-    if (!Number.isInteger(lesson)) {
+    const rawLesson = row.lesson;
+    const lesson = typeof rawLesson === "number" ? rawLesson : (typeof rawLesson === "string" ? rawLesson.trim() : rawLesson);
+    const validLesson = Number.isInteger(lesson) || (typeof lesson === "string" && /^[A-Z]+\d+$/u.test(lesson));
+    if (!validLesson) {
       throw new TypeError(`Mục ${index + 1} có lesson không hợp lệ`);
     }
 

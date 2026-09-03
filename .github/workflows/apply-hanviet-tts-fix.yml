@@ -24,13 +24,10 @@ jobs:
           node <<'NODE'
           const fs = require('fs');
           const path = require('path');
-
           const vocab = JSON.parse(fs.readFileSync('vocab_n4_26_31.json', 'utf8'));
           const hanViet = JSON.parse(fs.readFileSync('han_viet.json', 'utf8'));
-          const bankFiles = fs.readdirSync('/tmp/kdict').filter(f => /^kanji_bank_.*\.json$/i.test(f));
           const source = {};
-
-          for (const file of bankFiles) {
+          for (const file of fs.readdirSync('/tmp/kdict').filter(f => /^kanji_bank_.*\.json$/i.test(f))) {
             const rows = JSON.parse(fs.readFileSync(path.join('/tmp/kdict', file), 'utf8'));
             for (const row of rows) {
               if (!Array.isArray(row) || typeof row[0] !== 'string') continue;
@@ -39,31 +36,22 @@ jobs:
               if (readings.length) source[row[0]] = readings;
             }
           }
-
           const usedHan = new Set();
-          for (const row of vocab) {
-            for (const ch of (row.ja.match(/\p{Script=Han}/gu) || [])) usedHan.add(ch);
-          }
+          for (const row of vocab) for (const ch of (row.ja.match(/\p{Script=Han}/gu) || [])) usedHan.add(ch);
           const missing = [...usedHan].filter(ch => !hanViet[ch]).sort((a,b) => a.localeCompare(b, 'ja'));
           const unresolved = [];
           for (const ch of missing) {
-            const readings = source[ch];
-            if (!readings?.length) {
-              unresolved.push(ch);
-              continue;
-            }
-            hanViet[ch] = readings
+            if (!source[ch]?.length) { unresolved.push(ch); continue; }
+            hanViet[ch] = source[ch]
               .map(x => x.normalize('NFC').toLocaleUpperCase('vi-VN'))
               .join(' / ');
           }
           if (unresolved.length) throw new Error(`Không tìm được Hán-Việt cho: ${unresolved.join(' ')}`);
-
           fs.writeFileSync('han_viet.json', JSON.stringify(hanViet, null, 2) + '\n');
 
           let html = fs.readFileSync('index.html', 'utf8');
           const hvMarker = /const HAN_VIET = \{[^\n]*\};/g;
-          const hvMatches = html.match(hvMarker) || [];
-          if (hvMatches.length !== 1) throw new Error(`Cần đúng 1 HAN_VIET inline, tìm thấy ${hvMatches.length}`);
+          if ((html.match(hvMarker) || []).length !== 1) throw new Error('HAN_VIET inline không duy nhất');
           html = html.replace(hvMarker, `const HAN_VIET = ${JSON.stringify(hanViet)};`);
 
           const oldVoiceScore = `    const score = v =>\n      (/microsoft/i.test(v.name) ? 20 : 0) +\n      (/nanami|keita/i.test(v.name) ? 10 : 0) +\n      (v.default ? 2 : 0);`;
@@ -76,18 +64,56 @@ jobs:
           if (!html.includes(oldSpeak)) throw new Error('Không tìm thấy hàm speak hiện tại');
           html = html.replace(oldSpeak, newSpeak);
 
-          const oldSpeakListener = `$("speakBtn").addEventListener("click", () => quiz[index] && speak(quiz[index].reading));`;
-          const newSpeakListener = `$("speakBtn").addEventListener("click", () => {\n  const item = quiz[index];\n  if (item) speak(ttsTextForItem(item));\n});`;
-          if (!html.includes(oldSpeakListener)) throw new Error('Không tìm thấy listener speakBtn');
-          html = html.replace(oldSpeakListener, newSpeakListener);
-
+          const oldListener = `$("speakBtn").addEventListener("click", () => quiz[index] && speak(quiz[index].reading));`;
+          const newListener = `$("speakBtn").addEventListener("click", () => {\n  const item = quiz[index];\n  if (item) speak(ttsTextForItem(item));\n});`;
+          if (!html.includes(oldListener)) throw new Error('Không tìm thấy listener speakBtn');
+          html = html.replace(oldListener, newListener);
           fs.writeFileSync('index.html', html);
-
-          const testSource = `import assert from "node:assert/strict";\nimport test from "node:test";\nimport { readFileSync } from "node:fs";\n\nconst html = readFileSync(new URL("../index.html", import.meta.url), "utf8");\nconst vocabMatch = html.match(/const NEW_VOCAB = (\\[[^\\n]*\\]);/);\nconst hvMatch = html.match(/const HAN_VIET = (\\{[^\\n]*\\});/);\nassert.ok(vocabMatch, "Không tìm thấy NEW_VOCAB");\nassert.ok(hvMatch, "Không tìm thấy HAN_VIET");\nconst vocab = JSON.parse(vocabMatch[1]);\nconst hanViet = JSON.parse(hvMatch[1]);\n\nconst ttsStart = html.indexOf("function cleanJapaneseSpeechText");\nconst ttsEnd = html.indexOf("if (\\\"speechSynthesis\\\" in window)");\nassert.notEqual(ttsStart, -1, "Không tìm thấy helper TTS");\nassert.notEqual(ttsEnd, -1, "Không tìm thấy cuối helper TTS");\nconst { cleanJapaneseSpeechText, ttsTextForItem } = new Function(\`\n  \\${html.slice(ttsStart, ttsEnd)}\n  return { cleanJapaneseSpeechText, ttsTextForItem };\n\`)();\n\ntest("mọi Kanji trong bộ từ mới đều có Hán-Việt", () => {\n  const missing = new Set();\n  for (const item of vocab) {\n    for (const ch of (item.word.match(/\\p{Script=Han}/gu) || [])) {\n      if (!hanViet[ch]) missing.add(ch);\n    }\n  }\n  assert.deepEqual([...missing], []);\n});\n\ntest("TTS bỏ ghi chú ngữ cảnh và ký hiệu mẫu", () => {\n  assert.equal(cleanJapaneseSpeechText("つとめます [かいしゃに〜]"), "つとめます");\n  assert.equal(cleanJapaneseSpeechText("〜ちゅう"), "ちゅう");\n  assert.equal(cleanJapaneseSpeechText("いれます [コーヒーを〜]"), "いれます");\n});\n\ntest("TTS giữ nguyên âm ghép và âm ngắt nhỏ", () => {\n  assert.equal(cleanJapaneseSpeechText("きゅう"), "きゅう");\n  assert.equal(cleanJapaneseSpeechText("しゅっせきします"), "しゅっせきします");\n  assert.equal(cleanJapaneseSpeechText("はっぴょう"), "はっぴょう");\n  assert.equal(ttsTextForItem({ reading: "きょういく", word: "教育" }), "きょういく");\n});\n`;
-          fs.writeFileSync('tests/hanviet-tts.test.mjs', testSource);
-
-          console.log(`Đã bổ sung ${missing.length} Kanji, tổng Hán-Việt: ${Object.keys(hanViet).length}`);
+          console.log(`Đã bổ sung ${missing.length} Kanji; tổng map Hán-Việt: ${Object.keys(hanViet).length}`);
           NODE
+
+          cat > tests/hanviet-tts.test.mjs <<'TEST'
+          import assert from "node:assert/strict";
+          import test from "node:test";
+          import { readFileSync } from "node:fs";
+
+          const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+          const vocabMatch = html.match(/const NEW_VOCAB = (\[[^\n]*\]);/);
+          const hvMatch = html.match(/const HAN_VIET = (\{[^\n]*\});/);
+          assert.ok(vocabMatch, "Không tìm thấy NEW_VOCAB");
+          assert.ok(hvMatch, "Không tìm thấy HAN_VIET");
+          const vocab = JSON.parse(vocabMatch[1]);
+          const hanViet = JSON.parse(hvMatch[1]);
+
+          const helperStart = html.indexOf("function cleanJapaneseSpeechText");
+          const helperEnd = html.indexOf("function speak(text)", helperStart);
+          assert.notEqual(helperStart, -1, "Không tìm thấy cleanJapaneseSpeechText");
+          assert.notEqual(helperEnd, -1, "Không tìm thấy function speak");
+          const helpers = new Function(`${html.slice(helperStart, helperEnd)}\nreturn { cleanJapaneseSpeechText, ttsTextForItem };`)();
+
+          test("mọi Kanji trong bộ từ mới đều có Hán-Việt", () => {
+            const missing = new Set();
+            for (const item of vocab) {
+              for (const ch of (item.word.match(/\p{Script=Han}/gu) || [])) {
+                if (!hanViet[ch]) missing.add(ch);
+              }
+            }
+            assert.deepEqual([...missing], []);
+          });
+
+          test("TTS bỏ ghi chú ngữ cảnh và ký hiệu mẫu", () => {
+            assert.equal(helpers.cleanJapaneseSpeechText("つとめます [かいしゃに〜]"), "つとめます");
+            assert.equal(helpers.cleanJapaneseSpeechText("〜ちゅう"), "ちゅう");
+            assert.equal(helpers.cleanJapaneseSpeechText("いれます [コーヒーを〜]"), "いれます");
+          });
+
+          test("TTS giữ nguyên âm ghép và âm ngắt nhỏ", () => {
+            assert.equal(helpers.cleanJapaneseSpeechText("きゅう"), "きゅう");
+            assert.equal(helpers.cleanJapaneseSpeechText("しゅっせきします"), "しゅっせきします");
+            assert.equal(helpers.cleanJapaneseSpeechText("はっぴょう"), "はっぴょう");
+            assert.equal(helpers.ttsTextForItem({ reading: "きょういく", word: "教育" }), "きょういく");
+          });
+          TEST
       - name: Run tests
         run: |
           node --test tests/*.test.mjs

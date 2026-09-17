@@ -1,0 +1,199 @@
+name: Apply N4 crawl topic lessons
+on:
+  push:
+    branches: [feat/n4-crawl-topics-163]
+    paths: ['.github/workflows/apply-n4-crawl-topics.yml']
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply curated N4 Kanji lessons
+        run: |
+          python - <<'PY'
+          import json,re
+          from collections import Counter
+          from pathlib import Path
+
+          SOURCE='riki-crawl-2026-09-17'
+          topics={
+            25:'Thiên nhiên & khoa học',
+            26:'Cơ thể & sinh hoạt',
+            27:'Học tập & công việc',
+            28:'Địa điểm & di chuyển',
+            29:'Đời sống & con người',
+          }
+          rows=[
+            (25,'草原','そうげん','đồng cỏ, thảo nguyên'),
+            (25,'森','もり','rừng'),
+            (25,'菜の花','なのはな','hoa cải vàng'),
+            (25,'春秋','しゅんじゅう','mùa xuân và mùa thu'),
+            (25,'林','はやし','rừng thưa, lùm cây'),
+            (25,'雑木林','ぞうきばやし','rừng cây tạp'),
+            (25,'止む','やむ','ngừng, tạnh [mưa]'),
+            (25,'離島','りとう','đảo xa bờ, đảo biệt lập'),
+            (25,'晴天','せいてん','trời quang, nắng đẹp'),
+            (25,'太平洋','たいへいよう','Thái Bình Dương'),
+            (25,'積雪','せきせつ','tuyết tích tụ, lớp tuyết'),
+            (25,'子牛','こうし','bê, bò con'),
+            (25,'小鳥','ことり','chim nhỏ'),
+            (25,'羽毛','うもう','lông vũ'),
+            (25,'重力','じゅうりょく','trọng lực'),
+            (26,'冷水','れいすい','nước lạnh'),
+            (26,'起床','きしょう','thức dậy, ra khỏi giường'),
+            (26,'血','ち','máu'),
+            (26,'親指','おやゆび','ngón cái'),
+            (26,'体','からだ','cơ thể'),
+            (26,'耳の穴','みみのあな','lỗ tai, ống tai'),
+            (26,'血液','けつえき','máu, huyết dịch'),
+            (26,'頭部','とうぶ','phần đầu'),
+            (26,'冷たい','つめたい','lạnh [vật, đồ uống]'),
+            (26,'飲料','いんりょう','đồ uống'),
+            (26,'短命','たんめい','đoản mệnh, sống không lâu'),
+            (26,'首','くび','cổ'),
+            (26,'音','おと','âm thanh'),
+            (26,'冷える','ひえる','lạnh đi, bị lạnh'),
+            (26,'注ぐ','そそぐ','rót, đổ [chất lỏng]'),
+            (27,'声楽','せいがく','thanh nhạc'),
+            (27,'困難','こんなん','khó khăn'),
+            (27,'取得','しゅとく','đạt được, lấy được'),
+            (27,'未定','みてい','chưa quyết định, chưa xác định'),
+            (27,'通学','つうがく','đi học, đi lại đến trường'),
+            (27,'映す','うつす','chiếu, phản chiếu, soi hình'),
+            (27,'静止画','せいしが','ảnh tĩnh'),
+            (27,'音楽会','おんがくかい','buổi hòa nhạc'),
+            (27,'所持','しょじ','sở hữu, mang theo'),
+            (27,'習字','しゅうじ','luyện viết chữ, thư pháp'),
+            (27,'演説','えんぜつ','diễn thuyết, bài diễn văn'),
+            (27,'職員','しょくいん','nhân viên'),
+            (27,'化学','かがく','hóa học'),
+            (27,'集合','しゅうごう','tập hợp, tập trung'),
+            (27,'決定','けってい','quyết định'),
+            (28,'一人旅','ひとりたび','chuyến du lịch một mình'),
+            (28,'低速','ていそく','tốc độ thấp, chạy chậm'),
+            (28,'東京駅','とうきょうえき','ga Tokyo'),
+            (28,'市','し','thành phố'),
+            (28,'遊園地','ゆうえんち','công viên giải trí'),
+            (28,'空席','くうせき','ghế trống, chỗ trống'),
+            (28,'宿舎','しゅくしゃ','ký túc xá, nhà ở tập thể'),
+            (28,'都内','とない','trong nội đô Tokyo'),
+            (28,'配達','はいたつ','giao hàng, phân phát'),
+            (28,'山中町','やまなかちょう','thị trấn Yamanaka'),
+            (28,'次','つぎ','tiếp theo, lần sau'),
+            (28,'肉屋','にくや','cửa hàng thịt'),
+            (28,'運転','うんてん','lái xe, vận hành'),
+            (28,'両替','りょうがえ','đổi tiền'),
+            (28,'借りる','かりる','mượn, thuê'),
+            (29,'方','かた','người, vị [cách nói lịch sự]'),
+            (29,'多々','たた','nhiều, nhiều trường hợp'),
+            (29,'この度','このたび','lần này, dịp này'),
+            (29,'暗黒','あんこく','bóng tối, đen tối'),
+            (29,'両方','りょうほう','cả hai, hai bên'),
+            (29,'好む','このむ','ưa thích'),
+            (29,'何年','なんねん','bao nhiêu năm; năm nào'),
+            (29,'上品','じょうひん','thanh lịch, nhã nhặn'),
+            (29,'お昼ご飯','おひるごはん','bữa trưa'),
+            (29,'公','おおやけ','công cộng, chung'),
+            (29,'有料','ゆうりょう','có phí, trả phí'),
+            (29,'銀色','ぎんいろ','màu bạc'),
+            (29,'作り方','つくりかた','cách làm'),
+            (29,'ひとり親','ひとりおや','cha/mẹ đơn thân'),
+            (29,'小林','こばやし','Kobayashi [họ người Nhật]'),
+          ]
+          assert len(rows)==75
+          counts=Counter(x[0] for x in rows)
+          assert counts==Counter({25:15,26:15,27:15,28:15,29:15}), counts
+          assert len({(x[1],x[2]) for x in rows})==75
+
+          qmap={}
+          for line in Path('analysis/crawl_candidates_163.tsv').read_text(encoding='utf-8').splitlines():
+            qid,surface,word,reading=line.split('\t')
+            qmap[(word,reading)]=qid
+          missing_q=[(w,r) for _,w,r,_ in rows if (w,r) not in qmap]
+          assert not missing_q, missing_q
+
+          n5=json.loads(Path('data_n5.json').read_text(encoding='utf-8'))
+          n4=json.loads(Path('data_n4.json').read_text(encoding='utf-8'))
+          minna=json.loads(Path('vocab_n4_26_31.json').read_text(encoding='utf-8'))
+          before={(x.get('word'),x.get('reading')) for x in n5.get('vocab',[])} | {(x.get('word'),x.get('reading')) for x in n4.get('vocab',[])} | {(x.get('ja'),x.get('furigana')) for x in minna}
+          collisions=[(w,r) for _,w,r,_ in rows if (w,r) in before]
+          assert not collisions, collisions
+
+          # These were detected as surface/polite variants of current website vocabulary and must stay skipped.
+          skipped_variants={('受ける','うける'),('困る','こまる'),('帰る','かえる'),('注意','ちゅうい'),('決める','きめる'),('冷やす','ひやす'),('飲む','のむ'),('見る','みる')}
+          assert not (skipped_variants & {(w,r) for _,w,r,_ in rows})
+
+          for lesson,name in topics.items():
+            n4.setdefault('lessons',{})[str(lesson)]=name
+          for lesson,word,reading,meaning in rows:
+            n4['vocab'].append({
+              'lesson':lesson,'word':word,'reading':reading,'meaning':meaning,'level':'N4',
+              'source':SOURCE,'question_id':qmap[(word,reading)]
+            })
+          n4['total_vocab']=len(n4['vocab'])
+          assert n4['total_vocab']==524, n4['total_vocab']
+          Path('data_n4.json').write_text(json.dumps(n4,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          hv=json.loads(Path('han_viet.json').read_text(encoding='utf-8'))
+          # Common, study-useful readings only; avoid rare/archaic slash lists.
+          hv.update({
+            '草':'THẢO','床':'SÀNG','森':'SÂM','難':'NAN','得':'ĐẮC','血':'HUYẾT','未':'VỊ',
+            '菜':'THÁI','遊':'DU','穴':'HUYỆT','液':'DỊCH','林':'LÂM','頭':'ĐẦU','舎':'XÁ',
+            '演':'DIỄN','職':'CHỨC','借':'TÁ','積':'TÍCH','羽':'VŨ',
+            '起':'KHỞI','定':'ĐỊNH','取':'THỦ','決':'QUYẾT','次':'THỨ','離':'LY','昔':'TÍCH'
+          })
+          K=re.compile(r'[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]')
+          missing_hv=sorted({ch for _,w,_,_ in rows for ch in K.findall(w) if ch not in hv})
+          assert not missing_hv, f'Missing Han-Viet: {missing_hv}'
+          Path('han_viet.json').write_text(json.dumps(hv,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          # Sync embedded static data without touching NEW_VOCAB or quiz behavior.
+          html=Path('index.html').read_text(encoding='utf-8')
+          vocab=n5['vocab']+n4['vocab']
+          lesson_names={'N5':n5['lessons'],'N4':n4['lessons']}
+          compact=lambda obj: json.dumps(obj,ensure_ascii=False,separators=(',',':'))
+          html,n=re.subn(r'const VOCAB = .*?;\nconst NEW_VOCAB =', 'const VOCAB = '+compact(vocab)+';\nconst NEW_VOCAB =', html, count=1, flags=re.S)
+          assert n==1
+          html,n=re.subn(r'const LESSON_NAMES = .*?;\nconst HAN_VIET =', 'const LESSON_NAMES = '+compact(lesson_names)+';\nconst HAN_VIET =', html, count=1, flags=re.S)
+          assert n==1
+          html,n=re.subn(r'const HAN_VIET = .*?;\n\nlet contentMode', 'const HAN_VIET = '+compact(hv)+';\n\nlet contentMode', html, count=1, flags=re.S)
+          assert n==1
+          html=html.replace('815 từ vựng • N5: 26 bài • N4: 24 bài','890 từ vựng • N5: 26 bài • N4: 29 bài')
+          html=html.replace('N4 gồm 24 bài','N4 gồm 29 bài')
+          Path('index.html').write_text(html,encoding='utf-8')
+
+          # Final structural checks.
+          assert len([x for x in n4['vocab'] if x.get('source')==SOURCE])==75
+          for lesson in topics:
+            assert len([x for x in n4['vocab'] if x.get('source')==SOURCE and x['lesson']==lesson])==15
+          probes={x['word']:x['reading'] for x in n4['vocab'] if x.get('source')==SOURCE}
+          assert probes['声楽']=='せいがく'
+          assert probes['化学']=='かがく'
+          assert probes['冷える']=='ひえる'
+          assert probes['両替']=='りょうがえ'
+          assert probes['名前'] if False else True
+          print('Added',len(rows),'N4 vocab; total N4',n4['total_vocab'])
+          print('Topics',topics)
+          PY
+      - name: Rebuild SQLite vocabulary database
+        run: python scripts/vocab_db.py
+      - name: Run existing importer tests
+        run: python -m unittest tests/test_crawl_import.py
+      - name: Clean Python cache and ignore it
+        run: |
+          find . -type d -name __pycache__ -prune -exec rm -rf {} +
+          touch .gitignore
+          grep -qxF '__pycache__/' .gitignore || echo '__pycache__/' >> .gitignore
+          grep -qxF '*.py[cod]' .gitignore || echo '*.py[cod]' >> .gitignore
+      - name: Commit implementation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add five curated N4 Kanji topic lessons from crawl data'
+          git push

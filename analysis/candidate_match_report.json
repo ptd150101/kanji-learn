@@ -1,8 +1,8 @@
 {
   "summary": {
-    "exact_existing": 63,
-    "new": 93,
-    "likely_variant": 7
+    "exact_existing": 80,
+    "new": 77,
+    "likely_variant": 6
   },
   "rows": [
     {
@@ -26,8 +26,16 @@
       "surface": "田んぼ",
       "word": "田んぼ",
       "reading": "たんぼ",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 16,
+          "word": "田んぼ",
+          "reading": "たんぼ",
+          "meaning": "ruộng lúa"
+        }
+      ]
     },
     {
       "question_id": "349021",
@@ -50,8 +58,16 @@
       "surface": "名前",
       "word": "名前",
       "reading": "なまえ",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 12,
+          "word": "名前",
+          "reading": "なまえ",
+          "meaning": "tên"
+        }
+      ]
     },
     {
       "question_id": "349061",
@@ -122,8 +138,16 @@
       "surface": "体力",
       "word": "体力",
       "reading": "たいりょく",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 26,
+          "word": "体力",
+          "reading": "たいりょく",
+          "meaning": "thể lực"
+        }
+      ]
     },
     {
       "question_id": "348830",
@@ -266,6 +290,13 @@
           "word": "帰ってきます",
           "reading": "かえってきます",
           "meaning": "trở về"
+        },
+        {
+          "source": "kanji_n5",
+          "lesson": 10,
+          "word": "帰ります",
+          "reading": "かえります",
+          "meaning": "trở về"
         }
       ]
     },
@@ -274,8 +305,16 @@
       "surface": "魚",
       "word": "魚",
       "reading": "さかな",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 15,
+          "word": "魚",
+          "reading": "さかな",
+          "meaning": "cá"
+        }
+      ]
     },
     {
       "question_id": "348897",
@@ -338,8 +377,16 @@
       "surface": "国内",
       "word": "国内",
       "reading": "こくない",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 26,
+          "word": "国内",
+          "reading": "こくない",
+          "meaning": "trong nước"
+        }
+      ]
     },
     {
       "question_id": "348857",
@@ -426,8 +473,16 @@
       "surface": "会社",
       "word": "会社",
       "reading": "かいしゃ",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 24,
+          "word": "会社",
+          "reading": "かいしゃ",
+          "meaning": "công ty"
+        }
+      ]
     },
     {
       "question_id": "348913",
@@ -562,8 +617,16 @@
       "surface": "医者",
       "word": "医者",
       "reading": "いしゃ",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 17,
+          "word": "医者",
+          "reading": "いしゃ",
+          "meaning": "bác sĩ"
+        }
+      ]
     },
     {
       "question_id": "348960",
@@ -674,8 +737,16 @@
       "surface": "暗い",
       "word": "暗い",
       "reading": "くらい",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 26,
+          "word": "暗い",
+          "reading": "くらい",
+          "meaning": "tối"
+        }
+      ]
     },
     {
       "question_id": "349010",
@@ -706,8 +777,16 @@
       "surface": "この町",
       "word": "町",
       "reading": "まち",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 23,
+          "word": "町",
+          "reading": "まち",
+          "meaning": "thị trấn, phố"
+        }
+      ]
     },
     {
       "question_id": "348918",
@@ -826,8 +905,16 @@
       "surface": "説明",
       "word": "説明",
       "reading": "せつめい",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 21,
+          "word": "説明",
+          "reading": "せつめい",
+          "meaning": "giải thích"
+        }
+      ]
     },
     {
       "question_id": "348858",
@@ -905,8 +992,16 @@
       "surface": "鳥肉",
       "word": "鳥肉",
       "reading": "とりにく",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 22,
+          "word": "鳥肉",
+          "reading": "とりにく",
+          "meaning": "thịt gà/chim"
+        }
+      ]
     },
     {
       "question_id": "348868",
@@ -1009,16 +1104,32 @@
       "surface": "地下",
       "word": "地下",
       "reading": "ちか",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 11,
+          "word": "地下",
+          "reading": "ちか",
+          "meaning": "dưới đất"
+        }
+      ]
     },
     {
       "question_id": "348896",
       "surface": "私の名前",
       "word": "名前",
       "reading": "なまえ",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 12,
+          "word": "名前",
+          "reading": "なまえ",
+          "meaning": "tên"
+        }
+      ]
     },
     {
       "question_id": "349058",
@@ -1161,8 +1272,16 @@
       "surface": "明るい",
       "word": "明るい",
       "reading": "あかるい",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 21,
+          "word": "明るい",
+          "reading": "あかるい",
+          "meaning": "sáng; vui vẻ"
+        }
+      ]
     },
     {
       "question_id": "348765",
@@ -1281,16 +1400,32 @@
       "surface": "あの事",
       "word": "事",
       "reading": "こと",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 26,
+          "word": "事",
+          "reading": "こと",
+          "meaning": "việc, chuyện"
+        }
+      ]
     },
     {
       "question_id": "348956",
       "surface": "少し",
       "word": "少し",
       "reading": "すこし",
-      "status": "new",
-      "matches": []
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n5",
+          "lesson": 21,
+          "word": "少し",
+          "reading": "すこし",
+          "meaning": "một ít"
+        }
+      ]
     },
     {
       "question_id": "349081",
@@ -1633,14 +1768,14 @@
       "surface": "小さい",
       "word": "小さい",
       "reading": "ちいさい",
-      "status": "likely_variant",
+      "status": "exact_existing",
       "matches": [
         {
-          "source": "new_vocab_n4",
-          "lesson": 38,
-          "word": "小さな〜",
-          "reading": "ちいさな〜",
-          "meaning": "~ bé, ~ nhỏ"
+          "source": "kanji_n5",
+          "lesson": 8,
+          "word": "小さい",
+          "reading": "ちいさい",
+          "meaning": "nhỏ"
         }
       ]
     },

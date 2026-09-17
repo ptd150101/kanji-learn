@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_records_with_kanji": 1334,
+  "unique_vocab": 1178,
+  "source_links": 1333,
+  "reading_aliases": 7,
+  "by_level": {
+    "N4": 831,
+    "N5": 347
+  }
+}

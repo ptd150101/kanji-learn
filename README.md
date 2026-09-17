@@ -48,3 +48,40 @@ Tạo thành 4 tổ hợp:
 - Có thể chọn riêng từng bài 26–48, MR1, MR2 hoặc chọn nhiều bài; vẫn dùng số câu, thứ tự, TTS, điểm số, ôn câu sai và giao diện responsive hiện tại.
 - Dữ liệu nguồn được lưu ở `vocab_n4_26_31.json`.
 - Sau khi chỉnh dữ liệu nguồn, chạy `node scripts/sync-new-vocab.mjs` để đồng bộ dữ liệu nhúng trong `index.html`.
+
+## SQLite database + import JSON từ crawler
+
+Database chuẩn hóa nằm ở `data/kanji_vocab.sqlite`. Database được tổng hợp từ `data_n5.json`, `data_n4.json` và `vocab_n4_26_31.json`, chỉ giữ các mục có Kanji và deduplicate theo cặp **word + reading**. Thống kê build hiện tại nằm ở `data/kanji_vocab_stats.json`.
+
+Build lại database:
+
+```bash
+python scripts/vocab_db.py
+```
+
+Importer nhận trực tiếp JSON crawler dạng `crawled_at`, `page_title`, `question_count`, `questions[]`, `answers[]`, `sentence_text`, `sentence_html`, `underlined_texts[]`, `source_url` như extension đang xuất:
+
+```bash
+python scripts/import_crawl.py path/to/crawl.json
+```
+
+Có thể chạy thử mà không ghi DB:
+
+```bash
+python scripts/import_crawl.py path/to/crawl.json --dry-run --report import-report.json
+```
+
+Cơ chế match trước khi import:
+1. `underlined_text + một trong 4 đáp án furigana` khớp DB → `existing`, không tạo vocab mới.
+2. Chỉ `underlined_text` đã có trong DB → vẫn coi là `existing`, nhưng lưu strategy để có thể review trường hợp đáp án crawl lệch.
+3. Nếu phần gạch chân sai, importer tìm vocab nằm trong `sentence_text` và yêu cầu reading của vocab xuất hiện trong 4 đáp án.
+4. Có fallback bảo thủ cho biến thể chia động từ: cùng Kanji signature + prefix furigana đủ mạnh.
+5. Không đoán đáp án đúng cho từ hoàn toàn mới chỉ từ 4 lựa chọn. Câu chưa xác định được lưu `pending`; câu có nhiều match lưu `ambiguous`.
+
+Nếu crawler sau này đánh dấu chính xác một đáp án bằng `correct_detected` / `correct_answers_detected`, có thể cho phép promote từ mới vào bảng `vocab`:
+
+```bash
+python scripts/import_crawl.py path/to/crawl.json --promote-detected
+```
+
+Importer là idempotent theo batch + `question_id`: import lại cùng JSON sẽ không tạo duplicate. Toàn bộ raw question/answer vẫn được giữ trong các bảng `crawl_batches`, `crawl_questions`, `crawl_answers` để debug các trường hợp gạch chân sai.

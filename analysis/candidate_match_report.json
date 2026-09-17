@@ -1,0 +1,1880 @@
+{
+  "summary": {
+    "exact_existing": 63,
+    "new": 93,
+    "likely_variant": 7
+  },
+  "rows": [
+    {
+      "question_id": "348892",
+      "surface": "仕事",
+      "word": "仕事",
+      "reading": "しごと",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 3,
+          "word": "仕事",
+          "reading": "しごと",
+          "meaning": "công việc"
+        }
+      ]
+    },
+    {
+      "question_id": "349029",
+      "surface": "田んぼ",
+      "word": "田んぼ",
+      "reading": "たんぼ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349021",
+      "surface": "注ぎます",
+      "word": "注ぐ",
+      "reading": "そそぐ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348984",
+      "surface": "声楽",
+      "word": "声楽",
+      "reading": "せいがく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348767",
+      "surface": "名前",
+      "word": "名前",
+      "reading": "なまえ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349061",
+      "surface": "売って",
+      "word": "売る",
+      "reading": "うる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 4,
+          "word": "売る",
+          "reading": "うる",
+          "meaning": "bán"
+        }
+      ]
+    },
+    {
+      "question_id": "348944",
+      "surface": "受ける",
+      "word": "受ける",
+      "reading": "うける",
+      "status": "likely_variant",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 31,
+          "word": "受けます",
+          "reading": "うけます",
+          "meaning": "dự [thi]"
+        }
+      ]
+    },
+    {
+      "question_id": "348998",
+      "surface": "草原",
+      "word": "草原",
+      "reading": "そうげん",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348797",
+      "surface": "遠い",
+      "word": "遠い",
+      "reading": "とおい",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 2,
+          "word": "遠い",
+          "reading": "とおい",
+          "meaning": "xa"
+        }
+      ]
+    },
+    {
+      "question_id": "349073",
+      "surface": "冷水",
+      "word": "冷水",
+      "reading": "れいすい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349005",
+      "surface": "体力",
+      "word": "体力",
+      "reading": "たいりょく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348830",
+      "surface": "起床",
+      "word": "起床",
+      "reading": "きしょう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348908",
+      "surface": "新聞紙",
+      "word": "新聞紙",
+      "reading": "しんぶんし",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 5,
+          "word": "新聞紙",
+          "reading": "しんぶんし",
+          "meaning": "giấy báo"
+        }
+      ]
+    },
+    {
+      "question_id": "348977",
+      "surface": "地図",
+      "word": "地図",
+      "reading": "ちず",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 10,
+          "word": "地図",
+          "reading": "ちず",
+          "meaning": "bản đồ"
+        }
+      ]
+    },
+    {
+      "question_id": "348881",
+      "surface": "困って",
+      "word": "困る",
+      "reading": "こまる",
+      "status": "likely_variant",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 35,
+          "word": "困ります",
+          "reading": "こまります",
+          "meaning": "khó khăn"
+        }
+      ]
+    },
+    {
+      "question_id": "348976",
+      "surface": "森",
+      "word": "森",
+      "reading": "もり",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348889",
+      "surface": "困難",
+      "word": "困難",
+      "reading": "こんなん",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348934",
+      "surface": "取得",
+      "word": "取得",
+      "reading": "しゅとく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349024",
+      "surface": "昼食",
+      "word": "昼食",
+      "reading": "ちゅうしょく",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 6,
+          "word": "昼食",
+          "reading": "ちゅうしょく",
+          "meaning": "bữa trưa"
+        }
+      ]
+    },
+    {
+      "question_id": "348954",
+      "surface": "事務所",
+      "word": "事務所",
+      "reading": "じむしょ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 8,
+          "word": "事務所",
+          "reading": "じむしょ",
+          "meaning": "văn phòng"
+        }
+      ]
+    },
+    {
+      "question_id": "349008",
+      "surface": "台所",
+      "word": "台所",
+      "reading": "だいどころ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 28,
+          "word": "台所",
+          "reading": "だいどころ",
+          "meaning": "nhà bếp (kiểu Nhật)"
+        }
+      ]
+    },
+    {
+      "question_id": "348824",
+      "surface": "帰ります",
+      "word": "帰る",
+      "reading": "かえる",
+      "status": "likely_variant",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 46,
+          "word": "帰ってきます",
+          "reading": "かえってきます",
+          "meaning": "trở về"
+        }
+      ]
+    },
+    {
+      "question_id": "348838",
+      "surface": "魚",
+      "word": "魚",
+      "reading": "さかな",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348897",
+      "surface": "使って",
+      "word": "使う",
+      "reading": "つかう",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 5,
+          "word": "使う",
+          "reading": "つかう",
+          "meaning": "dùng, sử dụng"
+        }
+      ]
+    },
+    {
+      "question_id": "348776",
+      "surface": "一人旅",
+      "word": "一人旅",
+      "reading": "ひとりたび",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349064",
+      "surface": "方",
+      "word": "方",
+      "reading": "かた",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348955",
+      "surface": "暑い",
+      "word": "暑い",
+      "reading": "あつい",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 20,
+          "word": "暑い",
+          "reading": "あつい",
+          "meaning": "nóng (thời tiết)"
+        }
+      ]
+    },
+    {
+      "question_id": "349033",
+      "surface": "低速",
+      "word": "低速",
+      "reading": "ていそく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349047",
+      "surface": "国内",
+      "word": "国内",
+      "reading": "こくない",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348857",
+      "surface": "血",
+      "word": "血",
+      "reading": "ち",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349066",
+      "surface": "未定",
+      "word": "未定",
+      "reading": "みてい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349032",
+      "surface": "通学",
+      "word": "通学",
+      "reading": "つうがく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348796",
+      "surface": "東京駅",
+      "word": "東京駅",
+      "reading": "とうきょうえき",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348851",
+      "surface": "苦い",
+      "word": "苦い",
+      "reading": "にがい",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 34,
+          "word": "苦い",
+          "reading": "にがい",
+          "meaning": "đắng"
+        }
+      ]
+    },
+    {
+      "question_id": "348802",
+      "surface": "映して",
+      "word": "映す",
+      "reading": "うつす",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349083",
+      "surface": "薬局",
+      "word": "薬局",
+      "reading": "やっきょく",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 15,
+          "word": "薬局",
+          "reading": "やっきょく",
+          "meaning": "hiệu thuốc"
+        }
+      ]
+    },
+    {
+      "question_id": "348769",
+      "surface": "菜の花",
+      "word": "菜の花",
+      "reading": "なのはな",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348905",
+      "surface": "会社",
+      "word": "会社",
+      "reading": "かいしゃ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348913",
+      "surface": "親指",
+      "word": "親指",
+      "reading": "おやゆび",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349018",
+      "surface": "短かった",
+      "word": "短い",
+      "reading": "みじかい",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 12,
+          "word": "短い",
+          "reading": "みじかい",
+          "meaning": "ngắn"
+        }
+      ]
+    },
+    {
+      "question_id": "349009",
+      "surface": "多々",
+      "word": "多々",
+      "reading": "たた",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349041",
+      "surface": "この度",
+      "word": "この度",
+      "reading": "このたび",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348852",
+      "surface": "空",
+      "word": "空",
+      "reading": "そら",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 32,
+          "word": "空",
+          "reading": "そら",
+          "meaning": "bầu trời"
+        }
+      ]
+    },
+    {
+      "question_id": "348790",
+      "surface": "暗黒",
+      "word": "暗黒",
+      "reading": "あんこく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348987",
+      "surface": "静止画",
+      "word": "静止画",
+      "reading": "せいしが",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348825",
+      "surface": "音楽会",
+      "word": "音楽会",
+      "reading": "おんがくかい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348808",
+      "surface": "温泉",
+      "word": "温泉",
+      "reading": "おんせん",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 31,
+          "word": "温泉",
+          "reading": "おんせん",
+          "meaning": "suối nước nóng"
+        }
+      ]
+    },
+    {
+      "question_id": "348763",
+      "surface": "英語",
+      "word": "英語",
+      "reading": "えいご",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 16,
+          "word": "英語",
+          "reading": "えいご",
+          "meaning": "tiếng Anh"
+        }
+      ]
+    },
+    {
+      "question_id": "348921",
+      "surface": "所持",
+      "word": "所持",
+      "reading": "しょじ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348893",
+      "surface": "市",
+      "word": "市",
+      "reading": "し",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348780",
+      "surface": "医者",
+      "word": "医者",
+      "reading": "いしゃ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348960",
+      "surface": "春秋",
+      "word": "春秋",
+      "reading": "しゅんじゅう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348925",
+      "surface": "写真",
+      "word": "写真",
+      "reading": "しゃしん",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 21,
+          "word": "写真",
+          "reading": "しゃしん",
+          "meaning": "ảnh"
+        }
+      ]
+    },
+    {
+      "question_id": "348939",
+      "surface": "習字",
+      "word": "習字",
+      "reading": "しゅうじ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348900",
+      "surface": "始めます",
+      "word": "始める",
+      "reading": "はじめる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 3,
+          "word": "始める",
+          "reading": "はじめる",
+          "meaning": "bắt đầu (tha động từ)"
+        }
+      ]
+    },
+    {
+      "question_id": "349071",
+      "surface": "薬",
+      "word": "薬",
+      "reading": "くすり",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 15,
+          "word": "薬",
+          "reading": "くすり",
+          "meaning": "thuốc"
+        }
+      ]
+    },
+    {
+      "question_id": "349007",
+      "surface": "待ちます",
+      "word": "待つ",
+      "reading": "まつ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 15,
+          "word": "待つ",
+          "reading": "まつ",
+          "meaning": "chờ"
+        }
+      ]
+    },
+    {
+      "question_id": "349015",
+      "surface": "私の体",
+      "word": "体",
+      "reading": "からだ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348922",
+      "surface": "持って",
+      "word": "持つ",
+      "reading": "もつ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 21,
+          "word": "持つ",
+          "reading": "もつ",
+          "meaning": "cầm, mang, có"
+        }
+      ]
+    },
+    {
+      "question_id": "348766",
+      "surface": "暗い",
+      "word": "暗い",
+      "reading": "くらい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349010",
+      "surface": "地震",
+      "word": "地震",
+      "reading": "じしん",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 39,
+          "word": "地震",
+          "reading": "じしん",
+          "meaning": "động đất"
+        }
+      ]
+    },
+    {
+      "question_id": "348798",
+      "surface": "遊園地",
+      "word": "遊園地",
+      "reading": "ゆうえんち",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349038",
+      "surface": "この町",
+      "word": "町",
+      "reading": "まち",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348918",
+      "surface": "耳の穴",
+      "word": "耳の穴",
+      "reading": "みみのあな",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348985",
+      "surface": "大雪",
+      "word": "大雪",
+      "reading": "おおゆき",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 20,
+          "word": "大雪",
+          "reading": "おおゆき",
+          "meaning": "tuyết lớn"
+        }
+      ]
+    },
+    {
+      "question_id": "349043",
+      "surface": "冬",
+      "word": "冬",
+      "reading": "ふゆ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 19,
+          "word": "冬",
+          "reading": "ふゆ",
+          "meaning": "mùa đông"
+        }
+      ]
+    },
+    {
+      "question_id": "349022",
+      "surface": "着て",
+      "word": "着る",
+      "reading": "きる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 13,
+          "word": "着る",
+          "reading": "きる",
+          "meaning": "mặc"
+        }
+      ]
+    },
+    {
+      "question_id": "349096",
+      "surface": "両方",
+      "word": "両方",
+      "reading": "りょうほう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348876",
+      "surface": "好みます",
+      "word": "好む",
+      "reading": "このむ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348861",
+      "surface": "血液",
+      "word": "血液",
+      "reading": "けつえき",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348935",
+      "surface": "終日",
+      "word": "終日",
+      "reading": "しゅうじつ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 3,
+          "word": "終日",
+          "reading": "しゅうじつ",
+          "meaning": "cả ngày"
+        }
+      ]
+    },
+    {
+      "question_id": "349050",
+      "surface": "特にすし",
+      "word": "特に",
+      "reading": "とくに",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 11,
+          "word": "特に",
+          "reading": "とくに",
+          "meaning": "đặc biệt là"
+        }
+      ]
+    },
+    {
+      "question_id": "348992",
+      "surface": "説明",
+      "word": "説明",
+      "reading": "せつめい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348858",
+      "surface": "空席",
+      "word": "空席",
+      "reading": "くうせき",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349023",
+      "surface": "注意",
+      "word": "注意",
+      "reading": "ちゅうい",
+      "status": "likely_variant",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 33,
+          "word": "注意します",
+          "reading": "ちゅういします",
+          "meaning": "chú ý [xe]"
+        },
+        {
+          "source": "new_vocab_n4",
+          "lesson": 37,
+          "word": "注意します",
+          "reading": "ちゅういします",
+          "meaning": "nhắc nhở, chú ý"
+        }
+      ]
+    },
+    {
+      "question_id": "349072",
+      "surface": "林",
+      "word": "林",
+      "reading": "はやし",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348755",
+      "surface": "屋上",
+      "word": "屋上",
+      "reading": "おくじょう",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 35,
+          "word": "屋上",
+          "reading": "おくじょう",
+          "meaning": "tầng thượng"
+        }
+      ]
+    },
+    {
+      "question_id": "348997",
+      "surface": "走る",
+      "word": "走る",
+      "reading": "はしる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 24,
+          "word": "走る",
+          "reading": "はしる",
+          "meaning": "chạy"
+        }
+      ]
+    },
+    {
+      "question_id": "349051",
+      "surface": "鳥肉",
+      "word": "鳥肉",
+      "reading": "とりにく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348868",
+      "surface": "公園",
+      "word": "公園",
+      "reading": "こうえん",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 10,
+          "word": "公園",
+          "reading": "こうえん",
+          "meaning": "công viên"
+        }
+      ]
+    },
+    {
+      "question_id": "348878",
+      "surface": "降り",
+      "word": "降りる",
+      "reading": "おりる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 13,
+          "word": "降りる",
+          "reading": "おりる",
+          "meaning": "xuống"
+        }
+      ]
+    },
+    {
+      "question_id": "349046",
+      "surface": "頭部",
+      "word": "頭部",
+      "reading": "とうぶ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349025",
+      "surface": "到着",
+      "word": "到着",
+      "reading": "とうちゃく",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 13,
+          "word": "到着",
+          "reading": "とうちゃく",
+          "meaning": "đến nơi"
+        }
+      ]
+    },
+    {
+      "question_id": "348951",
+      "surface": "宿舎",
+      "word": "宿舎",
+      "reading": "しゅくしゃ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349085",
+      "surface": "雑木林",
+      "word": "雑木林",
+      "reading": "ぞうきばやし",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348863",
+      "surface": "決めました",
+      "word": "決める",
+      "reading": "きめる",
+      "status": "likely_variant",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 30,
+          "word": "決めます",
+          "reading": "きめます",
+          "meaning": "quyết định"
+        }
+      ]
+    },
+    {
+      "question_id": "348762",
+      "surface": "何年",
+      "word": "何年",
+      "reading": "なんねん",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349014",
+      "surface": "地下",
+      "word": "地下",
+      "reading": "ちか",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348896",
+      "surface": "私の名前",
+      "word": "名前",
+      "reading": "わたしのなまえ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349058",
+      "surface": "上品",
+      "word": "上品",
+      "reading": "じょうひん",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348993",
+      "surface": "演説",
+      "word": "演説",
+      "reading": "えんぜつ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348793",
+      "surface": "運びます",
+      "word": "運ぶ",
+      "reading": "はこぶ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 24,
+          "word": "運ぶ",
+          "reading": "はこぶ",
+          "meaning": "vận chuyển, mang"
+        }
+      ]
+    },
+    {
+      "question_id": "349089",
+      "surface": "冷たい",
+      "word": "冷たい",
+      "reading": "つめたい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348782",
+      "surface": "大学院",
+      "word": "大学院",
+      "reading": "だいがくいん",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 31,
+          "word": "大学院",
+          "reading": "だいがくいん",
+          "meaning": "cao học"
+        }
+      ]
+    },
+    {
+      "question_id": "348867",
+      "surface": "工事",
+      "word": "工事",
+      "reading": "こうじ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 3,
+          "word": "工事",
+          "reading": "こうじ",
+          "meaning": "công trình, thi công"
+        }
+      ]
+    },
+    {
+      "question_id": "348891",
+      "surface": "止む",
+      "word": "止む",
+      "reading": "やむ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348799",
+      "surface": "飲料",
+      "word": "飲料",
+      "reading": "いんりょう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348856",
+      "surface": "軽い",
+      "word": "軽い",
+      "reading": "かるい",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 7,
+          "word": "軽い",
+          "reading": "かるい",
+          "meaning": "nhẹ"
+        }
+      ]
+    },
+    {
+      "question_id": "348805",
+      "surface": "屋上",
+      "word": "屋上",
+      "reading": "おくじょう",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 35,
+          "word": "屋上",
+          "reading": "おくじょう",
+          "meaning": "tầng thượng"
+        }
+      ]
+    },
+    {
+      "question_id": "349044",
+      "surface": "離島",
+      "word": "離島",
+      "reading": "りとう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349013",
+      "surface": "短命",
+      "word": "短命",
+      "reading": "たんめい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349067",
+      "surface": "明るい",
+      "word": "明るい",
+      "reading": "あかるい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348765",
+      "surface": "都合",
+      "word": "都合",
+      "reading": "つごう",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 15,
+          "word": "都合",
+          "reading": "つごう",
+          "meaning": "sự thuận tiện, tình hình"
+        }
+      ]
+    },
+    {
+      "question_id": "348914",
+      "surface": "白い紙",
+      "word": "紙",
+      "reading": "かみ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 5,
+          "word": "紙",
+          "reading": "かみ",
+          "meaning": "giấy"
+        }
+      ]
+    },
+    {
+      "question_id": "348937",
+      "surface": "首が長い",
+      "word": "首",
+      "reading": "くび",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348761",
+      "surface": "都内",
+      "word": "都内",
+      "reading": "とない",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349053",
+      "surface": "配達",
+      "word": "配達",
+      "reading": "はいたつ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349034",
+      "surface": "着いたら",
+      "word": "着く",
+      "reading": "つく",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 13,
+          "word": "着く",
+          "reading": "つく",
+          "meaning": "đến nơi"
+        }
+      ]
+    },
+    {
+      "question_id": "348786",
+      "surface": "職員かいぎ",
+      "word": "職員",
+      "reading": "しょくいん",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348773",
+      "surface": "閉めて",
+      "word": "閉める",
+      "reading": "しめる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 13,
+          "word": "閉める",
+          "reading": "しめる",
+          "meaning": "đóng"
+        }
+      ]
+    },
+    {
+      "question_id": "348906",
+      "surface": "思い",
+      "word": "思う",
+      "reading": "おもう",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 11,
+          "word": "思う",
+          "reading": "おもう",
+          "meaning": "nghĩ"
+        }
+      ]
+    },
+    {
+      "question_id": "348920",
+      "surface": "あの事",
+      "word": "事",
+      "reading": "こと",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348956",
+      "surface": "少し",
+      "word": "少し",
+      "reading": "すこし",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349081",
+      "surface": "夜食",
+      "word": "夜食",
+      "reading": "やしょく",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 6,
+          "word": "夜食",
+          "reading": "やしょく",
+          "meaning": "bữa ăn đêm"
+        }
+      ]
+    },
+    {
+      "question_id": "348807",
+      "surface": "音",
+      "word": "音",
+      "reading": "おと",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348809",
+      "surface": "化学",
+      "word": "化学",
+      "reading": "かがく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348929",
+      "surface": "借りました",
+      "word": "借りる",
+      "reading": "かりる",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349026",
+      "surface": "山中町",
+      "word": "山中町",
+      "reading": "やまなかちょう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348792",
+      "surface": "飲む",
+      "word": "飲む",
+      "reading": "のむ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348978",
+      "surface": "声",
+      "word": "声",
+      "reading": "こえ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 27,
+          "word": "声",
+          "reading": "こえ",
+          "meaning": "tiếng, giọng"
+        }
+      ]
+    },
+    {
+      "question_id": "349065",
+      "surface": "妹",
+      "word": "妹",
+      "reading": "いもうと",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 1,
+          "word": "妹",
+          "reading": "いもうと",
+          "meaning": "em gái"
+        }
+      ]
+    },
+    {
+      "question_id": "348794",
+      "surface": "映画",
+      "word": "映画",
+      "reading": "えいが",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 10,
+          "word": "映画",
+          "reading": "えいが",
+          "meaning": "phim điện ảnh"
+        }
+      ]
+    },
+    {
+      "question_id": "349075",
+      "surface": "髪の毛",
+      "word": "髪の毛",
+      "reading": "かみのけ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 12,
+          "word": "髪の毛",
+          "reading": "かみのけ",
+          "meaning": "tóc"
+        }
+      ]
+    },
+    {
+      "question_id": "348986",
+      "surface": "晴天",
+      "word": "晴天",
+      "reading": "せいてん",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349004",
+      "surface": "太平洋",
+      "word": "太平洋",
+      "reading": "たいへいよう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348850",
+      "surface": "区",
+      "word": "区",
+      "reading": "く",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 9,
+          "word": "区",
+          "reading": "く",
+          "meaning": "quận, khu"
+        }
+      ]
+    },
+    {
+      "question_id": "348943",
+      "surface": "終わりました",
+      "word": "終わる",
+      "reading": "おわる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 3,
+          "word": "終わる",
+          "reading": "おわる",
+          "meaning": "kết thúc"
+        }
+      ]
+    },
+    {
+      "question_id": "348982",
+      "surface": "切って",
+      "word": "切る",
+      "reading": "きる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 4,
+          "word": "切る",
+          "reading": "きる",
+          "meaning": "cắt"
+        }
+      ]
+    },
+    {
+      "question_id": "349100",
+      "surface": "教えて",
+      "word": "教える",
+      "reading": "おしえる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 22,
+          "word": "教える",
+          "reading": "おしえる",
+          "meaning": "dạy, chỉ"
+        }
+      ]
+    },
+    {
+      "question_id": "348947",
+      "surface": "集合",
+      "word": "集合",
+      "reading": "しゅうごう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348991",
+      "surface": "積雪",
+      "word": "積雪",
+      "reading": "せきせつ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348916",
+      "surface": "次の",
+      "word": "次",
+      "reading": "つぎ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348801",
+      "surface": "肉屋",
+      "word": "肉屋",
+      "reading": "にくや",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349036",
+      "surface": "お昼ご飯",
+      "word": "お昼ご飯",
+      "reading": "おひるごはん",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348874",
+      "surface": "公",
+      "word": "公",
+      "reading": "おおやけ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348983",
+      "surface": "正式",
+      "word": "正式",
+      "reading": "せいしき",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 23,
+          "word": "正式",
+          "reading": "せいしき",
+          "meaning": "chính thức"
+        }
+      ]
+    },
+    {
+      "question_id": "349068",
+      "surface": "質問",
+      "word": "質問",
+      "reading": "しつもん",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 22,
+          "word": "質問",
+          "reading": "しつもん",
+          "meaning": "câu hỏi"
+        }
+      ]
+    },
+    {
+      "question_id": "348848",
+      "surface": "子牛",
+      "word": "子牛",
+      "reading": "こうし",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349098",
+      "surface": "見ました",
+      "word": "見る",
+      "reading": "みる",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349091",
+      "surface": "有料",
+      "word": "有料",
+      "reading": "ゆうりょう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349028",
+      "surface": "小鳥",
+      "word": "小鳥",
+      "reading": "ことり",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348757",
+      "surface": "全部",
+      "word": "全部",
+      "reading": "ぜんぶ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 2,
+          "word": "全部",
+          "reading": "ぜんぶ",
+          "meaning": "toàn bộ, tất cả"
+        }
+      ]
+    },
+    {
+      "question_id": "348958",
+      "surface": "重力",
+      "word": "重力",
+      "reading": "じゅうりょく",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348752",
+      "surface": "小さい",
+      "word": "小さい",
+      "reading": "ちいさい",
+      "status": "likely_variant",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 38,
+          "word": "小さな〜",
+          "reading": "ちいさな〜",
+          "meaning": "~ bé, ~ nhỏ"
+        }
+      ]
+    },
+    {
+      "question_id": "348849",
+      "surface": "銀色",
+      "word": "銀色",
+      "reading": "ぎんいろ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348903",
+      "surface": "使用",
+      "word": "使用",
+      "reading": "しよう",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 5,
+          "word": "使用",
+          "reading": "しよう",
+          "meaning": "sử dụng"
+        }
+      ]
+    },
+    {
+      "question_id": "349095",
+      "surface": "冷やして",
+      "word": "冷やす",
+      "reading": "ひやす",
+      "status": "likely_variant",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 32,
+          "word": "冷やします",
+          "reading": "ひやします",
+          "meaning": "làm mát, làm lạnh"
+        }
+      ]
+    },
+    {
+      "question_id": "348950",
+      "surface": "重い",
+      "word": "重い",
+      "reading": "おもい",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 7,
+          "word": "重い",
+          "reading": "おもい",
+          "meaning": "nặng"
+        }
+      ]
+    },
+    {
+      "question_id": "349094",
+      "surface": "資料",
+      "word": "資料",
+      "reading": "しりょう",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 11,
+          "word": "資料",
+          "reading": "しりょう",
+          "meaning": "tài liệu"
+        }
+      ]
+    },
+    {
+      "question_id": "348748",
+      "surface": "作り方",
+      "word": "作り方",
+      "reading": "つくりかた",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348770",
+      "surface": "青い",
+      "word": "青い",
+      "reading": "あおい",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 14,
+          "word": "青い",
+          "reading": "あおい",
+          "meaning": "xanh"
+        }
+      ]
+    },
+    {
+      "question_id": "348800",
+      "surface": "運転",
+      "word": "運転",
+      "reading": "うんてん",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348975",
+      "surface": "ひとり親",
+      "word": "ひとり親",
+      "reading": "ひとりおや",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349097",
+      "surface": "小林",
+      "word": "小林",
+      "reading": "こばやし",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349012",
+      "surface": "知らない",
+      "word": "知る",
+      "reading": "しる",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 17,
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "biết"
+        }
+      ]
+    },
+    {
+      "question_id": "348968",
+      "surface": "真実",
+      "word": "真実",
+      "reading": "しんじつ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 21,
+          "word": "真実",
+          "reading": "しんじつ",
+          "meaning": "sự thật"
+        }
+      ]
+    },
+    {
+      "question_id": "348872",
+      "surface": "決定",
+      "word": "決定",
+      "reading": "けってい",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "349077",
+      "surface": "羽毛",
+      "word": "羽毛",
+      "reading": "うもう",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348772",
+      "surface": "両替",
+      "word": "両替",
+      "reading": "りょうがえ",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348842",
+      "surface": "近い",
+      "word": "近い",
+      "reading": "ちかい",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 2,
+          "word": "近い",
+          "reading": "ちかい",
+          "meaning": "gần"
+        }
+      ]
+    },
+    {
+      "question_id": "349084",
+      "surface": "冷えます",
+      "word": "冷える",
+      "reading": "ひえる",
+      "status": "new",
+      "matches": []
+    },
+    {
+      "question_id": "348753",
+      "surface": "歌手",
+      "word": "歌手",
+      "reading": "かしゅ",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "new_vocab_n4",
+          "lesson": 28,
+          "word": "歌手",
+          "reading": "かしゅ",
+          "meaning": "ca sĩ"
+        }
+      ]
+    },
+    {
+      "question_id": "348811",
+      "surface": "家族",
+      "word": "家族",
+      "reading": "かぞく",
+      "status": "exact_existing",
+      "matches": [
+        {
+          "source": "kanji_n4",
+          "lesson": 1,
+          "word": "家族",
+          "reading": "かぞく",
+          "meaning": "gia đình"
+        }
+      ]
+    }
+  ]
+}

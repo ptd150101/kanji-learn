@@ -1,0 +1,45 @@
+name: Build crawl vocabulary database once
+
+on:
+  push:
+    branches:
+      - feat/crawl-vocab-database
+    paths:
+      - scripts/vocab_db.py
+      - scripts/import_crawl.py
+      - tests/test_crawl_import.py
+      - .github/workflows/build-crawl-vocab-db-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build SQLite vocabulary database
+        run: |
+          python scripts/vocab_db.py \
+            --output data/kanji_vocab.sqlite \
+            --stats data/kanji_vocab_stats.json
+
+      - name: Run crawler import tests
+        run: |
+          python -m unittest tests/test_crawl_import.py
+
+      - name: Commit generated database and remove one-shot workflow
+        run: |
+          rm .github/workflows/build-crawl-vocab-db-once.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m "Generate Kanji vocabulary SQLite database"
+          git push

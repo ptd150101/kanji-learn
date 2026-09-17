@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Compare candidates with current website vocab
+      - name: Compare candidates with all current website vocab
         run: |
           python - <<'PY'
           import json,re
@@ -28,11 +28,12 @@ jobs:
               if x!=y: break
               n+=1
             return n
-          n4=json.loads(Path('data_n4.json').read_text(encoding='utf-8'))['vocab']
-          extra=json.loads(Path('vocab_n4_26_31.json').read_text(encoding='utf-8'))
           sources=[]
-          for x in n4: sources.append({'source':'kanji_n4','lesson':x.get('lesson'),'word':x.get('word',''),'reading':x.get('reading',''),'meaning':x.get('meaning','')})
-          for x in extra: sources.append({'source':'new_vocab_n4','lesson':x.get('lesson'),'word':x.get('ja',''),'reading':x.get('furigana',''),'meaning':x.get('vi','')})
+          for fn,label in [('data_n5.json','kanji_n5'),('data_n4.json','kanji_n4')]:
+            for x in json.loads(Path(fn).read_text(encoding='utf-8'))['vocab']:
+              sources.append({'source':label,'lesson':x.get('lesson'),'word':x.get('word',''),'reading':x.get('reading',''),'meaning':x.get('meaning','')})
+          for x in json.loads(Path('vocab_n4_26_31.json').read_text(encoding='utf-8')):
+            sources.append({'source':'new_vocab_n4','lesson':x.get('lesson'),'word':x.get('ja',''),'reading':x.get('furigana',''),'meaning':x.get('vi','')})
           exact={(x['word'],x['reading']):x for x in sources}
           byword={}; bysig={}
           for x in sources:
@@ -59,12 +60,18 @@ jobs:
           for r in rows: summary[r['status']]=summary.get(r['status'],0)+1
           out={'summary':summary,'rows':rows}
           Path('analysis/candidate_match_report.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          compact=[]
+          for r in rows:
+            if r['status']!='exact_existing':
+              m=' | '.join(f"{x['source']}:{x['word']}/{x['reading']}" for x in r['matches'])
+              compact.append('\t'.join([r['status'],r['question_id'],r['surface'],r['word'],r['reading'],m]))
+          Path('analysis/nonexact_candidates.tsv').write_text('\n'.join(compact)+'\n',encoding='utf-8')
           print(summary)
           PY
       - name: Commit report
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add analysis/candidate_match_report.json
-          git commit -m 'chore: analyze N4 crawl candidates against current vocab'
+          git add analysis/candidate_match_report.json analysis/nonexact_candidates.tsv
+          git commit -m 'chore: analyze N4 crawl candidates against all vocab'
           git push

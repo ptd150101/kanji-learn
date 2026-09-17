@@ -1,0 +1,1015 @@
+[
+  {
+    "word": "注ぐ",
+    "reading": "そそぐ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "注",
+        "han_viet": "CHÚ"
+      }
+    ]
+  },
+  {
+    "word": "声楽",
+    "reading": "せいがく",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "声",
+        "han_viet": "THANH"
+      },
+      {
+        "char": "楽",
+        "han_viet": "LẠC"
+      }
+    ]
+  },
+  {
+    "word": "草原",
+    "reading": "そうげん",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "草",
+        "han_viet": null
+      },
+      {
+        "char": "原",
+        "han_viet": "NGUYÊN / NGUYỆN"
+      }
+    ]
+  },
+  {
+    "word": "冷水",
+    "reading": "れいすい",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "冷",
+        "han_viet": "LÃNH"
+      },
+      {
+        "char": "水",
+        "han_viet": "THỦY"
+      }
+    ]
+  },
+  {
+    "word": "起床",
+    "reading": "きしょう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "起",
+        "han_viet": "KHỈ / KHỞI"
+      },
+      {
+        "char": "床",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "森",
+    "reading": "もり",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "森",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "困難",
+    "reading": "こんなん",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "困",
+        "han_viet": "KHỐN"
+      },
+      {
+        "char": "難",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "取得",
+    "reading": "しゅとく",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "取",
+        "han_viet": "THỦ / TỤ"
+      },
+      {
+        "char": "得",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "一人旅",
+    "reading": "ひとりたび",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "一",
+        "han_viet": "NHẤT"
+      },
+      {
+        "char": "人",
+        "han_viet": "NHÂN"
+      },
+      {
+        "char": "旅",
+        "han_viet": "LỮ"
+      }
+    ]
+  },
+  {
+    "word": "方",
+    "reading": "かた",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "方",
+        "han_viet": "PHƯƠNG"
+      }
+    ]
+  },
+  {
+    "word": "低速",
+    "reading": "ていそく",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "低",
+        "han_viet": "ĐÊ"
+      },
+      {
+        "char": "速",
+        "han_viet": "TỐC"
+      }
+    ]
+  },
+  {
+    "word": "血",
+    "reading": "ち",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "血",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "未定",
+    "reading": "みてい",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "未",
+        "han_viet": null
+      },
+      {
+        "char": "定",
+        "han_viet": "ĐÍNH / ĐỊNH"
+      }
+    ]
+  },
+  {
+    "word": "通学",
+    "reading": "つうがく",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "通",
+        "han_viet": "THÔNG"
+      },
+      {
+        "char": "学",
+        "han_viet": "HỌC"
+      }
+    ]
+  },
+  {
+    "word": "映す",
+    "reading": "うつす",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "映",
+        "han_viet": "ÁNH"
+      }
+    ]
+  },
+  {
+    "word": "菜の花",
+    "reading": "なのはな",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "菜",
+        "han_viet": null
+      },
+      {
+        "char": "花",
+        "han_viet": "HOA"
+      }
+    ]
+  },
+  {
+    "word": "親指",
+    "reading": "おやゆび",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "親",
+        "han_viet": "THÂN"
+      },
+      {
+        "char": "指",
+        "han_viet": "CHỈ"
+      }
+    ]
+  },
+  {
+    "word": "多々",
+    "reading": "たた",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "多",
+        "han_viet": "ĐA"
+      }
+    ]
+  },
+  {
+    "word": "この度",
+    "reading": "このたび",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "度",
+        "han_viet": "ĐỘ"
+      }
+    ]
+  },
+  {
+    "word": "暗黒",
+    "reading": "あんこく",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "暗",
+        "han_viet": "ÁM"
+      },
+      {
+        "char": "黒",
+        "han_viet": "HẮC"
+      }
+    ]
+  },
+  {
+    "word": "静止画",
+    "reading": "せいしが",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "静",
+        "han_viet": "TĨNH"
+      },
+      {
+        "char": "止",
+        "han_viet": "CHỈ"
+      },
+      {
+        "char": "画",
+        "han_viet": "HỌA"
+      }
+    ]
+  },
+  {
+    "word": "音楽会",
+    "reading": "おんがくかい",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "音",
+        "han_viet": "ÂM"
+      },
+      {
+        "char": "楽",
+        "han_viet": "LẠC"
+      },
+      {
+        "char": "会",
+        "han_viet": "HỘI"
+      }
+    ]
+  },
+  {
+    "word": "所持",
+    "reading": "しょじ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "所",
+        "han_viet": "SỞ"
+      },
+      {
+        "char": "持",
+        "han_viet": "TRÌ"
+      }
+    ]
+  },
+  {
+    "word": "市",
+    "reading": "し",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "市",
+        "han_viet": "THỊ"
+      }
+    ]
+  },
+  {
+    "word": "春秋",
+    "reading": "しゅんじゅう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "春",
+        "han_viet": "XUÂN"
+      },
+      {
+        "char": "秋",
+        "han_viet": "THU"
+      }
+    ]
+  },
+  {
+    "word": "習字",
+    "reading": "しゅうじ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "習",
+        "han_viet": "TẬP"
+      },
+      {
+        "char": "字",
+        "han_viet": "TỰ"
+      }
+    ]
+  },
+  {
+    "word": "体",
+    "reading": "からだ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "体",
+        "han_viet": "THỂ"
+      }
+    ]
+  },
+  {
+    "word": "遊園地",
+    "reading": "ゆうえんち",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "遊",
+        "han_viet": null
+      },
+      {
+        "char": "園",
+        "han_viet": "VIÊN"
+      },
+      {
+        "char": "地",
+        "han_viet": "ĐỊA"
+      }
+    ]
+  },
+  {
+    "word": "耳の穴",
+    "reading": "みみのあな",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "耳",
+        "han_viet": "NHĨ"
+      },
+      {
+        "char": "穴",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "両方",
+    "reading": "りょうほう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "両",
+        "han_viet": "LƯỠNG"
+      },
+      {
+        "char": "方",
+        "han_viet": "PHƯƠNG"
+      }
+    ]
+  },
+  {
+    "word": "好む",
+    "reading": "このむ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "好",
+        "han_viet": "HẢO"
+      }
+    ]
+  },
+  {
+    "word": "血液",
+    "reading": "けつえき",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "血",
+        "han_viet": null
+      },
+      {
+        "char": "液",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "空席",
+    "reading": "くうせき",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "空",
+        "han_viet": "KHÔNG"
+      },
+      {
+        "char": "席",
+        "han_viet": "TỊCH"
+      }
+    ]
+  },
+  {
+    "word": "林",
+    "reading": "はやし",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "林",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "頭部",
+    "reading": "とうぶ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "頭",
+        "han_viet": null
+      },
+      {
+        "char": "部",
+        "han_viet": "BỘ"
+      }
+    ]
+  },
+  {
+    "word": "宿舎",
+    "reading": "しゅくしゃ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "宿",
+        "han_viet": "TÚC"
+      },
+      {
+        "char": "舎",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "雑木林",
+    "reading": "ぞうきばやし",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "雑",
+        "han_viet": "TẠP"
+      },
+      {
+        "char": "木",
+        "han_viet": "MỘC"
+      },
+      {
+        "char": "林",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "何年",
+    "reading": "なんねん",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "何",
+        "han_viet": "HÀ"
+      },
+      {
+        "char": "年",
+        "han_viet": "NIÊN"
+      }
+    ]
+  },
+  {
+    "word": "上品",
+    "reading": "じょうひん",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "上",
+        "han_viet": "THƯỢNG"
+      },
+      {
+        "char": "品",
+        "han_viet": "PHẨM"
+      }
+    ]
+  },
+  {
+    "word": "演説",
+    "reading": "えんぜつ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "演",
+        "han_viet": null
+      },
+      {
+        "char": "説",
+        "han_viet": "THUYẾT"
+      }
+    ]
+  },
+  {
+    "word": "冷たい",
+    "reading": "つめたい",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "冷",
+        "han_viet": "LÃNH"
+      }
+    ]
+  },
+  {
+    "word": "止む",
+    "reading": "やむ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "止",
+        "han_viet": "CHỈ"
+      }
+    ]
+  },
+  {
+    "word": "飲料",
+    "reading": "いんりょう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "飲",
+        "han_viet": "ẨM"
+      },
+      {
+        "char": "料",
+        "han_viet": "LIỆU"
+      }
+    ]
+  },
+  {
+    "word": "離島",
+    "reading": "りとう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "離",
+        "han_viet": "LI / LY / LỆ"
+      },
+      {
+        "char": "島",
+        "han_viet": "ĐẢO"
+      }
+    ]
+  },
+  {
+    "word": "短命",
+    "reading": "たんめい",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "短",
+        "han_viet": "ĐOẢN"
+      },
+      {
+        "char": "命",
+        "han_viet": "MỆNH"
+      }
+    ]
+  },
+  {
+    "word": "都内",
+    "reading": "とない",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "都",
+        "han_viet": "ĐÔ"
+      },
+      {
+        "char": "内",
+        "han_viet": "NỘI"
+      }
+    ]
+  },
+  {
+    "word": "配達",
+    "reading": "はいたつ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "配",
+        "han_viet": "PHỐI"
+      },
+      {
+        "char": "達",
+        "han_viet": "ĐẠT"
+      }
+    ]
+  },
+  {
+    "word": "職員",
+    "reading": "しょくいん",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "職",
+        "han_viet": null
+      },
+      {
+        "char": "員",
+        "han_viet": "VIÊN"
+      }
+    ]
+  },
+  {
+    "word": "音",
+    "reading": "おと",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "音",
+        "han_viet": "ÂM"
+      }
+    ]
+  },
+  {
+    "word": "化学",
+    "reading": "かがく",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "化",
+        "han_viet": "HÓA"
+      },
+      {
+        "char": "学",
+        "han_viet": "HỌC"
+      }
+    ]
+  },
+  {
+    "word": "借りる",
+    "reading": "かりる",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "借",
+        "han_viet": null
+      }
+    ]
+  },
+  {
+    "word": "晴天",
+    "reading": "せいてん",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "晴",
+        "han_viet": "TÌNH"
+      },
+      {
+        "char": "天",
+        "han_viet": "THIÊN"
+      }
+    ]
+  },
+  {
+    "word": "太平洋",
+    "reading": "たいへいよう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "太",
+        "han_viet": "THÁI"
+      },
+      {
+        "char": "平",
+        "han_viet": "BÌNH"
+      },
+      {
+        "char": "洋",
+        "han_viet": "DƯƠNG"
+      }
+    ]
+  },
+  {
+    "word": "集合",
+    "reading": "しゅうごう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "集",
+        "han_viet": "TẬP"
+      },
+      {
+        "char": "合",
+        "han_viet": "HỢP"
+      }
+    ]
+  },
+  {
+    "word": "積雪",
+    "reading": "せきせつ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "積",
+        "han_viet": null
+      },
+      {
+        "char": "雪",
+        "han_viet": "TUYẾT"
+      }
+    ]
+  },
+  {
+    "word": "次の",
+    "reading": "つぎの",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "次",
+        "han_viet": "THỨ / TƯ"
+      }
+    ]
+  },
+  {
+    "word": "肉屋",
+    "reading": "にくや",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "肉",
+        "han_viet": "NHỤC"
+      },
+      {
+        "char": "屋",
+        "han_viet": "ỐC"
+      }
+    ]
+  },
+  {
+    "word": "お昼ご飯",
+    "reading": "おひるごはん",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "昼",
+        "han_viet": "TRÚ"
+      },
+      {
+        "char": "飯",
+        "han_viet": "PHẠN"
+      }
+    ]
+  },
+  {
+    "word": "公",
+    "reading": "おおやけ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "公",
+        "han_viet": "CÔNG"
+      }
+    ]
+  },
+  {
+    "word": "子牛",
+    "reading": "こうし",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "子",
+        "han_viet": "TỬ"
+      },
+      {
+        "char": "牛",
+        "han_viet": "NGƯU"
+      }
+    ]
+  },
+  {
+    "word": "有料",
+    "reading": "ゆうりょう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "有",
+        "han_viet": "HỮU"
+      },
+      {
+        "char": "料",
+        "han_viet": "LIỆU"
+      }
+    ]
+  },
+  {
+    "word": "小鳥",
+    "reading": "ことり",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "小",
+        "han_viet": "TIỂU"
+      },
+      {
+        "char": "鳥",
+        "han_viet": "ĐIỂU"
+      }
+    ]
+  },
+  {
+    "word": "重力",
+    "reading": "じゅうりょく",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "重",
+        "han_viet": "TRỌNG"
+      },
+      {
+        "char": "力",
+        "han_viet": "LỰC"
+      }
+    ]
+  },
+  {
+    "word": "銀色",
+    "reading": "ぎんいろ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "銀",
+        "han_viet": "NGÂN"
+      },
+      {
+        "char": "色",
+        "han_viet": "SẮC"
+      }
+    ]
+  },
+  {
+    "word": "作り方",
+    "reading": "つくりかた",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "作",
+        "han_viet": "TÁC"
+      },
+      {
+        "char": "方",
+        "han_viet": "PHƯƠNG"
+      }
+    ]
+  },
+  {
+    "word": "運転",
+    "reading": "うんてん",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "運",
+        "han_viet": "VẬN"
+      },
+      {
+        "char": "転",
+        "han_viet": "CHUYỂN"
+      }
+    ]
+  },
+  {
+    "word": "ひとり親",
+    "reading": "ひとりおや",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "親",
+        "han_viet": "THÂN"
+      }
+    ]
+  },
+  {
+    "word": "決定",
+    "reading": "けってい",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "決",
+        "han_viet": "HUYẾT / KHUYẾT / QUYẾT"
+      },
+      {
+        "char": "定",
+        "han_viet": "ĐÍNH / ĐỊNH"
+      }
+    ]
+  },
+  {
+    "word": "羽毛",
+    "reading": "うもう",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "羽",
+        "han_viet": null
+      },
+      {
+        "char": "毛",
+        "han_viet": "MAO"
+      }
+    ]
+  },
+  {
+    "word": "両替",
+    "reading": "りょうがえ",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "両",
+        "han_viet": "LƯỠNG"
+      },
+      {
+        "char": "替",
+        "han_viet": "THẾ"
+      }
+    ]
+  },
+  {
+    "word": "冷える",
+    "reading": "ひえる",
+    "same_word": [],
+    "han_viet_chars": [
+      {
+        "char": "冷",
+        "han_viet": "LÃNH"
+      }
+    ]
+  }
+]

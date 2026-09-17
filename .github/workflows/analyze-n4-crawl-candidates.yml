@@ -2,7 +2,9 @@ name: Analyze N4 crawl candidates
 on:
   push:
     branches: [feat/n4-crawl-topics-163]
-    paths: ['analysis/crawl_candidates_163.tsv']
+    paths:
+      - 'analysis/crawl_candidates_163.tsv'
+      - '.github/workflows/analyze-n4-crawl-candidates.yml'
 permissions:
   contents: write
 jobs:
@@ -32,8 +34,7 @@ jobs:
           for x in n4: sources.append({'source':'kanji_n4','lesson':x.get('lesson'),'word':x.get('word',''),'reading':x.get('reading',''),'meaning':x.get('meaning','')})
           for x in extra: sources.append({'source':'new_vocab_n4','lesson':x.get('lesson'),'word':x.get('ja',''),'reading':x.get('furigana',''),'meaning':x.get('vi','')})
           exact={(x['word'],x['reading']):x for x in sources}
-          byword={}
-          bysig={}
+          byword={}; bysig={}
           for x in sources:
             byword.setdefault(x['word'],[]).append(x)
             if sig(x['word']): bysig.setdefault(sig(x['word']),[]).append(x)
@@ -46,8 +47,7 @@ jobs:
             elif word in byword:
               status='word_existing'; matches=byword[word]
             else:
-              s=sig(word)
-              fuzzy=[]
+              s=sig(word); fuzzy=[]
               for x in bysig.get(s,[]):
                 p=pref(reading,x['reading'])
                 if p>=3 or (len(s)==1 and p>=2): fuzzy.append((p,x))

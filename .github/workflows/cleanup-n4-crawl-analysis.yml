@@ -1,0 +1,54 @@
+name: Cleanup N4 crawl analysis artifacts
+on:
+  push:
+    branches: [feat/n4-crawl-topics-163]
+    paths: ['.github/workflows/cleanup-n4-crawl-analysis.yml']
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate final curated dataset
+        run: |
+          python - <<'PY'
+          import json,re
+          from collections import Counter
+          from pathlib import Path
+          n4=json.loads(Path('data_n4.json').read_text(encoding='utf-8'))
+          rows=[x for x in n4['vocab'] if x.get('source')=='riki-crawl-2026-09-17']
+          assert len(rows)==75
+          assert Counter(x['lesson'] for x in rows)==Counter({25:15,26:15,27:15,28:15,29:15})
+          assert len({(x['word'],x['reading']) for x in rows})==75
+          assert n4['total_vocab']==524
+          hv=json.loads(Path('han_viet.json').read_text(encoding='utf-8'))
+          K=re.compile(r'[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]')
+          missing=sorted({c for x in rows for c in K.findall(x['word']) if c not in hv})
+          assert not missing, missing
+          html=Path('index.html').read_text(encoding='utf-8')
+          assert '890 từ vựng • N5: 26 bài • N4: 29 bài' in html
+          assert '"25":"Thiên nhiên & khoa học"' in html
+          assert '"29":"Đời sống & con người"' in html
+          stats=json.loads(Path('data/kanji_vocab_stats.json').read_text(encoding='utf-8'))
+          assert stats['unique_vocab']==1253
+          assert stats['by_level']['N4']==906
+          print('final validation OK')
+          PY
+      - name: Remove temporary analysis machinery
+        run: |
+          rm -rf analysis
+          rm -f .github/workflows/snapshot-current-n4-vocab.yml
+          rm -f .github/workflows/analyze-n4-crawl-candidates.yml
+          rm -f .github/workflows/apply-n4-crawl-topics.yml
+          rm -f .github/workflows/cleanup-n4-crawl-analysis.yml
+      - name: Commit cleanup
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'chore: remove temporary crawl analysis artifacts'
+          git push

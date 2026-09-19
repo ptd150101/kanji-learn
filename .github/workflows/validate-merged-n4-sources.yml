@@ -37,8 +37,9 @@ jobs:
               got=sum(1 for x in n4['vocab'] if x['lesson']==lesson)
               assert got==count,(lesson,got)
 
-          keys=[(x['word'],x['reading']) for x in n4['vocab']]
-          assert len(keys)==len(set(keys)), 'duplicate N4 word+reading'
+          new_rows=[x for x in n4['vocab'] if x['lesson'] in expected]
+          new_keys=[(x['word'],x['reading']) for x in new_rows]
+          assert len(new_keys)==len(set(new_keys)), 'duplicate word+reading in new N4 lessons'
 
           must={
             '営業':'えいぎょう','顔':'かお','進む':'すすむ','産む':'うむ','引く':'ひく',

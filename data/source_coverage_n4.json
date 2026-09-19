@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-09-19",
+  "sources": {
+    "nihongo_master": {
+      "n5_kanji": 103,
+      "n4_kanji": 181,
+      "urls": [
+        "https://www.nihongomaster.com/jlpt-n5-kanji-list",
+        "https://www.nihongomaster.com/jlpt-n4-kanji-list"
+      ]
+    },
+    "minna_no_nihongo": {
+      "scope": "Minna no Nihongo I + II, dùng các Kanji thuộc N5/N4 để đối chiếu và chọn từ đại diện theo ngữ cảnh bài học",
+      "urls": [
+        "https://en-nihongo.com/japanesetips/kanji/kanji-list-for-minna-no-nihongo/",
+        "https://en-nihongo.com/japanesetips/kanji/kanji-list-for-minna-no-nihongo-2/"
+      ]
+    },
+    "jlpt_n4_past_exam_pdf": {
+      "title_claims_vocab": 231,
+      "observed_rows": 230,
+      "kanji_containing_rows": 219,
+      "already_in_n4_kanji_dataset": 88,
+      "already_elsewhere_on_site": 23,
+      "added_new_rows": 108,
+      "note": "Bảng nguồn tự ghi 231 nhưng tổng nhóm 113 danh từ + 69 động từ + 33 tính từ + 7 phó từ + 8 katakana = 230; số thứ tự trên trang tính từ có bước nhảy 197→199."
+    }
+  },
+  "additions": {
+    "n5_level_alignment": 3,
+    "n4_from_pdf": 108,
+    "n4_source_gap_representatives": 6,
+    "n4_total_added": 114,
+    "n5_total_added": 3,
+    "n4_new_lessons": {
+      "30": "Công việc & dịch vụ",
+      "31": "Giao tiếp & xã hội",
+      "32": "Du lịch & địa điểm",
+      "33": "Học tập & thông tin",
+      "34": "Sinh hoạt & sức khỏe",
+      "35": "Di chuyển & thao tác",
+      "36": "Hành động & quan hệ",
+      "37": "Trạng thái & ứng xử"
+    },
+    "lesson_counts": {
+      "30": 15,
+      "31": 15,
+      "32": 15,
+      "33": 14,
+      "34": 14,
+      "35": 14,
+      "36": 14,
+      "37": 13
+    }
+  },
+  "coverage_after": {
+    "nihongo_master_n5_missing_anywhere": [],
+    "nihongo_master_n4_missing_anywhere": [],
+    "n5_vocab_count": 369,
+    "n4_vocab_count": 638,
+    "n5_unique_kanji": 205,
+    "n4_unique_kanji": 464,
+    "website_unique_kanji": 532
+  },
+  "normalization": {
+    "(100)枚": "百枚",
+    "han_viet_policy": "mỗi Kanji ưu tiên một âm Hán-Việt thông dụng/phù hợp học tập; không nối toàn bộ âm hiếm"
+  }
+}

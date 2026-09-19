@@ -28,7 +28,7 @@
     "25": "Thời gian (4)",
     "26": "Nâng cao"
   },
-  "total_vocab": 366,
+  "total_vocab": 369,
   "vocab": [
     {
       "level": "N5",
@@ -2615,6 +2615,27 @@
       "word": "能力",
       "reading": "のうりょく",
       "meaning": "năng lực"
+    },
+    {
+      "lesson": 7,
+      "word": "日本語",
+      "reading": "にほんご",
+      "meaning": "tiếng Nhật",
+      "level": "N5"
+    },
+    {
+      "lesson": 8,
+      "word": "白い",
+      "reading": "しろい",
+      "meaning": "trắng",
+      "level": "N5"
+    },
+    {
+      "lesson": 24,
+      "word": "駅",
+      "reading": "えき",
+      "meaning": "nhà ga",
+      "level": "N5"
     }
   ]
 }

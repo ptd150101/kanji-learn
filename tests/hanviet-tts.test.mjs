@@ -14,7 +14,7 @@ const helperStart = html.indexOf("function cleanJapaneseSpeechText");
 const helperEnd = html.indexOf("function speak(text)", helperStart);
 assert.notEqual(helperStart, -1, "Không tìm thấy cleanJapaneseSpeechText");
 assert.notEqual(helperEnd, -1, "Không tìm thấy function speak");
-const helpers = new Function(`${html.slice(helperStart, helperEnd)}\nreturn { cleanJapaneseSpeechText, ttsTextForItem };`)();
+const helpers = new Function(`${html.slice(helperStart, helperEnd)}\nreturn { cleanJapaneseSpeechText, ttsTextForItem, isEloquenceJapaneseVoice, japaneseVoiceScore };`)();
 
 test("mọi Kanji trong bộ từ mới đều có Hán-Việt", () => {
   const missing = new Set();
@@ -37,4 +37,13 @@ test("TTS giữ nguyên âm ghép và âm ngắt nhỏ", () => {
   assert.equal(helpers.cleanJapaneseSpeechText("しゅっせきします"), "しゅっせきします");
   assert.equal(helpers.cleanJapaneseSpeechText("はっぴょう"), "はっぴょう");
   assert.equal(helpers.ttsTextForItem({ reading: "きょういく", word: "教育" }), "きょういく");
+});
+
+
+test("TTS không tự ưu tiên Apple Eloquence khi có lựa chọn tốt hơn", () => {
+  const eloquence = { name: "Eddy", voiceURI: "com.apple.eloquence.ja-JP.Eddy", lang: "ja-JP", localService: true, default: true };
+  const microsoft = { name: "Microsoft Nanami Online (Natural) - Japanese (Japan)", voiceURI: "Microsoft Nanami", lang: "ja-JP", localService: false, default: false };
+  assert.equal(helpers.isEloquenceJapaneseVoice(eloquence), true);
+  assert.ok(helpers.japaneseVoiceScore(eloquence) < 0);
+  assert.ok(helpers.japaneseVoiceScore(microsoft) > helpers.japaneseVoiceScore(eloquence));
 });

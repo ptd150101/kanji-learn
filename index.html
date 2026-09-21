@@ -605,7 +605,7 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
         </select>
         <button class="secondary" id="testVoiceBtn" type="button">🔊 Nghe thử giọng</button>
       </div>
-      <div class="source-note">Dùng <code>window.speechSynthesis</code> của Microsoft Edge; ưu tiên giọng <b>ja-JP / Microsoft</b> nếu máy có. Tốc độ mặc định là <b>1.00×</b>. Có thể bấm <b>Nghe thử giọng</b> trước khi bắt đầu. Khi nghe trong câu hỏi hoặc sau khi chọn đáp án, website sẽ đọc <b>furigana/cách đọc chuẩn trong dữ liệu</b> thay vì đưa Kanji thẳng cho TTS, tránh Edge tự đoán sai cách đọc. Không cần backend hay API key.</div>
+      <div class="source-note">Dùng <code>window.speechSynthesis</code> với ngôn ngữ <b>ja-JP</b>. Website ưu tiên voice Nhật chất lượng tốt (Microsoft/Google/Nanami/Keita/Kyoko/Otoya); nếu trình duyệt chỉ cung cấp voice <b>Eloquence</b> thì mặc định để hệ thống tự chọn ja-JP thay vì ép voice đó. Khi đọc câu hỏi/đáp án, website phát <b>furigana chuẩn trong dữ liệu</b> để tránh tự đoán sai cách đọc Kanji.</div>
     </div>
 
     <div class="actions">
@@ -917,34 +917,66 @@ function selectedLessons() {
   return [...document.querySelectorAll('.lessons input:checked')].map(x => parseLessonValue(x.value));
 }
 
+function japaneseVoiceIdentity(v) {
+  return `${v?.name || ""} ${v?.voiceURI || ""}`;
+}
+
+function isEloquenceJapaneseVoice(v) {
+  return /eloquence/i.test(japaneseVoiceIdentity(v));
+}
+
+function japaneseVoiceScore(v) {
+  const identity = japaneseVoiceIdentity(v);
+  return
+    (/microsoft/i.test(identity) ? 24 : 0) +
+    (/google/i.test(identity) ? 20 : 0) +
+    (/nanami|keita|kyoko|otoya/i.test(identity) ? 12 : 0) +
+    (v?.localService ? 3 : 0) +
+    (v?.default ? 2 : 0) -
+    (isEloquenceJapaneseVoice(v) ? 100 : 0);
+}
+
 function loadVoices() {
   voices = speechSynthesis.getVoices();
   const ja = voices.filter(v => (v.lang || "").toLowerCase().startsWith("ja"));
-  const ranked = [...ja].sort((a,b) => {
-    const score = v =>
-      (/microsoft/i.test(v.name) ? 24 : 0) +
-      (/google/i.test(v.name) ? 20 : 0) +
-      (/nanami|keita|kyoko|otoya/i.test(v.name) ? 12 : 0) +
-      (v.localService ? 3 : 0) +
-      (v.default ? 2 : 0);
-    return score(b) - score(a);
-  });
+  const ranked = [...ja].sort((a,b) => japaneseVoiceScore(b) - japaneseVoiceScore(a));
   const select = $("voiceSelect");
+  const previous = select.value;
   select.innerHTML = "";
-  if (!ranked.length) {
+
+  const auto = document.createElement("option");
+  auto.value = "";
+  auto.textContent = "Tự động ja-JP (khuyến nghị)";
+  select.appendChild(auto);
+
+  ranked.forEach(v => {
     const opt = document.createElement("option");
-    opt.value = "";
-    opt.textContent = "Không thấy giọng ja-JP — dùng mặc định";
+    opt.value = v.name;
+    const warning = isEloquenceJapaneseVoice(v) ? " · ⚠️ Eloquence" : "";
+    opt.textContent = `${v.name} · ${v.lang}${warning}`;
     select.appendChild(opt);
-    $("ttsStatus").textContent = "⚠️ Chưa thấy giọng ja-JP";
+  });
+
+  const previousStillExists = previous &&
+    [...select.options].some(opt => opt.value === previous);
+  if (previousStillExists) {
+    select.value = previous;
   } else {
-    ranked.forEach(v => {
-      const opt = document.createElement("option");
-      opt.value = v.name;
-      opt.textContent = `${v.name} · ${v.lang}`;
-      select.appendChild(opt);
-    });
-    $("ttsStatus").textContent = `🔊 ${ranked.length} giọng Nhật`;
+    const best = ranked.find(v =>
+      !isEloquenceJapaneseVoice(v) && japaneseVoiceScore(v) >= 10
+    );
+    select.value = best?.name || "";
+  }
+
+  const chosen = voices.find(v => v.name === select.value);
+  if (chosen) {
+    $("ttsStatus").textContent = `🔊 ${chosen.name} · ${chosen.lang}`;
+  } else if (ja.some(isEloquenceJapaneseVoice)) {
+    $("ttsStatus").textContent = "🔊 ja-JP tự động · tránh voice Eloquence";
+  } else if (ja.length) {
+    $("ttsStatus").textContent = `🔊 ja-JP tự động · ${ja.length} voice khả dụng`;
+  } else {
+    $("ttsStatus").textContent = "🔊 ja-JP tự động";
   }
 }
 
@@ -970,13 +1002,17 @@ function speak(text) {
   if (!speechText) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(speechText);
+  u.lang = "ja-JP";
   u.rate = Number($("rateSelect").value || 1);
+  u.pitch = 1;
+  u.volume = 1;
+
+  // Khi dropdown ở "Tự động ja-JP", không ép một voice cụ thể.
+  // WebKit/iOS có thể chỉ expose voice Eloquence chất lượng thấp.
   const chosen = voices.find(v => v.name === $("voiceSelect").value);
   if (chosen) {
     u.voice = chosen;
     u.lang = chosen.lang || "ja-JP";
-  } else {
-    u.lang = "ja-JP";
   }
   speechSynthesis.speak(u);
 }
@@ -1468,7 +1504,7 @@ function checkMCQ(btn, chosenItem) {
     ? (questionMode === "kanji" ? chosenItem.meaning : chosenItem.word)
     : chosenItem.reading);
   $("speakBtn").style.display = "inline-flex";
-  speak(item.reading);
+  speak(ttsTextForItem(item));
   saveActiveSession({resumeNext:true});
 }
 
@@ -1487,7 +1523,7 @@ function showWrittenAnswer() {
 
   // Sau khi lộ đáp án thì cho nghe lại và tự phát âm luôn.
   $("speakBtn").style.display = "inline-flex";
-  speak(item.reading);
+  speak(ttsTextForItem(item));
   saveActiveSession({resumeNext:true});
 }
 
@@ -1510,7 +1546,7 @@ function checkWritten() {
   $("correctText").textContent = correct;
   revealFeedback(ok, item, input);
   $("speakBtn").style.display = "inline-flex";
-  speak(item.reading);
+  speak(ttsTextForItem(item));
   saveActiveSession({resumeNext:true});
 }
 

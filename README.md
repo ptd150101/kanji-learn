@@ -1,7 +1,8 @@
 # Kanji N5 / N4 Quiz
 
-- N5: 26 bài, 366 mục từ.
-- N4: 24 bài, 449 mục từ.
+- N5: 34 bài, 477 mục từ.
+- Bài N5 27–34 là 8 bài theme bổ sung từ Nihongo Master, đối chiếu Minna no Nihongo I/II và loại trùng với dữ liệu hiện có.
+- N4: 37 bài, 638 mục từ.
 - Tổng: 815 mục từ.
 - Chuyển N5/N4 ngay ở màn hình thiết lập.
 - Trắc nghiệm 4 đáp án + viết furigana.

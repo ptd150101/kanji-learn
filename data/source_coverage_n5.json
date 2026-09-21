@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-21",
+  "sources": {
+    "nihongo_master": {
+      "n5_kanji": 103,
+      "n5_vocab_approx": 743,
+      "urls": [
+        "https://www.nihongomaster.com/jlpt-n5-kanji-list",
+        "https://www.nihongomaster.com/jlpt-n5-vocabulary-list"
+      ]
+    },
+    "minna_no_nihongo": {
+      "scope": "Minna no Nihongo I + II; chỉ dùng Kanji/từ trong phạm vi N5/N4 để đối chiếu và nhóm theo ngữ cảnh bài học",
+      "urls": [
+        "https://en-nihongo.com/japanesetips/kanji/kanji-list-for-minna-no-nihongo/",
+        "https://en-nihongo.com/japanesetips/kanji/kanji-list-for-minna-no-nihongo-2/"
+      ]
+    },
+    "base_pdf": "Kanji N5 update 14.3.2023.pdf"
+  },
+  "additions": {
+    "n5_total_added": 108,
+    "n5_new_lessons": {
+      "27": "Giao tiếp & con người",
+      "28": "Học tập & ngôn ngữ",
+      "29": "Thời gian & nhịp sống",
+      "30": "Di chuyển & địa điểm",
+      "31": "Sinh hoạt & mua sắm",
+      "32": "Thiên nhiên, thời tiết & màu sắc",
+      "33": "Tính chất & trạng thái",
+      "34": "Hành động cơ bản"
+    },
+    "lesson_counts": {
+      "27": 13,
+      "28": 13,
+      "29": 13,
+      "30": 13,
+      "31": 13,
+      "32": 11,
+      "33": 16,
+      "34": 16
+    }
+  },
+  "coverage_after": {
+    "n5_vocab_count": 477,
+    "n5_lesson_count": 34
+  }
+}

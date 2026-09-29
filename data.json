@@ -1,6 +1,6 @@
 {
   "sources": {
-    "N5": "Kanji N5 update 14.3.2023.pdf",
+    "N5": "Kanji N5 update 14.3.2023.pdf + JLPT N5 2010-2024 vocabulary PDF",
     "N4": "1. Kanji N4 (mới) update 27-03-2025.pdf"
   },
   "lesson_names": {
@@ -38,7 +38,11 @@
       "31": "Sinh hoạt & mua sắm",
       "32": "Thiên nhiên, thời tiết & màu sắc",
       "33": "Tính chất & trạng thái",
-      "34": "Hành động cơ bản"
+      "34": "Hành động cơ bản",
+      "35": "Số đếm & đơn vị",
+      "36": "Địa điểm & sinh hoạt",
+      "37": "Hành động & đi lại",
+      "38": "Tính chất & trạng thái"
     },
     "N4": {
       "1": "Gia đình",
@@ -81,9 +85,9 @@
     }
   },
   "counts": {
-    "N5": 477,
+    "N5": 527,
     "N4": 638,
-    "total": 1115
+    "total": 1165
   },
   "vocab": [
     {
@@ -3556,6 +3560,406 @@
       "reading": "ならぶ",
       "meaning": "xếp hàng",
       "source": "nihongo-master-n5+minna-crosscheck-2026-09-21"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "六本",
+      "reading": "ろっぽん",
+      "meaning": "6 cái (đồ vật hình trụ dài)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "百人",
+      "reading": "ひゃくにん",
+      "meaning": "100 người",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "六万円",
+      "reading": "ろくまんえん",
+      "meaning": "6 vạn Yên",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "三本",
+      "reading": "さんぼん",
+      "meaning": "3 cái (đồ vật hình trụ dài)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "〜冊",
+      "reading": "さつ",
+      "meaning": "~Cuốn/quyển",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "何人",
+      "reading": "なんにん",
+      "meaning": "Bao nhiêu người",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "八百円",
+      "reading": "はっぴゃくえん",
+      "meaning": "800 Yên",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "〜本",
+      "reading": "ほん",
+      "meaning": "~ Cái (đồ vật hình trụ dài)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "〜階",
+      "reading": "かい",
+      "meaning": "Tầng~",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "五分",
+      "reading": "ごふん",
+      "meaning": "5 phút",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "六番",
+      "reading": "ろくばん",
+      "meaning": "Vị trí thứ 6",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "〜歳",
+      "reading": "さい",
+      "meaning": "~Tuổi",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "一杯",
+      "reading": "いっぱい",
+      "meaning": "Nhiều, đầy",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 35,
+      "word": "メートル",
+      "reading": "メートル",
+      "meaning": "Mét (m)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "地図",
+      "reading": "ちず",
+      "meaning": "Bản đồ",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "間",
+      "reading": "あいだ",
+      "meaning": "Ở giữa",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "北側",
+      "reading": "きたがわ",
+      "meaning": "Phía Bắc",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "時計",
+      "reading": "とけい",
+      "meaning": "Đồng hồ",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "歯",
+      "reading": "は",
+      "meaning": "Răng",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "財布",
+      "reading": "さいふ",
+      "meaning": "Ví",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "休み",
+      "reading": "やすみ",
+      "meaning": "Nghỉ",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "南側",
+      "reading": "みなみがわ",
+      "meaning": "Phía Nam",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "窓",
+      "reading": "まど",
+      "meaning": "Cửa",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "アパート",
+      "reading": "アパート",
+      "meaning": "Chung cư",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "シャワー",
+      "reading": "シャワー",
+      "meaning": "Vòi hoa sen",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "ワイシャツ",
+      "reading": "ワイシャツ",
+      "meaning": "Áo sơ mi công sở",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "エアコン",
+      "reading": "エアコン",
+      "meaning": "Điều hòa",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 36,
+      "word": "プール",
+      "reading": "プール",
+      "meaning": "Hồ bơi",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "弾く",
+      "reading": "ひく",
+      "meaning": "Chơi (ghita)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "並べる",
+      "reading": "ならべる",
+      "meaning": "Sắp xếp, bài trí",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "消す",
+      "reading": "けす",
+      "meaning": "Tắt (TV)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "入る",
+      "reading": "はいる",
+      "meaning": "Đi vào",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "置く",
+      "reading": "おく",
+      "meaning": "Đặt",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "登る",
+      "reading": "のぼる",
+      "meaning": "Leo (núi)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "質問する",
+      "reading": "しつもんする",
+      "meaning": "Hỏi",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "覚える",
+      "reading": "おぼえる",
+      "meaning": "Nhớ",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "吹く",
+      "reading": "ふく",
+      "meaning": "(Gió) thổi",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "旅行する",
+      "reading": "りょこうする",
+      "meaning": "Du lịch",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "開ける",
+      "reading": "あける",
+      "meaning": "Mở",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "脱ぐ",
+      "reading": "ぬぐ",
+      "meaning": "Tháo, cởi (giày)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "休む",
+      "reading": "やすむ",
+      "meaning": "Nghỉ ngơi",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "下りる",
+      "reading": "おりる",
+      "meaning": "Xuống (cầu thang)",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "チケット",
+      "reading": "チケット",
+      "meaning": "Vé",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 37,
+      "word": "タクシー",
+      "reading": "タクシー",
+      "meaning": "Taxi",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 38,
+      "word": "遠い",
+      "reading": "とおい",
+      "meaning": "Xa",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 38,
+      "word": "寒い",
+      "reading": "さむい",
+      "meaning": "Lạnh",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 38,
+      "word": "甘い",
+      "reading": "あまい",
+      "meaning": "Ngọt",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 38,
+      "word": "薄い",
+      "reading": "うすい",
+      "meaning": "Mỏng",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 38,
+      "word": "綺麗",
+      "reading": "きれい",
+      "meaning": "Sạch sẽ",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
+    },
+    {
+      "level": "N5",
+      "lesson": 38,
+      "word": "便利",
+      "reading": "べんり",
+      "meaning": "Thuận tiện",
+      "source": "jlpt-n5-past-exam-2010-2024-pdf-2026-09-29"
     },
     {
       "lesson": 1,

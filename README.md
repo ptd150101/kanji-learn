@@ -1,9 +1,10 @@
 # Kanji N5 / N4 Quiz
 
-- N5: 34 bài, 477 mục từ.
+- N5: 38 bài, 527 mục từ.
 - Bài N5 27–34 là 8 bài theme bổ sung từ Nihongo Master, đối chiếu Minna no Nihongo I/II và loại trùng với dữ liệu hiện có.
+- Bài N5 35–38 bổ sung 50 mục còn thiếu khi đối chiếu toàn bộ 128 từ trong PDF JLPT N5 2010–2024; coverage sau merge là 128/128 theo từ + cách đọc, mỗi bài mới tối đa 20 mục.
 - N4: 37 bài, 638 mục từ.
-- Tổng: 815 mục từ.
+- Tổng: 1165 mục từ.
 - Chuyển N5/N4 ngay ở màn hình thiết lập.
 - Trắc nghiệm 4 đáp án + viết furigana.
 - Sau khi trả lời hiện nghĩa Việt + Hán Việt từng chữ.

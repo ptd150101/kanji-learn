@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21",
+  "generated_at": "2026-09-29",
   "sources": {
     "nihongo_master": {
       "n5_kanji": 103,
@@ -16,7 +16,22 @@
         "https://en-nihongo.com/japanesetips/kanji/kanji-list-for-minna-no-nihongo-2/"
       ]
     },
-    "base_pdf": "Kanji N5 update 14.3.2023.pdf"
+    "base_pdf": "Kanji N5 update 14.3.2023.pdf",
+    "jlpt_n5_past_exam_pdf": {
+      "title": "TỔNG HỢP 128 Từ vựng - KANJI XUẤT HIỆN TRONG ĐỀ THI JLPT N5 (2010-2024)",
+      "total_rows": 128,
+      "categories": {
+        "danh_tu": 73,
+        "dong_tu": 29,
+        "tinh_tu": 18,
+        "katakana": 8
+      },
+      "exact_missing_from_n5_before": 50,
+      "already_elsewhere_on_site_before": 9,
+      "new_exact_forms_sitewide_before": 41,
+      "added_to_n5": 50,
+      "note": "Đối chiếu theo đúng surface form + cách đọc trong PDF; giữ riêng các mẫu bộ đếm 〜本/〜冊/〜階/〜歳 thay vì coi chúng là từ đơn cùng Kanji."
+    }
   },
   "additions": {
     "n5_total_added": 108,
@@ -28,7 +43,11 @@
       "31": "Sinh hoạt & mua sắm",
       "32": "Thiên nhiên, thời tiết & màu sắc",
       "33": "Tính chất & trạng thái",
-      "34": "Hành động cơ bản"
+      "34": "Hành động cơ bản",
+      "35": "Số đếm & đơn vị",
+      "36": "Địa điểm & sinh hoạt",
+      "37": "Hành động & đi lại",
+      "38": "Tính chất & trạng thái"
     },
     "lesson_counts": {
       "27": 13,
@@ -38,11 +57,17 @@
       "31": 13,
       "32": 11,
       "33": 16,
-      "34": 16
-    }
+      "34": 16,
+      "35": 14,
+      "36": 14,
+      "37": 16,
+      "38": 6
+    },
+    "n5_jlpt_2010_2024_added": 50
   },
   "coverage_after": {
-    "n5_vocab_count": 477,
-    "n5_lesson_count": 34
+    "n5_vocab_count": 527,
+    "n5_lesson_count": 38,
+    "jlpt_n5_2010_2024_exact_word_reading_coverage": "128/128"
   }
 }

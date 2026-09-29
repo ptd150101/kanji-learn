@@ -422,6 +422,54 @@ input.write-input{
   overflow-wrap:anywhere;
 }
 .missed-item>span{max-width:100%;overflow-wrap:anywhere}
+.saved-review{
+  margin-top:var(--space-3);
+  padding:var(--space-3);
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--panel2);
+}
+.saved-review-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:var(--space-2);
+}
+.saved-count-badge{
+  flex:0 0 auto;
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:5px 9px;
+  color:var(--accent2);
+  font-size:12px;
+  font-weight:800;
+}
+.saved-review-actions{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:var(--space-2);
+  margin-top:var(--space-3);
+}
+.saved-review-actions button{width:100%;min-height:46px}
+.saved-list{
+  margin-top:var(--space-3);
+  border-top:1px solid var(--border);
+}
+.saved-list[hidden]{display:none}
+.saved-list-empty{padding:12px 2px;color:var(--muted);font-size:13px}
+.saved-list-item{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:var(--space-2);
+  padding:10px 2px;
+  border-bottom:1px solid var(--border);
+}
+.saved-word-main{min-width:0}
+.saved-word-title{font-family:var(--font-ja);font-weight:800;overflow-wrap:anywhere}
+.saved-word-meta{margin-top:3px;color:var(--muted);font-size:12px;line-height:1.4;overflow-wrap:anywhere}
+.saved-remove-btn{min-height:40px;padding:8px 10px}
+#saveWordBtn.saved{border-color:var(--accent2);color:var(--accent2)}
 kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;border-radius:5px;padding:2px 6px;font-size:12px;color:var(--muted)}
 
 @media (hover:hover) and (pointer:fine){
@@ -613,6 +661,21 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
       <button class="secondary" id="selectAllBtn">Chọn / bỏ chọn tất cả</button>
     </div>
     <div class="source-note" id="dataNote">Có 2 bộ dữ liệu: <b>N5 gồm 34 bài</b> và <b>N4 gồm 37 bài</b>. Tên bài của cả hai cấp độ được hiển thị thống nhất bằng <b>tiếng Việt</b>. Từ vựng/cách đọc bám theo các ô On/Kun trong sách; nghĩa Việt và Hán Việt được bổ sung để phục vụ quiz.</div>
+
+    <div class="saved-review" id="savedReviewSection">
+      <div class="saved-review-head">
+        <div>
+          <div class="label">7. Từ đã lưu</div>
+          <div class="source-note" id="savedScopeText">Lưu những từ trả lời sai để kiểm tra lại sau.</div>
+        </div>
+        <span class="saved-count-badge" id="savedCountBadge">0 từ</span>
+      </div>
+      <div class="saved-review-actions">
+        <button class="secondary" id="reviewSavedBtn" type="button" disabled>⭐ Kiểm tra từ đã lưu</button>
+        <button class="ghost" id="toggleSavedListBtn" type="button" disabled>Xem danh sách</button>
+      </div>
+      <div class="saved-list" id="savedList" hidden></div>
+    </div>
   </section>
 
   <section class="panel quiz" id="quizPanel">
@@ -646,6 +709,7 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
         <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
 
         <div class="quiz-actions">
+          <button class="secondary" id="saveWordBtn" type="button" style="display:none" aria-pressed="false">☆ Lưu từ này</button>
           <button class="primary" id="nextBtn" style="display:none" title="Phím tắt: Enter">Câu tiếp →</button>
         </div>
       </div>
@@ -684,10 +748,12 @@ let voices = [];
 
 const ACTIVE_SESSION_KEY = "kanjiLearnActiveSessionV1";
 const ACTIVE_SESSION_VERSION = 1;
+const SAVED_WORDS_KEY = "kanjiLearnSavedWordsV1";
 
 const $ = (id) => document.getElementById(id);
 
 let selectedLevel = "N5";
+let savedWords = loadSavedWords();
 
 function currentDataset() {
   return contentMode === "vocab" ? NEW_VOCAB : VOCAB;
@@ -784,6 +850,7 @@ function setContentMode(mode) {
   $("questionModeViDesc").textContent = "Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng.";
 
   renderLessonPicker();
+  updateSavedWordsUI();
 }
 
 document.querySelectorAll(".content-mode-btn").forEach(btn => {
@@ -841,6 +908,226 @@ function matchesReading(item, input) {
 function matchesJapaneseWord(item, input) {
   const normalized = normalizeJapaneseWord(input);
   return Boolean(normalized) && normalized === normalizeJapaneseWord(item.word);
+}
+
+function savedWordKey(item, mode = contentMode) {
+  const lesson = item?.lesson === undefined || item?.lesson === null ? "" : String(item.lesson);
+  const id = mode === "vocab" && item?.id ? String(item.id) : "";
+  return [
+    mode,
+    id,
+    item?.level || "",
+    lesson,
+    normalizeJapaneseWord(item?.word || ""),
+    normalizeKana(item?.reading || "")
+  ].join("|");
+}
+
+function cloneSavedItem(item) {
+  const copy = {...item};
+  if (Array.isArray(item?.accepted)) copy.accepted = [...item.accepted];
+  return copy;
+}
+
+function loadSavedWords() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(SAVED_WORDS_KEY) || "[]");
+    if (!Array.isArray(raw)) return [];
+    return raw
+      .filter(record =>
+        record &&
+        (record.contentMode === "kanji" || record.contentMode === "vocab") &&
+        record.item &&
+        typeof record.item.word === "string" &&
+        typeof record.item.reading === "string"
+      )
+      .map(record => ({
+        ...record,
+        key: record.key || savedWordKey(record.item, record.contentMode)
+      }));
+  } catch (e) {
+    return [];
+  }
+}
+
+function persistSavedWords() {
+  try {
+    localStorage.setItem(SAVED_WORDS_KEY, JSON.stringify(savedWords));
+  } catch (e) {}
+}
+
+function isSavedWord(item, mode = contentMode) {
+  const key = savedWordKey(item, mode);
+  return savedWords.some(record => record.key === key);
+}
+
+function currentSavedScopeName() {
+  return contentMode === "vocab" ? "N4 · Từ mới" : `${selectedLevel} · Kanji`;
+}
+
+function savedWordsForCurrentScope() {
+  return savedWords.filter(record => {
+    if (record.contentMode !== contentMode) return false;
+    if (contentMode === "vocab") return selectedLevel === "N4";
+    return record.item?.level === selectedLevel;
+  });
+}
+
+function savedRecordLabel(record) {
+  const item = record.item || {};
+  if (record.contentMode === "vocab") {
+    return `N4 · Từ mới · ${lessonDisplayName(item.lesson)}`;
+  }
+  const lessonName = LESSON_NAMES[item.level]?.[item.lesson];
+  return [item.level || "Kanji", item.lesson != null ? `Bài ${item.lesson}` : "", lessonName || ""]
+    .filter(Boolean)
+    .join(" · ");
+}
+
+function renderSaveWordButton(show, item = quiz[index]) {
+  const btn = $("saveWordBtn");
+  if (!btn) return;
+  if (!show || !item) {
+    btn.style.display = "none";
+    btn.classList.remove("saved");
+    btn.setAttribute("aria-pressed", "false");
+    btn.textContent = "☆ Lưu từ này";
+    return;
+  }
+
+  const saved = isSavedWord(item, contentMode);
+  btn.style.display = "inline-block";
+  btn.classList.toggle("saved", saved);
+  btn.setAttribute("aria-pressed", saved ? "true" : "false");
+  btn.textContent = saved ? "★ Đã lưu · bấm để bỏ" : "☆ Lưu từ này";
+}
+
+function renderSavedList() {
+  const root = $("savedList");
+  if (!root) return;
+  root.textContent = "";
+
+  if (!savedWords.length) {
+    const empty = document.createElement("div");
+    empty.className = "saved-list-empty";
+    empty.textContent = "Chưa có từ nào được lưu.";
+    root.appendChild(empty);
+    return;
+  }
+
+  savedWords.forEach(record => {
+    const item = record.item;
+    const row = document.createElement("div");
+    row.className = "saved-list-item";
+
+    const main = document.createElement("div");
+    main.className = "saved-word-main";
+
+    const title = document.createElement("div");
+    title.className = "saved-word-title";
+    title.textContent = `${item.word}（${item.reading}） — ${item.meaning || ""}`;
+
+    const meta = document.createElement("div");
+    meta.className = "saved-word-meta";
+    meta.textContent = savedRecordLabel(record);
+
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.className = "ghost saved-remove-btn";
+    remove.textContent = "Bỏ lưu";
+    remove.addEventListener("click", () => {
+      savedWords = savedWords.filter(x => x.key !== record.key);
+      persistSavedWords();
+      updateSavedWordsUI();
+    });
+
+    main.append(title, meta);
+    row.append(main, remove);
+    root.appendChild(row);
+  });
+}
+
+function updateSavedWordsUI() {
+  const badge = $("savedCountBadge");
+  const reviewBtn = $("reviewSavedBtn");
+  const toggleBtn = $("toggleSavedListBtn");
+  const scopeText = $("savedScopeText");
+  const list = $("savedList");
+  if (!badge || !reviewBtn || !toggleBtn || !scopeText || !list) return;
+
+  const scoped = savedWordsForCurrentScope();
+  badge.textContent = savedWords.length
+    ? `${scoped.length} phù hợp · ${savedWords.length} tổng`
+    : "0 từ";
+  scopeText.textContent = `Phạm vi hiện tại: ${currentSavedScopeName()}. Từ được lưu trong trình duyệt này và vẫn còn sau khi tải lại trang.`;
+  reviewBtn.disabled = scoped.length === 0;
+  reviewBtn.textContent = scoped.length
+    ? `⭐ Kiểm tra ${scoped.length} từ đã lưu`
+    : "⭐ Kiểm tra từ đã lưu";
+  toggleBtn.disabled = savedWords.length === 0;
+
+  if (!savedWords.length) {
+    list.hidden = true;
+    toggleBtn.textContent = "Xem danh sách";
+  } else if (!list.hidden) {
+    renderSavedList();
+  }
+
+  const saveBtn = $("saveWordBtn");
+  if (saveBtn && saveBtn.style.display !== "none" && quiz[index]) {
+    renderSaveWordButton(true, quiz[index]);
+  }
+}
+
+function toggleSavedWord(item, mode = contentMode) {
+  if (!item) return;
+  const key = savedWordKey(item, mode);
+  const existingIndex = savedWords.findIndex(record => record.key === key);
+
+  if (existingIndex >= 0) {
+    savedWords.splice(existingIndex, 1);
+  } else {
+    savedWords.unshift({
+      key,
+      contentMode: mode,
+      item: cloneSavedItem(item),
+      savedAt: Date.now()
+    });
+  }
+
+  persistSavedWords();
+  updateSavedWordsUI();
+  renderSaveWordButton(true, item);
+}
+
+function toggleSavedList() {
+  const list = $("savedList");
+  const btn = $("toggleSavedListBtn");
+  if (!list || !btn || !savedWords.length) return;
+  list.hidden = !list.hidden;
+  btn.textContent = list.hidden ? "Xem danh sách" : "Ẩn danh sách";
+  if (!list.hidden) renderSavedList();
+}
+
+function reviewSavedWords() {
+  const records = savedWordsForCurrentScope();
+  if (!records.length) {
+    alert(`Chưa có từ đã lưu cho ${currentSavedScopeName()}.`);
+    return;
+  }
+
+  const pool = records.map(record => cloneSavedItem(record.item));
+  const lessons = [...new Set(pool.map(item => item.lesson))];
+  startQuiz({
+    contentMode,
+    level: selectedLevel,
+    lessons,
+    questionMode,
+    answerMode,
+    order: $("orderSelect").value,
+    countSetting: "all",
+    explicitPool: pool
+  });
 }
 
 function normalizeVietnameseAnswer(s) {
@@ -1049,6 +1336,12 @@ $("selectAllBtn").addEventListener("click", () => {
 });
 
 $("startBtn").addEventListener("click", () => startQuiz());
+$("reviewSavedBtn").addEventListener("click", reviewSavedWords);
+$("toggleSavedListBtn").addEventListener("click", toggleSavedList);
+$("saveWordBtn").addEventListener("click", () => {
+  if (!answered || !quiz[index]) return;
+  toggleSavedWord(quiz[index], contentMode);
+});
 $("backBtn").addEventListener("click", showSetup);
 $("endSetupBtn").addEventListener("click", showSetup);
 $("speakBtn").addEventListener("click", () => {
@@ -1222,14 +1515,15 @@ function startQuiz(forced = null) {
   if (forced?.explicitPool) n = pool.length;
   quiz = pool.slice(0,n);
 
-  lastSettings = forced?.explicitPool ? lastSettings : {
+  lastSettings = {
     contentMode: runContentMode,
     questionMode: runQuestionMode,
     answerMode: runAnswerMode,
     level,
     lessons:[...lessons],
     order,
-    countSetting
+    countSetting,
+    ...(forced?.explicitPool ? {explicitPool:[...quiz]} : {})
   };
   index = 0; correct = 0; answered = false; missed = [];
 
@@ -1246,6 +1540,7 @@ function showSetup() {
   clearActiveSession();
   quizPanel.classList.remove("show");
   setupPanel.style.display = "grid";
+  updateSavedWordsUI();
   requestAnimationFrame(() => setupPanel.scrollIntoView({behavior:"auto", block:"start"}));
 }
 
@@ -1336,6 +1631,7 @@ function renderQuestion() {
   $("progressWrap").setAttribute("aria-valuenow", String(Math.round(progressPercent)));
   $("feedback").className = "feedback";
   $("feedback").innerHTML = "";
+  renderSaveWordButton(false);
   $("nextBtn").style.display = "none";
 
   requestAnimationFrame(() => {
@@ -1471,6 +1767,7 @@ function revealFeedback(isCorrect, item, userAnswer = "") {
   fb.innerHTML = isCorrect
     ? `✅ Đúng! <span class="answer-reading">${item.word}（${item.reading}）</span> — ${item.meaning}${hvHtml}${extra}`
     : `❌ Chưa đúng. Đáp án: <span class="answer-reading">${item.word}（${item.reading}）</span> — ${item.meaning}${hvHtml}${extra}`;
+  renderSaveWordButton(!isCorrect, item);
   $("nextBtn").style.display = "inline-block";
 }
 

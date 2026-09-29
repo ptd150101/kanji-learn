@@ -7,6 +7,7 @@
 - Chuyển N5/N4 ngay ở màn hình thiết lập.
 - Trắc nghiệm 4 đáp án + viết furigana.
 - Sau khi trả lời hiện nghĩa Việt + Hán Việt từng chữ.
+- Khi trả lời sai có thể bấm **☆ Lưu từ này**; từ được giữ trong trình duyệt và có khu vực **Từ đã lưu** để xem, bỏ lưu và kiểm tra lại theo đúng N5/N4/từ mới hiện tại.
 - Tự động Edge/Browser TTS bằng trường reading/furigana.
 - Tốc độ mặc định 1.00x + nút nghe thử.
 

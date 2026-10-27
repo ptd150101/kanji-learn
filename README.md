@@ -1,26 +1,45 @@
-# Kanji N5 / N4 Quiz
+# Kanji N5 / N4 / N3 Quiz
 
 - N5: 38 bài, 527 mục từ.
 - Bài N5 27–34 là 8 bài theme bổ sung từ Nihongo Master, đối chiếu Minna no Nihongo I/II và loại trùng với dữ liệu hiện có.
 - Bài N5 35–38 bổ sung 50 mục còn thiếu khi đối chiếu toàn bộ 128 từ trong PDF JLPT N5 2010–2024; coverage sau merge là 128/128 theo từ + cách đọc, mỗi bài mới tối đa 20 mục.
 - N4: 37 bài, 638 mục từ.
-- Tổng: 1165 mục từ.
-- Chuyển N5/N4 ngay ở màn hình thiết lập.
+- N3: 20 chương theo **漢字マスターN3**, 1.309 mục từ (biên soạn thêm từ ghép thông dụng, theo chủ điểm từng chữ).
+- Tổng: 2.474 mục từ (N5 + N4 + N3).
+- Chuyển N5/N4/N3 ngay ở màn hình thiết lập.
 - Trắc nghiệm 4 đáp án + viết furigana.
 - Sau khi trả lời hiện nghĩa Việt + Hán Việt từng chữ.
-- Khi trả lời sai có thể bấm **☆ Lưu từ này**; từ được giữ trong trình duyệt và có khu vực **Từ đã lưu** để xem, bỏ lưu và kiểm tra lại theo đúng N5/N4/từ mới hiện tại.
+- Khi trả lời sai có thể bấm **☆ Lưu từ này**; từ được giữ trong trình duyệt và có khu vực **Từ đã lưu** để xem, bỏ lưu và kiểm tra lại theo đúng N5/N4/N3/từ mới hiện tại.
 - Tự động Edge/Browser TTS bằng trường reading/furigana.
 - Tốc độ mặc định 1.00x + nút nghe thử.
 
 Files:
-- data.json: N5 + N4
+- data.json: N5 + N4 + N3
 - data_n5.json: riêng N5
 - data_n4.json: riêng N4
-- han_viet.json: Hán Việt
+- data_n3.json: 20 chương Kanji Masuta N3, gồm từ tiếng Nhật, cách đọc, nghĩa Việt, chương và trang đối chiếu
+- data/source_coverage_n3.json: danh sách 376 chữ Kanji chính và các trang của sách
+- han_viet.json: âm Hán Việt theo từng chữ (bổ sung cho N3)
 
-- Tên bài của cả N5 và N4 đều hiển thị bằng tiếng Việt để giao diện đồng nhất.
+- Tên bài của cả N5, N4 và N3 đều hiển thị bằng tiếng Việt để giao diện đồng nhất.
 
 - Chế độ **Tiếng Việt → Kanji**: hiện nghĩa tiếng Việt và yêu cầu chọn từ Kanji đúng trong 4 đáp án; sau khi trả lời mới hiện furigana, nghĩa và Hán Việt rồi tự phát âm.
+
+## Dữ liệu Kanji Master N3 và phạm vi kiểm tra
+
+- Sách nguồn: `Kanji_Masuta_N3 1.pdf` (bản scan 192 trang).
+- Giữ **20 chương** theo đúng thứ tự và chủ đề sách; ghi `source_page` là trang giới thiệu chữ Kanji được dùng làm mốc cho từ (không nhất thiết là trang mà toàn bộ từ ghép đều được in).
+- `data/source_coverage_n3.json` ghi đủ **376 vị trí chữ Kanji chính** trên 96 trang học chữ. Mỗi chữ có ít nhất một mục từ tương ứng ngay trong chương của nó.
+- Với mỗi từ: `lesson`, `word`, `reading` (hiragana/katakana), `meaning` (tiếng Việt), `level`. Riêng N3 có thêm `source_page` và `source_type`.
+- Âm Hán Việt **theo từng chữ** lấy từ `han_viet.json`; 224 mục ánh xạ mới đã được bổ sung.
+- **Giới hạn nguồn:** đây là bộ từ **được biên soạn, chọn lọc và mở rộng dựa trên chữ chính trong sách**, **không phải bản chép nguyên văn toàn bộ ví dụ, câu gạch chân hay bài kiểm tra trên từng dòng PDF**. Các mục N3 có `source_type: "curated"` để không nhầm chúng là lời trích nguyên văn. Cần đối chiếu thêm với nguyên bản để bảo đảm bao phủ toàn bộ câu ví dụ nếu muốn nâng mức coverage.
+- Một từ có thể xuất hiện ở **nhiều chương** nếu được dùng để học những chữ khác nhau; ứng dụng vẫn lọc theo bài được chọn.
+
+Kiểm tra N3:
+
+```bash
+node --test tests/n3-masuta-data.test.mjs
+```
 
 ## Cấu trúc chế độ kiểm tra
 Website có 2 chiều lựa chọn độc lập:
@@ -54,7 +73,7 @@ Tạo thành 4 tổ hợp:
 
 ## SQLite database + import JSON từ crawler
 
-Database chuẩn hóa nằm ở `data/kanji_vocab.sqlite`. Database được tổng hợp từ `data_n5.json`, `data_n4.json` và `vocab_n4_26_31.json`, chỉ giữ các mục có Kanji và deduplicate theo cặp **word + reading**. Thống kê build hiện tại nằm ở `data/kanji_vocab_stats.json`.
+Database chuẩn hóa nằm ở `data/kanji_vocab.sqlite`. Script xây dựng database đọc `data_n5.json`, `data_n4.json`, `data_n3.json` và `vocab_n4_26_31.json`, chỉ giữ các mục có Kanji và deduplicate theo cặp **word + reading**. Bản SQLite và thống kê được commit từ trước ở `data/kanji_vocab.sqlite` và `data/kanji_vocab_stats.json` vẫn là snapshot N5/N4; **chạy lại lệnh build dưới đây sau khi cập nhật nhánh** để có dữ liệu N3 trong SQLite.
 
 Build lại database:
 

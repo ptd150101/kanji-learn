@@ -1,0 +1,1668 @@
+{
+  "source": "Kanji Masuta N3, 192-page scanned PDF; inherited revision words from existing repo; additional curated N3 vocabulary to follow",
+  "lessons": {
+    "1": "Sinh hoạt",
+    "2": "Nhà cửa",
+    "3": "Nấu ăn",
+    "4": "Bệnh viện",
+    "5": "Thể thao",
+    "6": "Cảm xúc",
+    "7": "Hôn nhân",
+    "8": "Quan hệ",
+    "9": "Đơn vị và mức độ",
+    "10": "Trường học",
+    "11": "Học tập",
+    "12": "Giảng dạy",
+    "13": "Thiên nhiên và địa lý",
+    "14": "Du lịch",
+    "15": "Giao thông",
+    "16": "Công việc",
+    "17": "Hội họp",
+    "18": "Công ty",
+    "19": "Công nghiệp và kinh tế",
+    "20": "Pháp luật"
+  },
+  "total_vocab": 205,
+  "vocab": [
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "起きる",
+      "reading": "おきる",
+      "meaning": "thức dậy",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "起床",
+      "reading": "きしょう",
+      "meaning": "thức dậy, ra khỏi giường",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "洗濯",
+      "reading": "せんたく",
+      "meaning": "giặt quần áo",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "拾う",
+      "reading": "ひろう",
+      "meaning": "nhặt, nhặt lên",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "日曜日",
+      "reading": "にちようび",
+      "meaning": "Chủ nhật",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "月曜日",
+      "reading": "げつようび",
+      "meaning": "thứ Hai",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "火曜日",
+      "reading": "かようび",
+      "meaning": "thứ Ba",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "週末",
+      "reading": "しゅうまつ",
+      "meaning": "cuối tuần",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "年末年始",
+      "reading": "ねんまつねんし",
+      "meaning": "cuối năm và đầu năm",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "一昨年",
+      "reading": "いっさくねん",
+      "meaning": "năm kia",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "予習",
+      "reading": "よしゅう",
+      "meaning": "học trước",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "予約",
+      "reading": "よやく",
+      "meaning": "đặt trước, đặt chỗ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "予報",
+      "reading": "よほう",
+      "meaning": "dự báo",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "未定",
+      "reading": "みてい",
+      "meaning": "chưa quyết định, chưa xác định",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "決定",
+      "reading": "けってい",
+      "meaning": "quyết định",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "推定",
+      "reading": "すいてい",
+      "meaning": "ước tính, ước đoán",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "用事",
+      "reading": "ようじ",
+      "meaning": "việc cần làm",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "利用する",
+      "reading": "りようする",
+      "meaning": "sử dụng, tận dụng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "使用",
+      "reading": "しよう",
+      "meaning": "sử dụng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "仕事",
+      "reading": "しごと",
+      "meaning": "công việc",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "食事",
+      "reading": "しょくじ",
+      "meaning": "bữa ăn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "大事",
+      "reading": "だいじ",
+      "meaning": "quan trọng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "押す",
+      "reading": "おす",
+      "meaning": "ấn, đẩy",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "引く",
+      "reading": "ひく",
+      "meaning": "kéo",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "取る",
+      "reading": "とる",
+      "meaning": "lấy",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "取得",
+      "reading": "しゅとく",
+      "meaning": "đạt được, lấy được",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "消える",
+      "reading": "きえる",
+      "meaning": "biến mất, tắt",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "消す",
+      "reading": "けす",
+      "meaning": "Tắt (TV)",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "窓",
+      "reading": "まど",
+      "meaning": "Cửa",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "〜階",
+      "reading": "かい",
+      "meaning": "Tầng~",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "言葉",
+      "reading": "ことば",
+      "meaning": "từ ngữ, lời nói",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "真実",
+      "reading": "しんじつ",
+      "meaning": "sự thật",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "建物",
+      "reading": "たてもの",
+      "meaning": "tòa nhà, công trình",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
+      "word": "方向",
+      "reading": "ほうこう",
+      "meaning": "phương hướng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "熱",
+      "reading": "ねつ",
+      "meaning": "sốt, nhiệt",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "冷静",
+      "reading": "れいせい",
+      "meaning": "bình tĩnh",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "冷水",
+      "reading": "れいすい",
+      "meaning": "nước lạnh",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "冷たい",
+      "reading": "つめたい",
+      "meaning": "lạnh [vật, đồ uống]",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "速度",
+      "reading": "そくど",
+      "meaning": "tốc độ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "この度",
+      "reading": "このたび",
+      "meaning": "lần này, dịp này",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "一度",
+      "reading": "いちど",
+      "meaning": "một lần",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "牛乳",
+      "reading": "ぎゅうにゅう",
+      "meaning": "sữa bò",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "小麦粉",
+      "reading": "こむぎこ",
+      "meaning": "bột mì",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "菜の花",
+      "reading": "なのはな",
+      "meaning": "hoa cải vàng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "野菜",
+      "reading": "やさい",
+      "meaning": "rau, rau củ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "結果",
+      "reading": "けっか",
+      "meaning": "kết quả",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "一杯",
+      "reading": "いっぱい",
+      "meaning": "Nhiều, đầy",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "三枚",
+      "reading": "さんまい",
+      "meaning": "ba tờ/cái (vật mỏng)",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "百枚",
+      "reading": "ひゃくまい",
+      "meaning": "100 tờ/cái (vật mỏng)",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "頭部",
+      "reading": "とうぶ",
+      "meaning": "phần đầu",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "顔",
+      "reading": "かお",
+      "meaning": "khuôn mặt",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "首都",
+      "reading": "しゅと",
+      "meaning": "thủ đô",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "首",
+      "reading": "くび",
+      "meaning": "cổ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "歯",
+      "reading": "は",
+      "meaning": "Răng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "歯医者",
+      "reading": "はいしゃ",
+      "meaning": "nha sĩ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "血",
+      "reading": "ち",
+      "meaning": "máu",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "血液",
+      "reading": "けつえき",
+      "meaning": "máu, huyết dịch",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "包む",
+      "reading": "つつむ",
+      "meaning": "gói, bọc",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "救急車",
+      "reading": "きゅうきゅうしゃ",
+      "meaning": "xe cứu thương",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "死ぬ",
+      "reading": "しぬ",
+      "meaning": "chết",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "決定",
+      "reading": "けってい",
+      "meaning": "quyết định",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "決まる",
+      "reading": "きまる",
+      "meaning": "được quyết định",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "決める",
+      "reading": "きめる",
+      "meaning": "quyết định",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "交代",
+      "reading": "こうたい",
+      "meaning": "thay phiên, thay thế",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "六回",
+      "reading": "ろっかい",
+      "meaning": "sáu lần",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "一回",
+      "reading": "いっかい",
+      "meaning": "một lần",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "回します",
+      "reading": "まわします",
+      "meaning": "xoay, vặn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "日記",
+      "reading": "にっき",
+      "meaning": "nhật ký",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "結婚記念日",
+      "reading": "けっこんきねんび",
+      "meaning": "ngày kỷ niệm kết hôn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "交差点",
+      "reading": "こうさてん",
+      "meaning": "ngã tư, giao lộ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "差す",
+      "reading": "さす",
+      "meaning": "cầm, che (ô/dù)",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "信号",
+      "reading": "しんごう",
+      "meaning": "đèn tín hiệu",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "伝言",
+      "reading": "でんごん",
+      "meaning": "lời nhắn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "伝える",
+      "reading": "つたえる",
+      "meaning": "truyền đạt, thông báo",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "手伝う",
+      "reading": "てつだう",
+      "meaning": "giúp đỡ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "困る",
+      "reading": "こまる",
+      "meaning": "gặp khó khăn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "困難",
+      "reading": "こんなん",
+      "meaning": "khó khăn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "難しい",
+      "reading": "むずかしい",
+      "meaning": "khó",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "残る",
+      "reading": "のこる",
+      "meaning": "còn lại",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "残念",
+      "reading": "ざんねん",
+      "meaning": "đáng tiếc",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "結婚記念日",
+      "reading": "けっこんきねんび",
+      "meaning": "ngày kỷ niệm kết hôn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "結婚記念日",
+      "reading": "けっこんきねんび",
+      "meaning": "ngày kỷ niệm kết hôn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "結果",
+      "reading": "けっか",
+      "meaning": "kết quả",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "短期",
+      "reading": "たんき",
+      "meaning": "ngắn hạn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "秋学期",
+      "reading": "あきがっき",
+      "meaning": "học kỳ mùa thu",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "予約",
+      "reading": "よやく",
+      "meaning": "đặt trước, đặt chỗ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "約束",
+      "reading": "やくそく",
+      "meaning": "lời hứa, cuộc hẹn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "正式",
+      "reading": "せいしき",
+      "meaning": "chính thức",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "係り",
+      "reading": "かかり",
+      "meaning": "người phụ trách",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "和服",
+      "reading": "わふく",
+      "meaning": "trang phục Nhật",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "受付",
+      "reading": "うけつけ",
+      "meaning": "quầy tiếp tân, tiếp nhận",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "片付ける",
+      "reading": "かたづける",
+      "meaning": "dọn dẹp",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "夫婦",
+      "reading": "ふうふ",
+      "meaning": "vợ chồng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "彼女",
+      "reading": "かのじょ",
+      "meaning": "cô ấy; bạn gái",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "初めて",
+      "reading": "はじめて",
+      "meaning": "lần đầu tiên",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "友達",
+      "reading": "ともだち",
+      "meaning": "bạn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "配達",
+      "reading": "はいたつ",
+      "meaning": "giao hàng, phân phát",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "男性",
+      "reading": "だんせい",
+      "meaning": "nam giới",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "女性",
+      "reading": "じょせい",
+      "meaning": "nữ giới",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "合格",
+      "reading": "ごうかく",
+      "meaning": "đỗ, đạt",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "単語",
+      "reading": "たんご",
+      "meaning": "từ vựng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "安全",
+      "reading": "あんぜん",
+      "meaning": "an toàn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "全部",
+      "reading": "ぜんぶ",
+      "meaning": "toàn bộ, tất cả",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "以外",
+      "reading": "いがい",
+      "meaning": "ngoài ra, ngoài",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "未定",
+      "reading": "みてい",
+      "meaning": "chưa quyết định, chưa xác định",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "無料",
+      "reading": "むりょう",
+      "meaning": "miễn phí",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "幼稚園",
+      "reading": "ようちえん",
+      "meaning": "trường mẫu giáo",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "生徒",
+      "reading": "せいと",
+      "meaning": "học sinh",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "黒板",
+      "reading": "こくばん",
+      "meaning": "bảng đen",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "貸す",
+      "reading": "かす",
+      "meaning": "cho mượn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "借りる",
+      "reading": "かりる",
+      "meaning": "mượn, thuê",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "〜冊",
+      "reading": "さつ",
+      "meaning": "~Cuốn/quyển",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "道具",
+      "reading": "どうぐ",
+      "meaning": "dụng cụ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "夢",
+      "reading": "ゆめ",
+      "meaning": "giấc mơ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "目的",
+      "reading": "もくてき",
+      "meaning": "mục đích",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "能力",
+      "reading": "のうりょく",
+      "meaning": "năng lực",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "面白い",
+      "reading": "おもしろい",
+      "meaning": "thú vị",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "真面目",
+      "reading": "まじめ",
+      "meaning": "nghiêm túc, chăm chỉ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "受付",
+      "reading": "うけつけ",
+      "meaning": "quầy tiếp tân, tiếp nhận",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "落とす",
+      "reading": "おとす",
+      "meaning": "làm rơi",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "公平",
+      "reading": "こうへい",
+      "meaning": "công bằng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "太平洋",
+      "reading": "たいへいよう",
+      "meaning": "Thái Bình Dương",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "賛成",
+      "reading": "さんせい",
+      "meaning": "tán thành, đồng ý",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "良い",
+      "reading": "よい",
+      "meaning": "tốt",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 11,
+      "word": "悪い",
+      "reading": "わるい",
+      "meaning": "xấu, tệ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "授業",
+      "reading": "じゅぎょう",
+      "meaning": "giờ học, tiết học",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "営業",
+      "reading": "えいぎょう",
+      "meaning": "kinh doanh, hoạt động kinh doanh",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "卒業",
+      "reading": "そつぎょう",
+      "meaning": "tốt nghiệp",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "空席",
+      "reading": "くうせき",
+      "meaning": "ghế trống, chỗ trống",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "自由",
+      "reading": "じゆう",
+      "meaning": "tự do",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "理由",
+      "reading": "りゆう",
+      "meaning": "lý do",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "説明",
+      "reading": "せつめい",
+      "meaning": "giải thích",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "演説",
+      "reading": "えんぜつ",
+      "meaning": "diễn thuyết, bài diễn văn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "覚える",
+      "reading": "おぼえる",
+      "meaning": "Nhớ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "忘れる",
+      "reading": "わすれる",
+      "meaning": "quên",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "重要な",
+      "reading": "じゅうような",
+      "meaning": "quan trọng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "復習",
+      "reading": "ふくしゅう",
+      "meaning": "ôn tập",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "往復",
+      "reading": "おうふく",
+      "meaning": "khứ hồi",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 13,
+      "word": "種類",
+      "reading": "しゅるい",
+      "meaning": "loại, kiểu",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 13,
+      "word": "太陽",
+      "reading": "たいよう",
+      "meaning": "mặt trời",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 13,
+      "word": "季節",
+      "reading": "きせつ",
+      "meaning": "mùa",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 13,
+      "word": "深い",
+      "reading": "ふかい",
+      "meaning": "sâu",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 13,
+      "word": "浅い",
+      "reading": "あさい",
+      "meaning": "nông",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 13,
+      "word": "離島",
+      "reading": "りとう",
+      "meaning": "đảo xa bờ, đảo biệt lập",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "迎え",
+      "reading": "むかえ",
+      "meaning": "việc đón, tiếp đón",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "大変",
+      "reading": "たいへん",
+      "meaning": "vất vả, nghiêm trọng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "登る",
+      "reading": "のぼる",
+      "meaning": "Leo (núi)",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "観客",
+      "reading": "かんきゃく",
+      "meaning": "khán giả",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "観光",
+      "reading": "かんこう",
+      "meaning": "tham quan, du lịch",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "演説",
+      "reading": "えんぜつ",
+      "meaning": "diễn thuyết, bài diễn văn",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "神社",
+      "reading": "じんじゃ",
+      "meaning": "đền Thần đạo",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "折る",
+      "reading": "おる",
+      "meaning": "gấp, bẻ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "自転車",
+      "reading": "じてんしゃ",
+      "meaning": "xe đạp",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "運転手",
+      "reading": "うんてんしゅ",
+      "meaning": "tài xế",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "運転",
+      "reading": "うんてん",
+      "meaning": "lái xe, vận hành",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "倒れる",
+      "reading": "たおれる",
+      "meaning": "ngã, đổ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "置く",
+      "reading": "おく",
+      "meaning": "Đặt",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "左側",
+      "reading": "ひだりがわ",
+      "meaning": "phía bên trái",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "北側",
+      "reading": "きたがわ",
+      "meaning": "Phía Bắc",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "南側",
+      "reading": "みなみがわ",
+      "meaning": "Phía Nam",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "注ぐ",
+      "reading": "そそぐ",
+      "meaning": "rót, đổ [chất lỏng]",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "注意",
+      "reading": "ちゅうい",
+      "meaning": "chú ý, cẩn thận",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "意見",
+      "reading": "いけん",
+      "meaning": "ý kiến",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "意味",
+      "reading": "いみ",
+      "meaning": "ý nghĩa",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "意思",
+      "reading": "いし",
+      "meaning": "ý chí, ý định",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "橋",
+      "reading": "はし",
+      "meaning": "cầu",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "進む",
+      "reading": "すすむ",
+      "meaning": "tiến lên, tiến về phía trước",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "仕事",
+      "reading": "しごと",
+      "meaning": "công việc",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "仕方",
+      "reading": "しかた",
+      "meaning": "cách làm",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "職員",
+      "reading": "しょくいん",
+      "meaning": "nhân viên",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "探す",
+      "reading": "さがす",
+      "meaning": "tìm kiếm",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "労働",
+      "reading": "ろうどう",
+      "meaning": "lao động",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "会社員",
+      "reading": "かいしゃいん",
+      "meaning": "nhân viên công ty",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "銀行員",
+      "reading": "ぎんこういん",
+      "meaning": "nhân viên ngân hàng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "駅員",
+      "reading": "えきいん",
+      "meaning": "nhân viên nhà ga",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "郵便局",
+      "reading": "ゆうびんきょく",
+      "meaning": "bưu điện",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "薬局",
+      "reading": "やっきょく",
+      "meaning": "hiệu thuốc",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "退院する",
+      "reading": "たいいんする",
+      "meaning": "xuất viện",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 16,
+      "word": "積雪",
+      "reading": "せきせつ",
+      "meaning": "tuyết tích tụ, lớp tuyết",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "会議",
+      "reading": "かいぎ",
+      "meaning": "cuộc họp",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "会議室",
+      "reading": "かいぎしつ",
+      "meaning": "phòng họp",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "賛成",
+      "reading": "さんせい",
+      "meaning": "tán thành, đồng ý",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "反対",
+      "reading": "はんたい",
+      "meaning": "phản đối",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "予報",
+      "reading": "よほう",
+      "meaning": "dự báo",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "連絡",
+      "reading": "れんらく",
+      "meaning": "liên lạc",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "相談",
+      "reading": "そうだん",
+      "meaning": "bàn bạc, trao đổi",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "親指",
+      "reading": "おやゆび",
+      "meaning": "ngón cái",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "指",
+      "reading": "ゆび",
+      "meaning": "ngón tay",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 18,
+      "word": "最近",
+      "reading": "さいきん",
+      "meaning": "gần đây",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 18,
+      "word": "最後",
+      "reading": "さいご",
+      "meaning": "cuối cùng",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 18,
+      "word": "医者",
+      "reading": "いしゃ",
+      "meaning": "bác sĩ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 18,
+      "word": "若者",
+      "reading": "わかもの",
+      "meaning": "người trẻ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 18,
+      "word": "研究者",
+      "reading": "けんきゅうしゃ",
+      "meaning": "nhà nghiên cứu",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 18,
+      "word": "次",
+      "reading": "つぎ",
+      "meaning": "tiếp theo, lần sau",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 18,
+      "word": "子供の時",
+      "reading": "こどものとき",
+      "meaning": "khi còn nhỏ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 18,
+      "word": "子供",
+      "reading": "こども",
+      "meaning": "trẻ em",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 19,
+      "word": "産む",
+      "reading": "うむ",
+      "meaning": "sinh, đẻ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 19,
+      "word": "美術館",
+      "reading": "びじゅつかん",
+      "meaning": "bảo tàng mỹ thuật",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 19,
+      "word": "財布",
+      "reading": "さいふ",
+      "meaning": "Ví",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 19,
+      "word": "毛布",
+      "reading": "もうふ",
+      "meaning": "chăn, mền",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 19,
+      "word": "富士山",
+      "reading": "ふじさん",
+      "meaning": "núi Phú Sĩ",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 20,
+      "word": "方法",
+      "reading": "ほうほう",
+      "meaning": "phương pháp",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 20,
+      "word": "文法",
+      "reading": "ぶんぽう",
+      "meaning": "ngữ pháp",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 20,
+      "word": "禁止",
+      "reading": "きんし",
+      "meaning": "cấm",
+      "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 20,
+      "word": "市役所",
+      "reading": "しやくしょ",
+      "meaning": "tòa thị chính",
+      "origin": "review-existing-n4-n5"
+    }
+  ]
+}

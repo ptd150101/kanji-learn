@@ -2,18 +2,20 @@
 
 ## N3 — 漢字マスター N3
 
-- N3: 20 chương theo thứ tự sách, 376 chữ Kanji tiêu đề chính, **1.100 mục từ** (danh sách học + mở rộng thường gặp).
+- N3: 20 chương theo thứ tự sách, 376 chữ Kanji tiêu đề chính, **1.150 mục từ** (danh sách học + mở rộng thường gặp).
 - Mỗi mục có chữ Nhật, cách đọc hiragana, nghĩa tiếng Việt, cấp độ N3 và nguồn phân loại `origin`. Khi trả lời, ứng dụng hiển thị âm Hán Việt theo từng chữ Kanji.
 - Chỉ số nguồn chữ và trang PDF: `data/n3/source_character_index.json`; từ N3 độc lập: `data_n3.json`; tổng dữ liệu: `data.json`. N3 hiện có thể chọn trong giao diện.
-- `origin: review-existing-n4-n5` là từ ôn tập tái dùng từ bộ dữ liệu đã có; `origin: expanded-common-n3` là từ mở rộng được biên soạn thêm.
-- **Tình trạng đối chiếu:** đã đối chiếu trực quan chữ Kanji chính theo 20 chương và kiểm tra dữ liệu của 376 chữ. Chưa hoàn tất kiểm tra từng dòng bài tập/câu ví dụ trong toàn bộ PDF; không xem 1.100 từ là bản chép nguyên vẹn tất cả từ của sách.
+- Có 205 từ ôn tập (`review-existing-n4-n5`), 932 từ mở rộng (`expanded-common-n3`) và 13 mục đọc được bổ sung trực tiếp từ bài 1 của sách (`textbook-reading`).
+- **Tình trạng đối chiếu:** đã đối chiếu trực quan chữ Kanji chính theo 20 chương và kiểm tra dữ liệu của 376 chữ. Chưa hoàn tất kiểm tra từng dòng bài tập/câu ví dụ trong toàn bộ PDF; không xem 1.150 từ là bản chép nguyên vẹn tất cả từ của sách.
+- Riêng bài 1 đã rà lại các cách đọc Kun ở trang 8–12, đặc biệt **干す（ほす）／干る（ひる）** ở trang 9; **乾く／乾かす** được bổ sung vì thường dùng, không phải cặp cùng mặt chữ 干 trong sách.
+- Có danh mục **41 cặp tự động từ / tha động từ** tại `data/n3/verb_pairs.json`; quiz hiển thị từ đối ứng sau khi trả lời.
 - Sau khi sửa file dữ liệu, chạy `node scripts/sync-kanji-data.mjs` để đồng bộ dữ liệu nhúng offline trong `index.html`; chạy `node --test tests/*.test.mjs` để kiểm tra.
 
 - N5: 38 bài, 527 mục từ.
 - Bài N5 27–34 là 8 bài theme bổ sung từ Nihongo Master, đối chiếu Minna no Nihongo I/II và loại trùng với dữ liệu hiện có.
 - Bài N5 35–38 bổ sung 50 mục còn thiếu khi đối chiếu toàn bộ 128 từ trong PDF JLPT N5 2010–2024; coverage sau merge là 128/128 theo từ + cách đọc, mỗi bài mới tối đa 20 mục.
 - N4: 37 bài, 638 mục từ.
-- Tổng: 1165 mục từ.
+- Tổng dữ liệu Kanji N5/N4/N3: 2315 mục từ.
 - Chuyển N5/N4 ngay ở màn hình thiết lập.
 - Trắc nghiệm 4 đáp án + viết furigana.
 - Sau khi trả lời hiện nghĩa Việt + Hán Việt từng chữ.
@@ -22,7 +24,7 @@
 - Tốc độ mặc định 1.00x + nút nghe thử.
 
 Files:
-- data.json: N5 + N4
+- data.json: N5 + N4 + N3
 - data_n5.json: riêng N5
 - data_n4.json: riêng N4
 - han_viet.json: Hán Việt

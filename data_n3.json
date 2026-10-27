@@ -22,7 +22,7 @@
     "19": "Công nghiệp và kinh tế",
     "20": "Pháp luật"
   },
-  "total_vocab": 1100,
+  "total_vocab": 1150,
   "vocab": [
     {
       "level": "N3",
@@ -75,10 +75,68 @@
     {
       "level": "N3",
       "lesson": 1,
+      "word": "乾かす",
+      "reading": "かわかす",
+      "meaning": "làm khô, hong khô (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "乾く",
+        "reading": "かわく"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "乾く",
+      "reading": "かわく",
+      "meaning": "khô, tự khô (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "乾かす",
+        "reading": "かわかす"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
       "word": "干す",
       "reading": "ほす",
       "meaning": "phơi",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "source_page": 9,
+      "source_kind": "textbook-reading",
+      "related_verbs": [
+        {
+          "word": "干る",
+          "reading": "ひる",
+          "relation": "same_kanji_intransitive_uncommon"
+        },
+        {
+          "word": "乾く",
+          "reading": "かわく",
+          "relation": "related_result"
+        },
+        {
+          "word": "乾かす",
+          "reading": "かわかす",
+          "relation": "related_transitive"
+        }
+      ],
+      "usage_note": "干す là 'đem phơi'; 干る（ひる） là tự cạn/khô (ít dùng); 乾く↔乾かす là cặp tự/tha thông dụng về trạng thái khô."
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "干る",
+      "reading": "ひる",
+      "meaning": "cạn, khô đi; thủy triều rút (tự động từ; ít dùng trong hội thoại hiện đại)",
+      "origin": "textbook-reading",
+      "source_page": 9,
+      "verb_type": "intransitive",
+      "usage_note": "Cách đọc ひる được ghi ngay bên cạnh 干す ở trang 9 của sách; ít gặp trong hội thoại hiện đại, thường dùng 乾く cho 'tự khô'."
     },
     {
       "level": "N3",
@@ -179,6 +237,15 @@
     {
       "level": "N3",
       "lesson": 1,
+      "word": "事",
+      "reading": "こと",
+      "meaning": "sự việc, chuyện",
+      "origin": "textbook-reading",
+      "source_page": 12
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
       "word": "事故",
       "reading": "じこ",
       "meaning": "tai nạn",
@@ -235,6 +302,15 @@
     {
       "level": "N3",
       "lesson": 1,
+      "word": "寝かす",
+      "reading": "ねかす",
+      "meaning": "cho nằm ngủ, đặt nằm (tha động từ)",
+      "origin": "textbook-reading",
+      "source_page": 8
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
       "word": "寝る",
       "reading": "ねる",
       "meaning": "ngủ",
@@ -263,6 +339,15 @@
       "reading": "せいかつ",
       "meaning": "sinh hoạt, cuộc sống",
       "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "洗う",
+      "reading": "あらう",
+      "meaning": "rửa, giặt (tha động từ)",
+      "origin": "textbook-reading",
+      "source_page": 9
     },
     {
       "level": "N3",
@@ -307,10 +392,46 @@
     {
       "level": "N3",
       "lesson": 1,
+      "word": "定か",
+      "reading": "さだか",
+      "meaning": "rõ ràng, chắc chắn (tính từ-na)",
+      "origin": "textbook-reading",
+      "source_page": 12
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "定まる",
+      "reading": "さだまる",
+      "meaning": "được xác định, ổn định (tự động từ)",
+      "origin": "textbook-reading",
+      "source_page": 12
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "定める",
+      "reading": "さだめる",
+      "meaning": "quyết định, ấn định (tha động từ)",
+      "origin": "textbook-reading",
+      "source_page": 12
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
       "word": "定休日",
       "reading": "ていきゅうび",
       "meaning": "ngày nghỉ cố định",
       "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "湯",
+      "reading": "ゆ",
+      "meaning": "nước nóng",
+      "origin": "textbook-reading",
+      "source_page": 8
     },
     {
       "level": "N3",
@@ -363,6 +484,15 @@
     {
       "level": "N3",
       "lesson": 1,
+      "word": "燃す",
+      "reading": "もす",
+      "meaning": "đốt, làm cháy (tha động từ; ít dùng hơn 燃やす)",
+      "origin": "textbook-reading",
+      "source_page": 10
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
       "word": "燃やす",
       "reading": "もやす",
       "meaning": "đốt (tha động từ)",
@@ -383,6 +513,50 @@
       "reading": "うめぼし",
       "meaning": "mơ muối",
       "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "沸かす",
+      "reading": "わかす",
+      "meaning": "đun sôi, làm sôi (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "沸く",
+        "reading": "わく"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "沸く",
+      "reading": "わく",
+      "meaning": "sôi lên (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "沸かす",
+        "reading": "わかす"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "末",
+      "reading": "すえ",
+      "meaning": "cuối, phần cuối; tương lai",
+      "origin": "textbook-reading",
+      "source_page": 11
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "末っ子",
+      "reading": "すえっこ",
+      "meaning": "con út",
+      "origin": "textbook-reading",
+      "source_page": 11
     },
     {
       "level": "N3",
@@ -435,10 +609,28 @@
     {
       "level": "N3",
       "lesson": 1,
+      "word": "用いる",
+      "reading": "もちいる",
+      "meaning": "sử dụng, dùng đến (tha động từ)",
+      "origin": "textbook-reading",
+      "source_page": 12
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
       "word": "用事",
       "reading": "ようじ",
       "meaning": "việc cần làm",
       "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 1,
+      "word": "浴びせる",
+      "reading": "あびせる",
+      "meaning": "dội lên, đổ lên người hoặc vật (tha động từ)",
+      "origin": "textbook-reading",
+      "source_page": 8
     },
     {
       "level": "N3",
@@ -563,10 +755,28 @@
     {
       "level": "N3",
       "lesson": 2,
+      "word": "建つ",
+      "reading": "たつ",
+      "meaning": "được xây lên, mọc lên (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "建てる",
+        "reading": "たてる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
       "word": "建てる",
       "reading": "たてる",
       "meaning": "xây dựng",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "建つ",
+        "reading": "たつ"
+      }
     },
     {
       "level": "N3",
@@ -627,10 +837,28 @@
     {
       "level": "N3",
       "lesson": 2,
+      "word": "向く",
+      "reading": "むく",
+      "meaning": "hướng về, quay mặt về (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "向ける",
+        "reading": "むける"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 2,
       "word": "向ける",
       "reading": "むける",
       "meaning": "hướng về phía",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "向く",
+        "reading": "むく"
+      }
     },
     {
       "level": "N3",
@@ -750,7 +978,12 @@
       "word": "消える",
       "reading": "きえる",
       "meaning": "biến mất, tắt",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "消す",
+        "reading": "けす"
+      }
     },
     {
       "level": "N3",
@@ -758,7 +991,12 @@
       "word": "消す",
       "reading": "けす",
       "meaning": "Tắt (TV)",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "消える",
+        "reading": "きえる"
+      }
     },
     {
       "level": "N3",
@@ -1019,6 +1257,32 @@
     {
       "level": "N3",
       "lesson": 3,
+      "word": "温まる",
+      "reading": "あたたまる",
+      "meaning": "trở nên ấm (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "温める",
+        "reading": "あたためる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "温める",
+      "reading": "あたためる",
+      "meaning": "làm ấm, hâm nóng (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "温まる",
+        "reading": "あたたまる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
       "word": "温泉",
       "reading": "おんせん",
       "meaning": "suối nước nóng",
@@ -1163,6 +1427,32 @@
     {
       "level": "N3",
       "lesson": 3,
+      "word": "煮える",
+      "reading": "にえる",
+      "meaning": "chín nhừ, được nấu chín (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "煮る",
+        "reading": "にる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
+      "word": "煮る",
+      "reading": "にる",
+      "meaning": "ninh, luộc, nấu (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "煮える",
+        "reading": "にえる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 3,
       "word": "小豆",
       "reading": "あずき",
       "meaning": "đậu đỏ",
@@ -1190,7 +1480,12 @@
       "word": "焼く",
       "reading": "やく",
       "meaning": "nướng, đốt",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "焼ける",
+        "reading": "やける"
+      }
     },
     {
       "level": "N3",
@@ -1198,7 +1493,12 @@
       "word": "焼ける",
       "reading": "やける",
       "meaning": "cháy, được nướng",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "焼く",
+        "reading": "やく"
+      }
     },
     {
       "level": "N3",
@@ -1414,7 +1714,12 @@
       "word": "冷える",
       "reading": "ひえる",
       "meaning": "trở lạnh",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "冷やす",
+        "reading": "ひやす"
+      }
     },
     {
       "level": "N3",
@@ -1430,7 +1735,12 @@
       "word": "冷やす",
       "reading": "ひやす",
       "meaning": "làm lạnh",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "冷える",
+        "reading": "ひえる"
+      }
     },
     {
       "level": "N3",
@@ -1643,6 +1953,32 @@
     {
       "level": "N3",
       "lesson": 4,
+      "word": "治す",
+      "reading": "なおす",
+      "meaning": "chữa khỏi bệnh (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "治る",
+        "reading": "なおる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "治る",
+      "reading": "なおる",
+      "meaning": "khỏi bệnh, lành (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "治す",
+        "reading": "なおす"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
       "word": "首",
       "reading": "くび",
       "meaning": "cổ",
@@ -1678,7 +2014,12 @@
       "word": "助かる",
       "reading": "たすかる",
       "meaning": "được cứu, thoát nạn",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "助ける",
+        "reading": "たすける"
+      }
     },
     {
       "level": "N3",
@@ -1686,7 +2027,12 @@
       "word": "助ける",
       "reading": "たすける",
       "meaning": "giúp, cứu",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "助かる",
+        "reading": "たすかる"
+      }
     },
     {
       "level": "N3",
@@ -1774,7 +2120,25 @@
       "word": "痛む",
       "reading": "いたむ",
       "meaning": "đau nhức",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "痛める",
+        "reading": "いためる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 4,
+      "word": "痛める",
+      "reading": "いためる",
+      "meaning": "làm đau, gây tổn thương (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "痛む",
+        "reading": "いたむ"
+      }
     },
     {
       "level": "N3",
@@ -1934,7 +2298,12 @@
       "word": "決まる",
       "reading": "きまる",
       "meaning": "được quyết định",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "決める",
+        "reading": "きめる"
+      }
     },
     {
       "level": "N3",
@@ -1942,7 +2311,12 @@
       "word": "決める",
       "reading": "きめる",
       "meaning": "quyết định",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "決まる",
+        "reading": "きまる"
+      }
     },
     {
       "level": "N3",
@@ -2262,7 +2636,25 @@
       "word": "表す",
       "reading": "あらわす",
       "meaning": "biểu thị",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "表れる",
+        "reading": "あらわれる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 5,
+      "word": "表れる",
+      "reading": "あらわれる",
+      "meaning": "biểu hiện ra, bộc lộ (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "表す",
+        "reading": "あらわす"
+      }
     },
     {
       "level": "N3",
@@ -2574,7 +2966,12 @@
       "word": "伝える",
       "reading": "つたえる",
       "meaning": "truyền đạt, thông báo",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "伝わる",
+        "reading": "つたわる"
+      }
     },
     {
       "level": "N3",
@@ -2582,7 +2979,12 @@
       "word": "伝わる",
       "reading": "つたわる",
       "meaning": "được truyền tới",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "伝える",
+        "reading": "つたえる"
+      }
     },
     {
       "level": "N3",
@@ -3083,10 +3485,28 @@
     {
       "level": "N3",
       "lesson": 7,
+      "word": "貯まる",
+      "reading": "たまる",
+      "meaning": "tích tụ, được tích lũy (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "貯める",
+        "reading": "ためる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
       "word": "貯める",
       "reading": "ためる",
       "meaning": "tích góp",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "貯まる",
+        "reading": "たまる"
+      }
     },
     {
       "level": "N3",
@@ -3571,10 +3991,28 @@
     {
       "level": "N3",
       "lesson": 8,
+      "word": "付く",
+      "reading": "つく",
+      "meaning": "dính vào, được gắn vào (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "付ける",
+        "reading": "つける"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
       "word": "付ける",
       "reading": "つける",
       "meaning": "gắn, đính",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "付く",
+        "reading": "つく"
+      }
     },
     {
       "level": "N3",
@@ -3747,6 +4185,32 @@
     {
       "level": "N3",
       "lesson": 9,
+      "word": "減らす",
+      "reading": "へらす",
+      "meaning": "làm giảm bớt (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "減る",
+        "reading": "へる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "減る",
+      "reading": "へる",
+      "meaning": "giảm xuống (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "減らす",
+        "reading": "へらす"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
       "word": "是非",
       "reading": "ぜひ",
       "meaning": "nhất định, bằng mọi cách",
@@ -3759,6 +4223,32 @@
       "reading": "ぜんぶ",
       "meaning": "toàn bộ, tất cả",
       "origin": "review-existing-n4-n5"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "増える",
+      "reading": "ふえる",
+      "meaning": "tăng lên (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "増やす",
+        "reading": "ふやす"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "増やす",
+      "reading": "ふやす",
+      "meaning": "làm tăng lên (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "増える",
+        "reading": "ふえる"
+      }
     },
     {
       "level": "N3",
@@ -3822,7 +4312,25 @@
       "word": "満たす",
       "reading": "みたす",
       "meaning": "làm đầy",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "満ちる",
+        "reading": "みちる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "満ちる",
+      "reading": "みちる",
+      "meaning": "tràn đầy, đầy lên (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "満たす",
+        "reading": "みたす"
+      }
     },
     {
       "level": "N3",
@@ -4027,6 +4535,32 @@
     {
       "level": "N3",
       "lesson": 10,
+      "word": "集まる",
+      "reading": "あつまる",
+      "meaning": "tụ tập, tập trung lại (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "集める",
+        "reading": "あつめる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "集める",
+      "reading": "あつめる",
+      "meaning": "thu thập, tập hợp (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "集まる",
+        "reading": "あつまる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
       "word": "小児科",
       "reading": "しょうにか",
       "meaning": "khoa nhi",
@@ -4038,7 +4572,12 @@
       "word": "伸ばす",
       "reading": "のばす",
       "meaning": "kéo dài, duỗi ra",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "伸びる",
+        "reading": "のびる"
+      }
     },
     {
       "level": "N3",
@@ -4046,7 +4585,12 @@
       "word": "伸びる",
       "reading": "のびる",
       "meaning": "duỗi ra, phát triển",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "伸ばす",
+        "reading": "のばす"
+      }
     },
     {
       "level": "N3",
@@ -4718,7 +5262,12 @@
       "word": "落ちる",
       "reading": "おちる",
       "meaning": "rơi, trượt",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "落とす",
+        "reading": "おとす"
+      }
     },
     {
       "level": "N3",
@@ -4726,7 +5275,12 @@
       "word": "落とす",
       "reading": "おとす",
       "meaning": "làm rơi",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "落ちる",
+        "reading": "おちる"
+      }
     },
     {
       "level": "N3",
@@ -4790,7 +5344,25 @@
       "word": "解く",
       "reading": "とく",
       "meaning": "giải (bài, câu đố)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "解ける",
+        "reading": "とける"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 12,
+      "word": "解ける",
+      "reading": "とける",
+      "meaning": "được giải, được tháo gỡ (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "解く",
+        "reading": "とく"
+      }
     },
     {
       "level": "N3",
@@ -5006,7 +5578,12 @@
       "word": "続く",
       "reading": "つづく",
       "meaning": "tiếp tục (tự động từ)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "続ける",
+        "reading": "つづける"
+      }
     },
     {
       "level": "N3",
@@ -5014,7 +5591,12 @@
       "word": "続ける",
       "reading": "つづける",
       "meaning": "tiếp tục (tha động từ)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "続く",
+        "reading": "つづく"
+      }
     },
     {
       "level": "N3",
@@ -5547,6 +6129,32 @@
     {
       "level": "N3",
       "lesson": 13,
+      "word": "沈む",
+      "reading": "しずむ",
+      "meaning": "chìm xuống (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "沈める",
+        "reading": "しずめる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 13,
+      "word": "沈める",
+      "reading": "しずめる",
+      "meaning": "làm chìm (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "沈む",
+        "reading": "しずむ"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 13,
       "word": "底",
       "reading": "そこ",
       "meaning": "đáy",
@@ -5678,7 +6286,12 @@
       "word": "流す",
       "reading": "ながす",
       "meaning": "làm chảy",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "流れる",
+        "reading": "ながれる"
+      }
     },
     {
       "level": "N3",
@@ -5686,7 +6299,12 @@
       "word": "流れる",
       "reading": "ながれる",
       "meaning": "chảy",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "流す",
+        "reading": "ながす"
+      }
     },
     {
       "level": "N3",
@@ -5702,7 +6320,12 @@
       "word": "移す",
       "reading": "うつす",
       "meaning": "di chuyển (tha động từ)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "移る",
+        "reading": "うつる"
+      }
     },
     {
       "level": "N3",
@@ -5710,7 +6333,12 @@
       "word": "移る",
       "reading": "うつる",
       "meaning": "chuyển sang (tự động từ)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "移す",
+        "reading": "うつす"
+      }
     },
     {
       "level": "N3",
@@ -6062,7 +6690,38 @@
       "word": "泊まる",
       "reading": "とまる",
       "meaning": "ở qua đêm",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "泊める",
+        "reading": "とめる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "泊める",
+      "reading": "とめる",
+      "meaning": "cho ở qua đêm (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "泊まる",
+        "reading": "とまる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 14,
+      "word": "飛ばす",
+      "reading": "とばす",
+      "meaning": "làm bay, phóng đi (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "飛ぶ",
+        "reading": "とぶ"
+      }
     },
     {
       "level": "N3",
@@ -6078,7 +6737,12 @@
       "word": "飛ぶ",
       "reading": "とぶ",
       "meaning": "bay, nhảy",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "飛ばす",
+        "reading": "とばす"
+      }
     },
     {
       "level": "N3",
@@ -6134,7 +6798,12 @@
       "word": "変える",
       "reading": "かえる",
       "meaning": "thay đổi (tha động từ)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "変わる",
+        "reading": "かわる"
+      }
     },
     {
       "level": "N3",
@@ -6142,7 +6811,12 @@
       "word": "変わる",
       "reading": "かわる",
       "meaning": "thay đổi (tự động từ)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "変える",
+        "reading": "かえる"
+      }
     },
     {
       "level": "N3",
@@ -6302,7 +6976,12 @@
       "word": "曲がる",
       "reading": "まがる",
       "meaning": "rẽ, cong (tự động từ)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "曲げる",
+        "reading": "まげる"
+      }
     },
     {
       "level": "N3",
@@ -6310,7 +6989,12 @@
       "word": "曲げる",
       "reading": "まげる",
       "meaning": "bẻ cong (tha động từ)",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "曲がる",
+        "reading": "まがる"
+      }
     },
     {
       "level": "N3",
@@ -6339,6 +7023,32 @@
     {
       "level": "N3",
       "lesson": 15,
+      "word": "止まる",
+      "reading": "とまる",
+      "meaning": "dừng lại (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "止める",
+        "reading": "とめる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
+      "word": "止める",
+      "reading": "とめる",
+      "meaning": "làm dừng, dừng lại cái gì (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "止まる",
+        "reading": "とまる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 15,
       "word": "自転車",
       "reading": "じてんしゃ",
       "meaning": "xe đạp",
@@ -6358,7 +7068,12 @@
       "word": "進む",
       "reading": "すすむ",
       "meaning": "tiến lên, tiến về phía trước",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "進める",
+        "reading": "すすめる"
+      }
     },
     {
       "level": "N3",
@@ -6366,7 +7081,12 @@
       "word": "進める",
       "reading": "すすめる",
       "meaning": "thúc đẩy",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "進む",
+        "reading": "すすむ"
+      }
     },
     {
       "level": "N3",
@@ -6390,7 +7110,12 @@
       "word": "折る",
       "reading": "おる",
       "meaning": "gấp, bẻ",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "折れる",
+        "reading": "おれる"
+      }
     },
     {
       "level": "N3",
@@ -6398,7 +7123,12 @@
       "word": "折れる",
       "reading": "おれる",
       "meaning": "bị gãy, gập",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "折る",
+        "reading": "おる"
+      }
     },
     {
       "level": "N3",
@@ -6486,7 +7216,12 @@
       "word": "直す",
       "reading": "なおす",
       "meaning": "sửa chữa",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "直る",
+        "reading": "なおる"
+      }
     },
     {
       "level": "N3",
@@ -6494,7 +7229,12 @@
       "word": "直る",
       "reading": "なおる",
       "meaning": "được sửa, lành",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "直す",
+        "reading": "なおす"
+      }
     },
     {
       "level": "N3",
@@ -6566,7 +7306,12 @@
       "word": "倒す",
       "reading": "たおす",
       "meaning": "làm đổ",
-      "origin": "expanded-common-n3"
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "倒れる",
+        "reading": "たおれる"
+      }
     },
     {
       "level": "N3",
@@ -6574,7 +7319,12 @@
       "word": "倒れる",
       "reading": "たおれる",
       "meaning": "ngã, đổ",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "倒す",
+        "reading": "たおす"
+      }
     },
     {
       "level": "N3",
@@ -7355,6 +8105,32 @@
     {
       "level": "N3",
       "lesson": 17,
+      "word": "集まる",
+      "reading": "あつまる",
+      "meaning": "tụ họp (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "集める",
+        "reading": "あつめる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
+      "word": "集める",
+      "reading": "あつめる",
+      "meaning": "tập hợp người hoặc vật (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "集まる",
+        "reading": "あつまる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 17,
       "word": "承認",
       "reading": "しょうにん",
       "meaning": "chấp thuận",
@@ -8123,10 +8899,28 @@
     {
       "level": "N3",
       "lesson": 19,
+      "word": "産まれる",
+      "reading": "うまれる",
+      "meaning": "được sinh ra (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "産む",
+        "reading": "うむ"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 19,
       "word": "産む",
       "reading": "うむ",
       "meaning": "sinh, đẻ",
-      "origin": "review-existing-n4-n5"
+      "origin": "review-existing-n4-n5",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "産まれる",
+        "reading": "うまれる"
+      }
     },
     {
       "level": "N3",
@@ -8215,6 +9009,32 @@
       "reading": "はいふ",
       "meaning": "phân phát",
       "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 19,
+      "word": "売る",
+      "reading": "うる",
+      "meaning": "bán (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "売れる",
+        "reading": "うれる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 19,
+      "word": "売れる",
+      "reading": "うれる",
+      "meaning": "bán được, bán chạy (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "売る",
+        "reading": "うる"
+      }
     },
     {
       "level": "N3",
@@ -8727,6 +9547,32 @@
       "reading": "へいたい",
       "meaning": "binh lính",
       "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 20,
+      "word": "捕まえる",
+      "reading": "つかまえる",
+      "meaning": "bắt giữ (tha động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "transitive",
+      "paired_with": {
+        "word": "捕まる",
+        "reading": "つかまる"
+      }
+    },
+    {
+      "level": "N3",
+      "lesson": 20,
+      "word": "捕まる",
+      "reading": "つかまる",
+      "meaning": "bị bắt, bị giữ lại (tự động từ)",
+      "origin": "expanded-common-n3",
+      "verb_type": "intransitive",
+      "paired_with": {
+        "word": "捕まえる",
+        "reading": "つかまえる"
+      }
     },
     {
       "level": "N3",

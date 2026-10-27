@@ -180,7 +180,7 @@ def init_db(conn: sqlite3.Connection) -> None:
 
 def iter_source_vocab(root: str | Path) -> Iterable[VocabRecord]:
     root = Path(root)
-    for filename in ("data_n5.json", "data_n4.json"):
+    for filename in ("data_n5.json", "data_n4.json", "data_n3.json"):
         path = root / filename
         if not path.exists():
             continue

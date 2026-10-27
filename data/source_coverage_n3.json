@@ -1,0 +1,309 @@
+{
+  "level": "N3",
+  "source_pdf": "Kanji_Masuta_N3 1.pdf",
+  "source_pdf_pages": 192,
+  "source_heading_characters": 376,
+  "source_chapters": 20,
+  "validated_scope": "Main Kanji headings on study pages were visually reviewed. Exercises and answer-key lines have NOT been fully reviewed.",
+  "word_source_policy": "review-existing-n4-n5 = existing vocabulary for reinforcement; expanded-common-n3 = independently curated supplementary common-use word",
+  "exercise_audit_status": "incomplete",
+  "total_vocab": 1100,
+  "chapters": {
+    "1": {
+      "title": "Sinh hoạt",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 58,
+      "reused_entries": 22,
+      "expanded_entries": 36,
+      "source_pdf_pages": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "2": {
+      "title": "Nhà cửa",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 57,
+      "reused_entries": 12,
+      "expanded_entries": 45,
+      "source_pdf_pages": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "3": {
+      "title": "Nấu ăn",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 63,
+      "reused_entries": 15,
+      "expanded_entries": 48,
+      "source_pdf_pages": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    "4": {
+      "title": "Bệnh viện",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 52,
+      "reused_entries": 11,
+      "expanded_entries": 41,
+      "source_pdf_pages": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    "5": {
+      "title": "Thể thao",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 61,
+      "reused_entries": 11,
+      "expanded_entries": 50,
+      "source_pdf_pages": [
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    "6": {
+      "title": "Cảm xúc",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 51,
+      "reused_entries": 10,
+      "expanded_entries": 41,
+      "source_pdf_pages": [
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    "7": {
+      "title": "Hôn nhân",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 55,
+      "reused_entries": 7,
+      "expanded_entries": 48,
+      "source_pdf_pages": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    "8": {
+      "title": "Quan hệ",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 61,
+      "reused_entries": 12,
+      "expanded_entries": 49,
+      "source_pdf_pages": [
+        62,
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    "9": {
+      "title": "Đơn vị và mức độ",
+      "kanji_headings": 8,
+      "kanji_with_vocabulary": 8,
+      "vocab_entries": 25,
+      "reused_entries": 6,
+      "expanded_entries": 19,
+      "source_pdf_pages": [
+        68,
+        69
+      ]
+    },
+    "10": {
+      "title": "Trường học",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 51,
+      "reused_entries": 7,
+      "expanded_entries": 44,
+      "source_pdf_pages": [
+        74,
+        75,
+        76,
+        77,
+        78
+      ]
+    },
+    "11": {
+      "title": "Học tập",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 58,
+      "reused_entries": 12,
+      "expanded_entries": 46,
+      "source_pdf_pages": [
+        80,
+        81,
+        82,
+        83,
+        84
+      ]
+    },
+    "12": {
+      "title": "Giảng dạy",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 60,
+      "reused_entries": 13,
+      "expanded_entries": 47,
+      "source_pdf_pages": [
+        92,
+        93,
+        94,
+        95,
+        96
+      ]
+    },
+    "13": {
+      "title": "Thiên nhiên và địa lý",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 57,
+      "reused_entries": 6,
+      "expanded_entries": 51,
+      "source_pdf_pages": [
+        98,
+        99,
+        100,
+        101,
+        102
+      ]
+    },
+    "14": {
+      "title": "Du lịch",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 58,
+      "reused_entries": 7,
+      "expanded_entries": 51,
+      "source_pdf_pages": [
+        108,
+        109,
+        110,
+        111,
+        112
+      ]
+    },
+    "15": {
+      "title": "Giao thông",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 63,
+      "reused_entries": 16,
+      "expanded_entries": 47,
+      "source_pdf_pages": [
+        114,
+        115,
+        116,
+        117,
+        118
+      ]
+    },
+    "16": {
+      "title": "Công việc",
+      "kanji_headings": 19,
+      "kanji_with_vocabulary": 19,
+      "vocab_entries": 62,
+      "reused_entries": 12,
+      "expanded_entries": 50,
+      "source_pdf_pages": [
+        124,
+        125,
+        126,
+        127,
+        128
+      ]
+    },
+    "17": {
+      "title": "Hội họp",
+      "kanji_headings": 20,
+      "kanji_with_vocabulary": 20,
+      "vocab_entries": 60,
+      "reused_entries": 9,
+      "expanded_entries": 51,
+      "source_pdf_pages": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ]
+    },
+    "18": {
+      "title": "Công ty",
+      "kanji_headings": 14,
+      "kanji_with_vocabulary": 14,
+      "vocab_entries": 43,
+      "reused_entries": 8,
+      "expanded_entries": 35,
+      "source_pdf_pages": [
+        140,
+        141,
+        142,
+        143
+      ]
+    },
+    "19": {
+      "title": "Công nghiệp và kinh tế",
+      "kanji_headings": 18,
+      "kanji_with_vocabulary": 18,
+      "vocab_entries": 55,
+      "reused_entries": 5,
+      "expanded_entries": 50,
+      "source_pdf_pages": [
+        146,
+        147,
+        148,
+        149,
+        150
+      ]
+    },
+    "20": {
+      "title": "Pháp luật",
+      "kanji_headings": 17,
+      "kanji_with_vocabulary": 17,
+      "vocab_entries": 50,
+      "reused_entries": 4,
+      "expanded_entries": 46,
+      "source_pdf_pages": [
+        152,
+        153,
+        154,
+        155,
+        156
+      ]
+    }
+  }
+}

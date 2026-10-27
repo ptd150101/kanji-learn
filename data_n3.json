@@ -22,7 +22,7 @@
     "19": "Công nghiệp và kinh tế",
     "20": "Pháp luật"
   },
-  "total_vocab": 425,
+  "total_vocab": 626,
   "vocab": [
     {
       "level": "N3",
@@ -3422,6 +3422,1614 @@
       "word": "採点",
       "reading": "さいてん",
       "meaning": "chấm điểm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "感情",
+      "reading": "かんじょう",
+      "meaning": "cảm xúc, tình cảm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "感動",
+      "reading": "かんどう",
+      "meaning": "cảm động",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "感じる",
+      "reading": "かんじる",
+      "meaning": "cảm thấy",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "表情",
+      "reading": "ひょうじょう",
+      "meaning": "biểu cảm, nét mặt",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "友情",
+      "reading": "ゆうじょう",
+      "meaning": "tình bạn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "恋愛",
+      "reading": "れんあい",
+      "meaning": "tình yêu nam nữ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "恋人",
+      "reading": "こいびと",
+      "meaning": "người yêu",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "恋しい",
+      "reading": "こいしい",
+      "meaning": "nhớ nhung",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "愛情",
+      "reading": "あいじょう",
+      "meaning": "tình yêu thương",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "愛する",
+      "reading": "あいする",
+      "meaning": "yêu thương",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "信じる",
+      "reading": "しんじる",
+      "meaning": "tin tưởng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "信用",
+      "reading": "しんよう",
+      "meaning": "uy tín, tín dụng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "想像",
+      "reading": "そうぞう",
+      "meaning": "tưởng tượng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "感想",
+      "reading": "かんそう",
+      "meaning": "cảm tưởng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "理想",
+      "reading": "りそう",
+      "meaning": "lý tưởng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "伝わる",
+      "reading": "つたわる",
+      "meaning": "được truyền tới",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "欲しい",
+      "reading": "ほしい",
+      "meaning": "muốn có",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "欲望",
+      "reading": "よくぼう",
+      "meaning": "ham muốn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "食欲",
+      "reading": "しょくよく",
+      "meaning": "cảm giác thèm ăn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "苦しい",
+      "reading": "くるしい",
+      "meaning": "đau khổ, khó khăn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "苦手",
+      "reading": "にがて",
+      "meaning": "không giỏi, yếu về",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "苦労",
+      "reading": "くろう",
+      "meaning": "vất vả",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "悩む",
+      "reading": "なやむ",
+      "meaning": "phiền não, trăn trở",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "悩み",
+      "reading": "なやみ",
+      "meaning": "nỗi lo",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "難問",
+      "reading": "なんもん",
+      "meaning": "câu hỏi khó",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "怒る",
+      "reading": "おこる",
+      "meaning": "tức giận",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "怒り",
+      "reading": "いかり",
+      "meaning": "cơn giận",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "悲しい",
+      "reading": "かなしい",
+      "meaning": "buồn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "悲しむ",
+      "reading": "かなしむ",
+      "meaning": "đau buồn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "悲劇",
+      "reading": "ひげき",
+      "meaning": "bi kịch",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "笑う",
+      "reading": "わらう",
+      "meaning": "cười",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "笑顔",
+      "reading": "えがお",
+      "meaning": "nụ cười",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "微笑む",
+      "reading": "ほほえむ",
+      "meaning": "mỉm cười",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "喜ぶ",
+      "reading": "よろこぶ",
+      "meaning": "vui mừng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "喜び",
+      "reading": "よろこび",
+      "meaning": "niềm vui",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "記念",
+      "reading": "きねん",
+      "meaning": "kỷ niệm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "念のため",
+      "reading": "ねんのため",
+      "meaning": "để chắc chắn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "泣く",
+      "reading": "なく",
+      "meaning": "khóc",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "泣き声",
+      "reading": "なきごえ",
+      "meaning": "tiếng khóc",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "涙",
+      "reading": "なみだ",
+      "meaning": "nước mắt",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 6,
+      "word": "涙ぐむ",
+      "reading": "なみだぐむ",
+      "meaning": "rơm rớm nước mắt",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "結婚",
+      "reading": "けっこん",
+      "meaning": "kết hôn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "結ぶ",
+      "reading": "むすぶ",
+      "meaning": "buộc, kết nối",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "婚約",
+      "reading": "こんやく",
+      "meaning": "đính hôn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "新婚",
+      "reading": "しんこん",
+      "meaning": "mới cưới",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "紹介",
+      "reading": "しょうかい",
+      "meaning": "giới thiệu",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "自己紹介",
+      "reading": "じこしょうかい",
+      "meaning": "tự giới thiệu",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "介護",
+      "reading": "かいご",
+      "meaning": "chăm sóc người cao tuổi",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "仲介",
+      "reading": "ちゅうかい",
+      "meaning": "trung gian",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "独身",
+      "reading": "どくしん",
+      "meaning": "độc thân",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "独立",
+      "reading": "どくりつ",
+      "meaning": "độc lập",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "一人暮らし",
+      "reading": "ひとりぐらし",
+      "meaning": "sống một mình",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "身分",
+      "reading": "みぶん",
+      "meaning": "thân phận, địa vị",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "身近",
+      "reading": "みぢか",
+      "meaning": "gần gũi",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "貯金",
+      "reading": "ちょきん",
+      "meaning": "tiền tiết kiệm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "貯める",
+      "reading": "ためる",
+      "meaning": "tích góp",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "期間",
+      "reading": "きかん",
+      "meaning": "khoảng thời gian",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "期待",
+      "reading": "きたい",
+      "meaning": "mong đợi",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "期限",
+      "reading": "きげん",
+      "meaning": "thời hạn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "束ねる",
+      "reading": "たばねる",
+      "meaning": "bó lại",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "花束",
+      "reading": "はなたば",
+      "meaning": "bó hoa",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "必ず",
+      "reading": "かならず",
+      "meaning": "nhất định",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "必要",
+      "reading": "ひつよう",
+      "meaning": "cần thiết",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "必死",
+      "reading": "ひっし",
+      "meaning": "hết sức, liều mạng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "守る",
+      "reading": "まもる",
+      "meaning": "bảo vệ, tuân thủ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "留守",
+      "reading": "るす",
+      "meaning": "vắng nhà",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "保守",
+      "reading": "ほしゅ",
+      "meaning": "bảo trì, bảo thủ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "結婚式",
+      "reading": "けっこんしき",
+      "meaning": "lễ cưới",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "形式",
+      "reading": "けいしき",
+      "meaning": "hình thức",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "公式",
+      "reading": "こうしき",
+      "meaning": "chính thức",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "列",
+      "reading": "れつ",
+      "meaning": "hàng, dãy",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "行列",
+      "reading": "ぎょうれつ",
+      "meaning": "hàng người",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "列車",
+      "reading": "れっしゃ",
+      "meaning": "tàu hỏa",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "祝う",
+      "reading": "いわう",
+      "meaning": "chúc mừng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "祝日",
+      "reading": "しゅくじつ",
+      "meaning": "ngày lễ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "お祝い",
+      "reading": "おいわい",
+      "meaning": "lời chúc, quà mừng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "酔う",
+      "reading": "よう",
+      "meaning": "say rượu",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "酔っ払い",
+      "reading": "よっぱらい",
+      "meaning": "người say",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "永遠",
+      "reading": "えいえん",
+      "meaning": "vĩnh viễn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "永久",
+      "reading": "えいきゅう",
+      "meaning": "vĩnh cửu",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "願う",
+      "reading": "ねがう",
+      "meaning": "mong ước, cầu nguyện",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "願い",
+      "reading": "ねがい",
+      "meaning": "ước nguyện",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "出願",
+      "reading": "しゅつがん",
+      "meaning": "nộp đơn đăng ký",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "幸せ",
+      "reading": "しあわせ",
+      "meaning": "hạnh phúc",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "幸運",
+      "reading": "こううん",
+      "meaning": "may mắn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "不幸",
+      "reading": "ふこう",
+      "meaning": "bất hạnh",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "福祉",
+      "reading": "ふくし",
+      "meaning": "phúc lợi",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "幸福",
+      "reading": "こうふく",
+      "meaning": "hạnh phúc",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 7,
+      "word": "祝福",
+      "reading": "しゅくふく",
+      "meaning": "chúc phúc",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "関係",
+      "reading": "かんけい",
+      "meaning": "quan hệ, liên quan",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "関心",
+      "reading": "かんしん",
+      "meaning": "sự quan tâm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "関わる",
+      "reading": "かかわる",
+      "meaning": "liên quan",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "係",
+      "reading": "かかり",
+      "meaning": "người phụ trách",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "係員",
+      "reading": "かかりいん",
+      "meaning": "nhân viên phụ trách",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "和食",
+      "reading": "わしょく",
+      "meaning": "món ăn Nhật",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "平和",
+      "reading": "へいわ",
+      "meaning": "hòa bình",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "和やか",
+      "reading": "なごやか",
+      "meaning": "hòa nhã",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "付き合う",
+      "reading": "つきあう",
+      "meaning": "giao du, hẹn hò",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "付ける",
+      "reading": "つける",
+      "meaning": "gắn, đính",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "娘",
+      "reading": "むすめ",
+      "meaning": "con gái",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "娘さん",
+      "reading": "むすめさん",
+      "meaning": "con gái nhà người khác",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "老いる",
+      "reading": "おいる",
+      "meaning": "già đi",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "老人",
+      "reading": "ろうじん",
+      "meaning": "người già",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "老後",
+      "reading": "ろうご",
+      "meaning": "tuổi già",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "婦人",
+      "reading": "ふじん",
+      "meaning": "phụ nữ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "主婦",
+      "reading": "しゅふ",
+      "meaning": "nội trợ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "名字",
+      "reading": "みょうじ",
+      "meaning": "họ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "姓名",
+      "reading": "せいめい",
+      "meaning": "họ tên",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "姓",
+      "reading": "せい",
+      "meaning": "họ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "仲間",
+      "reading": "なかま",
+      "meaning": "bạn đồng hành, nhóm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "仲良し",
+      "reading": "なかよし",
+      "meaning": "bạn thân thiết",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "仲直り",
+      "reading": "なかなおり",
+      "meaning": "làm hòa",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "君",
+      "reading": "きみ",
+      "meaning": "bạn, cậu (thân mật)",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "諸君",
+      "reading": "しょくん",
+      "meaning": "các bạn, quý vị",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "彼",
+      "reading": "かれ",
+      "meaning": "anh ấy",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "彼氏",
+      "reading": "かれし",
+      "meaning": "bạn trai",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "他人",
+      "reading": "たにん",
+      "meaning": "người khác",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "他",
+      "reading": "ほか",
+      "meaning": "khác",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "その他",
+      "reading": "そのた",
+      "meaning": "những thứ khác",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "最初",
+      "reading": "さいしょ",
+      "meaning": "đầu tiên",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "初級",
+      "reading": "しょきゅう",
+      "meaning": "sơ cấp",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "再び",
+      "reading": "ふたたび",
+      "meaning": "lại lần nữa",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "再開",
+      "reading": "さいかい",
+      "meaning": "mở lại",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "再会",
+      "reading": "さいかい",
+      "meaning": "tái ngộ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "久しぶり",
+      "reading": "ひさしぶり",
+      "meaning": "lâu rồi không gặp",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "永久",
+      "reading": "えいきゅう",
+      "meaning": "vĩnh cửu",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "達する",
+      "reading": "たっする",
+      "meaning": "đạt đến",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "達成",
+      "reading": "たっせい",
+      "meaning": "hoàn thành, đạt được",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "個人",
+      "reading": "こじん",
+      "meaning": "cá nhân",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "個性",
+      "reading": "こせい",
+      "meaning": "cá tính",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "一個",
+      "reading": "いっこ",
+      "meaning": "một cái",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "性格",
+      "reading": "せいかく",
+      "meaning": "tính cách",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "性質",
+      "reading": "せいしつ",
+      "meaning": "tính chất",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "各自",
+      "reading": "かくじ",
+      "meaning": "mỗi người",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "各国",
+      "reading": "かっこく",
+      "meaning": "các nước",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "各種",
+      "reading": "かくしゅ",
+      "meaning": "các loại",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "資格",
+      "reading": "しかく",
+      "meaning": "tư cách, bằng cấp",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 8,
+      "word": "格好",
+      "reading": "かっこう",
+      "meaning": "diện mạo",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "単純",
+      "reading": "たんじゅん",
+      "meaning": "đơn giản",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "簡単",
+      "reading": "かんたん",
+      "meaning": "đơn giản, dễ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "複雑",
+      "reading": "ふくざつ",
+      "meaning": "phức tạp",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "複数",
+      "reading": "ふくすう",
+      "meaning": "số nhiều",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "複写",
+      "reading": "ふくしゃ",
+      "meaning": "sao chép",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "完全",
+      "reading": "かんぜん",
+      "meaning": "hoàn toàn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "以上",
+      "reading": "いじょう",
+      "meaning": "trở lên",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "以下",
+      "reading": "いか",
+      "meaning": "trở xuống",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "以前",
+      "reading": "いぜん",
+      "meaning": "trước đây",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "未来",
+      "reading": "みらい",
+      "meaning": "tương lai",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "未満",
+      "reading": "みまん",
+      "meaning": "chưa đến, dưới mức",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "満足",
+      "reading": "まんぞく",
+      "meaning": "hài lòng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "満員",
+      "reading": "まんいん",
+      "meaning": "hết chỗ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "満たす",
+      "reading": "みたす",
+      "meaning": "làm đầy",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "無理",
+      "reading": "むり",
+      "meaning": "quá sức, vô lý",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "無駄",
+      "reading": "むだ",
+      "meaning": "lãng phí",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "非常に",
+      "reading": "ひじょうに",
+      "meaning": "rất, vô cùng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "非常口",
+      "reading": "ひじょうぐち",
+      "meaning": "lối thoát hiểm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 9,
+      "word": "是非",
+      "reading": "ぜひ",
+      "meaning": "nhất định, bằng mọi cách",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "幼い",
+      "reading": "おさない",
+      "meaning": "trẻ thơ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "幼児",
+      "reading": "ようじ",
+      "meaning": "trẻ nhỏ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "児童",
+      "reading": "じどう",
+      "meaning": "trẻ em (tuổi đi học)",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "小児科",
+      "reading": "しょうにか",
+      "meaning": "khoa nhi",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "童話",
+      "reading": "どうわ",
+      "meaning": "truyện cổ tích",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "童謡",
+      "reading": "どうよう",
+      "meaning": "đồng dao",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "徒歩",
+      "reading": "とほ",
+      "meaning": "đi bộ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "担当",
+      "reading": "たんとう",
+      "meaning": "phụ trách",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "担任",
+      "reading": "たんにん",
+      "meaning": "giáo viên chủ nhiệm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "負担",
+      "reading": "ふたん",
+      "meaning": "gánh nặng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "任せる",
+      "reading": "まかせる",
+      "meaning": "giao phó",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "責任",
+      "reading": "せきにん",
+      "meaning": "trách nhiệm",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "任務",
+      "reading": "にんむ",
+      "meaning": "nhiệm vụ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "教師",
+      "reading": "きょうし",
+      "meaning": "giáo viên",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "師匠",
+      "reading": "ししょう",
+      "meaning": "sư phụ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "組",
+      "reading": "くみ",
+      "meaning": "nhóm, lớp",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "組む",
+      "reading": "くむ",
+      "meaning": "lắp ghép, hợp tác",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "組織",
+      "reading": "そしき",
+      "meaning": "tổ chức",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "机",
+      "reading": "つくえ",
+      "meaning": "bàn học",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "机上",
+      "reading": "きじょう",
+      "meaning": "trên bàn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "座る",
+      "reading": "すわる",
+      "meaning": "ngồi",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "座席",
+      "reading": "ざせき",
+      "meaning": "ghế ngồi",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "正座",
+      "reading": "せいざ",
+      "meaning": "ngồi quỳ kiểu Nhật",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "看板",
+      "reading": "かんばん",
+      "meaning": "biển hiệu",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "板",
+      "reading": "いた",
+      "meaning": "tấm ván",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "筆",
+      "reading": "ふで",
+      "meaning": "bút lông",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "鉛筆",
+      "reading": "えんぴつ",
+      "meaning": "bút chì",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "筆記",
+      "reading": "ひっき",
+      "meaning": "ghi chép",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "貸し出す",
+      "reading": "かしだす",
+      "meaning": "cho mượn ra",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "借金",
+      "reading": "しゃっきん",
+      "meaning": "nợ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "返す",
+      "reading": "かえす",
+      "meaning": "trả lại",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "返事",
+      "reading": "へんじ",
+      "meaning": "câu trả lời",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "返却",
+      "reading": "へんきゃく",
+      "meaning": "hoàn trả",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "一冊",
+      "reading": "いっさつ",
+      "meaning": "một quyển",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "冊数",
+      "reading": "さっすう",
+      "meaning": "số quyển",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "具合",
+      "reading": "ぐあい",
+      "meaning": "tình trạng, mức độ",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "具体的",
+      "reading": "ぐたいてき",
+      "meaning": "cụ thể",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "箱",
+      "reading": "はこ",
+      "meaning": "hộp, thùng",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "箱庭",
+      "reading": "はこにわ",
+      "meaning": "tiểu cảnh trong hộp",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "棒",
+      "reading": "ぼう",
+      "meaning": "cây gậy, thanh",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "鉄棒",
+      "reading": "てつぼう",
+      "meaning": "xà đơn",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "伸びる",
+      "reading": "のびる",
+      "meaning": "duỗi ra, phát triển",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "伸ばす",
+      "reading": "のばす",
+      "meaning": "kéo dài, duỗi ra",
+      "origin": "expanded-common-n3"
+    },
+    {
+      "level": "N3",
+      "lesson": 10,
+      "word": "身長",
+      "reading": "しんちょう",
+      "meaning": "chiều cao",
       "origin": "expanded-common-n3"
     }
   ]

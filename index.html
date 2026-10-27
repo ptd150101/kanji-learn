@@ -1214,13 +1214,14 @@ function isEloquenceJapaneseVoice(v) {
 
 function japaneseVoiceScore(v) {
   const identity = japaneseVoiceIdentity(v);
-  return
+  return (
     (/microsoft/i.test(identity) ? 24 : 0) +
     (/google/i.test(identity) ? 20 : 0) +
     (/nanami|keita|kyoko|otoya/i.test(identity) ? 12 : 0) +
     (v?.localService ? 3 : 0) +
     (v?.default ? 2 : 0) -
-    (isEloquenceJapaneseVoice(v) ? 100 : 0);
+    (isEloquenceJapaneseVoice(v) ? 100 : 0)
+  );
 }
 
 function loadVoices() {

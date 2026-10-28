@@ -53,18 +53,52 @@ test("N3 new vocabulary stays separate from N3 Kanji and N4 new vocabulary", () 
   assert.match(html, /selectedLevel === "N4" \|\| selectedLevel === "N3"/);
   assert.match(html, /pool = vocabDatasetForLevel\(level\)\.filter/);
   assert.match(html, /return vocabDatasetForLevel\(item\.level\)\.filter/);
-  assert.match(html, /N3 · Mimi kara · Bài/);
+  assert.ok(html.includes("N3 · Mimi kara · ${mimiSectionLabel(mimiSectionForItem(item))}"));
   assert.match(html, /item\.accepted_words \|\| \[\]/);
 });
 
-test("N3 vocabulary UI uses Bài 1–12 consistently", () => {
-  assert.match(html, /\`Bài \${lesson} · \${MIMI_UNIT_NAMES\[lesson\]}\`/);
-  assert.match(html, /gồm 12 bài và các mục tổng hợp/);
-  assert.match(html, /N3 Từ mới: \${rows\.length} từ • 12 bài/);
-  assert.match(html, /N3 · Mimi kara · Bài \${item\.lesson}/);
-  assert.match(html, /"Bài " \+ item\.lesson/);
+test("21 book-defined selectable sections cover numbers 1–880 exactly once", () => {
+  const expectedRanges = [
+    [1,71],[72,120],[121,170],[171,220],[221,258],[259,298],[299,310],
+    [311,370],[371,410],[411,460],[461,510],[511,550],[551,590],
+    [591,635],[636,675],[676,715],[716,753],[754,795],[796,835],
+    [836,845],[846,880],
+  ];
+  assert.equal(mimi.sections.length, 21);
+  assert.deepEqual(mimi.sections.map(s => [s.start,s.end]), expectedRanges);
+  assert.equal(mimi.sections.reduce((sum,s)=>sum+s.count,0), 880);
+  assert.equal(new Set(mimi.sections.map(s=>s.unit)).size, 12);
+  assert.deepEqual(mimi.sections.filter(s=>s.kind==="summary").map(s=>[s.start,s.end]),
+    [[221,258],[299,310],[836,845]]);
+  const ids = new Set();
+  for (const section of mimi.sections) {
+    const members = mimi.vocab.filter(v=>v.section===section.id);
+    assert.equal(members.length, section.end-section.start+1, "Missing words in " + section.label);
+    assert.equal(section.count,members.length);
+    assert.ok(members.every(v=>v.number>=section.start && v.number<=section.end && v.unit===section.unit));
+    assert.ok(!ids.has(section.id));
+    ids.add(section.id);
+    assert.ok(section.label.includes(section.start+"–"+section.end));
+    if(section.kind==="summary") assert.ok(section.label.startsWith("Tổng hợp"));
+    else assert.ok(section.label.startsWith("Bài "+section.unit));
+  }
+  assert.deepEqual(mimi.vocab.map(v=>v.section), mimi.vocab.map(v=>
+    mimi.sections.find(s=>v.number>=s.start && v.number<=s.end)?.id));
+});
+
+test("N3 Từ mới picker and quiz are filtered by small source ranges", () => {
+  assert.deepEqual(inline("MIMI_SECTIONS"),mimi.sections);
+  assert.ok(html.includes("MIMI_SECTIONS.map(section => section.id)"));
+  assert.ok(html.includes("const displayLesson = section"));
+  assert.ok(html.includes("mimiSectionLabel(section)"));
+  assert.ok(html.includes('lessons.includes(level === "N3" ? v.section : v.lesson)'));
+  assert.ok(html.includes('v.section === item.section || selected.includes(v.section)'));
+  assert.ok(html.includes("a.number - b.number"));
+  assert.ok(html.includes("mimiSectionLabel(mimiSectionForItem(item))"));
+  assert.ok(html.includes("lessonSelectionVersion:2"));
+  assert.ok(html.includes("oldMimiUnitSelection"));
+  assert.ok(html.includes("N3 Từ mới: ${rows.length} từ • 12 bài · ${MIMI_SECTIONS.length} phần"));
   assert.doesNotMatch(html, /Mimi kara · Unit/);
-  assert.doesNotMatch(html, /\`Unit \${String\(lesson\)/);
 });
 
 test("Switching Kanji and N3 Từ mới keeps header and lesson picker dimensions stable", () => {

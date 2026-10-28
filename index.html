@@ -1763,9 +1763,11 @@ function renderOptions(item) {
       return;
     }
 
-    const seenWords = new Set([normalizeJapaneseWord(item.word)]);
+    const askReading = item.level === "N3" && /[\u3400-\u9fff]/u.test(item.word);
+    const optionKey = v => askReading ? normalizeKana(v.reading) : normalizeJapaneseWord(v.word);
+    const seenWords = new Set([optionKey(item)]);
     const uniqueCandidates = shuffle(candidates).filter(v => {
-      const key = normalizeJapaneseWord(v.word);
+      const key = optionKey(v);
       if (seenWords.has(key)) return false;
       seenWords.add(key);
       return true;
@@ -1775,10 +1777,10 @@ function renderOptions(item) {
       const btn = document.createElement("button");
       btn.className = "option";
       btn.innerHTML = `
-        <span class="option-reading option-word">${optionItem.word}</span>
+        <span class="option-reading ${askReading ? "" : "option-word"}">${escapeJapaneseEntryText(askReading ? optionItem.reading : optionItem.word)}</span>
         <span class="option-detail">
-          <span class="kanji">${optionItem.word}（${optionItem.reading}）</span>
-          <span class="meaning">${optionItem.meaning}</span>
+          <span class="kanji">${escapeJapaneseEntryText(optionItem.word)}（${escapeJapaneseEntryText(optionItem.reading)}）</span>
+          <span class="meaning">${escapeJapaneseEntryText(optionItem.meaning)}</span>
         </span>
       `;
       btn.dataset.optionId = optionItem.id;

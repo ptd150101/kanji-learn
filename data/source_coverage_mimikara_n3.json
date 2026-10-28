@@ -1,0 +1,142 @@
+{
+  "source_pdf": "Mimi_Kara_Oboeru_N3-Từ vựng.pdf",
+  "physical_pdf_pages": 236,
+  "textbook_title": "耳から覚える 日本語能力試験 語彙トレーニング N3",
+  "original_headword_numbers": "1–880",
+  "coverage_scope": "All 880 numbered headwords indexed; sample pages visually checked against user-provided scan. Not a fully manual line-by-line verification of all example sentences, collocations, or exercises.",
+  "source_reference": "https://github.com/NguyenManhTuan-20235862/quiz-n3-mimikara",
+  "total_indexed": 880,
+  "units": {
+    "1": {
+      "name": "Danh từ A (名詞A)",
+      "first_printed_pdf_page": 9,
+      "count": 120,
+      "first_number": 1,
+      "last_number": 120
+    },
+    "2": {
+      "name": "Động từ A + danh từ ứng dụng (動詞A・運用名詞)",
+      "first_printed_pdf_page": 33,
+      "count": 138,
+      "first_number": 121,
+      "last_number": 258
+    },
+    "3": {
+      "name": "Tính từ A + từ liên quan (形容詞A)",
+      "first_printed_pdf_page": 59,
+      "count": 52,
+      "first_number": 259,
+      "last_number": 310
+    },
+    "4": {
+      "name": "Danh từ B (名詞B)",
+      "first_printed_pdf_page": 71,
+      "count": 100,
+      "first_number": 311,
+      "last_number": 410
+    },
+    "5": {
+      "name": "Động từ B (動詞B)",
+      "first_printed_pdf_page": 91,
+      "count": 100,
+      "first_number": 411,
+      "last_number": 510
+    },
+    "6": {
+      "name": "Katakana A (カタカナA)",
+      "first_printed_pdf_page": 113,
+      "count": 40,
+      "first_number": 511,
+      "last_number": 550
+    },
+    "7": {
+      "name": "Tính từ B (形容詞B)",
+      "first_printed_pdf_page": 121,
+      "count": 40,
+      "first_number": 551,
+      "last_number": 590
+    },
+    "8": {
+      "name": "Phó từ A (副詞A)",
+      "first_printed_pdf_page": 133,
+      "count": 45,
+      "first_number": 591,
+      "last_number": 635
+    },
+    "9": {
+      "name": "Danh từ C (名詞C)",
+      "first_printed_pdf_page": 143,
+      "count": 80,
+      "first_number": 636,
+      "last_number": 715
+    },
+    "10": {
+      "name": "Động từ C (動詞C)",
+      "first_printed_pdf_page": 161,
+      "count": 80,
+      "first_number": 716,
+      "last_number": 795
+    },
+    "11": {
+      "name": "Katakana B + động từ nấu ăn (カタカナB・料理)",
+      "first_printed_pdf_page": 183,
+      "count": 50,
+      "first_number": 796,
+      "last_number": 845
+    },
+    "12": {
+      "name": "Phó từ B, liên thể từ, liên từ (副詞B・連体詞・接続詞)",
+      "first_printed_pdf_page": 195,
+      "count": 35,
+      "first_number": 846,
+      "last_number": 880
+    }
+  },
+  "supplemental_ranges": [
+    {
+      "range": [
+        221,
+        258
+      ],
+      "attached_unit": 2,
+      "kind": "book summary section"
+    },
+    {
+      "range": [
+        299,
+        310
+      ],
+      "attached_unit": 3,
+      "kind": "book summary section"
+    },
+    {
+      "range": [
+        836,
+        845
+      ],
+      "attached_unit": 11,
+      "kind": "book summary section"
+    }
+  ],
+  "reading_corrections": [
+    {
+      "number": 446,
+      "word": "盗む",
+      "reading": "ぬすむ"
+    },
+    {
+      "number": 503,
+      "word": "悩む",
+      "reading": "なやむ"
+    },
+    {
+      "number": 240,
+      "word": "行き",
+      "reading": "いき",
+      "accepted": [
+        "ゆき"
+      ]
+    }
+  ],
+  "manual_review_status": "spot_checked_not_all_236_pages"
+}

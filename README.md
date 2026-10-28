@@ -1,11 +1,28 @@
 # Kanji N5 / N4 / N3 Quiz
 
+## Từ vựng N3 – Mimi kara Oboeru
+
+- Chọn **N3 → Từ mới** để ôn **880 từ** theo số thứ tự 1–880 của 12 Unit sách *Mimi kara Oboeru N3*; chọn **N3 → Kanji** để ôn 20 chương Kanji Master.
+- Các phần tổng hợp từ 221–258, 299–310 và 836–845 vẫn được giữ và gắn vào Unit tương ứng.
+- Mỗi từ có cách đọc, nghĩa Việt, Hán Việt (khi có Kanji), số thứ tự và Unit. Dữ liệu ở `vocab_n3_mimikara.json`.
+- Hỗ trợ trắc nghiệm/tự luận, phát âm, lưu từ sai và ôn theo Unit.
+- Đã đối chiếu cấu trúc/số thứ tự và kiểm tra các trang mẫu PDF; chưa kiểm chứng thủ công từng câu ví dụ của toàn bộ bản scan.
+- `node scripts/sync-kanji-data.mjs` đồng bộ các nguồn JSON vào trang offline.
+- `data/source_coverage_mimikara_n3.json` mô tả kiểm tra nguồn.
+
+## Gộp hai bộ dữ liệu Kanji N3
+
+- Giữ lại 1.592 mục từ N3 đã có trên `main`; bổ sung 283 mục khác nhau từ PR #23 thành **1.592 mục từ Kanji N3**.
+- Bổ sung metadata tự/tha động từ và `data/n3/verb_pairs.json` (41 cặp); không thay thế bộ dữ liệu gốc trên `main`.
+- Đã bổ sung cả 干る（ひる）và các từ dễ thiếu như 乾く（かわく）/乾かす（かわかす）.
+
+
 - N5: 38 bài, 527 mục từ.
 - Bài N5 27–34 là 8 bài theme bổ sung từ Nihongo Master, đối chiếu Minna no Nihongo I/II và loại trùng với dữ liệu hiện có.
 - Bài N5 35–38 bổ sung 50 mục còn thiếu khi đối chiếu toàn bộ 128 từ trong PDF JLPT N5 2010–2024; coverage sau merge là 128/128 theo từ + cách đọc, mỗi bài mới tối đa 20 mục.
 - N4: 37 bài, 638 mục từ.
-- N3: 20 chương theo **漢字マスターN3**, 1.309 mục từ (biên soạn thêm từ ghép thông dụng, theo chủ điểm từng chữ).
-- Tổng: 2.474 mục từ (N5 + N4 + N3).
+- N3: 20 chương theo **漢字マスターN3**, 1.592 mục từ (biên soạn thêm từ ghép thông dụng, theo chủ điểm từng chữ).
+- Tổng: 2.757 mục từ (N5 + N4 + N3).
 - Chuyển N5/N4/N3 ngay ở màn hình thiết lập.
 - Trắc nghiệm 4 đáp án + viết furigana.
 - Sau khi trả lời hiện nghĩa Việt + Hán Việt từng chữ.

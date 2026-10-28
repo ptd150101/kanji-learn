@@ -10,9 +10,9 @@ assert.ok(hvMatch, "Không tìm thấy HAN_VIET");
 const vocab = JSON.parse(vocabMatch[1]);
 const hanViet = JSON.parse(hvMatch[1]);
 
-const helperStart = html.indexOf("function cleanJapaneseSpeechText");
+const helperStart = html.indexOf("function japaneseVoiceIdentity");
 const helperEnd = html.indexOf("function speak(text)", helperStart);
-assert.notEqual(helperStart, -1, "Không tìm thấy cleanJapaneseSpeechText");
+assert.notEqual(helperStart, -1, "Không tìm thấy japaneseVoiceIdentity");
 assert.notEqual(helperEnd, -1, "Không tìm thấy function speak");
 const helpers = new Function(`${html.slice(helperStart, helperEnd)}\nreturn { cleanJapaneseSpeechText, ttsTextForItem, isEloquenceJapaneseVoice, japaneseVoiceScore };`)();
 

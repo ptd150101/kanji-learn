@@ -154,8 +154,12 @@
       "end": 71,
       "count": 71,
       "kind": "practice",
+      "book_page": 18,
+      "label": "Bài 1 · Danh từ A · phần 1 · 1–71",
+      "title": "Bài 1 · Danh từ A · phần 1",
+      "range_label": "1–71",
       "printed_page": 18,
-      "display_label": "Bài 1 · 1–71"
+      "display_label": "Bài 1 · Danh từ A · phần 1 · 1–71"
     },
     {
       "id": 2,
@@ -164,8 +168,12 @@
       "end": 120,
       "count": 49,
       "kind": "practice",
+      "book_page": 28,
+      "label": "Bài 2 · Danh từ A · phần 2 · 72–120",
+      "title": "Bài 2 · Danh từ A · phần 2",
+      "range_label": "72–120",
       "printed_page": 28,
-      "display_label": "Bài 1 · 72–120"
+      "display_label": "Bài 2 · Danh từ A · phần 2 · 72–120"
     },
     {
       "id": 3,
@@ -174,8 +182,12 @@
       "end": 170,
       "count": 50,
       "kind": "practice",
+      "book_page": 40,
+      "label": "Bài 3 · Động từ A · phần 1 · 121–170",
+      "title": "Bài 3 · Động từ A · phần 1",
+      "range_label": "121–170",
       "printed_page": 40,
-      "display_label": "Bài 2 · 121–170"
+      "display_label": "Bài 3 · Động từ A · phần 1 · 121–170"
     },
     {
       "id": 4,
@@ -184,8 +196,12 @@
       "end": 220,
       "count": 50,
       "kind": "practice",
+      "book_page": 50,
+      "label": "Bài 4 · Động từ A · phần 2 · 171–220",
+      "title": "Bài 4 · Động từ A · phần 2",
+      "range_label": "171–220",
       "printed_page": 50,
-      "display_label": "Bài 2 · 171–220"
+      "display_label": "Bài 4 · Động từ A · phần 2 · 171–220"
     },
     {
       "id": 5,
@@ -194,8 +210,12 @@
       "end": 258,
       "count": 38,
       "kind": "summary",
+      "book_page": 54,
+      "label": "Bài 5 · Danh từ hóa động từ · 221–258",
+      "title": "Bài 5 · Danh từ hóa động từ",
+      "range_label": "221–258",
       "printed_page": 54,
-      "display_label": "Tổng hợp · 221–258"
+      "display_label": "Bài 5 · Danh từ hóa động từ · 221–258"
     },
     {
       "id": 6,
@@ -204,8 +224,12 @@
       "end": 298,
       "count": 40,
       "kind": "practice",
+      "book_page": 66,
+      "label": "Bài 6 · Tính từ A · 259–298",
+      "title": "Bài 6 · Tính từ A",
+      "range_label": "259–298",
       "printed_page": 66,
-      "display_label": "Bài 3 · 259–298"
+      "display_label": "Bài 6 · Tính từ A · 259–298"
     },
     {
       "id": 7,
@@ -214,8 +238,12 @@
       "end": 310,
       "count": 12,
       "kind": "summary",
+      "book_page": 68,
+      "label": "Bài 7 · Cặp động từ ～まる／～める · 299–310",
+      "title": "Bài 7 · Cặp động từ ～まる／～める",
+      "range_label": "299–310",
       "printed_page": 68,
-      "display_label": "Tổng hợp · 299–310"
+      "display_label": "Bài 7 · Cặp động từ ～まる／～める · 299–310"
     },
     {
       "id": 8,
@@ -224,8 +252,12 @@
       "end": 370,
       "count": 60,
       "kind": "practice",
+      "book_page": 78,
+      "label": "Bài 8 · Danh từ B · phần 1 · 311–370",
+      "title": "Bài 8 · Danh từ B · phần 1",
+      "range_label": "311–370",
       "printed_page": 78,
-      "display_label": "Bài 4 · 311–370"
+      "display_label": "Bài 8 · Danh từ B · phần 1 · 311–370"
     },
     {
       "id": 9,
@@ -234,8 +266,12 @@
       "end": 410,
       "count": 40,
       "kind": "practice",
+      "book_page": 86,
+      "label": "Bài 9 · Danh từ B · phần 2 · 371–410",
+      "title": "Bài 9 · Danh từ B · phần 2",
+      "range_label": "371–410",
       "printed_page": 86,
-      "display_label": "Bài 4 · 371–410"
+      "display_label": "Bài 9 · Danh từ B · phần 2 · 371–410"
     },
     {
       "id": 10,
@@ -244,8 +280,12 @@
       "end": 460,
       "count": 50,
       "kind": "practice",
+      "book_page": 98,
+      "label": "Bài 10 · Động từ B · phần 1 · 411–460",
+      "title": "Bài 10 · Động từ B · phần 1",
+      "range_label": "411–460",
       "printed_page": 98,
-      "display_label": "Bài 5 · 411–460"
+      "display_label": "Bài 10 · Động từ B · phần 1 · 411–460"
     },
     {
       "id": 11,
@@ -254,8 +294,12 @@
       "end": 510,
       "count": 50,
       "kind": "practice",
+      "book_page": 108,
+      "label": "Bài 11 · Động từ B · phần 2 · 461–510",
+      "title": "Bài 11 · Động từ B · phần 2",
+      "range_label": "461–510",
       "printed_page": 108,
-      "display_label": "Bài 5 · 461–510"
+      "display_label": "Bài 11 · Động từ B · phần 2 · 461–510"
     },
     {
       "id": 12,
@@ -264,8 +308,12 @@
       "end": 550,
       "count": 40,
       "kind": "practice",
+      "book_page": 118,
+      "label": "Bài 12 · Từ Katakana A · 511–550",
+      "title": "Bài 12 · Từ Katakana A",
+      "range_label": "511–550",
       "printed_page": 118,
-      "display_label": "Bài 6 · 511–550"
+      "display_label": "Bài 12 · Từ Katakana A · 511–550"
     },
     {
       "id": 13,
@@ -274,8 +322,12 @@
       "end": 590,
       "count": 40,
       "kind": "practice",
+      "book_page": 128,
+      "label": "Bài 13 · Tính từ B · 551–590",
+      "title": "Bài 13 · Tính từ B",
+      "range_label": "551–590",
       "printed_page": 128,
-      "display_label": "Bài 7 · 551–590"
+      "display_label": "Bài 13 · Tính từ B · 551–590"
     },
     {
       "id": 14,
@@ -284,8 +336,12 @@
       "end": 635,
       "count": 45,
       "kind": "practice",
+      "book_page": 140,
+      "label": "Bài 14 · Phó từ A · 591–635",
+      "title": "Bài 14 · Phó từ A",
+      "range_label": "591–635",
       "printed_page": 140,
-      "display_label": "Bài 8 · 591–635"
+      "display_label": "Bài 14 · Phó từ A · 591–635"
     },
     {
       "id": 15,
@@ -294,8 +350,12 @@
       "end": 675,
       "count": 40,
       "kind": "practice",
+      "book_page": 148,
+      "label": "Bài 15 · Danh từ C · phần 1 · 636–675",
+      "title": "Bài 15 · Danh từ C · phần 1",
+      "range_label": "636–675",
       "printed_page": 148,
-      "display_label": "Bài 9 · 636–675"
+      "display_label": "Bài 15 · Danh từ C · phần 1 · 636–675"
     },
     {
       "id": 16,
@@ -304,8 +364,12 @@
       "end": 715,
       "count": 40,
       "kind": "practice",
+      "book_page": 156,
+      "label": "Bài 16 · Danh từ C · phần 2 · 676–715",
+      "title": "Bài 16 · Danh từ C · phần 2",
+      "range_label": "676–715",
       "printed_page": 156,
-      "display_label": "Bài 9 · 676–715"
+      "display_label": "Bài 16 · Danh từ C · phần 2 · 676–715"
     },
     {
       "id": 17,
@@ -314,8 +378,12 @@
       "end": 753,
       "count": 38,
       "kind": "practice",
+      "book_page": 168,
+      "label": "Bài 17 · Động từ C · phần 1 · 716–753",
+      "title": "Bài 17 · Động từ C · phần 1",
+      "range_label": "716–753",
       "printed_page": 168,
-      "display_label": "Bài 10 · 716–753"
+      "display_label": "Bài 17 · Động từ C · phần 1 · 716–753"
     },
     {
       "id": 18,
@@ -324,8 +392,12 @@
       "end": 795,
       "count": 42,
       "kind": "practice",
+      "book_page": 178,
+      "label": "Bài 18 · Động từ C · phần 2 · 754–795",
+      "title": "Bài 18 · Động từ C · phần 2",
+      "range_label": "754–795",
       "printed_page": 178,
-      "display_label": "Bài 10 · 754–795"
+      "display_label": "Bài 18 · Động từ C · phần 2 · 754–795"
     },
     {
       "id": 19,
@@ -334,8 +406,12 @@
       "end": 835,
       "count": 40,
       "kind": "practice",
+      "book_page": 188,
+      "label": "Bài 19 · Từ Katakana B · 796–835",
+      "title": "Bài 19 · Từ Katakana B",
+      "range_label": "796–835",
       "printed_page": 188,
-      "display_label": "Bài 11 · 796–835"
+      "display_label": "Bài 19 · Từ Katakana B · 796–835"
     },
     {
       "id": 20,
@@ -344,8 +420,12 @@
       "end": 845,
       "count": 10,
       "kind": "summary",
+      "book_page": 192,
+      "label": "Bài 20 · Động từ nấu ăn · 836–845",
+      "title": "Bài 20 · Động từ nấu ăn",
+      "range_label": "836–845",
       "printed_page": 192,
-      "display_label": "Tổng hợp · 836–845"
+      "display_label": "Bài 20 · Động từ nấu ăn · 836–845"
     },
     {
       "id": 21,
@@ -354,10 +434,15 @@
       "end": 880,
       "count": 35,
       "kind": "practice",
+      "book_page": 202,
+      "label": "Bài 21 · Phó từ B, liên thể từ và liên từ · 846–880",
+      "title": "Bài 21 · Phó từ B, liên thể từ và liên từ",
+      "range_label": "846–880",
       "printed_page": 202,
-      "display_label": "Bài 12 · 846–880"
+      "display_label": "Bài 21 · Phó từ B, liên thể từ và liên từ · 846–880"
     }
   ],
   "section_count": 21,
-  "section_terms_count": 880
+  "section_terms_count": 880,
+  "lesson_display": "21 bài đánh số liên tiếp (1–21), theo các khoảng số từ trong mục lục; giữ nguyên Unit gốc trong metadata."
 }

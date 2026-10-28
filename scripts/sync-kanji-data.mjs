@@ -8,6 +8,8 @@ const readJSON = path => JSON.parse(readFileSync(join(root, path), "utf8"));
 const combined = readJSON("data.json");
 const hanViet = readJSON("han_viet.json");
 const standaloneN3 = readJSON("data_n3.json");
+const mimi = readJSON("vocab_n3_mimikara.json");
+if (mimi.total_vocab !== 880 || mimi.vocab.length !== 880) throw new Error("Mimi Kara N3 must contain exactly 880 terms.");
 
 if (!Array.isArray(combined.vocab) || !combined.lesson_names || !Array.isArray(standaloneN3.vocab)) {
   throw new Error("Invalid vocabulary datasets.");
@@ -30,11 +32,13 @@ let html = readFileSync(filename, "utf8");
 for (const [name, value] of Object.entries({
   VOCAB: combined.vocab,
   LESSON_NAMES: combined.lesson_names,
-  HAN_VIET: hanViet
+  HAN_VIET: hanViet,
+  MIMI_VOCAB_N3: mimi.vocab,
+  MIMI_UNIT_NAMES: mimi.units
 })) {
   const pattern = new RegExp(`^const ${name} = .*;$`, "m");
   if (!pattern.test(html)) throw new Error(`Missing inline variable: ${name}`);
   html = html.replace(pattern, `const ${name} = ${JSON.stringify(value)};`);
 }
 writeFileSync(filename, html, "utf8");
-console.log(`Synced ${combined.vocab.length} entries and ${Object.keys(hanViet).length} Sino-Vietnamese readings.`);
+console.log(`Synced ${combined.vocab.length} Kanji entries, ${mimi.vocab.length} Mimi Kara N3 entries and ${Object.keys(hanViet).length} Sino-Vietnamese readings.`);

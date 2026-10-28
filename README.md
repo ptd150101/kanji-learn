@@ -5,7 +5,7 @@
 - Chọn **N3 → Từ mới** để ôn **880 từ** theo số thứ tự 1–880, chọn độc lập **21 khoảng nhỏ** bên trong 12 bài của *Mimi kara Oboeru N3* (ví dụ: **Bài 1 · 1–71**, **Bài 1 · 72–120**); chọn **N3 → Kanji** để ôn 20 chương Kanji Master.
 - Các phần **Tổng hợp · 221–258**, **Tổng hợp · 299–310** và **Tổng hợp · 836–845** có ô chọn riêng, đúng theo mục lục sách. Đối chiếu khoảng số từ tại các trang PDF **5–8**; không nhân đôi 練習問題Ⅱ (đề ôn tổng thể).
 - Mỗi từ có cách đọc, nghĩa Việt, Hán Việt (khi có Kanji), số thứ tự, bài gốc và mã khoảng `section`. Mục lục 21 khoảng là `sections` trong `vocab_n3_mimikara.json`.
-- Hỗ trợ trắc nghiệm/tự luận, phát âm, lưu từ sai và ôn theo bài. Danh sách bài có chiều cao cố định khi đổi Kanji/Từ mới, tránh nhảy UI trên mobile.
+- Hỗ trợ trắc nghiệm/tự luận, phát âm, lưu từ sai và ôn theo bài. Danh sách bài dùng hàng cao 48px và khoảng cách đồng nhất như các tab khác; chỉ giới hạn **chiều cao tối đa**, không ép các hàng giãn ra để lấp đầy vùng trống.
 - Đã đối chiếu cấu trúc/số thứ tự và kiểm tra các trang mẫu PDF; chưa kiểm chứng thủ công từng câu ví dụ của toàn bộ bản scan.
 - `node scripts/sync-kanji-data.mjs` đồng bộ các nguồn JSON vào trang offline.
 - `data/source_coverage_mimikara_n3.json` mô tả kiểm tra nguồn.

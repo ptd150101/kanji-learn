@@ -10,6 +10,16 @@ const hanViet = readJSON("han_viet.json");
 const standaloneN3 = readJSON("data_n3.json");
 const mimi = readJSON("vocab_n3_mimikara.json");
 if (mimi.total_vocab !== 880 || mimi.vocab.length !== 880) throw new Error("Mimi Kara N3 must contain exactly 880 terms.");
+if (!Array.isArray(mimi.sections) || mimi.sections.length !== 21 ||
+  mimi.sections.reduce((sum, section) => sum + section.count, 0) !== 880) {
+  throw new Error("Mimi Kara N3 must have exactly 21 complete book-defined review ranges.");
+}
+for (const word of mimi.vocab) {
+  const section = mimi.sections.find(s => s.id === word.section && s.start <= word.number && word.number <= s.end);
+  if (!section || section.unit !== word.unit) {
+    throw new Error("Invalid Mimi Kara N3 review range for word #" + word.number);
+  }
+}
 
 if (!Array.isArray(combined.vocab) || !combined.lesson_names || !Array.isArray(standaloneN3.vocab)) {
   throw new Error("Invalid vocabulary datasets.");
@@ -34,7 +44,8 @@ for (const [name, value] of Object.entries({
   LESSON_NAMES: combined.lesson_names,
   HAN_VIET: hanViet,
   MIMI_VOCAB_N3: mimi.vocab,
-  MIMI_UNIT_NAMES: mimi.units
+  MIMI_UNIT_NAMES: mimi.units,
+  MIMI_SECTIONS: mimi.sections
 })) {
   const pattern = new RegExp(`^const ${name} = .*;$`, "m");
   if (!pattern.test(html)) throw new Error(`Missing inline variable: ${name}`);

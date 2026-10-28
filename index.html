@@ -1664,7 +1664,7 @@ function renderQuestion() {
 function candidatePoolFor(item) {
   const selected = selectedLessons();
   if (contentMode === "vocab") {
-    return NEW_VOCAB.filter(v =>
+    return vocabDatasetForLevel(item.level).filter(v =>
       (v.lesson === item.lesson || selected.includes(v.lesson)) && v.id !== item.id
     );
   }

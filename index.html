@@ -172,6 +172,8 @@ h1{
   white-space:nowrap;
   transition:.15s;
 }
+.vocab-meaning-clue{display:block;line-height:1.35}
+.vocab-kanji-clue{display:block;margin-top:10px;color:var(--accent2);font-family:var(--font-ja-display);font-size:clamp(28px,5vw,46px);line-height:1.2}
 .lesson-chip-name{
   min-width:0;
   flex:1 1 auto;
@@ -790,8 +792,8 @@ function updateHeaderSummary() {
     const rows = vocabDatasetForLevel();
     if (selectedLevel === "N3") {
       document.querySelector(".subtitle").textContent =
-        `N3 Từ mới: ${rows.length} từ • 12 bài · ${MIMI_SECTIONS.length} phần`;
-      $("dataNote").innerHTML = `<b>Mimi kara Oboeru N3</b>: 880 mục từ chính, sắp theo số thứ tự 1–880, chia thành 21 phần theo khoảng số từ trong mục lục (12 bài chính và 3 phần tổng hợp). Chọn riêng các khoảng, chẳng hạn Bài 1: 1–71 hoặc 72–120. Giữ riêng hoàn toàn với <b>Kanji N3 (20 chương)</b>. Các từ cùng nghĩa được giữ nguyên theo từng mục từ nguồn.`;
+        `N3 Từ mới: ${rows.length} từ • ${MIMI_SECTIONS.length} bài`;
+      $("dataNote").innerHTML = `<b>Mimi kara Oboeru N3</b>: 880 mục từ chính, sắp theo số thứ tự 1–880, chia thành 21 bài theo các khoảng từ và chủ điểm trong mục lục sách. Ví dụ: Bài 1 (1–71), Bài 2 (72–120). Giữ riêng hoàn toàn với <b>Kanji N3 (20 chương)</b>. Các từ cùng nghĩa được giữ nguyên theo từng mục từ nguồn.`;
     } else {
       document.querySelector(".subtitle").textContent =
         `N4 Từ mới: ${rows.length} từ • Bài 26–48 + MR1–MR2`;
@@ -823,16 +825,16 @@ function renderLessonPicker() {
         ? section.count
         : rows.filter(v => v.lesson === lesson).length;
       const displayLesson = section
-        ? mimiSectionLabel(section)
+        ? section.title
         : lessonDisplayName(lesson);
       const label = document.createElement("label");
       label.className = "chip";
-      label.title = `${displayLesson} · ${count} từ mới`;
+      label.title = `${section ? mimiSectionLabel(section) : displayLesson} · ${count} từ mới`;
       label.innerHTML = `
         <input type="checkbox" value="${lesson}" checked>
         <span>
           <span class="lesson-chip-name">${displayLesson}</span>
-          <span class="lesson-chip-count">${count} từ</span>
+          <span class="lesson-chip-count">${section ? section.range_label : `${count} từ`}</span>
         </span>
       `;
       root.appendChild(label);
@@ -890,8 +892,10 @@ function setContentMode(mode) {
   $("questionModeJaDesc").textContent = isVocab
     ? "Hiện từ tiếng Nhật → trả lời nghĩa tiếng Việt."
     : "Hiện từ tiếng Nhật → trả lời cách đọc furigana.";
-  $("questionModeViTitle").textContent = "Tiếng Việt";
-  $("questionModeViDesc").textContent = "Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng.";
+  $("questionModeViTitle").textContent = isVocab && selectedLevel === "N3" ? "Tiếng Việt + Kanji" : "Tiếng Việt";
+  $("questionModeViDesc").textContent = isVocab && selectedLevel === "N3"
+    ? "Hiện nghĩa tiếng Việt và chữ Kanji → chọn / viết cách đọc."
+    : "Hiện nghĩa tiếng Việt → trả lời từ tiếng Nhật tương ứng.";
 
   renderLessonPicker();
   updateSavedWordsUI();

@@ -1,5 +1,16 @@
 # Kanji N5 / N4 / N3 Quiz
 
+## Từ vựng N3 — Mimi kara Oboeru N3 (新試験対応)
+
+- Đã tích hợp **880 mục từ chính** theo số thứ tự **1–880** và **12 Unit** của sách do người dùng tải lên (PDF **236 trang**).
+- Chọn **N3 → Từ mới** để ôn Mimi kara; chọn **N3 → Kanji** để ôn 20 chương Kanji Master. N4 → Từ mới vẫn sử dụng dữ liệu cũ.
+- Các Unit gồm: (01) Danh từ A, (02) Động từ A, (03) Tính từ A, (04) Danh từ B, (05) Động từ B, (06) Katakana A, (07) Tính từ B, (08) Phó từ A, (09) Danh từ C, (10) Động từ C, (11) Katakana B, (12) Phó từ B / liên thể từ / liên từ.
+- Không bỏ sót phần **221–258**, **299–310**, **836–845**: đây là các mục tổng hợp nằm giữa các Unit, được ghép vào Unit đứng trước để vẫn chọn ôn được.
+- Dữ liệu: `vocab_n3_mimikara.json` chứa `id`, `number`, `lesson`, `word`, `reading`, `meaning`, `han_viet`, `part` và một số dạng từ thay thế; dữ liệu nhúng trong `index.html` qua `MIMI_VOCAB_N3`.
+- Giữ nguyên 4 kiểu luyện tập, đọc âm, lưu từ sai, lựa chọn số câu và ôn theo Unit.
+- Sửa một số lỗi dữ liệu tham chiếu: mục **#446 盗む（ぬすむ）**, **#503 悩む（なやむ）**, **#240 行き（いき／ゆき）**. Các từ viết kana thông dụng như `けが`, `かび`, `おしゃべり` giữ thêm dạng Kanji thay thế.
+- **Phạm vi xác minh:** Đã so thứ tự, nhãn Unit, nhiều từ đầu/cuối phần với các trang ảnh PDF và đối chiếu thêm nguồn dữ liệu cộng đồng. Chưa tự nhận là đã kiểm chứng mọi câu ví dụ/cụm đi kèm trên tất cả 236 trang. Vì đây là bản scan, những từ/cách đọc khó cần tiếp tục rà soát thủ công trước khi merge `main`.
+
 ## N3 — 漢字マスター N3
 
 - N3: 20 chương theo thứ tự sách, 376 chữ Kanji tiêu đề chính, **1.150 mục từ** (danh sách học + mở rộng thường gặp).

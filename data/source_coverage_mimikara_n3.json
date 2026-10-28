@@ -138,5 +138,226 @@
       ]
     }
   ],
-  "manual_review_status": "spot_checked_not_all_236_pages"
+  "manual_review_status": "spot_checked_not_all_236_pages",
+  "contents_pdf_pages": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "subdivision_source": "Book's 練習問題Ⅰ ranges and まとめ page entries exactly as printed in the supplied PDF table of contents; 練習問題Ⅱ is whole-unit review and not duplicated.",
+  "sections": [
+    {
+      "id": 1,
+      "unit": 1,
+      "start": 1,
+      "end": 71,
+      "count": 71,
+      "kind": "practice",
+      "printed_page": 18,
+      "display_label": "Bài 1 · 1–71"
+    },
+    {
+      "id": 2,
+      "unit": 1,
+      "start": 72,
+      "end": 120,
+      "count": 49,
+      "kind": "practice",
+      "printed_page": 28,
+      "display_label": "Bài 1 · 72–120"
+    },
+    {
+      "id": 3,
+      "unit": 2,
+      "start": 121,
+      "end": 170,
+      "count": 50,
+      "kind": "practice",
+      "printed_page": 40,
+      "display_label": "Bài 2 · 121–170"
+    },
+    {
+      "id": 4,
+      "unit": 2,
+      "start": 171,
+      "end": 220,
+      "count": 50,
+      "kind": "practice",
+      "printed_page": 50,
+      "display_label": "Bài 2 · 171–220"
+    },
+    {
+      "id": 5,
+      "unit": 2,
+      "start": 221,
+      "end": 258,
+      "count": 38,
+      "kind": "summary",
+      "printed_page": 54,
+      "display_label": "Tổng hợp · 221–258"
+    },
+    {
+      "id": 6,
+      "unit": 3,
+      "start": 259,
+      "end": 298,
+      "count": 40,
+      "kind": "practice",
+      "printed_page": 66,
+      "display_label": "Bài 3 · 259–298"
+    },
+    {
+      "id": 7,
+      "unit": 3,
+      "start": 299,
+      "end": 310,
+      "count": 12,
+      "kind": "summary",
+      "printed_page": 68,
+      "display_label": "Tổng hợp · 299–310"
+    },
+    {
+      "id": 8,
+      "unit": 4,
+      "start": 311,
+      "end": 370,
+      "count": 60,
+      "kind": "practice",
+      "printed_page": 78,
+      "display_label": "Bài 4 · 311–370"
+    },
+    {
+      "id": 9,
+      "unit": 4,
+      "start": 371,
+      "end": 410,
+      "count": 40,
+      "kind": "practice",
+      "printed_page": 86,
+      "display_label": "Bài 4 · 371–410"
+    },
+    {
+      "id": 10,
+      "unit": 5,
+      "start": 411,
+      "end": 460,
+      "count": 50,
+      "kind": "practice",
+      "printed_page": 98,
+      "display_label": "Bài 5 · 411–460"
+    },
+    {
+      "id": 11,
+      "unit": 5,
+      "start": 461,
+      "end": 510,
+      "count": 50,
+      "kind": "practice",
+      "printed_page": 108,
+      "display_label": "Bài 5 · 461–510"
+    },
+    {
+      "id": 12,
+      "unit": 6,
+      "start": 511,
+      "end": 550,
+      "count": 40,
+      "kind": "practice",
+      "printed_page": 118,
+      "display_label": "Bài 6 · 511–550"
+    },
+    {
+      "id": 13,
+      "unit": 7,
+      "start": 551,
+      "end": 590,
+      "count": 40,
+      "kind": "practice",
+      "printed_page": 128,
+      "display_label": "Bài 7 · 551–590"
+    },
+    {
+      "id": 14,
+      "unit": 8,
+      "start": 591,
+      "end": 635,
+      "count": 45,
+      "kind": "practice",
+      "printed_page": 140,
+      "display_label": "Bài 8 · 591–635"
+    },
+    {
+      "id": 15,
+      "unit": 9,
+      "start": 636,
+      "end": 675,
+      "count": 40,
+      "kind": "practice",
+      "printed_page": 148,
+      "display_label": "Bài 9 · 636–675"
+    },
+    {
+      "id": 16,
+      "unit": 9,
+      "start": 676,
+      "end": 715,
+      "count": 40,
+      "kind": "practice",
+      "printed_page": 156,
+      "display_label": "Bài 9 · 676–715"
+    },
+    {
+      "id": 17,
+      "unit": 10,
+      "start": 716,
+      "end": 753,
+      "count": 38,
+      "kind": "practice",
+      "printed_page": 168,
+      "display_label": "Bài 10 · 716–753"
+    },
+    {
+      "id": 18,
+      "unit": 10,
+      "start": 754,
+      "end": 795,
+      "count": 42,
+      "kind": "practice",
+      "printed_page": 178,
+      "display_label": "Bài 10 · 754–795"
+    },
+    {
+      "id": 19,
+      "unit": 11,
+      "start": 796,
+      "end": 835,
+      "count": 40,
+      "kind": "practice",
+      "printed_page": 188,
+      "display_label": "Bài 11 · 796–835"
+    },
+    {
+      "id": 20,
+      "unit": 11,
+      "start": 836,
+      "end": 845,
+      "count": 10,
+      "kind": "summary",
+      "printed_page": 192,
+      "display_label": "Tổng hợp · 836–845"
+    },
+    {
+      "id": 21,
+      "unit": 12,
+      "start": 846,
+      "end": 880,
+      "count": 35,
+      "kind": "practice",
+      "printed_page": 202,
+      "display_label": "Bài 12 · 846–880"
+    }
+  ],
+  "section_count": 21,
+  "section_terms_count": 880
 }

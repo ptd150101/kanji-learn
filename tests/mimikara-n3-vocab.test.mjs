@@ -106,10 +106,11 @@ test("Switching Kanji and N3 Từ mới keeps header and lesson picker dimension
   assert.match(css, /\.setup\{[^}]*overflow-anchor:none/);
   assert.match(css, /\.subtitle\{[^}]*min-height:2\.8em/);
   assert.match(css, /\.subtitle\{[^}]*-webkit-line-clamp:2/);
-  assert.match(css, /\.lessons\{[^}]*height:clamp\(180px,38svh,300px\)/);
+  assert.match(css, /\.lessons\{[^}]*max-height:min\(42vh,320px\)/);
   assert.match(css, /\.lessons\{[^}]*overflow-anchor:none/);
-  assert.match(css, /\.lessons\{grid-template-columns:[^}]*height:280px/);
-  assert.match(css, /\.lessons\{grid-template-columns:[^}]*height:260px/);
-  assert.doesNotMatch(css, /\.lessons\{[^}]*max-height:/);
+  assert.match(css, /\.lessons\{grid-template-columns:[^}]*max-height:280px/);
+  assert.match(css, /\.lessons\{grid-template-columns:[^}]*max-height:260px/);
+  assert.match(css, /\.lessons\{[^}]*align-content:start/);
+  assert.doesNotMatch(css, /\.lessons\{[^}]*height:clamp\(/);
   assert.match(html, /root\.scrollTop = 0;/);
 });

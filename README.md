@@ -2,27 +2,26 @@
 
 ## Từ vựng N3 – Mimi kara Oboeru
 
-- Chọn **N3 → Từ mới** để ôn **880 từ** theo số thứ tự 1–880, chọn độc lập **21 khoảng nhỏ** bên trong 12 bài của *Mimi kara Oboeru N3* (ví dụ: **Bài 1 · 1–71**, **Bài 1 · 72–120**); chọn **N3 → Kanji** để ôn 20 chương Kanji Master.
-- Các phần **Tổng hợp · 221–258**, **Tổng hợp · 299–310** và **Tổng hợp · 836–845** có ô chọn riêng, đúng theo mục lục sách. Đối chiếu khoảng số từ tại các trang PDF **5–8**; không nhân đôi 練習問題Ⅱ (đề ôn tổng thể).
-- Mỗi từ có cách đọc, nghĩa Việt, Hán Việt (khi có Kanji), số thứ tự, bài gốc và mã khoảng `section`. Mục lục 21 khoảng là `sections` trong `vocab_n3_mimikara.json`.
-- Hỗ trợ trắc nghiệm/tự luận, phát âm, lưu từ sai và ôn theo bài. Danh sách bài giữ khoảng cách hàng đồng nhất như các tab khác; dùng chiều cao **tối đa** và chỉ cuộn khi cần, không kéo giãn các hàng theo khung cố định.
-- Đã đối chiếu cấu trúc/số thứ tự và kiểm tra các trang mẫu PDF; chưa kiểm chứng thủ công từng câu ví dụ của toàn bộ bản scan.
-- `node scripts/sync-kanji-data.mjs` đồng bộ các nguồn JSON vào trang offline.
-- `data/source_coverage_mimikara_n3.json` mô tả kiểm tra nguồn.
+- Chọn **N3 → Từ mới** để ôn **880 từ**, chia thành **21 bài liên tiếp**, mỗi bài có tên chủ đề và khoảng số từ như **Bài 1 · Danh từ A · phần 1 (1–71)**, **Bài 2 · Danh từ A · phần 2 (72–120)**. Giữ metadata 12 Unit gốc để đối chiếu giáo trình.
+- Các phần 221–258, 299–310, 836–845 có tên bài riêng: **Bài 5 · Danh từ hóa động từ**, **Bài 7 · Cặp động từ ～まる／～める**, **Bài 20 · Động từ nấu ăn**; không gọi chung là “Tổng hợp”.
+- Cách chia theo khoảng số từ là từ **mục lục PDF trang 5–8**. Mỗi mục từ thuộc đúng một bài, không nhân đôi bộ đề luyện tập.
+- Chế độ **Tiếng Việt + Kanji**: hiển thị nghĩa tiếng Việt kèm mặt chữ Kanji (khi có), yêu cầu chọn/nhập **cách đọc hiragana**; không chấp nhận chép lại chữ Kanji trong tự luận. Từ không có Kanji và bộ N4 vẫn dùng logic cũ.
+- Giao diện các hàng bài giữ khoảng cách chuẩn, không kéo giãn nội dung để lấp đầy vùng trống; chỉ giới hạn chiều cao tối đa của danh sách.
+- Dữ liệu đầy đủ tại `vocab_n3_mimikara.json`. Đồng bộ JSON vào trang offline: `node scripts/sync-kanji-data.mjs`.
+- Đã đối chiếu khoảng số từ và một số trang nguồn; các ví dụ/cụm từ trong toàn bộ bản scan vẫn chưa được rà thủ công từng dòng.
 
-## Gộp hai bộ dữ liệu Kanji N3
+## Kanji Master N3: chỉ dùng chữ Kanji thuộc chương sách
 
-- Giữ lại 1.592 mục từ N3 đã có trên `main`; bổ sung 283 mục khác nhau từ PR #23 thành **1.592 mục từ Kanji N3**.
-- Bổ sung metadata tự/tha động từ và `data/n3/verb_pairs.json` (41 cặp); không thay thế bộ dữ liệu gốc trên `main`.
-- Đã bổ sung cả 干る（ひる）và các từ dễ thiếu như 乾く（かわく）/乾かす（かわかす）.
-
+- Giữ nguyên **1.309** từ đã tồn tại trên `main` trước đợt nhập N3; sau khi loại các mục tự/tha động từ ngoài danh mục chữ Kanji của chương, bộ Kanji N3 hiện có **1.568 mục từ**.
+- `data/n3/verb_pairs.json` chỉ còn **30 cặp** tự/tha động từ dùng **cùng chữ Kanji đầu mục của chương tương ứng**. Đã bỏ 12 cặp tự thêm ngoài chữ của bài (24 mục từ).
+- **干る（ひる） ↔ 干す（ほす）** được giữ trong chương 1 vì sách có chữ **干** và cả hai cách đọc. **乾く／乾かす** không còn trong Kanji Master bài 1 vì chữ **乾** không thuộc chương này. Hai từ này vẫn có trong giáo trình Mimi Kara N3 ở đúng vị trí số 137–138.
 
 - N5: 38 bài, 527 mục từ.
 - Bài N5 27–34 là 8 bài theme bổ sung từ Nihongo Master, đối chiếu Minna no Nihongo I/II và loại trùng với dữ liệu hiện có.
 - Bài N5 35–38 bổ sung 50 mục còn thiếu khi đối chiếu toàn bộ 128 từ trong PDF JLPT N5 2010–2024; coverage sau merge là 128/128 theo từ + cách đọc, mỗi bài mới tối đa 20 mục.
 - N4: 37 bài, 638 mục từ.
-- N3: 20 chương theo **漢字マスターN3**, 1.592 mục từ (biên soạn thêm từ ghép thông dụng, theo chủ điểm từng chữ).
-- Tổng: 2.757 mục từ (N5 + N4 + N3).
+- N3: 20 chương theo **漢字マスターN3**, 1.568 mục từ (biên soạn thêm từ ghép thông dụng, theo chủ điểm từng chữ).
+- Tổng: 2.733 mục từ (N5 + N4 + N3).
 - Chuyển N5/N4/N3 ngay ở màn hình thiết lập.
 - Trắc nghiệm 4 đáp án + viết furigana.
 - Sau khi trả lời hiện nghĩa Việt + Hán Việt từng chữ.

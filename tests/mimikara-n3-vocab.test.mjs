@@ -44,7 +44,7 @@ test("Readings, Vietnamese meanings and Hán Việt are available", () => {
 });
 
 test("N3 new vocabulary stays separate from N3 Kanji and N4 new vocabulary", () => {
-  assert.ok(n3Kanji.vocab.length >= 1592);
+  assert.equal(n3Kanji.vocab.length, 1568);
   assert.ok((Array.isArray(n4) ? n4 : n4.vocab).length > 700);
   assert.deepEqual(inline("MIMI_VOCAB_N3"),mimi.vocab);
   assert.deepEqual(inline("MIMI_UNIT_NAMES"),mimi.units);
@@ -79,8 +79,10 @@ test("21 book-defined selectable sections cover numbers 1–880 exactly once", (
     assert.ok(!ids.has(section.id));
     ids.add(section.id);
     assert.ok(section.label.includes(section.start+"–"+section.end));
-    if(section.kind==="summary") assert.ok(section.label.startsWith("Tổng hợp"));
-    else assert.ok(section.label.startsWith("Bài "+section.unit));
+    assert.equal(section.title.startsWith("Bài " + section.id + " · "), true);
+    assert.ok(section.label.startsWith(section.title));
+    assert.equal(section.range_label, section.start + "–" + section.end);
+    assert.ok(!section.title.includes("Tổng hợp"));
   }
   assert.deepEqual(mimi.vocab.map(v=>v.section), mimi.vocab.map(v=>
     mimi.sections.find(s=>v.number>=s.start && v.number<=s.end)?.id));
@@ -90,6 +92,8 @@ test("N3 Từ mới picker and quiz are filtered by small source ranges", () => 
   assert.deepEqual(inline("MIMI_SECTIONS"),mimi.sections);
   assert.ok(html.includes("MIMI_SECTIONS.map(section => section.id)"));
   assert.ok(html.includes("const displayLesson = section"));
+  assert.ok(html.includes("section.range_label"));
+  assert.ok(html.includes("section.title"));
   assert.ok(html.includes("mimiSectionLabel(section)"));
   assert.ok(html.includes('lessons.includes(level === "N3" ? v.section : v.lesson)'));
   assert.ok(html.includes('v.section === item.section || selected.includes(v.section)'));
@@ -97,7 +101,7 @@ test("N3 Từ mới picker and quiz are filtered by small source ranges", () => 
   assert.ok(html.includes("mimiSectionLabel(mimiSectionForItem(item))"));
   assert.ok(html.includes("lessonSelectionVersion:2"));
   assert.ok(html.includes("oldMimiUnitSelection"));
-  assert.ok(html.includes("N3 Từ mới: ${rows.length} từ • 12 bài · ${MIMI_SECTIONS.length} phần"));
+  assert.ok(html.includes("N3 Từ mới: ${rows.length} từ • ${MIMI_SECTIONS.length} bài"));
   assert.doesNotMatch(html, /Mimi kara · Unit/);
 });
 
@@ -113,4 +117,16 @@ test("Switching Kanji and N3 Từ mới keeps header and lesson picker dimension
   assert.match(css, /\.lessons\{[^}]*align-content:start/);
   assert.doesNotMatch(css, /\.lessons\{[^}]*height:clamp\(/);
   assert.match(html, /root\.scrollTop = 0;/);
+});
+
+test("N3 Vietnamese prompt exposes Kanji but tests kana; N4 remains unchanged", () => {
+  assert.match(html, /Tiếng Việt \+ Kanji/);
+  assert.match(html, /class="vocab-kanji-clue"/);
+  assert.match(html, /escapeJapaneseEntryText\(item\.word\)/);
+  assert.match(html, /const withKanji = item\.level === "N3"/);
+  assert.match(html, /const askReading = item\.level === "N3"/);
+  assert.match(html, /askReading \? optionItem\.reading : optionItem\.word/);
+  assert.match(html, /\? matchesReading\(item, input\)/);
+  assert.match(html, /"N4" \? NEW_VOCAB/);
+  assert.doesNotMatch(html, /Mimi kara · Unit/);
 });

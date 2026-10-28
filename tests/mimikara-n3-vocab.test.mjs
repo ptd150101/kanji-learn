@@ -79,10 +79,10 @@ test("21 book-defined selectable sections cover numbers 1–880 exactly once", (
     assert.ok(!ids.has(section.id));
     ids.add(section.id);
     assert.ok(section.label.includes(section.start+"–"+section.end));
-    assert.equal(section.title.startsWith("Bài " + section.id + " · "), true);
+    assert.equal(section.title.startsWith("Bài " + section.unit + " · "), true);
     assert.ok(section.label.startsWith(section.title));
     assert.equal(section.range_label, section.start + "–" + section.end);
-    assert.ok(!section.title.includes("Tổng hợp"));
+    assert.equal(section.title.includes("Tổng hợp"), section.kind === "summary");
   }
   assert.deepEqual(mimi.vocab.map(v=>v.section), mimi.vocab.map(v=>
     mimi.sections.find(s=>v.number>=s.start && v.number<=s.end)?.id));
@@ -101,7 +101,7 @@ test("N3 Từ mới picker and quiz are filtered by small source ranges", () => 
   assert.ok(html.includes("mimiSectionLabel(mimiSectionForItem(item))"));
   assert.ok(html.includes("lessonSelectionVersion:2"));
   assert.ok(html.includes("oldMimiUnitSelection"));
-  assert.ok(html.includes("N3 Từ mới: ${rows.length} từ • ${MIMI_SECTIONS.length} bài"));
+  assert.ok(html.includes("N3 Từ mới: ${rows.length} từ • 12 bài / ${MIMI_SECTIONS.length} phần"));
   assert.doesNotMatch(html, /Mimi kara · Unit/);
 });
 
@@ -129,4 +129,26 @@ test("N3 Vietnamese prompt exposes Kanji but tests kana; N4 remains unchanged", 
   assert.match(html, /\? matchesReading\(item, input\)/);
   assert.match(html, /"N4" \? NEW_VOCAB/);
   assert.doesNotMatch(html, /Mimi kara · Unit/);
+});
+
+test("Two book ranges belong to Bài 1, and no unrelated Kanji verb is added", () => {
+  assert.equal(mimi.sections[0].unit, 1);
+  assert.equal(mimi.sections[1].unit, 1);
+  assert.ok(mimi.sections[0].title.startsWith("Bài 1 · "));
+  assert.ok(mimi.sections[1].title.startsWith("Bài 1 · "));
+  assert.deepEqual(mimi.sections.slice(0,2).map(v=>[v.start,v.end]), [[1,71],[72,120]]);
+  assert.deepEqual(mimi.sections.filter(x=>x.kind==="summary").map(x=>x.unit), [2,3,11]);
+  const kanjiOf = word => [...word].filter(ch => /[\u3400-\u9fff]/u.test(ch)).join("");
+  for (const v of mimi.vocab.filter(row=>row.paired_with)) {
+    assert.ok(kanjiOf(v.word), "Unmatched Kanji in verb pair: " + v.word);
+    assert.equal(kanjiOf(v.word), kanjiOf(v.paired_with.word),
+      "Pair uses different Kanji: " + v.word + " versus " + v.paired_with.word);
+  }
+  const index = get("data/n3/verb_pairs.json");
+  assert.equal(index.total_pairs,30);
+  for(const p of index.pairs){
+    assert.equal(kanjiOf(p.auto.word),kanjiOf(p.transitive.word));
+    const chapterKanji=get("data/n3/source_character_index.json").lessons[p.lesson].characters.map(x=>x.kanji);
+    assert.ok(chapterKanji.includes(kanjiOf(p.auto.word)));
+  }
 });

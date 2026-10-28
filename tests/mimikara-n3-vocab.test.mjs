@@ -52,6 +52,7 @@ test("N3 new vocabulary stays separate from N3 Kanji and N4 new vocabulary", () 
   assert.match(html, /level === "N3" \? MIMI_VOCAB_N3/);
   assert.match(html, /selectedLevel === "N4" \|\| selectedLevel === "N3"/);
   assert.match(html, /pool = vocabDatasetForLevel\(level\)\.filter/);
+  assert.match(html, /return vocabDatasetForLevel\(item\.level\)\.filter/);
   assert.match(html, /N3 · Mimi kara · Unit/);
   assert.match(html, /item\.accepted_words \|\| \[\]/);
 });

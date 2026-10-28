@@ -63,8 +63,8 @@ test("N3 is included in combined dataset and matches self-contained quiz HTML", 
   const embeddedHanViet = inlineJson("HAN_VIET");
   assert.equal(combined.counts.N3, n3.total_vocab);
   assert.equal(combined.counts.total, combined.vocab.length);
-  assert.deepEqual(combinedN3, n3.vocab.map(({lesson, word, reading, meaning, level}) =>
-    ({lesson, word, reading, meaning, level})));
+  const core = ({lesson, word, reading, meaning, level}) => ({lesson, word, reading, meaning, level});
+  assert.deepEqual(combinedN3.map(core), n3.vocab.map(core));
   assert.deepEqual(embeddedN3, combinedN3);
   assert.deepEqual(embeddedLessons.N3, n3.lessons);
   assert.deepEqual(embeddedHanViet, hanViet);

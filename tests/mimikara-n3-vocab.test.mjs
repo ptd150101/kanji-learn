@@ -45,7 +45,7 @@ test("Readings, Vietnamese meanings and Hán Việt are available", () => {
 
 test("N3 new vocabulary stays separate from N3 Kanji and N4 new vocabulary", () => {
   assert.equal(n3Kanji.vocab.length,1150);
-  assert.ok(n4.vocab.length>700);
+  assert.ok((Array.isArray(n4) ? n4 : n4.vocab).length > 700);
   assert.deepEqual(inline("MIMI_VOCAB_N3"),mimi.vocab);
   assert.deepEqual(inline("MIMI_UNIT_NAMES"),mimi.units);
   assert.match(html, /function vocabDatasetForLevel\(level = selectedLevel\)/);

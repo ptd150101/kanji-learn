@@ -1206,7 +1206,9 @@ function acceptedMeanings(item) {
 function isWrittenAnswerCorrect(item, input, activeContentMode, activeQuestionMode) {
   if (activeContentMode === "vocab") {
     return activeQuestionMode === "vi"
-      ? matchesReading(item, input) || matchesJapaneseWord(item, input)
+      ? ((item.level === "N3" && /[\u3400-\u9fff]/u.test(item.word))
+          ? matchesReading(item, input)
+          : matchesReading(item, input) || matchesJapaneseWord(item, input))
       : acceptedMeanings(item).includes(normalizeVietnameseAnswer(input));
   }
 
@@ -1623,10 +1625,14 @@ function renderQuestion() {
     $("word").classList.toggle("is-vietnamese", questionMode === "vi");
 
     if (questionMode === "vi") {
-      $("word").textContent = item.meaning;
-      $("prompt").textContent = answerMode === "mcq"
-        ? "Chọn từ tiếng Nhật đúng với nghĩa trên"
-        : "Tự nhập từ tiếng Nhật hoặc furigana tương ứng";
+      const withKanji = item.level === "N3" && /[\u3400-\u9fff]/u.test(item.word);
+      // Show the word's written Kanji, but not the pronunciation being tested.
+      $("word").innerHTML = withKanji
+        ? `<span class="vocab-meaning-clue">${escapeJapaneseEntryText(item.meaning)}</span><span class="vocab-kanji-clue">${escapeJapaneseEntryText(item.word)}</span>`
+        : escapeJapaneseEntryText(item.meaning);
+      $("prompt").textContent = withKanji
+        ? (answerMode === "mcq" ? "Chọn cách đọc hiragana đúng của chữ Kanji" : "Nhập cách đọc hiragana của chữ Kanji")
+        : (answerMode === "mcq" ? "Chọn từ tiếng Nhật đúng với nghĩa trên" : "Tự nhập từ tiếng Nhật hoặc furigana tương ứng");
       $("speakBtn").style.display = "none";
     } else {
       $("word").textContent = item.word;
@@ -1646,10 +1652,12 @@ function renderQuestion() {
       $("writeInput").value = "";
       $("writeInput").lang = questionMode === "vi" ? "ja" : "vi";
       $("writeInput").placeholder = questionMode === "vi"
-        ? "Nhập tiếng Nhật hoặc furigana..."
+        ? (item.level === "N3" && /[\u3400-\u9fff]/u.test(item.word) ? "Nhập hiragana (không chép lại Kanji)..." : "Nhập tiếng Nhật hoặc furigana...")
         : "Nhập nghĩa tiếng Việt...";
       $("writeHelp").innerHTML = questionMode === "vi"
-        ? 'Chấp nhận <b>từ tiếng Nhật hoặc furigana</b>. Có thể bấm <b>Xem đáp án</b> nếu không nhớ; câu đó sẽ được tính là sai. <kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.'
+        ? (item.level === "N3" && /[\u3400-\u9fff]/u.test(item.word)
+            ? 'Nhìn nghĩa Việt + Kanji rồi nhập <b>cách đọc hiragana</b>. Chỉ chép Kanji không được tính đúng. <kbd>Shift</kbd> + <kbd>Enter</kbd> xem đáp án · <kbd>Enter</kbd> kiểm tra.'
+            : 'Chấp nhận <b>từ tiếng Nhật hoặc furigana</b>. Có thể bấm <b>Xem đáp án</b> nếu không nhớ; câu đó sẽ được tính là sai. <kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.')
         : 'Nhập <b>nghĩa tiếng Việt</b>. Với từ có nhiều nghĩa ngăn cách bằng dấu phẩy/chấm phẩy, có thể nhập một nghĩa tương ứng. Có thể bấm <b>Xem đáp án</b>; câu đó sẽ được tính là sai. <kbd>Shift</kbd> + <kbd>Enter</kbd> để xem đáp án · <kbd>Enter</kbd> để kiểm tra / sang câu tiếp.';
       setTimeout(() => $("writeInput").focus(), 50);
     }

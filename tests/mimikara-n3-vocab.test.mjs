@@ -53,6 +53,29 @@ test("N3 new vocabulary stays separate from N3 Kanji and N4 new vocabulary", () 
   assert.match(html, /selectedLevel === "N4" \|\| selectedLevel === "N3"/);
   assert.match(html, /pool = vocabDatasetForLevel\(level\)\.filter/);
   assert.match(html, /return vocabDatasetForLevel\(item\.level\)\.filter/);
-  assert.match(html, /N3 · Mimi kara · Unit/);
+  assert.match(html, /N3 · Mimi kara · Bài/);
   assert.match(html, /item\.accepted_words \|\| \[\]/);
+});
+
+test("N3 vocabulary UI uses Bài 1–12 consistently", () => {
+  assert.match(html, /\`Bài \${lesson} · \${MIMI_UNIT_NAMES\[lesson\]}\`/);
+  assert.match(html, /gồm 12 bài và các mục tổng hợp/);
+  assert.match(html, /N3 Từ mới: \${rows\.length} từ • 12 bài/);
+  assert.match(html, /N3 · Mimi kara · Bài \${item\.lesson}/);
+  assert.match(html, /"Bài " \+ item\.lesson/);
+  assert.doesNotMatch(html, /Mimi kara · Unit/);
+  assert.doesNotMatch(html, /\`Unit \${String\(lesson\)/);
+});
+
+test("Switching Kanji and N3 Từ mới keeps header and lesson picker dimensions stable", () => {
+  const css = html.slice(html.indexOf("<style>"), html.indexOf("</style>"));
+  assert.match(css, /\.setup\{[^}]*overflow-anchor:none/);
+  assert.match(css, /\.subtitle\{[^}]*min-height:2\.8em/);
+  assert.match(css, /\.subtitle\{[^}]*-webkit-line-clamp:2/);
+  assert.match(css, /\.lessons\{[^}]*height:clamp\(180px,38svh,300px\)/);
+  assert.match(css, /\.lessons\{[^}]*overflow-anchor:none/);
+  assert.match(css, /\.lessons\{grid-template-columns:[^}]*height:280px/);
+  assert.match(css, /\.lessons\{grid-template-columns:[^}]*height:260px/);
+  assert.doesNotMatch(css, /\.lessons\{[^}]*max-height:/);
+  assert.match(html, /root\.scrollTop = 0;/);
 });

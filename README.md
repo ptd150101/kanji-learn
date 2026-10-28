@@ -2,10 +2,10 @@
 
 ## Từ vựng N3 – Mimi kara Oboeru
 
-- Chọn **N3 → Từ mới** để ôn **880 từ** theo số thứ tự 1–880 của 12 Unit sách *Mimi kara Oboeru N3*; chọn **N3 → Kanji** để ôn 20 chương Kanji Master.
+- Chọn **N3 → Từ mới** để ôn **880 từ** theo số thứ tự 1–880, hiển thị **Bài 1–12** (tương ứng 12 Unit gốc của *Mimi kara Oboeru N3*); chọn **N3 → Kanji** để ôn 20 chương Kanji Master.
 - Các phần tổng hợp từ 221–258, 299–310 và 836–845 vẫn được giữ và gắn vào Unit tương ứng.
 - Mỗi từ có cách đọc, nghĩa Việt, Hán Việt (khi có Kanji), số thứ tự và Unit. Dữ liệu ở `vocab_n3_mimikara.json`.
-- Hỗ trợ trắc nghiệm/tự luận, phát âm, lưu từ sai và ôn theo Unit.
+- Hỗ trợ trắc nghiệm/tự luận, phát âm, lưu từ sai và ôn theo bài. Danh sách bài có chiều cao cố định khi đổi Kanji/Từ mới, tránh nhảy UI trên mobile.
 - Đã đối chiếu cấu trúc/số thứ tự và kiểm tra các trang mẫu PDF; chưa kiểm chứng thủ công từng câu ví dụ của toàn bộ bản scan.
 - `node scripts/sync-kanji-data.mjs` đồng bộ các nguồn JSON vào trang offline.
 - `data/source_coverage_mimikara_n3.json` mô tả kiểm tra nguồn.

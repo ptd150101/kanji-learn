@@ -75,6 +75,12 @@ h1{
   font-size:13px;
   line-height:1.4;
   overflow-wrap:anywhere;
+  /* Always reserve the same two-line header height when switching datasets. */
+  min-height:2.8em;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow:hidden;
 }
 .badge{
   max-width:44vw;
@@ -98,7 +104,7 @@ h1{
   padding:var(--space-3);
   box-shadow:0 14px 34px rgba(0,0,0,.18);
 }
-.setup{display:grid;gap:var(--space-4)}
+.setup{display:grid;gap:var(--space-4);overflow-anchor:none}
 .setup>*,.row>*,.tts-row>*,.mode-grid>*,.topbar>*,.actions>*{min-width:0}
 .label{font-weight:700;margin-bottom:9px}
 .level-tabs{
@@ -126,8 +132,11 @@ h1{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:var(--space-2);
-  max-height:min(42vh,320px);
+  /* Stable picker height: 12 vocab lessons must not collapse the 20-lesson Kanji grid. */
+  height:300px;
+  height:clamp(180px,38svh,300px);
   overflow:auto;
+  overflow-anchor:none;
   overscroll-behavior:contain;
   padding:2px 2px 6px;
   scrollbar-gutter:stable;
@@ -490,7 +499,7 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
   .subtitle{font-size:14px}
   .badge{max-width:none;padding:8px 12px;font-size:13px;white-space:nowrap}
   .panel{padding:var(--space-4);border-radius:16px}
-  .lessons{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));max-height:280px}
+  .lessons{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));height:280px}
   .mode-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .tts-row{grid-template-columns:minmax(0,1fr) 130px auto;gap:10px}
   #voiceSelect{grid-column:auto}
@@ -511,7 +520,7 @@ kbd{border:1px solid var(--border);background:#0d1117;border-bottom-width:2px;bo
   .setup{gap:16px}
   .level-tabs{display:flex;gap:10px;flex-wrap:wrap}
   .level-btn{width:auto;padding:11px 18px}
-  .lessons{grid-template-columns:repeat(auto-fit,minmax(210px,1fr));max-height:260px}
+  .lessons{grid-template-columns:repeat(auto-fit,minmax(210px,1fr));height:260px}
   .row{grid-template-columns:1fr 1fr}
   .question-card{padding:28px 18px 22px}
   .word{font-size:clamp(44px,10vw,78px);line-height:1.2;margin:5px 0 12px}
@@ -770,11 +779,11 @@ function updateHeaderSummary() {
     const rows = vocabDatasetForLevel();
     if (selectedLevel === "N3") {
       document.querySelector(".subtitle").textContent =
-        `N3 Mimi kara: ${rows.length} từ vựng • 12 Unit • 4 chế độ kiểm tra`;
-      $("dataNote").innerHTML = `<b>Mimi kara Oboeru N3</b>: 880 mục từ chính, sắp theo số thứ tự 1–880, gồm 12 Unit và các mục tổng hợp của sách. Giữ riêng hoàn toàn với <b>Kanji N3 (20 chương)</b>. Các từ cùng nghĩa được giữ nguyên theo từng mục từ nguồn.`;
+        `N3 Từ mới: ${rows.length} từ • 12 bài • 4 chế độ`;
+      $("dataNote").innerHTML = `<b>Mimi kara Oboeru N3</b>: 880 mục từ chính, sắp theo số thứ tự 1–880, gồm 12 bài và các mục tổng hợp của sách. Giữ riêng hoàn toàn với <b>Kanji N3 (20 chương)</b>. Các từ cùng nghĩa được giữ nguyên theo từng mục từ nguồn.`;
     } else {
       document.querySelector(".subtitle").textContent =
-        `N4 từ mới: ${rows.length} từ vựng • Bài 26–48 + MR1–MR2 • 4 chế độ kiểm tra`;
+        `N4 Từ mới: ${rows.length} từ • Bài 26–48 + MR1–MR2`;
       $("dataNote").innerHTML = `Bộ <b>từ mới N4 bài 26–48 + MR1–MR2</b> gồm <b>${rows.length} từ</b>. Giống kiểm tra Kanji, có 2 kiểu câu hỏi (<b>Tiếng Nhật / Tiếng Việt</b>) × 2 cách trả lời (<b>Trắc nghiệm / Tự luận</b>) = <b>4 chế độ</b>. Có thể chọn từng bài hoặc nhiều bài để kiểm tra.`;
     }
     return;
@@ -782,7 +791,7 @@ function updateHeaderSummary() {
   const count = VOCAB.filter(v => v.level === selectedLevel).length;
   const lessonCount = Object.keys(LESSON_NAMES[selectedLevel]).length;
   document.querySelector(".subtitle").textContent =
-    `${selectedLevel}: ${count} từ vựng • ${lessonCount} bài • trắc nghiệm + viết furigana`;
+    `${selectedLevel} Kanji: ${count} từ • ${lessonCount} bài`;
   $("dataNote").innerHTML = `Có 3 bộ dữ liệu: <b>N5 gồm 38 bài</b>, <b>N4 gồm 37 bài</b> và <b>N3 gồm 20 chương</b>. Tên bài của cả hai cấp độ được hiển thị thống nhất bằng <b>tiếng Việt</b>. Từ vựng/cách đọc bám theo các ô On/Kun trong sách; nghĩa Việt và Hán Việt được bổ sung để phục vụ quiz.`;
 }
 
@@ -797,7 +806,7 @@ function renderLessonPicker() {
     lessons.forEach(lesson => {
       const count = rows.filter(v => v.lesson === lesson).length;
       const displayLesson = selectedLevel === "N3"
-        ? `Unit ${String(lesson).padStart(2, "0")} · ${MIMI_UNIT_NAMES[lesson]}`
+        ? `Bài ${lesson} · ${MIMI_UNIT_NAMES[lesson]}`
         : lessonDisplayName(lesson);
       const label = document.createElement("label");
       label.className = "chip";
@@ -811,6 +820,7 @@ function renderLessonPicker() {
       `;
       root.appendChild(label);
     });
+    root.scrollTop = 0;
     updateHeaderSummary();
     return;
   }
@@ -833,6 +843,7 @@ function renderLessonPicker() {
       `;
       root.appendChild(label);
     });
+  root.scrollTop = 0;
   updateHeaderSummary();
 }
 
@@ -994,7 +1005,7 @@ function savedWordsForCurrentScope() {
 function savedRecordLabel(record) {
   const item = record.item || {};
   if (record.contentMode === "vocab") {
-    return `${item.level || "N4"} · Từ mới · ${item.level === "N3" ? "Unit " + String(item.lesson).padStart(2, "0") : lessonDisplayName(item.lesson)}`;
+    return `${item.level || "N4"} · Từ mới · ${item.level === "N3" ? "Bài " + item.lesson : lessonDisplayName(item.lesson)}`;
   }
   const lessonName = LESSON_NAMES[item.level]?.[item.lesson];
   return [item.level || "Kanji", item.lesson != null ? `Bài ${item.lesson}` : "", lessonName || ""]
@@ -1576,7 +1587,7 @@ function renderQuestion() {
 
   if (contentMode === "vocab") {
     $("lessonTag").textContent = item.level === "N3"
-      ? `N3 · Mimi kara · Unit ${String(item.lesson).padStart(2, "0")} · Từ số ${item.number}`
+      ? `N3 · Mimi kara · Bài ${item.lesson} · Từ số ${item.number}`
       : `N4 · Từ mới · ${lessonDisplayName(item.lesson)}`;
     $("word").classList.toggle("is-vietnamese", questionMode === "vi");
 

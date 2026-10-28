@@ -136,14 +136,15 @@
       846,
       880
     ],
-    "status": "indexed and sample-checked; not fully verified line-by-line",
+    "status": "All 880 indexed, section ranges verified directly against book table of contents; word-level examples not all manually verified.",
     "sectioning": "21 source-number ranges; boundaries taken directly from printed table of contents (PDF pages 5–8), including summary sections 221–258, 299–310, 836–845",
     "section_toc_pdf_pages": [
       5,
       6,
       7,
       8
-    ]
+    ],
+    "sections_source": "PDF original table of contents pages 5–8: 21 non-overlapping numbered practice/summary ranges"
   },
   "vocab": [
     {
@@ -158,7 +159,7 @@
       "han_viet": "NAM TÍNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0002",
@@ -172,7 +173,7 @@
       "han_viet": "NỮ TÍNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0003",
@@ -186,7 +187,7 @@
       "han_viet": "CAO LINH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0004",
@@ -200,7 +201,7 @@
       "han_viet": "NIÊN THƯỢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0005",
@@ -214,7 +215,7 @@
       "han_viet": "MỤC THƯỢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0006",
@@ -228,7 +229,7 @@
       "han_viet": "TIÊN BỐI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0007",
@@ -242,7 +243,7 @@
       "han_viet": "HẬU BỐI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0008",
@@ -256,7 +257,7 @@
       "han_viet": "THƯỢNG TI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0009",
@@ -270,7 +271,7 @@
       "han_viet": "TƯƠNG THỦ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0010",
@@ -284,7 +285,7 @@
       "han_viet": "TRI HỢP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0011",
@@ -298,7 +299,7 @@
       "han_viet": "HỮU NHÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0012",
@@ -312,7 +313,7 @@
       "han_viet": "TRỌNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0013",
@@ -326,7 +327,7 @@
       "han_viet": "SANH NIÊN NGUYỆT NHẬT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0014",
@@ -340,7 +341,7 @@
       "han_viet": "ĐẢN SANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0015",
@@ -354,7 +355,7 @@
       "han_viet": "NIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0016",
@@ -368,7 +369,7 @@
       "han_viet": "XUẤT THÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0017",
@@ -382,7 +383,7 @@
       "han_viet": "CỐ HƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0018",
@@ -396,7 +397,7 @@
       "han_viet": "THÀNH TRƯỜNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0019",
@@ -410,7 +411,7 @@
       "han_viet": "THÀNH NHÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0020",
@@ -424,7 +425,7 @@
       "han_viet": "HỢP CÁCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0021",
@@ -438,7 +439,7 @@
       "han_viet": "TIẾN HỌC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0022",
@@ -452,7 +453,7 @@
       "han_viet": "THỐI HỌC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0023",
@@ -466,7 +467,7 @@
       "han_viet": "TỰU CHỨC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0024",
@@ -480,7 +481,7 @@
       "han_viet": "THỐI CHỨC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0025",
@@ -494,7 +495,7 @@
       "han_viet": "THẤT NGHIỆP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0026",
@@ -508,7 +509,7 @@
       "han_viet": "TÀN NGHIỆP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0027",
@@ -522,7 +523,7 @@
       "han_viet": "SANH HOẠT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0028",
@@ -536,7 +537,7 @@
       "han_viet": "THÔNG CẦN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0029",
@@ -550,7 +551,7 @@
       "han_viet": "HỌC LỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0030",
@@ -564,7 +565,7 @@
       "han_viet": "CẤP LIÊU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0031",
@@ -578,7 +579,7 @@
       "han_viet": "DIỆN TIẾP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0032",
@@ -592,7 +593,7 @@
       "han_viet": "HƯU KHẾ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0033",
@@ -606,7 +607,7 @@
       "han_viet": "QUAN QUANG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0034",
@@ -620,7 +621,7 @@
       "han_viet": "QUY QUỐC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0035",
@@ -634,7 +635,7 @@
       "han_viet": "QUY TỈNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0036",
@@ -648,7 +649,7 @@
       "han_viet": "QUY TRẠCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0037",
@@ -662,7 +663,7 @@
       "han_viet": "THAM GIA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0038",
@@ -676,7 +677,7 @@
       "han_viet": "XUẤT TỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0039",
@@ -690,7 +691,7 @@
       "han_viet": "KHIẾM TỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0040",
@@ -704,7 +705,7 @@
       "han_viet": "TRÌ KHẮC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0041",
@@ -718,7 +719,7 @@
       "han_viet": "HÓA TRANG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0042",
@@ -732,7 +733,7 @@
       "han_viet": "KẾ TOÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0043",
@@ -746,7 +747,7 @@
       "han_viet": "KẾ HỌA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0044",
@@ -760,7 +761,7 @@
       "han_viet": "THÀNH CÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0045",
@@ -774,7 +775,7 @@
       "han_viet": "THẤT BẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0046",
@@ -788,7 +789,7 @@
       "han_viet": "CHUẨN BỊ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0047",
@@ -802,7 +803,7 @@
       "han_viet": "CHỈNH LÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0048",
@@ -816,7 +817,7 @@
       "han_viet": "CHÚ VĂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0049",
@@ -830,7 +831,7 @@
       "han_viet": "TRỮ KIM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0050",
@@ -844,7 +845,7 @@
       "han_viet": "TRIỆT DẠ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0051",
@@ -858,7 +859,7 @@
       "han_viet": "DẪN VIỆT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0052",
@@ -872,7 +873,7 @@
       "han_viet": "THÂN TRƯỜNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0053",
@@ -886,7 +887,7 @@
       "han_viet": "THỂ TRỌNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0054",
@@ -905,7 +906,7 @@
         "怪我"
       ],
       "display_variant": "怪我",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0055",
@@ -919,7 +920,7 @@
       "han_viet": "HỘI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0056",
@@ -933,7 +934,7 @@
       "han_viet": "THÚ VỊ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0057",
@@ -947,7 +948,7 @@
       "han_viet": "HƯNG VỊ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0058",
@@ -961,7 +962,7 @@
       "han_viet": "TƯ XUẤT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0059",
@@ -975,7 +976,7 @@
       "han_viet": "NHŨNG ĐÀM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0060",
@@ -989,7 +990,7 @@
       "han_viet": "MỤC ĐÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0061",
@@ -1003,7 +1004,7 @@
       "han_viet": "ƯỚC THÚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0062",
@@ -1022,7 +1023,7 @@
         "お喋り"
       ],
       "display_variant": "お喋り",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0063",
@@ -1036,7 +1037,7 @@
       "han_viet": "VIỄN LỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0064",
@@ -1050,7 +1051,7 @@
       "han_viet": "NGÃ MẠN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0065",
@@ -1064,7 +1065,7 @@
       "han_viet": "MÊ HOẶC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0066",
@@ -1078,7 +1079,7 @@
       "han_viet": "HI VỌNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0067",
@@ -1092,7 +1093,7 @@
       "han_viet": "MỘNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0068",
@@ -1106,7 +1107,7 @@
       "han_viet": "TÁN THÀNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0069",
@@ -1120,7 +1121,7 @@
       "han_viet": "PHẢN ĐỐI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0070",
@@ -1134,7 +1135,7 @@
       "han_viet": "TƯỞNG TƯỢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0071",
@@ -1148,7 +1149,7 @@
       "han_viet": "NỖ LỰC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 1
+      "section": "1-71"
     },
     {
       "id": "mimi-n3-0072",
@@ -1162,7 +1163,7 @@
       "han_viet": "THÁI DƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0073",
@@ -1176,7 +1177,7 @@
       "han_viet": "ĐỊA CẦU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0074",
@@ -1190,7 +1191,7 @@
       "han_viet": "ÔN ĐỘ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0075",
@@ -1204,7 +1205,7 @@
       "han_viet": "THẤP ĐỘ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0076",
@@ -1218,7 +1219,7 @@
       "han_viet": "THẤP KHÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0077",
@@ -1232,7 +1233,7 @@
       "han_viet": "MAI VŨ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0078",
@@ -1251,7 +1252,7 @@
         "黴"
       ],
       "display_variant": "黴",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0079",
@@ -1265,7 +1266,7 @@
       "han_viet": "NOÃN PHÒNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0080",
@@ -1279,7 +1280,7 @@
       "han_viet": "BÌ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0081",
@@ -1293,7 +1294,7 @@
       "han_viet": "PHỮU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0082",
@@ -1307,7 +1308,7 @@
       "han_viet": "HỌA DIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0083",
@@ -1321,7 +1322,7 @@
       "han_viet": "PHIÊN TỔ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0084",
@@ -1335,7 +1336,7 @@
       "han_viet": "KÍ SỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0085",
@@ -1349,7 +1350,7 @@
       "han_viet": "CẬN SỞ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0086",
@@ -1363,7 +1364,7 @@
       "han_viet": "CẢNH SÁT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0087",
@@ -1377,7 +1378,7 @@
       "han_viet": "PHẠM NHÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0088",
@@ -1391,7 +1392,7 @@
       "han_viet": "TIỂU TIỀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0089",
@@ -1405,7 +1406,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0090",
@@ -1419,7 +1420,7 @@
       "han_viet": "TÁC GIẢ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0091",
@@ -1433,7 +1434,7 @@
       "han_viet": "TÁC PHẨM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0092",
@@ -1447,7 +1448,7 @@
       "han_viet": "CHẾ PHỤC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0093",
@@ -1461,7 +1462,7 @@
       "han_viet": "TÂY TẾ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0094",
@@ -1475,7 +1476,7 @@
       "han_viet": "ĐỂ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0095",
@@ -1489,7 +1490,7 @@
       "han_viet": "ĐỊA HẠ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0096",
@@ -1503,7 +1504,7 @@
       "han_viet": "TỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0097",
@@ -1517,7 +1518,7 @@
       "han_viet": "ĐẠO LỘ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0098",
@@ -1531,7 +1532,7 @@
       "han_viet": "PHẢN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0099",
@@ -1545,7 +1546,7 @@
       "han_viet": "YÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0100",
@@ -1559,7 +1560,7 @@
       "han_viet": "HÔI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0101",
@@ -1573,7 +1574,7 @@
       "han_viet": "PHÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0102",
@@ -1587,7 +1588,7 @@
       "han_viet": "DANH THỨ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0103",
@@ -1601,7 +1602,7 @@
       "han_viet": "MIỄN HỨA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0104",
@@ -1615,7 +1616,7 @@
       "han_viet": "ĐA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0105",
@@ -1629,7 +1630,7 @@
       "han_viet": "TIỀN BÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0106",
@@ -1643,7 +1644,7 @@
       "han_viet": "HẬU BÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0107",
@@ -1657,7 +1658,7 @@
       "han_viet": "TỐI CAO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0108",
@@ -1671,7 +1672,7 @@
       "han_viet": "TỐI ĐÊ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0109",
@@ -1685,7 +1686,7 @@
       "han_viet": "TỐI SƠ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0110",
@@ -1699,7 +1700,7 @@
       "han_viet": "TỐI HẬU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0111",
@@ -1713,7 +1714,7 @@
       "han_viet": "TỰ ĐỘNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0112",
@@ -1727,7 +1728,7 @@
       "han_viet": "CHỦNG LOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0113",
@@ -1741,7 +1742,7 @@
       "han_viet": "TÍNH CÁCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0114",
@@ -1755,7 +1756,7 @@
       "han_viet": "TÍNH CHẤT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0115",
@@ -1769,7 +1770,7 @@
       "han_viet": "THUẬN PHIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0116",
@@ -1783,7 +1784,7 @@
       "han_viet": "PHIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0117",
@@ -1797,7 +1798,7 @@
       "han_viet": "PHƯƠNG PHÁP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0118",
@@ -1811,7 +1812,7 @@
       "han_viet": "CHẾ PHẨM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0119",
@@ -1825,7 +1826,7 @@
       "han_viet": "TRỊ THƯỢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0120",
@@ -1839,7 +1840,7 @@
       "han_viet": "SANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 2
+      "section": "72-120"
     },
     {
       "id": "mimi-n3-0121",
@@ -1853,7 +1854,7 @@
       "han_viet": "KHÁT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0122",
@@ -1867,7 +1868,7 @@
       "han_viet": "KHỨU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0123",
@@ -1881,7 +1882,7 @@
       "han_viet": "KHẨU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0124",
@@ -1895,7 +1896,7 @@
       "han_viet": "ÂU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0125",
@@ -1909,7 +1910,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0126",
@@ -1923,7 +1924,7 @@
       "han_viet": "BÃO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0127",
@@ -1942,7 +1943,7 @@
         "word": "倒す",
         "reading": "たおす"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0128",
@@ -1961,7 +1962,7 @@
         "word": "倒れる",
         "reading": "たおれる"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0129",
@@ -1975,7 +1976,7 @@
       "han_viet": "KHỞI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0130",
@@ -1989,7 +1990,7 @@
       "han_viet": "KHỞI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0131",
@@ -2003,7 +2004,7 @@
       "han_viet": "TẦM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0132",
@@ -2017,7 +2018,7 @@
       "han_viet": "HÔ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0133",
@@ -2031,7 +2032,7 @@
       "han_viet": "KHIẾU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0134",
@@ -2045,7 +2046,7 @@
       "han_viet": "MẶC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0135",
@@ -2059,7 +2060,7 @@
       "han_viet": "TỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0136",
@@ -2073,7 +2074,7 @@
       "han_viet": "SỐ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0137",
@@ -2092,7 +2093,7 @@
         "word": "乾かす",
         "reading": "かわかす"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0138",
@@ -2111,7 +2112,7 @@
         "word": "乾く",
         "reading": "かわく"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0139",
@@ -2125,7 +2126,7 @@
       "han_viet": "ĐIỆP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0140",
@@ -2139,7 +2140,7 @@
       "han_viet": "DỤ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0141",
@@ -2153,7 +2154,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0142",
@@ -2167,7 +2168,7 @@
       "han_viet": "DỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0143",
@@ -2181,7 +2182,7 @@
       "han_viet": "DỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0144",
@@ -2200,7 +2201,7 @@
         "word": "決める",
         "reading": "きめる"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0145",
@@ -2219,7 +2220,7 @@
         "word": "決まる",
         "reading": "きまる"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0146",
@@ -2233,7 +2234,7 @@
       "han_viet": "TẢ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0147",
@@ -2247,7 +2248,7 @@
       "han_viet": "TẢ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0148",
@@ -2261,7 +2262,7 @@
       "han_viet": "TƯ XUẤT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0149",
@@ -2275,7 +2276,7 @@
       "han_viet": "GIÁO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0150",
@@ -2289,7 +2290,7 @@
       "han_viet": "THÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0151",
@@ -2303,7 +2304,7 @@
       "han_viet": "ĐOẠN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0152",
@@ -2317,7 +2318,7 @@
       "han_viet": "KIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0153",
@@ -2331,7 +2332,7 @@
       "han_viet": "KIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0154",
@@ -2350,7 +2351,7 @@
         "word": "捕まえる",
         "reading": "つかまえる"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0155",
@@ -2369,7 +2370,7 @@
         "word": "捕まる",
         "reading": "つかまる"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0156",
@@ -2383,7 +2384,7 @@
       "han_viet": "THỪA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0157",
@@ -2397,7 +2398,7 @@
       "han_viet": "THỪA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0158",
@@ -2411,7 +2412,7 @@
       "han_viet": "HÀNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0159",
@@ -2425,7 +2426,7 @@
       "han_viet": "HÀNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0160",
@@ -2444,7 +2445,7 @@
         "word": "直す",
         "reading": "なおす"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0161",
@@ -2463,7 +2464,7 @@
         "word": "直る",
         "reading": "なおる"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0162",
@@ -2482,7 +2483,7 @@
         "word": "治す",
         "reading": "なおす"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0163",
@@ -2501,7 +2502,7 @@
         "word": "治る",
         "reading": "なおる"
       },
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0164",
@@ -2515,7 +2516,7 @@
       "han_viet": "VONG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0165",
@@ -2529,7 +2530,7 @@
       "han_viet": "VONG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0166",
@@ -2543,7 +2544,7 @@
       "han_viet": "SANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0167",
@@ -2557,7 +2558,7 @@
       "han_viet": "SANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0168",
@@ -2571,7 +2572,7 @@
       "han_viet": "XUẤT HỘI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0169",
@@ -2585,7 +2586,7 @@
       "han_viet": "PHÓNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0170",
@@ -2599,7 +2600,7 @@
       "han_viet": "PHÓ HỢP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 3
+      "section": "121-170"
     },
     {
       "id": "mimi-n3-0171",
@@ -2613,7 +2614,7 @@
       "han_viet": "HIỆU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0172",
@@ -2627,7 +2628,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0173",
@@ -2641,7 +2642,7 @@
       "han_viet": "KINH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0174",
@@ -2655,7 +2656,7 @@
       "han_viet": "GIAN HỢP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0175",
@@ -2669,7 +2670,7 @@
       "han_viet": "GIAN HỢP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0176",
@@ -2683,7 +2684,7 @@
       "han_viet": "THÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0177",
@@ -2697,7 +2698,7 @@
       "han_viet": "VU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0178",
@@ -2711,7 +2712,7 @@
       "han_viet": "VI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0179",
@@ -2725,7 +2726,7 @@
       "han_viet": "QUẢI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0180",
@@ -2739,7 +2740,7 @@
       "han_viet": "QUẢI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0181",
@@ -2753,7 +2754,7 @@
       "han_viet": "ĐỘNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0182",
@@ -2767,7 +2768,7 @@
       "han_viet": "ĐỘNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0183",
@@ -2781,7 +2782,7 @@
       "han_viet": "LI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0184",
@@ -2795,7 +2796,7 @@
       "han_viet": "LI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0185",
@@ -2809,7 +2810,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0186",
@@ -2823,7 +2824,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0187",
@@ -2837,7 +2838,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0188",
@@ -2851,7 +2852,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0189",
@@ -2865,7 +2866,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0190",
@@ -2879,7 +2880,7 @@
       "han_viet": "PHIẾN PHÓ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0191",
@@ -2893,7 +2894,7 @@
       "han_viet": "PHIẾN PHÓ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0192",
@@ -2907,7 +2908,7 @@
       "han_viet": "BAO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0193",
@@ -2921,7 +2922,7 @@
       "han_viet": "TRƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0194",
@@ -2935,7 +2936,7 @@
       "han_viet": "VÔ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0195",
@@ -2949,7 +2950,7 @@
       "han_viet": "VÔ làm",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0196",
@@ -2963,7 +2964,7 @@
       "han_viet": "TÚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0197",
@@ -2977,7 +2978,7 @@
       "han_viet": "TÀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0198",
@@ -2991,7 +2992,7 @@
       "han_viet": "TÀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0199",
@@ -3005,7 +3006,7 @@
       "han_viet": "HỦ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0200",
@@ -3019,7 +3020,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0201",
@@ -3033,7 +3034,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0202",
@@ -3047,7 +3048,7 @@
       "han_viet": "HOẠT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0203",
@@ -3061,7 +3062,7 @@
       "han_viet": "TÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0204",
@@ -3075,7 +3076,7 @@
       "han_viet": "TÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0205",
@@ -3089,7 +3090,7 @@
       "han_viet": "KHÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0206",
@@ -3103,7 +3104,7 @@
       "han_viet": "KHÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0207",
@@ -3117,7 +3118,7 @@
       "han_viet": "HẠ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0208",
@@ -3131,7 +3132,7 @@
       "han_viet": "HẠ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0209",
@@ -3150,7 +3151,7 @@
         "word": "冷やす",
         "reading": "ひやす"
       },
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0210",
@@ -3169,7 +3170,7 @@
         "word": "冷える",
         "reading": "ひえる"
       },
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0211",
@@ -3183,7 +3184,7 @@
       "han_viet": "LÃNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0212",
@@ -3197,7 +3198,7 @@
       "han_viet": "LÃNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0213",
@@ -3211,7 +3212,7 @@
       "han_viet": "NHIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0214",
@@ -3225,7 +3226,7 @@
       "han_viet": "NHIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0215",
@@ -3244,7 +3245,7 @@
         "word": "沸かす",
         "reading": "わかす"
       },
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0216",
@@ -3263,7 +3264,7 @@
         "word": "沸く",
         "reading": "わく"
       },
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0217",
@@ -3277,7 +3278,7 @@
       "han_viet": "MINH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0218",
@@ -3291,7 +3292,7 @@
       "han_viet": "MINH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0219",
@@ -3305,7 +3306,7 @@
       "han_viet": "DỊCH LẬP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0220",
@@ -3319,7 +3320,7 @@
       "han_viet": "DỊCH LẬP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 4
+      "section": "171-220"
     },
     {
       "id": "mimi-n3-0221",
@@ -3333,7 +3334,7 @@
       "han_viet": "SỨC",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0222",
@@ -3347,7 +3348,7 @@
       "han_viet": "DU",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0223",
@@ -3361,7 +3362,7 @@
       "han_viet": "TẬP",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0224",
@@ -3375,7 +3376,7 @@
       "han_viet": "GIÁO",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0225",
@@ -3389,7 +3390,7 @@
       "han_viet": "DŨNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0226",
@@ -3403,7 +3404,7 @@
       "han_viet": "TƯ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0227",
@@ -3417,7 +3418,7 @@
       "han_viet": "KHẢO",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0228",
@@ -3431,7 +3432,7 @@
       "han_viet": "PHIẾN",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0229",
@@ -3445,7 +3446,7 @@
       "han_viet": "THỦ TRUYỀN",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0230",
@@ -3459,7 +3460,7 @@
       "han_viet": "ĐỘNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0231",
@@ -3473,7 +3474,7 @@
       "han_viet": "QUYẾT",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0232",
@@ -3487,7 +3488,7 @@
       "han_viet": "TAO",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0233",
@@ -3501,7 +3502,7 @@
       "han_viet": "TRI",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0234",
@@ -3515,7 +3516,7 @@
       "han_viet": "LẠI",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0235",
@@ -3529,7 +3530,7 @@
       "han_viet": "BÌ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0236",
@@ -3543,7 +3544,7 @@
       "han_viet": "VI",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0237",
@@ -3557,7 +3558,7 @@
       "han_viet": "THỦY",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0238",
@@ -3571,7 +3572,7 @@
       "han_viet": "TỤC",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0239",
@@ -3585,7 +3586,7 @@
       "han_viet": "MỘ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0240",
@@ -3603,7 +3604,7 @@
         "いき",
         "ゆき"
       ],
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0241",
@@ -3617,7 +3618,7 @@
       "han_viet": "QUY",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0242",
@@ -3631,7 +3632,7 @@
       "han_viet": "CẤP",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0243",
@@ -3645,7 +3646,7 @@
       "han_viet": "TRÌ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0244",
@@ -3659,7 +3660,7 @@
       "han_viet": "THẢI",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0245",
@@ -3673,7 +3674,7 @@
       "han_viet": "TÁ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0246",
@@ -3687,7 +3688,7 @@
       "han_viet": "THẮNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0247",
@@ -3701,7 +3702,7 @@
       "han_viet": "PHỤ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0248",
@@ -3715,7 +3716,7 @@
       "han_viet": "NGHÊNH",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0249",
@@ -3729,7 +3730,7 @@
       "han_viet": "THỦY",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0250",
@@ -3743,7 +3744,7 @@
       "han_viet": "CHUNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0251",
@@ -3757,7 +3758,7 @@
       "han_viet": "LỆ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0252",
@@ -3771,7 +3772,7 @@
       "han_viet": "BIỆT",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0253",
@@ -3785,7 +3786,7 @@
       "han_viet": "HỈ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0254",
@@ -3799,7 +3800,7 @@
       "han_viet": "LẠC",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0255",
@@ -3813,7 +3814,7 @@
       "han_viet": "TIỂU",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0256",
@@ -3827,7 +3828,7 @@
       "han_viet": "KINH",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0257",
@@ -3841,7 +3842,7 @@
       "han_viet": "NỘ",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0258",
@@ -3855,7 +3856,7 @@
       "han_viet": "BI",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 5
+      "section": "221-258"
     },
     {
       "id": "mimi-n3-0259",
@@ -3869,7 +3870,7 @@
       "han_viet": "HẠNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0260",
@@ -3883,7 +3884,7 @@
       "han_viet": "ĐẮC Ý",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0261",
@@ -3897,7 +3898,7 @@
       "han_viet": "KHỔ THỦ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0262",
@@ -3911,7 +3912,7 @@
       "han_viet": "NHIỆT TÂM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0263",
@@ -3925,7 +3926,7 @@
       "han_viet": "MỘNG TRUNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0264",
@@ -3939,7 +3940,7 @@
       "han_viet": "THỐI KHUẤT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0265",
@@ -3953,7 +3954,7 @@
       "han_viet": "KIỆN KHANG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0266",
@@ -3967,7 +3968,7 @@
       "han_viet": "KHỔ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0267",
@@ -3981,7 +3982,7 @@
       "han_viet": "BÌNH KHÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0268",
@@ -3995,7 +3996,7 @@
       "han_viet": "HỐI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0269",
@@ -4009,7 +4010,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0270",
@@ -4023,7 +4024,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0271",
@@ -4037,7 +4038,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0272",
@@ -4051,7 +4052,7 @@
       "han_viet": "NGÃ MẠN CƯỜNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0273",
@@ -4065,7 +4066,7 @@
       "han_viet": "CHÁNH TRỰC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0274",
@@ -4079,7 +4080,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0275",
@@ -4093,7 +4094,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0276",
@@ -4107,7 +4108,7 @@
       "han_viet": "TÍCH CỰC ĐÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0277",
@@ -4121,7 +4122,7 @@
       "han_viet": "TIÊU CỰC ĐÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0278",
@@ -4135,7 +4136,7 @@
       "han_viet": "MÃN TÚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0279",
@@ -4149,7 +4150,7 @@
       "han_viet": "BẤT MÃN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0280",
@@ -4163,7 +4164,7 @@
       "han_viet": "BẤT AN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0281",
@@ -4177,7 +4178,7 @@
       "han_viet": "ĐẠI BIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0282",
@@ -4191,7 +4192,7 @@
       "han_viet": "VÔ LÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0283",
@@ -4205,7 +4206,7 @@
       "han_viet": "BẤT CHÚ Ý",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0284",
@@ -4219,7 +4220,7 @@
       "han_viet": "LẠC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0285",
@@ -4233,7 +4234,7 @@
       "han_viet": "DIỆN ĐẢO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0286",
@@ -4247,7 +4248,7 @@
       "han_viet": "THẤT LỄ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0287",
@@ -4261,7 +4262,7 @@
       "han_viet": "ĐƯƠNG NHIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0288",
@@ -4275,7 +4276,7 @@
       "han_viet": "Ý NGOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0289",
@@ -4289,7 +4290,7 @@
       "han_viet": "KẾT CẤU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0290",
@@ -4303,7 +4304,7 @@
       "han_viet": "PHÁI THỦ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0291",
@@ -4317,7 +4318,7 @@
       "han_viet": "ĐỊA VỊ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0292",
@@ -4331,7 +4332,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0293",
@@ -4345,7 +4346,7 @@
       "han_viet": "BIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0294",
@@ -4359,7 +4360,7 @@
       "han_viet": "BẤT TƯ NGHỊ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0295",
@@ -4373,7 +4374,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0296",
@@ -4387,7 +4388,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0297",
@@ -4401,7 +4402,7 @@
       "han_viet": "TỰ DO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0298",
@@ -4415,7 +4416,7 @@
       "han_viet": "BẤT TỰ DO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 6
+      "section": "259-298"
     },
     {
       "id": "mimi-n3-0299",
@@ -4434,7 +4435,7 @@
         "word": "温める",
         "reading": "あたためる"
       },
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0300",
@@ -4453,7 +4454,7 @@
         "word": "温まる",
         "reading": "あたたまる"
       },
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0301",
@@ -4467,7 +4468,7 @@
       "han_viet": "CAO",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0302",
@@ -4481,7 +4482,7 @@
       "han_viet": "CAO",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0303",
@@ -4495,7 +4496,7 @@
       "han_viet": "CƯỜNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0304",
@@ -4509,7 +4510,7 @@
       "han_viet": "CƯỜNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0305",
@@ -4523,7 +4524,7 @@
       "han_viet": "NHƯỢC",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0306",
@@ -4537,7 +4538,7 @@
       "han_viet": "NHƯỢC",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0307",
@@ -4551,7 +4552,7 @@
       "han_viet": "QUẢNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0308",
@@ -4565,7 +4566,7 @@
       "han_viet": "QUẢNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0309",
@@ -4579,7 +4580,7 @@
       "han_viet": "THÂM",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0310",
@@ -4593,7 +4594,7 @@
       "han_viet": "THÂM",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 7
+      "section": "299-310"
     },
     {
       "id": "mimi-n3-0311",
@@ -4607,7 +4608,7 @@
       "han_viet": "THẾ THOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0312",
@@ -4621,7 +4622,7 @@
       "han_viet": "GIA ĐÌNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0313",
@@ -4635,7 +4636,7 @@
       "han_viet": "HIỆP LỰC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0314",
@@ -4649,7 +4650,7 @@
       "han_viet": "CẢM TẠ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0315",
@@ -4663,7 +4664,7 @@
       "han_viet": "LỄ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0316",
@@ -4677,7 +4678,7 @@
       "han_viet": "SÁ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0317",
@@ -4691,7 +4692,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0318",
@@ -4705,7 +4706,7 @@
       "han_viet": "ÁC THỦ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0319",
@@ -4719,7 +4720,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0320",
@@ -4733,7 +4734,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0321",
@@ -4747,7 +4748,7 @@
       "han_viet": "TIẾT ƯỚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0322",
@@ -4761,7 +4762,7 @@
       "han_viet": "KINH DOANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0323",
@@ -4775,7 +4776,7 @@
       "han_viet": "PHẢN TỈNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0324",
@@ -4789,7 +4790,7 @@
       "han_viet": "THỰC HÀNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0325",
@@ -4803,7 +4804,7 @@
       "han_viet": "TIẾN BỘ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0326",
@@ -4817,7 +4818,7 @@
       "han_viet": "BIẾN HÓA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0327",
@@ -4831,7 +4832,7 @@
       "han_viet": "PHÁT ĐẠT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0328",
@@ -4845,7 +4846,7 @@
       "han_viet": "THỂ LỰC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0329",
@@ -4859,7 +4860,7 @@
       "han_viet": "XUẤT TRÀNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0330",
@@ -4873,7 +4874,7 @@
       "han_viet": "HOẠT DƯỢC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0331",
@@ -4887,7 +4888,7 @@
       "han_viet": "CẠNH TRANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0332",
@@ -4901,7 +4902,7 @@
       "han_viet": "ỨNG VIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0333",
@@ -4915,7 +4916,7 @@
       "han_viet": "PHÁCH THỦ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0334",
@@ -4929,7 +4930,7 @@
       "han_viet": "NHÂN KHÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0335",
@@ -4943,7 +4944,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0336",
@@ -4957,7 +4958,7 @@
       "han_viet": "TÌNH BÁO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0337",
@@ -4971,7 +4972,7 @@
       "han_viet": "GIAO HOÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0338",
@@ -4985,7 +4986,7 @@
       "han_viet": "LƯU HÀNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0339",
@@ -4999,7 +5000,7 @@
       "han_viet": "TUYÊN TRUYỀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0340",
@@ -5013,7 +5014,7 @@
       "han_viet": "QUẢNG CÁO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0341",
@@ -5027,7 +5028,7 @@
       "han_viet": "CHÚ MỤC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0342",
@@ -5041,7 +5042,7 @@
       "han_viet": "THÔNG DỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0343",
@@ -5055,7 +5056,7 @@
       "han_viet": "PHIÊN DỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0344",
@@ -5069,7 +5070,7 @@
       "han_viet": "TRUYỀN NGÔN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0345",
@@ -5083,7 +5084,7 @@
       "han_viet": "BÁO CÁO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0346",
@@ -5097,7 +5098,7 @@
       "han_viet": "LỤC HỌA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0347",
@@ -5111,7 +5112,7 @@
       "han_viet": "HỖN TẠP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0348",
@@ -5125,7 +5126,7 @@
       "han_viet": "SÁP TRỆ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0349",
@@ -5139,7 +5140,7 @@
       "han_viet": "XUNG ĐỘT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0350",
@@ -5153,7 +5154,7 @@
       "han_viet": "BỊ HẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0351",
@@ -5167,7 +5168,7 @@
       "han_viet": "SỰ CỐ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0352",
@@ -5181,7 +5182,7 @@
       "han_viet": "SỰ KIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0353",
@@ -5195,7 +5196,7 @@
       "han_viet": "CỐ CHƯỚNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0354",
@@ -5209,7 +5210,7 @@
       "han_viet": "TU LÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0355",
@@ -5223,7 +5224,7 @@
       "han_viet": "ĐÌNH ĐIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0356",
@@ -5237,7 +5238,7 @@
       "han_viet": "ĐIỀU TỬ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0357",
@@ -5251,7 +5252,7 @@
       "han_viet": "KHẨN TRƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0358",
@@ -5265,7 +5266,7 @@
       "han_viet": "TỰ THÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0359",
@@ -5279,7 +5280,7 @@
       "han_viet": "TỰ MẠN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0360",
@@ -5293,7 +5294,7 @@
       "han_viet": "CẢM TÂM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0361",
@@ -5307,7 +5308,7 @@
       "han_viet": "CẢM ĐỘNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0362",
@@ -5321,7 +5322,7 @@
       "han_viet": "HƯNG PHẤN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0363",
@@ -5335,7 +5336,7 @@
       "han_viet": "CẢM TƯỞNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0364",
@@ -5349,7 +5350,7 @@
       "han_viet": "DƯ TƯỞNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0365",
@@ -5363,7 +5364,7 @@
       "han_viet": "CHUYÊN MÔN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0366",
@@ -5377,7 +5378,7 @@
       "han_viet": "NGHIÊN CỨU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0367",
@@ -5391,7 +5392,7 @@
       "han_viet": "ĐIỀU TRA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0368",
@@ -5405,7 +5406,7 @@
       "han_viet": "NGUYÊN NHÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0369",
@@ -5419,7 +5420,7 @@
       "han_viet": "KẾT QUẢ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0370",
@@ -5433,7 +5434,7 @@
       "han_viet": "GIẢI QUYẾT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 8
+      "section": "311-370"
     },
     {
       "id": "mimi-n3-0371",
@@ -5447,7 +5448,7 @@
       "han_viet": "XÁC NHẬN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0372",
@@ -5461,7 +5462,7 @@
       "han_viet": "LỢI DỤNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0373",
@@ -5475,7 +5476,7 @@
       "han_viet": "LÍ GIẢI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0374",
@@ -5489,7 +5490,7 @@
       "han_viet": "PHÁT KIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0375",
@@ -5503,7 +5504,7 @@
       "han_viet": "PHÁT MINH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0376",
@@ -5517,7 +5518,7 @@
       "han_viet": "QUAN HỆ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0377",
@@ -5531,7 +5532,7 @@
       "han_viet": "ĐOÀN THỂ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0378",
@@ -5545,7 +5546,7 @@
       "han_viet": "TUYỂN CỬ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0379",
@@ -5559,7 +5560,7 @@
       "han_viet": "THUẾ KIM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0380",
@@ -5573,7 +5574,7 @@
       "han_viet": "TRÁCH NHIỆM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0381",
@@ -5587,7 +5588,7 @@
       "han_viet": "THƯ LOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0382",
@@ -5601,7 +5602,7 @@
       "han_viet": "ĐỀ DANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0383",
@@ -5615,7 +5616,7 @@
       "han_viet": "ĐIỀU KIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0384",
@@ -5629,7 +5630,7 @@
       "han_viet": "ĐẾ THIẾT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0385",
@@ -5643,7 +5644,7 @@
       "han_viet": "KÌ GIAN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0386",
@@ -5657,7 +5658,7 @@
       "han_viet": "BỘI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0387",
@@ -5671,7 +5672,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0388",
@@ -5685,7 +5686,7 @@
       "han_viet": "CẬN ĐẠO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0389",
@@ -5699,7 +5700,7 @@
       "han_viet": "TRUNG TÂM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0390",
@@ -5713,7 +5714,7 @@
       "han_viet": "BIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0391",
@@ -5727,7 +5728,7 @@
       "han_viet": "CHU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0392",
@@ -5741,7 +5742,7 @@
       "han_viet": "HUYỆT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0393",
@@ -5755,7 +5756,7 @@
       "han_viet": "LIỆT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0394",
@@ -5769,7 +5770,7 @@
       "han_viet": "PHÚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0395",
@@ -5783,7 +5784,7 @@
       "han_viet": "PHẠM VI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0396",
@@ -5797,7 +5798,7 @@
       "han_viet": "NỘI DUNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0397",
@@ -5811,7 +5812,7 @@
       "han_viet": "TRUNG THÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0398",
@@ -5825,7 +5826,7 @@
       "han_viet": "ĐẶC TRƯNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0399",
@@ -5839,7 +5840,7 @@
       "han_viet": "PHỔ THÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0400",
@@ -5853,7 +5854,7 @@
       "han_viet": "ĐƯƠNG TIỀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0401",
@@ -5867,7 +5868,7 @@
       "han_viet": "NGỤY",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0402",
@@ -5881,7 +5882,7 @@
       "han_viet": "BIỆT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0403",
@@ -5895,7 +5896,7 @@
       "han_viet": "QUỐC TỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0404",
@@ -5909,7 +5910,7 @@
       "han_viet": "ĐÔNG DƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0405",
@@ -5923,7 +5924,7 @@
       "han_viet": "TÂY DƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0406",
@@ -5937,7 +5938,7 @@
       "han_viet": "QUỐC TẾ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0407",
@@ -5951,7 +5952,7 @@
       "han_viet": "TỰ NHIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0408",
@@ -5965,7 +5966,7 @@
       "han_viet": "CẢNH SẮC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0409",
@@ -5979,7 +5980,7 @@
       "han_viet": "TÔNG GIÁO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0410",
@@ -5993,7 +5994,7 @@
       "han_viet": "ÁI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 9
+      "section": "371-410"
     },
     {
       "id": "mimi-n3-0411",
@@ -6007,7 +6008,7 @@
       "han_viet": "GIỚI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0412",
@@ -6021,7 +6022,7 @@
       "han_viet": "GIỚI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0413",
@@ -6035,7 +6036,7 @@
       "han_viet": "TAO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0414",
@@ -6049,7 +6050,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0415",
@@ -6063,7 +6064,7 @@
       "han_viet": "ÁC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0416",
@@ -6077,7 +6078,7 @@
       "han_viet": "ỨC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0417",
@@ -6091,7 +6092,7 @@
       "han_viet": "CẬN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0418",
@@ -6105,7 +6106,7 @@
       "han_viet": "CẬN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0419",
@@ -6119,7 +6120,7 @@
       "han_viet": "HỢP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0420",
@@ -6133,7 +6134,7 @@
       "han_viet": "HỢP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0421",
@@ -6147,7 +6148,7 @@
       "han_viet": "ĐƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0422",
@@ -6161,7 +6162,7 @@
       "han_viet": "ĐƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0423",
@@ -6175,7 +6176,7 @@
       "han_viet": "BỈ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0424",
@@ -6189,7 +6190,7 @@
       "han_viet": "TỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0425",
@@ -6203,7 +6204,7 @@
       "han_viet": "TỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0426",
@@ -6217,7 +6218,7 @@
       "han_viet": "TỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0427",
@@ -6231,7 +6232,7 @@
       "han_viet": "PHÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0428",
@@ -6245,7 +6246,7 @@
       "han_viet": "PHÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0429",
@@ -6259,7 +6260,7 @@
       "han_viet": "TÚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0430",
@@ -6273,7 +6274,7 @@
       "han_viet": "DẪN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0431",
@@ -6292,7 +6293,7 @@
         "word": "増やす",
         "reading": "ふやす"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0432",
@@ -6311,7 +6312,7 @@
         "word": "増える",
         "reading": "ふえる"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0433",
@@ -6330,7 +6331,7 @@
         "word": "減らす",
         "reading": "へらす"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0434",
@@ -6349,7 +6350,7 @@
         "word": "減る",
         "reading": "へる"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0435",
@@ -6368,7 +6369,7 @@
         "word": "変える",
         "reading": "かえる"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0436",
@@ -6387,7 +6388,7 @@
         "word": "変わる",
         "reading": "かわる"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0437",
@@ -6406,7 +6407,7 @@
         "換わる"
       ],
       "display_variant": "替わる・換わる",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0438",
@@ -6425,7 +6426,7 @@
         "換える"
       ],
       "display_variant": "替える・換える",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0439",
@@ -6439,7 +6440,7 @@
       "han_viet": "PHẢN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0440",
@@ -6453,7 +6454,7 @@
       "han_viet": "PHẢN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0441",
@@ -6467,7 +6468,7 @@
       "han_viet": "NHƯỢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0442",
@@ -6486,7 +6487,7 @@
         "word": "助ける",
         "reading": "たすける"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0443",
@@ -6505,7 +6506,7 @@
         "word": "助かる",
         "reading": "たすかる"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0444",
@@ -6519,7 +6520,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0445",
@@ -6533,7 +6534,7 @@
       "han_viet": "PHIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0446",
@@ -6547,7 +6548,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0447",
@@ -6561,7 +6562,7 @@
       "han_viet": "THỨ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0448",
@@ -6575,7 +6576,7 @@
       "han_viet": "THỨ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0449",
@@ -6589,7 +6590,7 @@
       "han_viet": "SÁT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0450",
@@ -6603,7 +6604,7 @@
       "han_viet": "ẨN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0451",
@@ -6617,7 +6618,7 @@
       "han_viet": "ẨN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0452",
@@ -6631,7 +6632,7 @@
       "han_viet": "MAI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0453",
@@ -6645,7 +6646,7 @@
       "han_viet": "MAI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0454",
@@ -6659,7 +6660,7 @@
       "han_viet": "VI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0455",
@@ -6673,7 +6674,7 @@
       "han_viet": "CẬT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0456",
@@ -6687,7 +6688,7 @@
       "han_viet": "CẬT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0457",
@@ -6701,7 +6702,7 @@
       "han_viet": "KHAI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0458",
@@ -6715,7 +6716,7 @@
       "han_viet": "BẾ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0459",
@@ -6734,7 +6735,7 @@
         "word": "飛ばす",
         "reading": "とばす"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0460",
@@ -6753,7 +6754,7 @@
         "word": "飛ぶ",
         "reading": "とぶ"
       },
-      "section": 10
+      "section": "411-460"
     },
     {
       "id": "mimi-n3-0461",
@@ -6767,7 +6768,7 @@
       "han_viet": "CHẤN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0462",
@@ -6781,7 +6782,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0463",
@@ -6795,7 +6796,7 @@
       "han_viet": "KIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0464",
@@ -6809,7 +6810,7 @@
       "han_viet": "XÁC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0465",
@@ -6823,7 +6824,7 @@
       "han_viet": "THÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0466",
@@ -6837,7 +6838,7 @@
       "han_viet": "SÀO PHẢN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0467",
@@ -6851,7 +6852,7 @@
       "han_viet": "DỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0468",
@@ -6865,7 +6866,7 @@
       "han_viet": "HÀNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0469",
@@ -6879,7 +6880,7 @@
       "han_viet": "GIAN VI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0470",
@@ -6893,7 +6894,7 @@
       "han_viet": "GIAN VI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0471",
@@ -6907,7 +6908,7 @@
       "han_viet": "HỨA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0472",
@@ -6921,7 +6922,7 @@
       "han_viet": "QUÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0473",
@@ -6935,7 +6936,7 @@
       "han_viet": "QUÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0474",
@@ -6949,7 +6950,7 @@
       "han_viet": "LẬP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0475",
@@ -6963,7 +6964,7 @@
       "han_viet": "LẬP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0476",
@@ -6982,7 +6983,7 @@
         "word": "建てる",
         "reading": "たてる"
       },
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0477",
@@ -7001,7 +7002,7 @@
         "word": "建つ",
         "reading": "たつ"
       },
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0478",
@@ -7015,7 +7016,7 @@
       "han_viet": "DỤC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0479",
@@ -7029,7 +7030,7 @@
       "han_viet": "DỤC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0480",
@@ -7043,7 +7044,7 @@
       "han_viet": "SANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0481",
@@ -7057,7 +7058,7 @@
       "han_viet": "SANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0482",
@@ -7071,7 +7072,7 @@
       "han_viet": "Ô",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0483",
@@ -7085,7 +7086,7 @@
       "han_viet": "Ô",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0484",
@@ -7099,7 +7100,7 @@
       "han_viet": "HOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0485",
@@ -7113,7 +7114,7 @@
       "han_viet": "HOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0486",
@@ -7127,7 +7128,7 @@
       "han_viet": "CÁT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0487",
@@ -7141,7 +7142,7 @@
       "han_viet": "CÁT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0488",
@@ -7160,7 +7161,7 @@
         "word": "折る",
         "reading": "おる"
       },
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0489",
@@ -7179,7 +7180,7 @@
         "word": "折れる",
         "reading": "おれる"
       },
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0490",
@@ -7193,7 +7194,7 @@
       "han_viet": "PHÁ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0491",
@@ -7207,7 +7208,7 @@
       "han_viet": "PHÁ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0492",
@@ -7226,7 +7227,7 @@
         "word": "曲げる",
         "reading": "まげる"
       },
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0493",
@@ -7245,7 +7246,7 @@
         "word": "曲がる",
         "reading": "まがる"
       },
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0494",
@@ -7259,7 +7260,7 @@
       "han_viet": "NGOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0495",
@@ -7273,7 +7274,7 @@
       "han_viet": "NGOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0496",
@@ -7287,7 +7288,7 @@
       "han_viet": "DAO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0497",
@@ -7301,7 +7302,7 @@
       "han_viet": "DAO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0498",
@@ -7320,7 +7321,7 @@
         "word": "流す",
         "reading": "ながす"
       },
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0499",
@@ -7339,7 +7340,7 @@
         "word": "流れる",
         "reading": "ながれる"
       },
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0500",
@@ -7353,7 +7354,7 @@
       "han_viet": "NHU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0501",
@@ -7367,7 +7368,7 @@
       "han_viet": "NHU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0502",
@@ -7381,7 +7382,7 @@
       "han_viet": "MÊ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0503",
@@ -7395,7 +7396,7 @@
       "han_viet": "NÃO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0504",
@@ -7409,7 +7410,7 @@
       "han_viet": "HOẢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0505",
@@ -7423,7 +7424,7 @@
       "han_viet": "GIÁC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0506",
@@ -7437,7 +7438,7 @@
       "han_viet": "GIÁC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0507",
@@ -7451,7 +7452,7 @@
       "han_viet": "MIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0508",
@@ -7465,7 +7466,7 @@
       "han_viet": "KÌ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0509",
@@ -7479,7 +7480,7 @@
       "han_viet": "CHÚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0510",
@@ -7493,7 +7494,7 @@
       "han_viet": "CẢM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 11
+      "section": "461-510"
     },
     {
       "id": "mimi-n3-0511",
@@ -7507,7 +7508,7 @@
       "han_viet": "Classmate",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0512",
@@ -7521,7 +7522,7 @@
       "han_viet": "Group",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0513",
@@ -7535,7 +7536,7 @@
       "han_viet": "Team",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0514",
@@ -7549,7 +7550,7 @@
       "han_viet": "Professional",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0515",
@@ -7563,7 +7564,7 @@
       "han_viet": "Amateur",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0516",
@@ -7577,7 +7578,7 @@
       "han_viet": "Training",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0517",
@@ -7591,7 +7592,7 @@
       "han_viet": "Massage",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0518",
@@ -7605,7 +7606,7 @@
       "han_viet": "Advice",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0519",
@@ -7619,7 +7620,7 @@
       "han_viet": "Idea",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0520",
@@ -7633,7 +7634,7 @@
       "han_viet": "Top",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0521",
@@ -7647,7 +7648,7 @@
       "han_viet": "Speed",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0522",
@@ -7661,7 +7662,7 @@
       "han_viet": "Rush hour",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0523",
@@ -7675,7 +7676,7 @@
       "han_viet": "Bike / Motorbike",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0524",
@@ -7689,7 +7690,7 @@
       "han_viet": "Helmet",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0525",
@@ -7703,7 +7704,7 @@
       "han_viet": "Contact lens",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0526",
@@ -7717,7 +7718,7 @@
       "han_viet": "Glass",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0527",
@@ -7731,7 +7732,7 @@
       "han_viet": "Plastic",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0528",
@@ -7745,7 +7746,7 @@
       "han_viet": "Veranda",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0529",
@@ -7759,7 +7760,7 @@
       "han_viet": "Pet",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0530",
@@ -7773,7 +7774,7 @@
       "han_viet": "Bench",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0531",
@@ -7787,7 +7788,7 @@
       "han_viet": "Design",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0532",
@@ -7801,7 +7802,7 @@
       "han_viet": "Bargain sale",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0533",
@@ -7815,7 +7816,7 @@
       "han_viet": "Part-time",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0534",
@@ -7829,7 +7830,7 @@
       "han_viet": "Convenience store",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0535",
@@ -7843,7 +7844,7 @@
       "han_viet": "Cash register",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0536",
@@ -7857,7 +7858,7 @@
       "han_viet": "Receipt",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0537",
@@ -7871,7 +7872,7 @@
       "han_viet": "Instant",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0538",
@@ -7885,7 +7886,7 @@
       "han_viet": "Fast food",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0539",
@@ -7899,7 +7900,7 @@
       "han_viet": "Fruits",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0540",
@@ -7913,7 +7914,7 @@
       "han_viet": "Dessert",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0541",
@@ -7927,7 +7928,7 @@
       "han_viet": "Internet",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0542",
@@ -7941,7 +7942,7 @@
       "han_viet": "Chime",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0543",
@@ -7955,7 +7956,7 @@
       "han_viet": "Announce",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0544",
@@ -7969,7 +7970,7 @@
       "han_viet": "Message",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0545",
@@ -7983,7 +7984,7 @@
       "han_viet": "Pamphlet",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0546",
@@ -7997,7 +7998,7 @@
       "han_viet": "Card",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0547",
@@ -8011,7 +8012,7 @@
       "han_viet": "Interview",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0548",
@@ -8025,7 +8026,7 @@
       "han_viet": "Enquête",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0549",
@@ -8039,7 +8040,7 @@
       "han_viet": "Data",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0550",
@@ -8053,7 +8054,7 @@
       "han_viet": "Percent",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 12
+      "section": "511-550"
     },
     {
       "id": "mimi-n3-0551",
@@ -8067,7 +8068,7 @@
       "han_viet": "NỒNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0552",
@@ -8081,7 +8082,7 @@
       "han_viet": "BẠC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0553",
@@ -8095,7 +8096,7 @@
       "han_viet": "TOAN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0554",
@@ -8109,7 +8110,7 @@
       "han_viet": "XÚ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0555",
@@ -8123,7 +8124,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0556",
@@ -8137,7 +8138,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0557",
@@ -8151,7 +8152,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0558",
@@ -8165,7 +8166,7 @@
       "han_viet": "THÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0559",
@@ -8179,7 +8180,7 @@
       "han_viet": "TƯỜNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0560",
@@ -8193,7 +8194,7 @@
       "han_viet": "TẾ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0561",
@@ -8207,7 +8208,7 @@
       "han_viet": "THIỂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0562",
@@ -8226,7 +8227,7 @@
         "硬い"
       ],
       "display_variant": "固い・硬い",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0563",
@@ -8240,7 +8241,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0564",
@@ -8254,7 +8255,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0565",
@@ -8268,7 +8269,7 @@
       "han_viet": "CHƯNG THỬ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0566",
@@ -8282,7 +8283,7 @@
       "han_viet": "THANH KHIẾT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0567",
@@ -8296,7 +8297,7 @@
       "han_viet": "TÂN TIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0568",
@@ -8310,7 +8311,7 @@
       "han_viet": "PHONG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0569",
@@ -8324,7 +8325,7 @@
       "han_viet": "LẬP PHÁI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0570",
@@ -8338,7 +8339,7 @@
       "han_viet": "CHÁNH XÁC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0571",
@@ -8352,7 +8353,7 @@
       "han_viet": "XÁC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0572",
@@ -8366,7 +8367,7 @@
       "han_viet": "TRỌNG YẾU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0573",
@@ -8380,7 +8381,7 @@
       "han_viet": "TẤT YẾU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0574",
@@ -8394,7 +8395,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0575",
@@ -8408,7 +8409,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0576",
@@ -8422,7 +8423,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0577",
@@ -8436,7 +8437,7 @@
       "han_viet": "KÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0578",
@@ -8450,7 +8451,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0579",
@@ -8464,7 +8465,7 @@
       "han_viet": "CẤP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0580",
@@ -8478,7 +8479,7 @@
       "han_viet": "THÍCH ĐƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0581",
@@ -8492,7 +8493,7 @@
       "han_viet": "ĐẶC BIỆT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0582",
@@ -8506,7 +8507,7 @@
       "han_viet": "HOÀN TOÀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0583",
@@ -8520,7 +8521,7 @@
       "han_viet": "THỊNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0584",
@@ -8534,7 +8535,7 @@
       "han_viet": "DẠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0585",
@@ -8548,7 +8549,7 @@
       "han_viet": "KHẢ NĂNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0586",
@@ -8562,7 +8563,7 @@
       "han_viet": "BẤT KHẢ NĂNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0587",
@@ -8576,7 +8577,7 @@
       "han_viet": "CƠ BẢN ĐÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0588",
@@ -8590,7 +8591,7 @@
       "han_viet": "QUỐC TẾ ĐÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0589",
@@ -8604,7 +8605,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0590",
@@ -8618,7 +8619,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 13
+      "section": "551-590"
     },
     {
       "id": "mimi-n3-0591",
@@ -8632,7 +8633,7 @@
       "han_viet": "PHI THƯỜNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0592",
@@ -8646,7 +8647,7 @@
       "han_viet": "ĐẠI BIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0593",
@@ -8660,7 +8661,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0594",
@@ -8674,7 +8675,7 @@
       "han_viet": "ĐẠI THỂ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0595",
@@ -8688,7 +8689,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0596",
@@ -8702,7 +8703,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0597",
@@ -8716,7 +8717,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0598",
@@ -8730,7 +8731,7 @@
       "han_viet": "ĐẠI PHÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0599",
@@ -8744,7 +8745,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0600",
@@ -8758,7 +8759,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0601",
@@ -8772,7 +8773,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0602",
@@ -8786,7 +8787,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0603",
@@ -8800,7 +8801,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0604",
@@ -8814,7 +8815,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0605",
@@ -8828,7 +8829,7 @@
       "han_viet": "ĐỒNG THÌ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0606",
@@ -8842,7 +8843,7 @@
       "han_viet": "TIỀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0607",
@@ -8856,7 +8857,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0608",
@@ -8870,7 +8871,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0609",
@@ -8884,7 +8885,7 @@
       "han_viet": "ĐỘT NHIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0610",
@@ -8898,7 +8899,7 @@
       "han_viet": "GIAN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0611",
@@ -8912,7 +8913,7 @@
       "han_viet": "GIAN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0612",
@@ -8926,7 +8927,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0613",
@@ -8940,7 +8941,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0614",
@@ -8954,7 +8955,7 @@
       "han_viet": "TƯƠNG BIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0615",
@@ -8968,7 +8969,7 @@
       "han_viet": "THỨ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0616",
@@ -8982,7 +8983,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0617",
@@ -8996,7 +8997,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0618",
@@ -9010,7 +9011,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0619",
@@ -9024,7 +9025,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0620",
@@ -9038,7 +9039,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0621",
@@ -9052,7 +9053,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0622",
@@ -9066,7 +9067,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0623",
@@ -9080,7 +9081,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0624",
@@ -9094,7 +9095,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0625",
@@ -9108,7 +9109,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0626",
@@ -9122,7 +9123,7 @@
       "han_viet": "ÁN NGOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0627",
@@ -9136,7 +9137,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0628",
@@ -9150,7 +9151,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0629",
@@ -9164,7 +9165,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0630",
@@ -9178,7 +9179,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0631",
@@ -9192,7 +9193,7 @@
       "han_viet": "TƯ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0632",
@@ -9206,7 +9207,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0633",
@@ -9220,7 +9221,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0634",
@@ -9234,7 +9235,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0635",
@@ -9248,7 +9249,7 @@
       "han_viet": "THỰC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 14
+      "section": "591-635"
     },
     {
       "id": "mimi-n3-0636",
@@ -9262,7 +9263,7 @@
       "han_viet": "ĐỘC THƯ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0637",
@@ -9276,7 +9277,7 @@
       "han_viet": "DIỄN TẤU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0638",
@@ -9290,7 +9291,7 @@
       "han_viet": "VẬN THUẬT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0639",
@@ -9304,7 +9305,7 @@
       "han_viet": "KIỂM TRA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0640",
@@ -9318,7 +9319,7 @@
       "han_viet": "HUYẾT DỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0641",
@@ -9332,7 +9333,7 @@
       "han_viet": "TRÌ LIỆU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0642",
@@ -9346,7 +9347,7 @@
       "han_viet": "CHỨNG TRẠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0643",
@@ -9360,7 +9361,7 @@
       "han_viet": "DỰ PHÒNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0644",
@@ -9374,7 +9375,7 @@
       "han_viet": "VINH DƯỠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0645",
@@ -9388,7 +9389,7 @@
       "han_viet": "THỦ THUẬT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0646",
@@ -9402,7 +9403,7 @@
       "han_viet": "TỬ VONG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0647",
@@ -9416,7 +9417,7 @@
       "han_viet": "MỆNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0648",
@@ -9430,7 +9431,7 @@
       "han_viet": "NHẤT SANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0649",
@@ -9444,7 +9445,7 @@
       "han_viet": "NGỘ GIẢI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0650",
@@ -9458,7 +9459,7 @@
       "han_viet": "HẬU HỐI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0651",
@@ -9472,7 +9473,7 @@
       "han_viet": "DỊCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0652",
@@ -9486,7 +9487,7 @@
       "han_viet": "THÁI ĐỘ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0653",
@@ -9500,7 +9501,7 @@
       "han_viet": "PHÍCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0654",
@@ -9514,7 +9515,7 @@
       "han_viet": "LỄ NGHI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0655",
@@ -9528,7 +9529,7 @@
       "han_viet": "VĂN CÚ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0656",
@@ -9542,7 +9543,7 @@
       "han_viet": "BIỂU TÌNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0657",
@@ -9556,7 +9557,7 @@
       "han_viet": "BIỂU DIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0658",
@@ -9570,7 +9571,7 @@
       "han_viet": "CẤM YÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0659",
@@ -9584,7 +9585,7 @@
       "han_viet": "CẤM CHỈ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0660",
@@ -9598,7 +9599,7 @@
       "han_viet": "HOÀN THÀNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0661",
@@ -9612,7 +9613,7 @@
       "han_viet": "KHÓA ĐỀ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0662",
@@ -9626,7 +9627,7 @@
       "han_viet": "LỆ NGOẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0663",
@@ -9640,7 +9641,7 @@
       "han_viet": "CƠ BẢN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0664",
@@ -9654,7 +9655,7 @@
       "han_viet": "KÍ LỤC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0665",
@@ -9668,7 +9669,7 @@
       "han_viet": "TRẠNG THÁI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0666",
@@ -9682,7 +9683,7 @@
       "han_viet": "XUẤT LAI SỰ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0667",
@@ -9696,7 +9697,7 @@
       "han_viet": "TRÀNG DIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0668",
@@ -9710,7 +9711,7 @@
       "han_viet": "KI HỘI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0669",
@@ -9724,7 +9725,7 @@
       "han_viet": "CỰ LI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0670",
@@ -9738,7 +9739,7 @@
       "han_viet": "ĐỀ ÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0671",
@@ -9752,7 +9753,7 @@
       "han_viet": "THỦ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0672",
@@ -9766,7 +9767,7 @@
       "han_viet": "TRI THỨC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0673",
@@ -9780,7 +9781,7 @@
       "han_viet": "THỰC LỰC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0674",
@@ -9794,7 +9795,7 @@
       "han_viet": "THỦ ĐOẠN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0675",
@@ -9808,7 +9809,7 @@
       "han_viet": "ĐẠI BIỂU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 15
+      "section": "636-675"
     },
     {
       "id": "mimi-n3-0676",
@@ -9822,7 +9823,7 @@
       "han_viet": "ẢNH HƯỞNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0677",
@@ -9836,7 +9837,7 @@
       "han_viet": "HIỆU QUẢ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0678",
@@ -9850,7 +9851,7 @@
       "han_viet": "ẤN TƯỢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0679",
@@ -9864,7 +9865,7 @@
       "han_viet": "ẤN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0680",
@@ -9878,7 +9879,7 @@
       "han_viet": "HỢP ĐỒ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0681",
@@ -9892,7 +9893,7 @@
       "han_viet": "CỘNG THÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0682",
@@ -9906,7 +9907,7 @@
       "han_viet": "HIỆP ĐIỀU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0683",
@@ -9920,7 +9921,7 @@
       "han_viet": "TỈNH LƯỢC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0684",
@@ -9934,7 +9935,7 @@
       "han_viet": "THIÊU CHIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0685",
@@ -9948,7 +9949,7 @@
       "han_viet": "KHÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0686",
@@ -9962,7 +9963,7 @@
       "han_viet": "DŨNG KHÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0687",
@@ -9976,7 +9977,7 @@
       "han_viet": "TƯ CÁCH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0688",
@@ -9990,7 +9991,7 @@
       "han_viet": "THÂN THỈNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0689",
@@ -10004,7 +10005,7 @@
       "han_viet": "BỔN NHÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0690",
@@ -10018,7 +10019,7 @@
       "han_viet": "KHẾ ƯỚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0691",
@@ -10032,7 +10033,7 @@
       "han_viet": "CHỨNG MINH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0692",
@@ -10046,7 +10047,7 @@
       "han_viet": "BIẾN CANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0693",
@@ -10060,7 +10061,7 @@
       "han_viet": "BẢO TỒN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0694",
@@ -10074,7 +10075,7 @@
       "han_viet": "BẢO HỘ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0695",
@@ -10088,7 +10089,7 @@
       "han_viet": "HOÀN CẢNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0696",
@@ -10102,7 +10103,7 @@
       "han_viet": "TƯ NGUYÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0697",
@@ -10116,7 +10117,7 @@
       "han_viet": "BẤT TÚC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0698",
@@ -10130,7 +10131,7 @@
       "han_viet": "BÌNH QUÂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0699",
@@ -10144,7 +10145,7 @@
       "han_viet": "CÁT HỢP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0700",
@@ -10158,7 +10159,7 @@
       "han_viet": "THƯƠNG MẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0701",
@@ -10172,7 +10173,7 @@
       "han_viet": "THƯƠNG PHẨM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0702",
@@ -10186,7 +10187,7 @@
       "han_viet": "CHẤT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0703",
@@ -10200,7 +10201,7 @@
       "han_viet": "HÌNH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0704",
@@ -10214,7 +10215,7 @@
       "han_viet": "SANH SẢN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0705",
@@ -10228,7 +10229,7 @@
       "han_viet": "TIÊU PHÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0706",
@@ -10242,7 +10243,7 @@
       "han_viet": "VẬT GIÁ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0707",
@@ -10256,7 +10257,7 @@
       "han_viet": "ĐẢO SẢN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0708",
@@ -10270,7 +10271,7 @@
       "han_viet": "HUỀ ĐỚI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0709",
@@ -10284,7 +10285,7 @@
       "han_viet": "HIỆN ĐẠI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0710",
@@ -10298,7 +10299,7 @@
       "han_viet": "THẾ KỈ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0711",
@@ -10312,7 +10313,7 @@
       "han_viet": "VĂN HÓA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0712",
@@ -10326,7 +10327,7 @@
       "han_viet": "ĐÔ THỊ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0713",
@@ -10340,7 +10341,7 @@
       "han_viet": "ĐỊA PHƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0714",
@@ -10354,7 +10355,7 @@
       "han_viet": "CHIẾN TRANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0715",
@@ -10368,7 +10369,7 @@
       "han_viet": "BÌNH HÒA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 16
+      "section": "676-715"
     },
     {
       "id": "mimi-n3-0716",
@@ -10382,7 +10383,7 @@
       "han_viet": "THƯỢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0717",
@@ -10396,7 +10397,7 @@
       "han_viet": "HẠ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0718",
@@ -10415,7 +10416,7 @@
         "word": "進める",
         "reading": "すすめる"
       },
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0719",
@@ -10434,7 +10435,7 @@
         "word": "進む",
         "reading": "すすむ"
       },
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0720",
@@ -10448,7 +10449,7 @@
       "han_viet": "THÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0721",
@@ -10462,7 +10463,7 @@
       "han_viet": "THÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0722",
@@ -10481,7 +10482,7 @@
         "越える"
       ],
       "display_variant": "超える・越える",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0723",
@@ -10495,7 +10496,7 @@
       "han_viet": "QUÁ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0724",
@@ -10509,7 +10510,7 @@
       "han_viet": "QUÁ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0725",
@@ -10528,7 +10529,7 @@
         "word": "移す",
         "reading": "うつす"
       },
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0726",
@@ -10547,7 +10548,7 @@
         "word": "移る",
         "reading": "うつる"
       },
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0727",
@@ -10561,7 +10562,7 @@
       "han_viet": "LIÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0728",
@@ -10575,7 +10576,7 @@
       "han_viet": "KÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0729",
@@ -10589,7 +10590,7 @@
       "han_viet": "KÍ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0730",
@@ -10603,7 +10604,7 @@
       "han_viet": "DỮ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0731",
@@ -10617,7 +10618,7 @@
       "han_viet": "ĐẮC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0732",
@@ -10636,7 +10637,7 @@
         "word": "向ける",
         "reading": "むける"
       },
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0733",
@@ -10655,7 +10656,7 @@
         "word": "向く",
         "reading": "むく"
       },
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0734",
@@ -10669,7 +10670,7 @@
       "han_viet": "KHUYẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0735",
@@ -10683,7 +10684,7 @@
       "han_viet": "TIẾN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0736",
@@ -10697,7 +10698,7 @@
       "han_viet": "NHÂM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0737",
@@ -10711,7 +10712,7 @@
       "han_viet": "THỦ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0738",
@@ -10725,7 +10726,7 @@
       "han_viet": "TRANH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0739",
@@ -10739,7 +10740,7 @@
       "han_viet": "LÂM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0740",
@@ -10753,7 +10754,7 @@
       "han_viet": "TÍN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0741",
@@ -10767,7 +10768,7 @@
       "han_viet": "THÔNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0742",
@@ -10781,7 +10782,7 @@
       "han_viet": "BÃO",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0743",
@@ -10795,7 +10796,7 @@
       "han_viet": "TƯ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0744",
@@ -10809,7 +10810,7 @@
       "han_viet": "TƯ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0745",
@@ -10823,7 +10824,7 @@
       "han_viet": "NHIỆT TRUNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0746",
@@ -10837,7 +10838,7 @@
       "han_viet": "MỘ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0747",
@@ -10851,7 +10852,7 @@
       "han_viet": "QUYỂN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0748",
@@ -10865,7 +10866,7 @@
       "han_viet": "KẾT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0749",
@@ -10879,7 +10880,7 @@
       "han_viet": "TẾ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0750",
@@ -10893,7 +10894,7 @@
       "han_viet": "TẾ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0751",
@@ -10907,7 +10908,7 @@
       "han_viet": "XUẤT LAI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0752",
@@ -10921,7 +10922,7 @@
       "han_viet": "THIẾT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0753",
@@ -10935,7 +10936,7 @@
       "han_viet": "THIẾT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 17
+      "section": "716-753"
     },
     {
       "id": "mimi-n3-0754",
@@ -10954,7 +10955,7 @@
         "word": "伝える",
         "reading": "つたえる"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0755",
@@ -10973,7 +10974,7 @@
         "word": "伝わる",
         "reading": "つたわる"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0756",
@@ -10992,7 +10993,7 @@
         "word": "続ける",
         "reading": "つづける"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0757",
@@ -11011,7 +11012,7 @@
         "word": "続く",
         "reading": "つづく"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0758",
@@ -11025,7 +11026,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0759",
@@ -11039,7 +11040,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0760",
@@ -11053,7 +11054,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0761",
@@ -11072,7 +11073,7 @@
         "word": "伸ばす",
         "reading": "のばす"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0762",
@@ -11091,7 +11092,7 @@
         "word": "伸びる",
         "reading": "のびる"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0763",
@@ -11105,7 +11106,7 @@
       "han_viet": "DUYÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0764",
@@ -11119,7 +11120,7 @@
       "han_viet": "DUYÊN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0765",
@@ -11133,7 +11134,7 @@
       "han_viet": "TRỌNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0766",
@@ -11147,7 +11148,7 @@
       "han_viet": "TRỌNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0767",
@@ -11161,7 +11162,7 @@
       "han_viet": "QUẢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0768",
@@ -11175,7 +11176,7 @@
       "han_viet": "QUẢNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0769",
@@ -11189,7 +11190,7 @@
       "han_viet": "TÁI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0770",
@@ -11203,7 +11204,7 @@
       "han_viet": "TÁI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0771",
@@ -11217,7 +11218,7 @@
       "han_viet": "TIỄN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0772",
@@ -11231,7 +11232,7 @@
       "han_viet": "TIỄN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0773",
@@ -11245,7 +11246,7 @@
       "han_viet": "TRIỀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0774",
@@ -11259,7 +11260,7 @@
       "han_viet": "TRIỀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0775",
@@ -11278,7 +11279,7 @@
         "word": "付ける",
         "reading": "つける"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0776",
@@ -11297,7 +11298,7 @@
         "word": "付く",
         "reading": "つく"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0777",
@@ -11316,7 +11317,7 @@
         "word": "貯める",
         "reading": "ためる"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0778",
@@ -11335,7 +11336,7 @@
         "word": "貯まる",
         "reading": "たまる"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0779",
@@ -11354,7 +11355,7 @@
         "混じる"
       ],
       "display_variant": "交じる・混じる",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0780",
@@ -11373,7 +11374,7 @@
         "混ざる"
       ],
       "display_variant": "交ざる・混ざる",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0781",
@@ -11392,7 +11393,7 @@
         "混ぜる"
       ],
       "display_variant": "交ぜる・混ぜる",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0782",
@@ -11411,7 +11412,7 @@
         "溶ける"
       ],
       "display_variant": "解ける・溶ける",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0783",
@@ -11430,7 +11431,7 @@
         "溶く"
       ],
       "display_variant": "解く・溶く",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0784",
@@ -11444,7 +11445,7 @@
       "han_viet": "HÀM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0785",
@@ -11458,7 +11459,7 @@
       "han_viet": "HÀM",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0786",
@@ -11472,7 +11473,7 @@
       "han_viet": "BẠT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0787",
@@ -11486,7 +11487,7 @@
       "han_viet": "BẠT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0788",
@@ -11500,7 +11501,7 @@
       "han_viet": "HIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0789",
@@ -11514,7 +11515,7 @@
       "han_viet": "HIỆN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0790",
@@ -11533,7 +11534,7 @@
         "word": "表す",
         "reading": "あらわす"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0791",
@@ -11552,7 +11553,7 @@
         "word": "表れる",
         "reading": "あらわれる"
       },
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0792",
@@ -11566,7 +11567,7 @@
       "han_viet": "TÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0793",
@@ -11580,7 +11581,7 @@
       "han_viet": "TÁN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0794",
@@ -11594,7 +11595,7 @@
       "han_viet": "MINH",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0795",
@@ -11608,7 +11609,7 @@
       "han_viet": "SOA",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 18
+      "section": "754-795"
     },
     {
       "id": "mimi-n3-0796",
@@ -11622,7 +11623,7 @@
       "han_viet": "Partner",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0797",
@@ -11636,7 +11637,7 @@
       "han_viet": "Leader",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0798",
@@ -11650,7 +11651,7 @@
       "han_viet": "Volunteer",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0799",
@@ -11664,7 +11665,7 @@
       "han_viet": "Communication",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0800",
@@ -11678,7 +11679,7 @@
       "han_viet": "Humor",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0801",
@@ -11692,7 +11693,7 @@
       "han_viet": "Shock",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0802",
@@ -11706,7 +11707,7 @@
       "han_viet": "Stress",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0803",
@@ -11720,7 +11721,7 @@
       "han_viet": "Balance",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0804",
@@ -11734,7 +11735,7 @@
       "han_viet": "Level",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0805",
@@ -11748,7 +11749,7 @@
       "han_viet": "Up",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0806",
@@ -11762,7 +11763,7 @@
       "han_viet": "Down",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0807",
@@ -11776,7 +11777,7 @@
       "han_viet": "Plus",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0808",
@@ -11790,7 +11791,7 @@
       "han_viet": "Minus",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0809",
@@ -11804,7 +11805,7 @@
       "han_viet": "Image",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0810",
@@ -11818,7 +11819,7 @@
       "han_viet": "Contest",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0811",
@@ -11832,7 +11833,7 @@
       "han_viet": "Mass communication",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0812",
@@ -11846,7 +11847,7 @@
       "han_viet": "Privacy",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0813",
@@ -11860,7 +11861,7 @@
       "han_viet": "Office",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0814",
@@ -11874,7 +11875,7 @@
       "han_viet": "Rule",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0815",
@@ -11888,7 +11889,7 @@
       "han_viet": "Manner",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0816",
@@ -11902,7 +11903,7 @@
       "han_viet": "Miss / Mistake",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0817",
@@ -11916,7 +11917,7 @@
       "han_viet": "Schedule",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0818",
@@ -11930,7 +11931,7 @@
       "han_viet": "Title",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0819",
@@ -11944,7 +11945,7 @@
       "han_viet": "Thema",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0820",
@@ -11958,7 +11959,7 @@
       "han_viet": "Story",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0821",
@@ -11972,7 +11973,7 @@
       "han_viet": "Hit",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0822",
@@ -11986,7 +11987,7 @@
       "han_viet": "Brand",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0823",
@@ -12000,7 +12001,7 @@
       "han_viet": "Rental",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0824",
@@ -12014,7 +12015,7 @@
       "han_viet": "Recycle",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0825",
@@ -12028,7 +12029,7 @@
       "han_viet": "Label",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0826",
@@ -12042,7 +12043,7 @@
       "han_viet": "Type",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0827",
@@ -12056,7 +12057,7 @@
       "han_viet": "Style",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0828",
@@ -12070,7 +12071,7 @@
       "han_viet": "Set",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0829",
@@ -12084,7 +12085,7 @@
       "han_viet": "Virus",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0830",
@@ -12098,7 +12099,7 @@
       "han_viet": "Robot",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0831",
@@ -12112,7 +12113,7 @@
       "han_viet": "Energy",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0832",
@@ -12126,7 +12127,7 @@
       "han_viet": "Digital",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0833",
@@ -12140,7 +12141,7 @@
       "han_viet": "Microphone",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0834",
@@ -12154,7 +12155,7 @@
       "han_viet": "Brake",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0835",
@@ -12168,7 +12169,7 @@
       "han_viet": "Paint (pek)",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 19
+      "section": "796-835"
     },
     {
       "id": "mimi-n3-0836",
@@ -12182,7 +12183,7 @@
       "han_viet": "XUY",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0837",
@@ -12196,7 +12197,7 @@
       "han_viet": "XUY",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0838",
@@ -12215,7 +12216,7 @@
         "word": "煮る",
         "reading": "にる"
       },
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0839",
@@ -12234,7 +12235,7 @@
         "word": "煮える",
         "reading": "にえる"
       },
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0840",
@@ -12248,7 +12249,7 @@
       "han_viet": "SAO",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0841",
@@ -12267,7 +12268,7 @@
         "word": "焼く",
         "reading": "やく"
       },
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0842",
@@ -12286,7 +12287,7 @@
         "word": "焼ける",
         "reading": "やける"
       },
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0843",
@@ -12300,7 +12301,7 @@
       "han_viet": "",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0844",
@@ -12314,7 +12315,7 @@
       "han_viet": "DƯƠNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0845",
@@ -12328,7 +12329,7 @@
       "han_viet": "CHƯNG",
       "part": "supplement",
       "source_kind": "indexed_book_headword",
-      "section": 20
+      "section": "836-845"
     },
     {
       "id": "mimi-n3-0846",
@@ -12342,7 +12343,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0847",
@@ -12356,7 +12357,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0848",
@@ -12370,7 +12371,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0849",
@@ -12384,7 +12385,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0850",
@@ -12398,7 +12399,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0851",
@@ -12412,7 +12413,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0852",
@@ -12426,7 +12427,7 @@
       "han_viet": "BIỆT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0853",
@@ -12440,7 +12441,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0854",
@@ -12454,7 +12455,7 @@
       "han_viet": "HỖ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0855",
@@ -12468,7 +12469,7 @@
       "han_viet": "TRỰC TIẾP",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0856",
@@ -12482,7 +12483,7 @@
       "han_viet": "BỔN ĐƯƠNG",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0857",
@@ -12496,7 +12497,7 @@
       "han_viet": "TẤT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0858",
@@ -12510,7 +12511,7 @@
       "han_viet": "TUYỆT ĐỐI",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0859",
@@ -12524,7 +12525,7 @@
       "han_viet": "ĐẶC",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0860",
@@ -12538,7 +12539,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0861",
@@ -12552,7 +12553,7 @@
       "han_viet": "THIỂU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0862",
@@ -12566,7 +12567,7 @@
       "han_viet": "QUYẾT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0863",
@@ -12580,7 +12581,7 @@
       "han_viet": "THIỂU",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0864",
@@ -12594,7 +12595,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0865",
@@ -12608,7 +12609,7 @@
       "han_viet": "TOÀN",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0866",
@@ -12622,7 +12623,7 @@
       "han_viet": "NHẤT THỂ",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0867",
@@ -12636,7 +12637,7 @@
       "han_viet": "BIỆT",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0868",
@@ -12650,7 +12651,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0869",
@@ -12664,7 +12665,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0870",
@@ -12678,7 +12679,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0871",
@@ -12692,7 +12693,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0872",
@@ -12706,7 +12707,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0873",
@@ -12720,7 +12721,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0874",
@@ -12734,7 +12735,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0875",
@@ -12748,7 +12749,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0876",
@@ -12762,7 +12763,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0877",
@@ -12776,7 +12777,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0878",
@@ -12790,7 +12791,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0879",
@@ -12804,7 +12805,7 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     },
     {
       "id": "mimi-n3-0880",
@@ -12818,219 +12819,198 @@
       "han_viet": "",
       "part": "main",
       "source_kind": "indexed_book_headword",
-      "section": 21
+      "section": "846-880"
     }
   ],
   "sections": [
     {
-      "id": 1,
-      "unit": 1,
+      "id": "1-71",
+      "lesson": 1,
       "start": 1,
       "end": 71,
-      "count": 71,
-      "kind": "practice",
-      "book_page": 18,
-      "label": "Bài 1 · 1–71"
+      "kind": "practice_1",
+      "display_name": "Bài 1 · 1–71",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 2,
-      "unit": 1,
+      "id": "72-120",
+      "lesson": 1,
       "start": 72,
       "end": 120,
-      "count": 49,
-      "kind": "practice",
-      "book_page": 28,
-      "label": "Bài 1 · 72–120"
+      "kind": "practice_2",
+      "display_name": "Bài 1 · 72–120",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 3,
-      "unit": 2,
+      "id": "121-170",
+      "lesson": 2,
       "start": 121,
       "end": 170,
-      "count": 50,
-      "kind": "practice",
-      "book_page": 40,
-      "label": "Bài 2 · 121–170"
+      "kind": "practice_1",
+      "display_name": "Bài 2 · 121–170",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 4,
-      "unit": 2,
+      "id": "171-220",
+      "lesson": 2,
       "start": 171,
       "end": 220,
-      "count": 50,
-      "kind": "practice",
-      "book_page": 50,
-      "label": "Bài 2 · 171–220"
+      "kind": "practice_2",
+      "display_name": "Bài 2 · 171–220",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 5,
-      "unit": 2,
+      "id": "221-258",
+      "lesson": 2,
       "start": 221,
       "end": 258,
-      "count": 38,
       "kind": "summary",
-      "book_page": 54,
-      "label": "Tổng hợp · 221–258"
+      "display_name": "Bài 2 · Tổng hợp 221–258",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 6,
-      "unit": 3,
+      "id": "259-298",
+      "lesson": 3,
       "start": 259,
       "end": 298,
-      "count": 40,
-      "kind": "practice",
-      "book_page": 66,
-      "label": "Bài 3 · 259–298"
+      "kind": "practice_1",
+      "display_name": "Bài 3 · 259–298",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 7,
-      "unit": 3,
+      "id": "299-310",
+      "lesson": 3,
       "start": 299,
       "end": 310,
-      "count": 12,
       "kind": "summary",
-      "book_page": 68,
-      "label": "Tổng hợp · 299–310"
+      "display_name": "Bài 3 · Tổng hợp 299–310",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 8,
-      "unit": 4,
+      "id": "311-370",
+      "lesson": 4,
       "start": 311,
       "end": 370,
-      "count": 60,
-      "kind": "practice",
-      "book_page": 78,
-      "label": "Bài 4 · 311–370"
+      "kind": "practice_1",
+      "display_name": "Bài 4 · 311–370",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 9,
-      "unit": 4,
+      "id": "371-410",
+      "lesson": 4,
       "start": 371,
       "end": 410,
-      "count": 40,
-      "kind": "practice",
-      "book_page": 86,
-      "label": "Bài 4 · 371–410"
+      "kind": "practice_2",
+      "display_name": "Bài 4 · 371–410",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 10,
-      "unit": 5,
+      "id": "411-460",
+      "lesson": 5,
       "start": 411,
       "end": 460,
-      "count": 50,
-      "kind": "practice",
-      "book_page": 98,
-      "label": "Bài 5 · 411–460"
+      "kind": "practice_1",
+      "display_name": "Bài 5 · 411–460",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 11,
-      "unit": 5,
+      "id": "461-510",
+      "lesson": 5,
       "start": 461,
       "end": 510,
-      "count": 50,
-      "kind": "practice",
-      "book_page": 108,
-      "label": "Bài 5 · 461–510"
+      "kind": "practice_2",
+      "display_name": "Bài 5 · 461–510",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 12,
-      "unit": 6,
+      "id": "511-550",
+      "lesson": 6,
       "start": 511,
       "end": 550,
-      "count": 40,
-      "kind": "practice",
-      "book_page": 118,
-      "label": "Bài 6 · 511–550"
+      "kind": "practice_1",
+      "display_name": "Bài 6 · 511–550",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 13,
-      "unit": 7,
+      "id": "551-590",
+      "lesson": 7,
       "start": 551,
       "end": 590,
-      "count": 40,
-      "kind": "practice",
-      "book_page": 128,
-      "label": "Bài 7 · 551–590"
+      "kind": "practice_1",
+      "display_name": "Bài 7 · 551–590",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 14,
-      "unit": 8,
+      "id": "591-635",
+      "lesson": 8,
       "start": 591,
       "end": 635,
-      "count": 45,
-      "kind": "practice",
-      "book_page": 140,
-      "label": "Bài 8 · 591–635"
+      "kind": "practice_1",
+      "display_name": "Bài 8 · 591–635",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 15,
-      "unit": 9,
+      "id": "636-675",
+      "lesson": 9,
       "start": 636,
       "end": 675,
-      "count": 40,
-      "kind": "practice",
-      "book_page": 148,
-      "label": "Bài 9 · 636–675"
+      "kind": "practice_1",
+      "display_name": "Bài 9 · 636–675",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 16,
-      "unit": 9,
+      "id": "676-715",
+      "lesson": 9,
       "start": 676,
       "end": 715,
-      "count": 40,
-      "kind": "practice",
-      "book_page": 156,
-      "label": "Bài 9 · 676–715"
+      "kind": "practice_2",
+      "display_name": "Bài 9 · 676–715",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 17,
-      "unit": 10,
+      "id": "716-753",
+      "lesson": 10,
       "start": 716,
       "end": 753,
-      "count": 38,
-      "kind": "practice",
-      "book_page": 168,
-      "label": "Bài 10 · 716–753"
+      "kind": "practice_1",
+      "display_name": "Bài 10 · 716–753",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 18,
-      "unit": 10,
+      "id": "754-795",
+      "lesson": 10,
       "start": 754,
       "end": 795,
-      "count": 42,
-      "kind": "practice",
-      "book_page": 178,
-      "label": "Bài 10 · 754–795"
+      "kind": "practice_2",
+      "display_name": "Bài 10 · 754–795",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 19,
-      "unit": 11,
+      "id": "796-835",
+      "lesson": 11,
       "start": 796,
       "end": 835,
-      "count": 40,
-      "kind": "practice",
-      "book_page": 188,
-      "label": "Bài 11 · 796–835"
+      "kind": "practice_1",
+      "display_name": "Bài 11 · 796–835",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 20,
-      "unit": 11,
+      "id": "836-845",
+      "lesson": 11,
       "start": 836,
       "end": 845,
-      "count": 10,
       "kind": "summary",
-      "book_page": 192,
-      "label": "Tổng hợp · 836–845"
+      "display_name": "Bài 11 · Tổng hợp 836–845",
+      "source": "PDF mục lục trang 5–8"
     },
     {
-      "id": 21,
-      "unit": 12,
+      "id": "846-880",
+      "lesson": 12,
       "start": 846,
       "end": 880,
-      "count": 35,
-      "kind": "practice",
-      "book_page": 202,
-      "label": "Bài 12 · 846–880"
+      "kind": "practice_1",
+      "display_name": "Bài 12 · 846–880",
+      "source": "PDF mục lục trang 5–8"
     }
   ]
 }

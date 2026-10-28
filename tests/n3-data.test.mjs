@@ -75,15 +75,23 @@ test("bài 1 giữ nguyên âm Kun từ sách, gồm 干る và các từ thư�
   assert.equal(hi.origin, "textbook-reading");
   assert.equal(hi.verb_type, "intransitive");
   assert.match(hi.meaning, /ít dùng/);
-  assert.ok(n3.vocab.some(v => v.lesson === 1 && v.word === "乾く" && v.reading === "かわく"));
-  assert.ok(n3.vocab.some(v => v.lesson === 1 && v.word === "乾かす" && v.reading === "かわかす"));
+  assert.ok(!n3.vocab.some(v => v.lesson === 1 && v.word === "乾く" && v.reading === "かわく"), "乾 is not a book heading for chapter 1");
+  assert.ok(!n3.vocab.some(v => v.lesson === 1 && v.word === "乾かす" && v.reading === "かわかす"), "乾 is not a book heading for chapter 1");
+  assert.deepEqual(n3.vocab.find(v => v.lesson === 1 && v.word === "干す").paired_with,
+    {word:"干る",reading:"ひる"});
 });
 
 test("mọi cặp động từ N3 đều có đủ hai từ, đúng loại và được hiển thị trong quiz", () => {
   const index = readJSON("data/n3/verb_pairs.json");
   assert.equal(index.total_pairs, index.pairs.length);
-  assert.ok(index.pairs.length >= 40);
+  assert.equal(index.pairs.length, 30);
   for (const pair of index.pairs) {
+    const heading = new Set(readJSON("data/n3/source_character_index.json").lessons[pair.lesson].characters.map(x => x.kanji));
+    const aa = [...pair.auto.word].filter(c => /[\u3400-\u9fff]/u.test(c));
+    const bb = [...pair.transitive.word].filter(c => /[\u3400-\u9fff]/u.test(c));
+    assert.deepEqual(aa, bb, "Different Kanji in pairing: " + pair.auto.word);
+    assert.equal(aa.length, 1);
+    assert.ok(heading.has(aa[0]), "Out-of-book Kanji pair in chapter " + pair.lesson + ": " + aa[0]);
     const a = n3.vocab.find(v => v.lesson === pair.lesson && v.word === pair.auto.word && v.reading === pair.auto.reading);
     const b = n3.vocab.find(v => v.lesson === pair.lesson && v.word === pair.transitive.word && v.reading === pair.transitive.reading);
     assert.ok(a, `Missing intransitive ${pair.lesson}: ${pair.auto.word}`);

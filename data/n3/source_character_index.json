@@ -1,0 +1,1630 @@
+{
+  "source_pdf": "漢字マスター N3 (user supplied 192-page scan)",
+  "source_pdf_page_basis": "PDF page number (1-indexed)",
+  "lessons": {
+    "1": {
+      "title_vi": "Sinh hoạt",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "起",
+          "pdf_page": 8
+        },
+        {
+          "kanji": "寝",
+          "pdf_page": 8
+        },
+        {
+          "kanji": "浴",
+          "pdf_page": 8
+        },
+        {
+          "kanji": "湯",
+          "pdf_page": 8
+        },
+        {
+          "kanji": "洗",
+          "pdf_page": 9
+        },
+        {
+          "kanji": "濯",
+          "pdf_page": 9
+        },
+        {
+          "kanji": "干",
+          "pdf_page": 9
+        },
+        {
+          "kanji": "活",
+          "pdf_page": 9
+        },
+        {
+          "kanji": "拾",
+          "pdf_page": 10
+        },
+        {
+          "kanji": "捨",
+          "pdf_page": 10
+        },
+        {
+          "kanji": "燃",
+          "pdf_page": 10
+        },
+        {
+          "kanji": "袋",
+          "pdf_page": 10
+        },
+        {
+          "kanji": "曜",
+          "pdf_page": 11
+        },
+        {
+          "kanji": "末",
+          "pdf_page": 11
+        },
+        {
+          "kanji": "昨",
+          "pdf_page": 11
+        },
+        {
+          "kanji": "翌",
+          "pdf_page": 11
+        },
+        {
+          "kanji": "予",
+          "pdf_page": 12
+        },
+        {
+          "kanji": "定",
+          "pdf_page": 12
+        },
+        {
+          "kanji": "用",
+          "pdf_page": 12
+        },
+        {
+          "kanji": "事",
+          "pdf_page": 12
+        }
+      ]
+    },
+    "2": {
+      "title_vi": "Nhà cửa",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "押",
+          "pdf_page": 14
+        },
+        {
+          "kanji": "引",
+          "pdf_page": 14
+        },
+        {
+          "kanji": "取",
+          "pdf_page": 14
+        },
+        {
+          "kanji": "消",
+          "pdf_page": 14
+        },
+        {
+          "kanji": "戸",
+          "pdf_page": 15
+        },
+        {
+          "kanji": "窓",
+          "pdf_page": 15
+        },
+        {
+          "kanji": "階",
+          "pdf_page": 15
+        },
+        {
+          "kanji": "段",
+          "pdf_page": 15
+        },
+        {
+          "kanji": "植",
+          "pdf_page": 16
+        },
+        {
+          "kanji": "葉",
+          "pdf_page": 16
+        },
+        {
+          "kanji": "実",
+          "pdf_page": 16
+        },
+        {
+          "kanji": "根",
+          "pdf_page": 16
+        },
+        {
+          "kanji": "建",
+          "pdf_page": 17
+        },
+        {
+          "kanji": "築",
+          "pdf_page": 17
+        },
+        {
+          "kanji": "構",
+          "pdf_page": 17
+        },
+        {
+          "kanji": "造",
+          "pdf_page": 17
+        },
+        {
+          "kanji": "設",
+          "pdf_page": 18
+        },
+        {
+          "kanji": "柱",
+          "pdf_page": 18
+        },
+        {
+          "kanji": "庫",
+          "pdf_page": 18
+        },
+        {
+          "kanji": "向",
+          "pdf_page": 18
+        }
+      ]
+    },
+    "3": {
+      "title_vi": "Nấu ăn",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "熱",
+          "pdf_page": 24
+        },
+        {
+          "kanji": "冷",
+          "pdf_page": 24
+        },
+        {
+          "kanji": "温",
+          "pdf_page": 24
+        },
+        {
+          "kanji": "度",
+          "pdf_page": 24
+        },
+        {
+          "kanji": "材",
+          "pdf_page": 25
+        },
+        {
+          "kanji": "型",
+          "pdf_page": 25
+        },
+        {
+          "kanji": "焼",
+          "pdf_page": 25
+        },
+        {
+          "kanji": "器",
+          "pdf_page": 25
+        },
+        {
+          "kanji": "卵",
+          "pdf_page": 26
+        },
+        {
+          "kanji": "乳",
+          "pdf_page": 26
+        },
+        {
+          "kanji": "粉",
+          "pdf_page": 26
+        },
+        {
+          "kanji": "塩",
+          "pdf_page": 26
+        },
+        {
+          "kanji": "菜",
+          "pdf_page": 27
+        },
+        {
+          "kanji": "果",
+          "pdf_page": 27
+        },
+        {
+          "kanji": "豆",
+          "pdf_page": 27
+        },
+        {
+          "kanji": "缶",
+          "pdf_page": 27
+        },
+        {
+          "kanji": "杯",
+          "pdf_page": 28
+        },
+        {
+          "kanji": "枚",
+          "pdf_page": 28
+        },
+        {
+          "kanji": "匹",
+          "pdf_page": 28
+        },
+        {
+          "kanji": "量",
+          "pdf_page": 28
+        }
+      ]
+    },
+    "4": {
+      "title_vi": "Bệnh viện",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "頭",
+          "pdf_page": 30
+        },
+        {
+          "kanji": "顔",
+          "pdf_page": 30
+        },
+        {
+          "kanji": "首",
+          "pdf_page": 30
+        },
+        {
+          "kanji": "鼻",
+          "pdf_page": 30
+        },
+        {
+          "kanji": "呼",
+          "pdf_page": 31
+        },
+        {
+          "kanji": "吸",
+          "pdf_page": 31
+        },
+        {
+          "kanji": "息",
+          "pdf_page": 31
+        },
+        {
+          "kanji": "汗",
+          "pdf_page": 31
+        },
+        {
+          "kanji": "検",
+          "pdf_page": 32
+        },
+        {
+          "kanji": "査",
+          "pdf_page": 32
+        },
+        {
+          "kanji": "歯",
+          "pdf_page": 32
+        },
+        {
+          "kanji": "痛",
+          "pdf_page": 32
+        },
+        {
+          "kanji": "血",
+          "pdf_page": 33
+        },
+        {
+          "kanji": "液",
+          "pdf_page": 33
+        },
+        {
+          "kanji": "包",
+          "pdf_page": 33
+        },
+        {
+          "kanji": "帯",
+          "pdf_page": 33
+        },
+        {
+          "kanji": "救",
+          "pdf_page": 34
+        },
+        {
+          "kanji": "助",
+          "pdf_page": 34
+        },
+        {
+          "kanji": "死",
+          "pdf_page": 34
+        },
+        {
+          "kanji": "亡",
+          "pdf_page": 34
+        }
+      ]
+    },
+    "5": {
+      "title_vi": "Thể thao",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "戦",
+          "pdf_page": 40
+        },
+        {
+          "kanji": "決",
+          "pdf_page": 40
+        },
+        {
+          "kanji": "勝",
+          "pdf_page": 40
+        },
+        {
+          "kanji": "負",
+          "pdf_page": 40
+        },
+        {
+          "kanji": "代",
+          "pdf_page": 41
+        },
+        {
+          "kanji": "表",
+          "pdf_page": 41
+        },
+        {
+          "kanji": "第",
+          "pdf_page": 41
+        },
+        {
+          "kanji": "回",
+          "pdf_page": 41
+        },
+        {
+          "kanji": "記",
+          "pdf_page": 42
+        },
+        {
+          "kanji": "録",
+          "pdf_page": 42
+        },
+        {
+          "kanji": "優",
+          "pdf_page": 42
+        },
+        {
+          "kanji": "賞",
+          "pdf_page": 42
+        },
+        {
+          "kanji": "秒",
+          "pdf_page": 43
+        },
+        {
+          "kanji": "差",
+          "pdf_page": 43
+        },
+        {
+          "kanji": "測",
+          "pdf_page": 43
+        },
+        {
+          "kanji": "順",
+          "pdf_page": 43
+        },
+        {
+          "kanji": "球",
+          "pdf_page": 44
+        },
+        {
+          "kanji": "打",
+          "pdf_page": 44
+        },
+        {
+          "kanji": "投",
+          "pdf_page": 44
+        },
+        {
+          "kanji": "点",
+          "pdf_page": 44
+        }
+      ]
+    },
+    "6": {
+      "title_vi": "Cảm xúc",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "感",
+          "pdf_page": 46
+        },
+        {
+          "kanji": "情",
+          "pdf_page": 46
+        },
+        {
+          "kanji": "恋",
+          "pdf_page": 46
+        },
+        {
+          "kanji": "愛",
+          "pdf_page": 46
+        },
+        {
+          "kanji": "信",
+          "pdf_page": 47
+        },
+        {
+          "kanji": "想",
+          "pdf_page": 47
+        },
+        {
+          "kanji": "伝",
+          "pdf_page": 47
+        },
+        {
+          "kanji": "欲",
+          "pdf_page": 47
+        },
+        {
+          "kanji": "苦",
+          "pdf_page": 48
+        },
+        {
+          "kanji": "悩",
+          "pdf_page": 48
+        },
+        {
+          "kanji": "困",
+          "pdf_page": 48
+        },
+        {
+          "kanji": "難",
+          "pdf_page": 48
+        },
+        {
+          "kanji": "怒",
+          "pdf_page": 49
+        },
+        {
+          "kanji": "悲",
+          "pdf_page": 49
+        },
+        {
+          "kanji": "笑",
+          "pdf_page": 49
+        },
+        {
+          "kanji": "喜",
+          "pdf_page": 49
+        },
+        {
+          "kanji": "残",
+          "pdf_page": 50
+        },
+        {
+          "kanji": "念",
+          "pdf_page": 50
+        },
+        {
+          "kanji": "泣",
+          "pdf_page": 50
+        },
+        {
+          "kanji": "涙",
+          "pdf_page": 50
+        }
+      ]
+    },
+    "7": {
+      "title_vi": "Hôn nhân",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "結",
+          "pdf_page": 56
+        },
+        {
+          "kanji": "婚",
+          "pdf_page": 56
+        },
+        {
+          "kanji": "紹",
+          "pdf_page": 56
+        },
+        {
+          "kanji": "介",
+          "pdf_page": 56
+        },
+        {
+          "kanji": "独",
+          "pdf_page": 57
+        },
+        {
+          "kanji": "身",
+          "pdf_page": 57
+        },
+        {
+          "kanji": "貯",
+          "pdf_page": 57
+        },
+        {
+          "kanji": "期",
+          "pdf_page": 57
+        },
+        {
+          "kanji": "約",
+          "pdf_page": 58
+        },
+        {
+          "kanji": "束",
+          "pdf_page": 58
+        },
+        {
+          "kanji": "必",
+          "pdf_page": 58
+        },
+        {
+          "kanji": "守",
+          "pdf_page": 58
+        },
+        {
+          "kanji": "式",
+          "pdf_page": 59
+        },
+        {
+          "kanji": "列",
+          "pdf_page": 59
+        },
+        {
+          "kanji": "祝",
+          "pdf_page": 59
+        },
+        {
+          "kanji": "酔",
+          "pdf_page": 59
+        },
+        {
+          "kanji": "永",
+          "pdf_page": 60
+        },
+        {
+          "kanji": "願",
+          "pdf_page": 60
+        },
+        {
+          "kanji": "幸",
+          "pdf_page": 60
+        },
+        {
+          "kanji": "福",
+          "pdf_page": 60
+        }
+      ]
+    },
+    "8": {
+      "title_vi": "Quan hệ",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "関",
+          "pdf_page": 62
+        },
+        {
+          "kanji": "係",
+          "pdf_page": 62
+        },
+        {
+          "kanji": "和",
+          "pdf_page": 62
+        },
+        {
+          "kanji": "付",
+          "pdf_page": 62
+        },
+        {
+          "kanji": "娘",
+          "pdf_page": 63
+        },
+        {
+          "kanji": "老",
+          "pdf_page": 63
+        },
+        {
+          "kanji": "婦",
+          "pdf_page": 63
+        },
+        {
+          "kanji": "姓",
+          "pdf_page": 63
+        },
+        {
+          "kanji": "仲",
+          "pdf_page": 64
+        },
+        {
+          "kanji": "君",
+          "pdf_page": 64
+        },
+        {
+          "kanji": "彼",
+          "pdf_page": 64
+        },
+        {
+          "kanji": "他",
+          "pdf_page": 64
+        },
+        {
+          "kanji": "初",
+          "pdf_page": 65
+        },
+        {
+          "kanji": "再",
+          "pdf_page": 65
+        },
+        {
+          "kanji": "久",
+          "pdf_page": 65
+        },
+        {
+          "kanji": "達",
+          "pdf_page": 65
+        },
+        {
+          "kanji": "個",
+          "pdf_page": 66
+        },
+        {
+          "kanji": "性",
+          "pdf_page": 66
+        },
+        {
+          "kanji": "各",
+          "pdf_page": 66
+        },
+        {
+          "kanji": "格",
+          "pdf_page": 66
+        }
+      ]
+    },
+    "9": {
+      "title_vi": "Đơn vị và mức độ",
+      "kanji_count": 8,
+      "characters": [
+        {
+          "kanji": "単",
+          "pdf_page": 68
+        },
+        {
+          "kanji": "複",
+          "pdf_page": 68
+        },
+        {
+          "kanji": "全",
+          "pdf_page": 68
+        },
+        {
+          "kanji": "以",
+          "pdf_page": 68
+        },
+        {
+          "kanji": "未",
+          "pdf_page": 69
+        },
+        {
+          "kanji": "満",
+          "pdf_page": 69
+        },
+        {
+          "kanji": "無",
+          "pdf_page": 69
+        },
+        {
+          "kanji": "非",
+          "pdf_page": 69
+        }
+      ]
+    },
+    "10": {
+      "title_vi": "Trường học",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "幼",
+          "pdf_page": 74
+        },
+        {
+          "kanji": "児",
+          "pdf_page": 74
+        },
+        {
+          "kanji": "童",
+          "pdf_page": 74
+        },
+        {
+          "kanji": "徒",
+          "pdf_page": 74
+        },
+        {
+          "kanji": "担",
+          "pdf_page": 75
+        },
+        {
+          "kanji": "任",
+          "pdf_page": 75
+        },
+        {
+          "kanji": "師",
+          "pdf_page": 75
+        },
+        {
+          "kanji": "組",
+          "pdf_page": 75
+        },
+        {
+          "kanji": "机",
+          "pdf_page": 76
+        },
+        {
+          "kanji": "座",
+          "pdf_page": 76
+        },
+        {
+          "kanji": "板",
+          "pdf_page": 76
+        },
+        {
+          "kanji": "筆",
+          "pdf_page": 76
+        },
+        {
+          "kanji": "貸",
+          "pdf_page": 77
+        },
+        {
+          "kanji": "借",
+          "pdf_page": 77
+        },
+        {
+          "kanji": "返",
+          "pdf_page": 77
+        },
+        {
+          "kanji": "冊",
+          "pdf_page": 77
+        },
+        {
+          "kanji": "具",
+          "pdf_page": 78
+        },
+        {
+          "kanji": "箱",
+          "pdf_page": 78
+        },
+        {
+          "kanji": "棒",
+          "pdf_page": 78
+        },
+        {
+          "kanji": "伸",
+          "pdf_page": 78
+        }
+      ]
+    },
+    "11": {
+      "title_vi": "Học tập",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "希",
+          "pdf_page": 80
+        },
+        {
+          "kanji": "望",
+          "pdf_page": 80
+        },
+        {
+          "kanji": "夢",
+          "pdf_page": 80
+        },
+        {
+          "kanji": "的",
+          "pdf_page": 80
+        },
+        {
+          "kanji": "可",
+          "pdf_page": 81
+        },
+        {
+          "kanji": "能",
+          "pdf_page": 81
+        },
+        {
+          "kanji": "調",
+          "pdf_page": 81
+        },
+        {
+          "kanji": "選",
+          "pdf_page": 81
+        },
+        {
+          "kanji": "面",
+          "pdf_page": 82
+        },
+        {
+          "kanji": "接",
+          "pdf_page": 82
+        },
+        {
+          "kanji": "受",
+          "pdf_page": 82
+        },
+        {
+          "kanji": "落",
+          "pdf_page": 82
+        },
+        {
+          "kanji": "倍",
+          "pdf_page": 83
+        },
+        {
+          "kanji": "率",
+          "pdf_page": 83
+        },
+        {
+          "kanji": "平",
+          "pdf_page": 83
+        },
+        {
+          "kanji": "均",
+          "pdf_page": 83
+        },
+        {
+          "kanji": "成",
+          "pdf_page": 84
+        },
+        {
+          "kanji": "績",
+          "pdf_page": 84
+        },
+        {
+          "kanji": "良",
+          "pdf_page": 84
+        },
+        {
+          "kanji": "悪",
+          "pdf_page": 84
+        }
+      ]
+    },
+    "12": {
+      "title_vi": "Giảng dạy",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "授",
+          "pdf_page": 92
+        },
+        {
+          "kanji": "業",
+          "pdf_page": 92
+        },
+        {
+          "kanji": "級",
+          "pdf_page": 92
+        },
+        {
+          "kanji": "卒",
+          "pdf_page": 92
+        },
+        {
+          "kanji": "欠",
+          "pdf_page": 93
+        },
+        {
+          "kanji": "席",
+          "pdf_page": 93
+        },
+        {
+          "kanji": "由",
+          "pdf_page": 93
+        },
+        {
+          "kanji": "訳",
+          "pdf_page": 93
+        },
+        {
+          "kanji": "例",
+          "pdf_page": 94
+        },
+        {
+          "kanji": "易",
+          "pdf_page": 94
+        },
+        {
+          "kanji": "解",
+          "pdf_page": 94
+        },
+        {
+          "kanji": "説",
+          "pdf_page": 94
+        },
+        {
+          "kanji": "覚",
+          "pdf_page": 95
+        },
+        {
+          "kanji": "忘",
+          "pdf_page": 95
+        },
+        {
+          "kanji": "努",
+          "pdf_page": 95
+        },
+        {
+          "kanji": "続",
+          "pdf_page": 95
+        },
+        {
+          "kanji": "要",
+          "pdf_page": 96
+        },
+        {
+          "kanji": "復",
+          "pdf_page": 96
+        },
+        {
+          "kanji": "補",
+          "pdf_page": 96
+        },
+        {
+          "kanji": "効",
+          "pdf_page": 96
+        }
+      ]
+    },
+    "13": {
+      "title_vi": "Thiên nhiên và địa lý",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "種",
+          "pdf_page": 98
+        },
+        {
+          "kanji": "類",
+          "pdf_page": 98
+        },
+        {
+          "kanji": "存",
+          "pdf_page": 98
+        },
+        {
+          "kanji": "在",
+          "pdf_page": 98
+        },
+        {
+          "kanji": "陽",
+          "pdf_page": 99
+        },
+        {
+          "kanji": "巨",
+          "pdf_page": 99
+        },
+        {
+          "kanji": "氷",
+          "pdf_page": 99
+        },
+        {
+          "kanji": "河",
+          "pdf_page": 99
+        },
+        {
+          "kanji": "季",
+          "pdf_page": 100
+        },
+        {
+          "kanji": "候",
+          "pdf_page": 100
+        },
+        {
+          "kanji": "暖",
+          "pdf_page": 100
+        },
+        {
+          "kanji": "流",
+          "pdf_page": 100
+        },
+        {
+          "kanji": "形",
+          "pdf_page": 101
+        },
+        {
+          "kanji": "底",
+          "pdf_page": 101
+        },
+        {
+          "kanji": "深",
+          "pdf_page": 101
+        },
+        {
+          "kanji": "浅",
+          "pdf_page": 101
+        },
+        {
+          "kanji": "島",
+          "pdf_page": 102
+        },
+        {
+          "kanji": "陸",
+          "pdf_page": 102
+        },
+        {
+          "kanji": "岸",
+          "pdf_page": 102
+        },
+        {
+          "kanji": "坂",
+          "pdf_page": 102
+        }
+      ]
+    },
+    "14": {
+      "title_vi": "Du lịch",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "準",
+          "pdf_page": 108
+        },
+        {
+          "kanji": "備",
+          "pdf_page": 108
+        },
+        {
+          "kanji": "迎",
+          "pdf_page": 108
+        },
+        {
+          "kanji": "変",
+          "pdf_page": 108
+        },
+        {
+          "kanji": "飛",
+          "pdf_page": 109
+        },
+        {
+          "kanji": "移",
+          "pdf_page": 109
+        },
+        {
+          "kanji": "登",
+          "pdf_page": 109
+        },
+        {
+          "kanji": "泊",
+          "pdf_page": 109
+        },
+        {
+          "kanji": "団",
+          "pdf_page": 110
+        },
+        {
+          "kanji": "程",
+          "pdf_page": 110
+        },
+        {
+          "kanji": "欧",
+          "pdf_page": 110
+        },
+        {
+          "kanji": "州",
+          "pdf_page": 110
+        },
+        {
+          "kanji": "観",
+          "pdf_page": 111
+        },
+        {
+          "kanji": "舟",
+          "pdf_page": 111
+        },
+        {
+          "kanji": "芸",
+          "pdf_page": 111
+        },
+        {
+          "kanji": "演",
+          "pdf_page": 111
+        },
+        {
+          "kanji": "仏",
+          "pdf_page": 112
+        },
+        {
+          "kanji": "神",
+          "pdf_page": 112
+        },
+        {
+          "kanji": "祭",
+          "pdf_page": 112
+        },
+        {
+          "kanji": "絵",
+          "pdf_page": 112
+        }
+      ]
+    },
+    "15": {
+      "title_vi": "Giao thông",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "角",
+          "pdf_page": 114
+        },
+        {
+          "kanji": "曲",
+          "pdf_page": 114
+        },
+        {
+          "kanji": "折",
+          "pdf_page": 114
+        },
+        {
+          "kanji": "路",
+          "pdf_page": 114
+        },
+        {
+          "kanji": "追",
+          "pdf_page": 115
+        },
+        {
+          "kanji": "突",
+          "pdf_page": 115
+        },
+        {
+          "kanji": "転",
+          "pdf_page": 115
+        },
+        {
+          "kanji": "倒",
+          "pdf_page": 115
+        },
+        {
+          "kanji": "位",
+          "pdf_page": 116
+        },
+        {
+          "kanji": "置",
+          "pdf_page": 116
+        },
+        {
+          "kanji": "横",
+          "pdf_page": 116
+        },
+        {
+          "kanji": "央",
+          "pdf_page": 116
+        },
+        {
+          "kanji": "直",
+          "pdf_page": 117
+        },
+        {
+          "kanji": "線",
+          "pdf_page": 117
+        },
+        {
+          "kanji": "逆",
+          "pdf_page": 117
+        },
+        {
+          "kanji": "側",
+          "pdf_page": 117
+        },
+        {
+          "kanji": "注",
+          "pdf_page": 118
+        },
+        {
+          "kanji": "意",
+          "pdf_page": 118
+        },
+        {
+          "kanji": "橋",
+          "pdf_page": 118
+        },
+        {
+          "kanji": "進",
+          "pdf_page": 118
+        }
+      ]
+    },
+    "16": {
+      "title_vi": "Công việc",
+      "kanji_count": 19,
+      "characters": [
+        {
+          "kanji": "仕",
+          "pdf_page": 124
+        },
+        {
+          "kanji": "職",
+          "pdf_page": 124
+        },
+        {
+          "kanji": "求",
+          "pdf_page": 124
+        },
+        {
+          "kanji": "探",
+          "pdf_page": 124
+        },
+        {
+          "kanji": "常",
+          "pdf_page": 125
+        },
+        {
+          "kanji": "識",
+          "pdf_page": 125
+        },
+        {
+          "kanji": "失",
+          "pdf_page": 125
+        },
+        {
+          "kanji": "礼",
+          "pdf_page": 125
+        },
+        {
+          "kanji": "労",
+          "pdf_page": 126
+        },
+        {
+          "kanji": "員",
+          "pdf_page": 126
+        },
+        {
+          "kanji": "官",
+          "pdf_page": 126
+        },
+        {
+          "kanji": "局",
+          "pdf_page": 126
+        },
+        {
+          "kanji": "辞",
+          "pdf_page": 127
+        },
+        {
+          "kanji": "退",
+          "pdf_page": 127
+        },
+        {
+          "kanji": "積",
+          "pdf_page": 127
+        },
+        {
+          "kanji": "給",
+          "pdf_page": 127
+        },
+        {
+          "kanji": "収",
+          "pdf_page": 128
+        },
+        {
+          "kanji": "支",
+          "pdf_page": 128
+        },
+        {
+          "kanji": "厚",
+          "pdf_page": 128
+        }
+      ]
+    },
+    "17": {
+      "title_vi": "Hội họp",
+      "kanji_count": 20,
+      "characters": [
+        {
+          "kanji": "議",
+          "pdf_page": 130
+        },
+        {
+          "kanji": "賛",
+          "pdf_page": 130
+        },
+        {
+          "kanji": "反",
+          "pdf_page": 130
+        },
+        {
+          "kanji": "対",
+          "pdf_page": 130
+        },
+        {
+          "kanji": "肯",
+          "pdf_page": 131
+        },
+        {
+          "kanji": "否",
+          "pdf_page": 131
+        },
+        {
+          "kanji": "保",
+          "pdf_page": 131
+        },
+        {
+          "kanji": "留",
+          "pdf_page": 131
+        },
+        {
+          "kanji": "判",
+          "pdf_page": 132
+        },
+        {
+          "kanji": "断",
+          "pdf_page": 132
+        },
+        {
+          "kanji": "確",
+          "pdf_page": 132
+        },
+        {
+          "kanji": "認",
+          "pdf_page": 132
+        },
+        {
+          "kanji": "報",
+          "pdf_page": 133
+        },
+        {
+          "kanji": "告",
+          "pdf_page": 133
+        },
+        {
+          "kanji": "連",
+          "pdf_page": 133
+        },
+        {
+          "kanji": "絡",
+          "pdf_page": 133
+        },
+        {
+          "kanji": "相",
+          "pdf_page": 134
+        },
+        {
+          "kanji": "談",
+          "pdf_page": 134
+        },
+        {
+          "kanji": "指",
+          "pdf_page": 134
+        },
+        {
+          "kanji": "示",
+          "pdf_page": 134
+        }
+      ]
+    },
+    "18": {
+      "title_vi": "Công ty",
+      "kanji_count": 14,
+      "characters": [
+        {
+          "kanji": "最",
+          "pdf_page": 140
+        },
+        {
+          "kanji": "副",
+          "pdf_page": 140
+        },
+        {
+          "kanji": "管",
+          "pdf_page": 140
+        },
+        {
+          "kanji": "者",
+          "pdf_page": 140
+        },
+        {
+          "kanji": "現",
+          "pdf_page": 141
+        },
+        {
+          "kanji": "旧",
+          "pdf_page": 141
+        },
+        {
+          "kanji": "昔",
+          "pdf_page": 141
+        },
+        {
+          "kanji": "次",
+          "pdf_page": 141
+        },
+        {
+          "kanji": "億",
+          "pdf_page": 142
+        },
+        {
+          "kanji": "兆",
+          "pdf_page": 142
+        },
+        {
+          "kanji": "費",
+          "pdf_page": 142
+        },
+        {
+          "kanji": "算",
+          "pdf_page": 142
+        },
+        {
+          "kanji": "供",
+          "pdf_page": 143
+        },
+        {
+          "kanji": "税",
+          "pdf_page": 143
+        }
+      ]
+    },
+    "19": {
+      "title_vi": "Công nghiệp và kinh tế",
+      "kanji_count": 18,
+      "characters": [
+        {
+          "kanji": "産",
+          "pdf_page": 146
+        },
+        {
+          "kanji": "農",
+          "pdf_page": 146
+        },
+        {
+          "kanji": "貿",
+          "pdf_page": 146
+        },
+        {
+          "kanji": "商",
+          "pdf_page": 146
+        },
+        {
+          "kanji": "機",
+          "pdf_page": 147
+        },
+        {
+          "kanji": "械",
+          "pdf_page": 147
+        },
+        {
+          "kanji": "危",
+          "pdf_page": 147
+        },
+        {
+          "kanji": "険",
+          "pdf_page": 147
+        },
+        {
+          "kanji": "技",
+          "pdf_page": 148
+        },
+        {
+          "kanji": "術",
+          "pdf_page": 148
+        },
+        {
+          "kanji": "編",
+          "pdf_page": 148
+        },
+        {
+          "kanji": "綿",
+          "pdf_page": 148
+        },
+        {
+          "kanji": "布",
+          "pdf_page": 149
+        },
+        {
+          "kanji": "皮",
+          "pdf_page": 149
+        },
+        {
+          "kanji": "貧",
+          "pdf_page": 149
+        },
+        {
+          "kanji": "富",
+          "pdf_page": 149
+        },
+        {
+          "kanji": "豊",
+          "pdf_page": 150
+        },
+        {
+          "kanji": "等",
+          "pdf_page": 150
+        }
+      ]
+    },
+    "20": {
+      "title_vi": "Pháp luật",
+      "kanji_count": 17,
+      "characters": [
+        {
+          "kanji": "法",
+          "pdf_page": 152
+        },
+        {
+          "kanji": "律",
+          "pdf_page": 152
+        },
+        {
+          "kanji": "規",
+          "pdf_page": 152
+        },
+        {
+          "kanji": "則",
+          "pdf_page": 152
+        },
+        {
+          "kanji": "禁",
+          "pdf_page": 153
+        },
+        {
+          "kanji": "許",
+          "pdf_page": 153
+        },
+        {
+          "kanji": "件",
+          "pdf_page": 153
+        },
+        {
+          "kanji": "犯",
+          "pdf_page": 153
+        },
+        {
+          "kanji": "罪",
+          "pdf_page": 154
+        },
+        {
+          "kanji": "容",
+          "pdf_page": 154
+        },
+        {
+          "kanji": "疑",
+          "pdf_page": 154
+        },
+        {
+          "kanji": "争",
+          "pdf_page": 154
+        },
+        {
+          "kanji": "敗",
+          "pdf_page": 155
+        },
+        {
+          "kanji": "兵",
+          "pdf_page": 155
+        },
+        {
+          "kanji": "軍",
+          "pdf_page": 155
+        },
+        {
+          "kanji": "役",
+          "pdf_page": 155
+        },
+        {
+          "kanji": "臣",
+          "pdf_page": 156
+        }
+      ]
+    }
+  }
+}

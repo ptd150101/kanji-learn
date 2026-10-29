@@ -71,3 +71,49 @@ test("N3 is included in combined dataset and matches self-contained quiz HTML", 
   assert.match(html, /data-level="N3" type="button">N3<\/button>/);
   assert.doesNotMatch(html, /data-level="N3"[^>]+disabled/u);
 });
+
+test("N3 verb-pair examples only use the Kanji taught in their chapter", () => {
+  const pairData = readJson("../data/n3/verb_pairs.json");
+  const kanjiIn = word => [...word].filter(char => /\p{Script=Han}/u.test(char));
+  assert.equal(pairData.total_pairs, pairData.pairs.length);
+  const linkedEntries = n3.vocab.filter(entry => entry.paired_with);
+  assert.equal(linkedEntries.length, pairData.pairs.length * 2);
+
+  for (const pair of pairData.pairs) {
+    const featuredKanji = new Set(
+      coverage.lesson_pages[pair.lesson].flatMap(page => page.kanji)
+    );
+    for (const [verb, counterpart, verbType] of [
+      [pair.auto, pair.transitive, "intransitive"],
+      [pair.transitive, pair.auto, "transitive"]
+    ]) {
+      const characters = kanjiIn(verb.word);
+      assert.ok(characters.length > 0, `Missing Kanji in pair ${verb.word}`);
+      for (const char of characters) {
+        assert.ok(featuredKanji.has(char),
+          `Unfamiliar Kanji ${char} in chapter ${pair.lesson} pair ${verb.word}`);
+      }
+      const entry = n3.vocab.find(item =>
+        item.lesson === pair.lesson &&
+        item.word === verb.word &&
+        item.reading === verb.reading
+      );
+      assert.ok(entry, `Missing verb-pair vocabulary: ${verb.word}`);
+      assert.equal(entry.verb_type, verbType);
+      assert.deepEqual(entry.paired_with, {
+        word: counterpart.word,
+        reading: counterpart.reading
+      });
+    }
+  }
+
+  for (const removed of pairData.removed_out_of_book_pairs) {
+    for (const word of [removed.auto, removed.transitive]) {
+      assert.ok(!n3.vocab.some(entry =>
+        entry.lesson === removed.lesson &&
+        entry.word === word &&
+        entry.paired_with
+      ), `Out-of-chapter Kanji pair was restored: ${word}`);
+    }
+  }
+});

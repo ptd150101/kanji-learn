@@ -104,3 +104,16 @@ test("mọi cặp động từ N3 đều có đủ hai từ, đúng loại và �
   assert.match(html, /function verbPairFeedback\(item\)/);
   assert.match(html, /const pairHtml = verbPairFeedback\(item\)/);
 });
+
+test("chỉ hiện cặp cùng chữ Kanji, kể cả khi bản quiz cũ còn trong máy", () => {
+  const note = n3.vocab.find(v => v.lesson === 1 && v.word === "干る")?.usage_note;
+  assert.ok(note);
+  assert.doesNotMatch(note, /乾/);
+  assert.match(html, /const sameKanjiPair = item\.paired_with/);
+  assert.match(html, /kanjiIn\(item\.word\) === kanjiIn\(item\.paired_with\.word\)/);
+  for (const v of n3.vocab.filter(v => v.paired_with)) {
+    const k = word => [...word].filter(ch => /[\u3400-\u9fff]/u.test(ch)).join("");
+    assert.ok(k(v.word), "Thiếu Kanji: " + v.word);
+    assert.equal(k(v.word), k(v.paired_with.word), "Khác Kanji: " + v.word);
+  }
+});

@@ -1,13 +1,12 @@
 # Kanji N5 / N4 / N3 Quiz
 
-## Làm đề JLPT
+## Luyện đề JLPT
 
-- Mở **Làm đề JLPT** từ thanh điều hướng ở màn hình ôn từ vựng. Đây là khu vực riêng, dữ liệu ôn tập hiện tại không bị thay đổi.
-- Tạo bộ đề và phân câu hỏi thành 4 kỹ năng: từ vựng, chữ Hán, đọc hiểu, nghe hiểu. Có thể làm toàn bộ bộ đề hoặc luyện riêng một kỹ năng.
-- Mỗi câu có 2–6 lựa chọn, đáp án đúng và lời giải. Sau khi nộp bài, ứng dụng chấm điểm, ghi thời gian đã làm và hiển thị chữa đáp án từng câu.
-- Thêm đề thủ công hoặc nhập/xuất JSON theo cấu trúc mẫu ngay trên trang `exam.html`. Dữ liệu được lưu cục bộ bằng localStorage của trình duyệt.
-- PDF có thể mở trong trang làm tài liệu tham khảo khi nhập câu hỏi. Ứng dụng chưa tự trích câu hỏi/đáp án từ PDF; đặc biệt PDF scan cần OCR và đáp án cần được kiểm tra thủ công. Tệp PDF không được tải lên máy chủ.
-- Câu nghe hiểu có thể đính kèm một tệp audio vào câu hỏi khi tạo thủ công. File JSON có trường `audio` dạng data URL nếu cần chuyển một câu nghe sang trình duyệt khác.
+- Hai mục **Ôn tập từ vựng** và **Luyện đề JLPT** nằm song song trên thanh điều hướng.
+- Trang luyện đề có sẵn hai đề mô phỏng N4 (20 câu) và N5 (16 câu), chia thành từ vựng, chữ Hán, đọc hiểu và nghe hiểu. Có thể làm cả đề hoặc chọn riêng từng phần.
+- Khi làm có đồng hồ đếm giờ; nộp bài hiện điểm, thời gian và lời giải từng câu. Phần nghe đọc bằng giọng tiếng Nhật của thiết bị, lời thoại chỉ hiện khi chữa bài.
+- Đáp án được xáo trộn mỗi lượt. Kết quả gần nhất lưu cục bộ trong trình duyệt.
+- Câu hỏi là nội dung luyện tập tự biên soạn theo dạng bài JLPT, không phải đề thi chính thức. Dạng bài đối chiếu từ https://www.jlpt.jp/e/samples/sampleindex.html.
 
 ## Từ vựng N3 – Mimi kara Oboeru
 

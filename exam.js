@@ -25,27 +25,27 @@ function renderHome(){
     const card=document.createElement('article');card.className='card';
     const title=document.createElement('h3');title.textContent=exam.title;
     const desc=document.createElement('p');desc.className='muted';desc.textContent=exam.questions.length+' câu · 5 phần · làm và chữa trên web';
-    const chips=document.createElement('div');chips.className='chips';
-    SKILLS.forEach(skill=>{const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;const chip=document.createElement('span');chip.className='chip';chip.textContent=SKILL_NAMES[skill]+' '+count;chips.append(chip)});
+    const chips=document.createElement('div');chips.className='skill-checks';chips.setAttribute('aria-label','Chọn kỹ năng để làm');
+    SKILLS.forEach(skill=>{const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;const chip=document.createElement('label');chip.className='skill-check';const input=document.createElement('input');input.type='checkbox';input.value=skill;input.checked=true;chip.append(input,document.createTextNode(SKILL_NAMES[skill]+' · '+count));chips.append(chip)});
     const actions=document.createElement('div');actions.className='actions';
-    const all=document.createElement('button');all.className='primary';all.textContent='Làm toàn bộ đề';all.onclick=()=>start(exam,null);actions.append(all);
-    SKILLS.forEach(skill=>{
-      const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;
-      const b=document.createElement('button');b.textContent=SKILL_NAMES[skill]+' ('+count+')';b.onclick=()=>start(exam,skill);actions.append(b);
-    });
+    const all=document.createElement('button');all.className='primary';all.textContent='Bắt đầu làm bài →';
+    all.onclick=()=>start(exam,[...chips.querySelectorAll('input:checked')].map(input=>input.value));actions.append(all);
+    chips.addEventListener('change',()=>{const selected=[...chips.querySelectorAll('input:checked')];all.disabled=!selected.length;all.textContent=selected.length===SKILLS.length?'Bắt đầu toàn bộ đề →':'Làm '+selected.length+' kỹ năng đã chọn →'});
+    all.textContent='Bắt đầu toàn bộ đề →';
     const previous=lastResult(exam.id,null);
     card.append(title,desc,chips,actions);
     if(previous){const p=document.createElement('p');p.className='muted';p.textContent='Lần làm gần nhất: '+previous.score+'/'+previous.total+' · '+time(previous.elapsed);card.append(p)}
     $('cards').append(card);
   });
 }
-function start(exam,skill){
-  const questions=exam.questions.filter(q=>!skill||q.skill===skill).map(shuffle);
+function start(exam,selectedSkills){
+  const questions=exam.questions.filter(q=>selectedSkills.includes(q.skill)).map(shuffle);
   if(!questions.length)return;
-  const sections=(skill?[skill]:SKILLS).filter(name=>questions.some(q=>q.skill===name));
+  const sections=SKILLS.filter(name=>selectedSkills.includes(name)&&questions.some(q=>q.skill===name));
+  const skill=sections.length===SKILLS.length?null:sections.join('+');
   run={exam,skill,questions,sections,answers:Array(questions.length).fill(null),sectionIndex:0,started:Date.now()};
   $('home').classList.add('hidden');$('results').classList.add('hidden');$('runner').classList.remove('hidden');
-  $('runTitle').textContent=exam.title;$('runInfo').textContent=skill?'Luyện riêng · '+SKILL_NAMES[skill]:'Toàn bộ '+SKILLS.length+' phần';
+  $('runTitle').textContent=exam.title;$('runInfo').textContent=sections.map(name=>SKILL_NAMES[name]).join(' · ');
   clearInterval(tick);$('timer').textContent='00:00';tick=setInterval(()=>$('timer').textContent=time(Date.now()-run.started),500);
   renderSection();window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -67,6 +67,14 @@ function updateProgress(){
     const name=run.sections[index],indexes=run.questions.flatMap((q,i)=>q.skill===name?[i]:[]);
     button.textContent=SKILL_NAMES[name]+' · '+indexes.filter(i=>run.answers[i]!==null).length+'/'+indexes.length;
   });
+}
+function questionStem(q){
+  const node=document.createElement('div');node.className='question';
+  if(q.kanjiSentence){
+    const [before,target,after]=q.kanjiSentence.split(/[【】]/);
+    node.append(document.createTextNode(before));const u=document.createElement('u');u.textContent=target;node.append(u,document.createTextNode(after));
+  }else node.textContent=q.prompt;
+  return node;
 }
 function renderSection(){
   stopSpeech();
@@ -90,7 +98,8 @@ function renderSection(){
       const b=document.createElement('button');b.type='button';b.textContent='▶ Nghe đoạn hội thoại';b.onclick=()=>playAudio(q.audio);block.append(b);
       const hint=document.createElement('p');hint.className='audio-note';hint.textContent='Bấm để nghe lại. Lời thoại sẽ hiện khi chữa bài.';block.append(hint);
     }
-    const title=document.createElement('div');title.className='question';title.textContent=q.prompt;block.append(title);
+    if(q.kanjiSentence){const guide=document.createElement('p');guide.className='muted';guide.textContent=q.kanjiWriting?'下線のことばを漢字で書くと、どれですか。':'下線のことばの読み方はどれですか。';block.append(guide)}
+    block.append(questionStem(q));
     const choices=document.createElement('div');choices.className='choices';
     q.options.forEach((option,n)=>{
       const label=document.createElement('label');label.className='choice';
@@ -129,7 +138,7 @@ $('showReview').onclick=()=>{
     article.append(title);
     if(q.passage){const p=document.createElement('div');p.className='passage';p.textContent=q.passage;article.append(p)}
     if(q.audio){const p=document.createElement('div');p.className='passage';p.textContent='Lời thoại: '+q.audio;article.append(p)}
-    const prompt=document.createElement('p');prompt.textContent=q.prompt;article.append(prompt);
+    article.append(questionStem(q));
     const answer=document.createElement('p');answer.className=run.answers[i]===q.answer?'good':'bad';
     answer.textContent='Bạn chọn: '+(run.answers[i]===null?'Chưa trả lời':String.fromCharCode(65+run.answers[i])+'. '+q.options[run.answers[i]]);
     const correct=document.createElement('p');correct.className='good';correct.textContent='Đáp án đúng: '+String.fromCharCode(65+q.answer)+'. '+q.options[q.answer];

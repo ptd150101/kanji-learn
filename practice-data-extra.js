@@ -61,3 +61,24 @@ PRACTICE_EXAMS.push(
     {skill:'listening',audio:'女：この バスは えきに いきますか。\n男：はい、えきに いきます。',prompt:'バスは どこへ いきますか。',options:['えき','びょういん','がっこう','としょかん'],answer:0,explanation:'Xe buýt đi đến ga: 駅に行きます.'}
   ]}
 );
+// Câu ngữ cảnh tự biên soạn, 【 】 là phần được gạch chân trên giao diện như dạng 問題 chữ Hán.
+const KANJI_SENTENCES={
+  N4:[
+    '友達と土曜日に会う【約束】をしました。','電車に遅れそうなので【急いで】ください。',
+    '駅に【荷物】を忘れてしまいました。','熱があるので【病院】へ行きます。',
+    '日本で働いた【けいけん】があります。','旅行の【準備】をしています。',
+    'ここに名前と【住所】を書いてください。','電車は八時に【しゅっぱつ】します。',
+    '父は大きな【工場】で働いています。'
+  ],
+  N5:[
+    'あした【学校】へ いきます。','わたしは【毎日】しんぶんを よみます。',
+    'あの【大きい】いえは だれの いえですか。','コップに【みず】を いれて ください。',
+    'あの ひとは わたしの【先生】です。','【来週】ともだちに あいます。',
+    '日曜日に【やま】へ いきます。','この かばんは【小さい】です。'
+  ]
+};
+for(const level of Object.keys(KANJI_SENTENCES)){
+  const kanji=PRACTICE_EXAMS.filter(exam=>exam.level===level).flatMap(exam=>exam.questions.filter(q=>q.skill==='kanji'));
+  if(kanji.length!==KANJI_SENTENCES[level].length)throw Error('Kanji sentence count mismatch: '+level);
+  kanji.forEach((q,i)=>{q.kanjiSentence=KANJI_SENTENCES[level][i];q.kanjiWriting=/漢字で|かんじで/.test(q.prompt)});
+}

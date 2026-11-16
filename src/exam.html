@@ -41,17 +41,18 @@ button{transition:background .16s,border-color .16s,transform .16s}button:not(:d
 <nav class="nav" aria-label="Khu học tập"><a href="vocabulary.html">Ôn tập từ vựng</a><a class="active" aria-current="page" href="exam.html">Luyện đề JLPT</a></nav>
 <section id="home">
   <div class="panel"><h2>Chọn đề luyện</h2><p class="muted">Chạm vào một đề để chọn kỹ năng và bắt đầu. Theo dõi số câu đã làm, thời gian còn lại và xem lời giải sau khi nộp.</p><div class="filter-label">Lọc theo trình độ</div><div id="levels" class="filters" aria-label="Cấp độ"></div><div id="cards" class="cards"></div></div>
-  <p class="source">Âm thanh phần nghe có sẵn cho từng câu, dùng giọng VOICEVOX:ずんだもん. Nội dung đang có là câu hỏi mô phỏng, không phải đề JLPT chính thức. Có thể bổ sung đề từ PDF sau khi xử lý nội dung và quyền sử dụng.</p>
+  <p class="source">Đề có nhãn “Trích đề chính thức 2018” lấy từ bộ <a href="https://www.jlpt.jp/e/samples/sampleindex.html" target="_blank" rel="noopener noreferrer">JLPT Official Practice Workbook</a>; các đề còn lại là câu hỏi mô phỏng. Phần nghe hiện dùng audio mô phỏng thu sẵn, không phải audio của đề chính thức. Source: Official Worldwide Japanese-Language Proficiency Test Website (https://www.jlpt.jp/).</p>
 </section>
 <dialog id="examDialog" class="exam-dialog" aria-labelledby="dialogTitle" aria-describedby="dialogSummary">
   <div class="dialog-head"><div><span class="eyebrow">CHUẨN BỊ LÀM BÀI</span><h2 id="dialogTitle"></h2></div><button type="button" id="dialogClose" class="dialog-close" aria-label="Đóng">×</button></div>
   <p id="dialogSummary" class="muted"></p>
+  <p id="dialogSource" class="source hidden"></p>
   <div id="dialogSkills" class="skill-checks" aria-label="Kỹ năng của đề"></div>
   <div class="dialog-footer"><p id="dialogCount" class="muted"></p><button type="button" class="primary" id="dialogStart">Bắt đầu làm bài →</button></div>
 </dialog>
 <section id="runner" class="hidden">
   <div class="exam-layout">
-    <div class="panel exam-main"><div class="exam-main-head"><span class="eyebrow">ĐANG LÀM BÀI</span><h2 id="runTitle"></h2><div class="muted" id="runInfo"></div></div><nav id="skillTabs" class="skill-tabs" aria-label="Chuyển kỹ năng"></nav><h2 id="sectionHeading" class="section-heading"></h2><div id="content"></div><div class="actions"><button id="prev">← Kỹ năng trước</button><button id="next">Kỹ năng tiếp →</button><button class="primary" id="submit">Nộp bài</button><button id="quit">Thoát</button></div></div>
+    <div class="panel exam-main"><div class="exam-main-head"><span class="eyebrow">ĐANG LÀM BÀI</span><h2 id="runTitle"></h2><div class="muted" id="runInfo"></div><a id="runSource" class="source hidden" href="https://www.jlpt.jp/e/samples/sampleindex.html" target="_blank" rel="noopener noreferrer">Nguồn: JLPT Official Practice Workbook 2018</a></div><nav id="skillTabs" class="skill-tabs" aria-label="Chuyển kỹ năng"></nav><h2 id="sectionHeading" class="section-heading"></h2><div id="content"></div><div class="actions"><button id="prev">← Kỹ năng trước</button><button id="next">Kỹ năng tiếp →</button><button class="primary" id="submit">Nộp bài</button><button id="quit">Thoát</button></div></div>
     <aside class="panel exam-sidebar" aria-label="Thời gian và câu hỏi"><div class="sidebar-top"><span class="eyebrow">THỜI GIAN CÒN LẠI</span><div id="timer" class="timer" role="timer" aria-label="Thời gian còn lại">00:00</div><div class="muted" id="timeBudget"></div></div><div class="progress"><span id="progressBar"></span></div><div id="counter" class="sidebar-counter"></div><div class="legend"><span><i class="legend-done"></i> Đã làm</span><span><i></i> Chưa làm</span></div><nav id="questionNav" class="question-nav" aria-label="Chuyển đến câu hỏi"></nav></aside>
   </div>
 </section>
@@ -59,4 +60,4 @@ button{transition:background .16s,border-color .16s,transform .16s}button:not(:d
   <div class="panel"><h2>Kết quả</h2><div class="score" id="score"></div><p id="duration" class="muted"></p><div class="actions"><button class="primary" id="showReview">Chữa đáp án</button><button id="backHome">Chọn đề khác</button></div></div>
   <div id="review" class="panel hidden"></div>
 </section>
-</main><script src="practice-data.js"></script><script src="practice-data-extra.js"></script><script src="exam.js"></script></body></html>
+</main><script src="practice-data.js"></script><script src="practice-data-extra.js"></script><script src="official-data-2018.js"></script><script src="exam.js"></script></body></html>

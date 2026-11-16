@@ -31,7 +31,7 @@ function renderHome(){
     const card=document.createElement('button');card.type='button';card.className='card exam-card';
     card.setAttribute('aria-label','Chọn '+exam.title+', '+exam.questions.length+' câu');
     card.onclick=()=>openExamDialog(exam);
-    const level=document.createElement('span');level.className='exam-level';level.textContent=exam.level+' · ĐỀ LUYỆN';
+    const level=document.createElement('span');level.className='exam-level';level.textContent=exam.level+' · '+(exam.official?'TRÍCH ĐỀ THẬT 2018':'ĐỀ LUYỆN');
     const title=document.createElement('span');title.className='exam-card-title';title.textContent=exam.title;
     const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=exam.questions.length+' câu · '+time(durationFor(exam.questions,exam.level)); 
     const affordance=document.createElement('span');affordance.className='exam-card-arrow';affordance.setAttribute('aria-hidden','true');affordance.textContent='↗';
@@ -45,6 +45,8 @@ let selectedExam=null;
 function openExamDialog(exam){
   selectedExam=exam;$('dialogTitle').textContent=exam.title;
   $('dialogSummary').textContent=exam.questions.length+' câu trong '+SKILLS.filter(skill=>exam.questions.some(q=>q.skill===skill)).length+' phần';
+  $('dialogSource').textContent=exam.official?exam.source+' · Trích từ Workbook 2018; chưa gồm phần nghe.':'';
+  $('dialogSource').classList.toggle('hidden',!exam.official);
   const choices=$('dialogSkills');choices.replaceChildren();
   SKILLS.forEach(skill=>{
     const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;
@@ -79,6 +81,7 @@ function start(exam,selectedSkills){
   run={exam,skill,questions,sections,answers:Array(questions.length).fill(null),sectionIndex:0,currentQuestion:0,started:Date.now(),duration};
   $('home').classList.add('hidden');$('results').classList.add('hidden');$('runner').classList.remove('hidden');
   $('runTitle').textContent=exam.title;$('runInfo').textContent=sections.map(name=>SKILL_NAMES[name]).join(' · ');
+  $('runSource').classList.toggle('hidden',!exam.official);
   clearInterval(tick);$('timeBudget').textContent='Tổng thời gian: '+time(duration);
   updateTimer();tick=setInterval(updateTimer,500);
   renderSection();window.scrollTo({top:0,behavior:'smooth'});
@@ -124,7 +127,7 @@ function renderSection(){
   let previousPassage=null;
   items.forEach(({q,i},localIndex)=>{
     const block=document.createElement('article');block.className='question-block';block.id='exam-q-'+i;
-    const number=document.createElement('div');number.className='question-number';number.textContent='Câu '+(localIndex+1);
+    const number=document.createElement('div');number.className='question-number';number.textContent=(run.exam.official&&q.mondai?'問題 '+q.mondai+' · ':'')+'Câu '+(localIndex+1);
     block.append(number);
     if(q.passage&&q.passage!==previousPassage){const p=document.createElement('div');p.className='passage';p.textContent=q.passage;block.append(p)}
     previousPassage=q.passage||null;

@@ -21,8 +21,11 @@ button{transition:background .16s,border-color .16s,transform .16s}button:not(:d
 .filters{margin:9px 0 22px}.filters button{min-width:76px;border-radius:999px}.filters .active-filter{background:#226a68;color:white;border-color:#58cfc3}.filter-label{color:var(--muted);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-top:20px}
 .skill-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.skill-check{display:flex;align-items:center;gap:9px;padding:11px;background:#1c2937;border:1px solid #334354;border-radius:10px;cursor:pointer;font-weight:600}.skill-check:has(input:checked){background:#193b3c;border-color:#4aafa6}.skill-check input{accent-color:#5dd5c9;width:17px;height:17px;margin:0}.skill-check:last-child:nth-child(odd){grid-column:1/-1}
 .question-block{background:#101b28;border:1px solid #304153;border-radius:14px;padding:18px;margin:13px 0}.question-block:first-child{border-top:1px solid #304153}.question-block .question{font-family:system-ui,"Noto Sans JP",sans-serif;font-size:clamp(20px,3vw,25px);line-height:1.9}.question u{text-decoration-thickness:3px;text-underline-offset:5px;text-decoration-color:#55d8c9}.choice{background:#1b2836}.choice:hover{border-color:#61c7bf}.section-heading{margin-top:26px}.skill-tabs button{border-radius:999px}
+.card .chips{margin:18px 0 5px}.card .chip{background:#1c2a38;color:#b8c9d6}.card .actions{margin-top:auto}.card{display:flex;flex-direction:column}.card .primary{margin-top:0}
+.exam-dialog{width:min(520px,calc(100% - 24px));max-height:min(90vh,760px);overflow:auto;border:1px solid #457875;border-radius:20px;background:linear-gradient(150deg,#1d3040,#111c2a);color:var(--text);padding:26px;box-shadow:0 30px 90px #03090bcc}.exam-dialog::backdrop{background:#020910ba;backdrop-filter:blur(5px)}.dialog-head{display:flex;align-items:start;justify-content:space-between;gap:16px}.dialog-head h2{font-size:26px;margin:4px 0}.dialog-close{min-width:42px;min-height:42px;padding:0;font-size:22px}.exam-dialog .skill-checks{margin:20px 0}.dialog-footer{border-top:1px solid var(--line);padding-top:18px}.dialog-footer .primary{width:100%;margin-top:14px}.dialog-footer .muted{margin:0}
 @media(max-width:550px){.app{padding:14px 12px 38px}.panel,.card{padding:14px}header{align-items:flex-start}.actions button{flex:1}.question{font-size:19px}}
 @media(max-width:550px){.skill-checks{grid-template-columns:1fr}.skill-check:last-child:nth-child(odd){grid-column:auto}.card{padding:18px}.nav a{font-size:13px;padding:10px 4px}.bar{align-items:flex-start}.timer{white-space:nowrap}.question-block{padding:15px}.actions #submit{flex-basis:100%}}
+@media(max-width:550px){.exam-dialog{padding:20px}.exam-dialog .skill-checks{grid-template-columns:1fr}}
 </style>
 </head>
 <body><main class="app">
@@ -32,6 +35,12 @@ button{transition:background .16s,border-color .16s,transform .16s}button:not(:d
   <div class="panel"><h2>Chọn đề luyện</h2><p class="muted">Đề mô phỏng theo dạng bài JLPT, có đáp án và lời giải tiếng Việt. Phần nghe dùng giọng đọc tiếng Nhật của thiết bị.</p><div class="filter-label">Lọc theo trình độ</div><div id="levels" class="filters" aria-label="Cấp độ"></div><div id="cards" class="cards"></div></div>
   <p class="source">Nội dung đang có là câu hỏi mô phỏng, không phải đề JLPT chính thức. Có thể bổ sung đề từ PDF sau khi xử lý nội dung và quyền sử dụng.</p>
 </section>
+<dialog id="examDialog" class="exam-dialog" aria-labelledby="dialogTitle" aria-describedby="dialogSummary">
+  <div class="dialog-head"><div><span class="eyebrow">CHUẨN BỊ LÀM BÀI</span><h2 id="dialogTitle"></h2></div><button type="button" id="dialogClose" class="dialog-close" aria-label="Đóng">×</button></div>
+  <p id="dialogSummary" class="muted"></p><p class="filter-label">Chọn một hoặc nhiều kỹ năng</p>
+  <div id="dialogSkills" class="skill-checks" aria-label="Kỹ năng của đề"></div>
+  <div class="dialog-footer"><p id="dialogCount" class="muted"></p><button type="button" class="primary" id="dialogStart">Bắt đầu làm bài →</button></div>
+</dialog>
 <section id="runner" class="hidden">
   <div class="panel"><div class="bar"><div><strong id="runTitle"></strong><div class="muted" id="runInfo"></div></div><span id="timer" class="timer" aria-label="Thời gian làm bài">00:00</span></div><div class="progress"><span id="progressBar"></span></div><div class="muted" id="counter"></div><nav id="skillTabs" class="skill-tabs" aria-label="Chuyển kỹ năng"></nav><h2 id="sectionHeading" class="section-heading"></h2><div id="content"></div><div class="actions"><button id="prev">← Kỹ năng trước</button><button id="next">Kỹ năng tiếp →</button><button class="primary" id="submit">Nộp bài</button><button id="quit">Thoát</button></div></div>
 </section>

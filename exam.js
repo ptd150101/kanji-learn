@@ -25,19 +25,38 @@ function renderHome(){
     const card=document.createElement('article');card.className='card';
     const title=document.createElement('h3');title.textContent=exam.title;
     const desc=document.createElement('p');desc.className='muted';desc.textContent=exam.questions.length+' câu · 5 phần · làm và chữa trên web';
-    const chips=document.createElement('div');chips.className='skill-checks';chips.setAttribute('aria-label','Chọn kỹ năng để làm');
-    SKILLS.forEach(skill=>{const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;const chip=document.createElement('label');chip.className='skill-check';const input=document.createElement('input');input.type='checkbox';input.value=skill;input.checked=true;chip.append(input,document.createTextNode(SKILL_NAMES[skill]+' · '+count));chips.append(chip)});
+    const chips=document.createElement('div');chips.className='chips';
+    SKILLS.forEach(skill=>{const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;const chip=document.createElement('span');chip.className='chip';chip.textContent=SKILL_NAMES[skill]+' · '+count;chips.append(chip)});
     const actions=document.createElement('div');actions.className='actions';
-    const all=document.createElement('button');all.className='primary';all.textContent='Bắt đầu làm bài →';
-    all.onclick=()=>start(exam,[...chips.querySelectorAll('input:checked')].map(input=>input.value));actions.append(all);
-    chips.addEventListener('change',()=>{const selected=[...chips.querySelectorAll('input:checked')];all.disabled=!selected.length;all.textContent=selected.length===SKILLS.length?'Bắt đầu toàn bộ đề →':'Làm '+selected.length+' kỹ năng đã chọn →'});
-    all.textContent='Bắt đầu toàn bộ đề →';
+    const all=document.createElement('button');all.className='primary';all.textContent='Chọn đề →';all.onclick=()=>openExamDialog(exam);actions.append(all);
     const previous=lastResult(exam.id,null);
     card.append(title,desc,chips,actions);
     if(previous){const p=document.createElement('p');p.className='muted';p.textContent='Lần làm gần nhất: '+previous.score+'/'+previous.total+' · '+time(previous.elapsed);card.append(p)}
     $('cards').append(card);
   });
 }
+let selectedExam=null;
+function openExamDialog(exam){
+  selectedExam=exam;$('dialogTitle').textContent=exam.title;
+  $('dialogSummary').textContent=exam.questions.length+' câu · Chọn kỹ năng muốn làm';
+  const choices=$('dialogSkills');choices.replaceChildren();
+  SKILLS.forEach(skill=>{
+    const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;
+    const label=document.createElement('label');label.className='skill-check';
+    const input=document.createElement('input');input.type='checkbox';input.value=skill;input.checked=true;
+    label.append(input,document.createTextNode(SKILL_NAMES[skill]+' · '+count));choices.append(label);
+  });
+  const update=()=>{const checked=[...choices.querySelectorAll('input:checked')];$('dialogStart').disabled=!checked.length;
+    $('dialogCount').textContent=checked.length+' kỹ năng · '+exam.questions.filter(q=>checked.some(input=>input.value===q.skill)).length+' câu';
+  };
+  choices.onchange=update;update();$('examDialog').showModal();
+}
+$('dialogClose').onclick=()=>$('examDialog').close();
+$('dialogStart').onclick=()=>{
+  const skills=[...$('dialogSkills').querySelectorAll('input:checked')].map(input=>input.value);
+  if(!selectedExam||!skills.length)return;
+  $('examDialog').close();start(selectedExam,skills);
+};
 function start(exam,selectedSkills){
   const questions=exam.questions.filter(q=>selectedSkills.includes(q.skill)).map(shuffle);
   if(!questions.length)return;

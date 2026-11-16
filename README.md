@@ -5,6 +5,7 @@
 - Trang chủ mở **Luyện đề JLPT**; thanh điều hướng cho phép chuyển sang **Ôn tập từ vựng** tại `vocabulary.html`.
 - Bốn đề mô phỏng N4/N5 tự biên soạn có câu hỏi và lựa chọn hiển thị trực tiếp trên web. Có thể làm toàn bộ hoặc riêng phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe hiểu; không cần mở PDF bên ngoài.
 - Các câu cùng kỹ năng hiển thị thành một trang cuộn liên tục. Chỉ chuyển trang khi đổi kỹ năng; đáp án đã chọn vẫn được giữ khi chuyển qua lại.
+- Chọn một đề để mở hộp thoại kỹ năng, tích một hoặc nhiều phần, rồi bấm **Bắt đầu làm bài**.
 - Khi làm có đồng hồ đếm giờ; nộp bài hiện điểm, thời gian và lời giải từng câu. Phần nghe đọc bằng giọng tiếng Nhật của thiết bị, lời thoại chỉ hiện khi chữa bài.
 - Đáp án được xáo trộn mỗi lượt. Kết quả gần nhất lưu cục bộ trong trình duyệt.
 - Đề mô phỏng không phải đề thi thật. Cần xử lý nội dung, đáp án và quyền sử dụng trước khi nhập bộ đề PDF khác vào kho câu hỏi.

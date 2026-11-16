@@ -1,14 +1,5 @@
 # Kanji N5 / N4 / N3 Quiz
 
-## Làm đề JLPT
-
-- Mở **Làm đề JLPT** từ thanh điều hướng ở màn hình ôn từ vựng. Đây là khu vực riêng, dữ liệu ôn tập hiện tại không bị thay đổi.
-- Tạo bộ đề và phân câu hỏi thành 4 kỹ năng: từ vựng, chữ Hán, đọc hiểu, nghe hiểu. Có thể làm toàn bộ bộ đề hoặc luyện riêng một kỹ năng.
-- Mỗi câu có 2–6 lựa chọn, đáp án đúng và lời giải. Sau khi nộp bài, ứng dụng chấm điểm, ghi thời gian đã làm và hiển thị chữa đáp án từng câu.
-- Thêm đề thủ công hoặc nhập/xuất JSON theo cấu trúc mẫu ngay trên trang `exam.html`. Dữ liệu được lưu cục bộ bằng localStorage của trình duyệt.
-- PDF có thể mở trong trang làm tài liệu tham khảo khi nhập câu hỏi. Ứng dụng chưa tự trích câu hỏi/đáp án từ PDF; đặc biệt PDF scan cần OCR và đáp án cần được kiểm tra thủ công. Tệp PDF không được tải lên máy chủ.
-- Câu nghe hiểu có thể đính kèm một tệp audio vào câu hỏi khi tạo thủ công. File JSON có trường `audio` dạng data URL nếu cần chuyển một câu nghe sang trình duyệt khác.
-
 ## Từ vựng N3 – Mimi kara Oboeru
 
 - Chọn **N3 → Từ mới** để ôn **880 từ** theo **12 bài chính, 21 phần chọn riêng**, đúng các khoảng số của sách. Ví dụ **Bài 1 · Danh từ A · phần 1 (1–71)** và **Bài 1 · Danh từ A · phần 2 (72–120)**. Giữ metadata 12 Unit gốc để đối chiếu giáo trình.

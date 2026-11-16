@@ -42,11 +42,12 @@ function renderHome(){
 function start(exam,skill){
   const questions=exam.questions.filter(q=>!skill||q.skill===skill).map(shuffle);
   if(!questions.length)return;
-  run={exam,skill,questions,answers:Array(questions.length).fill(null),index:0,started:Date.now()};
+  const sections=(skill?[skill]:SKILLS).filter(name=>questions.some(q=>q.skill===name));
+  run={exam,skill,questions,sections,answers:Array(questions.length).fill(null),sectionIndex:0,started:Date.now()};
   $('home').classList.add('hidden');$('results').classList.add('hidden');$('runner').classList.remove('hidden');
   $('runTitle').textContent=exam.title;$('runInfo').textContent=skill?'Luyện riêng · '+SKILL_NAMES[skill]:'Toàn bộ '+SKILLS.length+' phần';
   clearInterval(tick);$('timer').textContent='00:00';tick=setInterval(()=>$('timer').textContent=time(Date.now()-run.started),500);
-  renderQuestion();window.scrollTo({top:0,behavior:'smooth'});
+  renderSection();window.scrollTo({top:0,behavior:'smooth'});
 }
 function stopSpeech(){if('speechSynthesis' in window)speechSynthesis.cancel()}
 function playAudio(script){
@@ -58,36 +59,55 @@ function playAudio(script){
   if(voice)utterance.voice=voice;
   speechSynthesis.speak(utterance);
 }
-function renderQuestion(){
-  stopSpeech();
-  const q=run.questions[run.index],i=run.index;
-  $('counter').textContent='Câu '+(i+1)+'/'+run.questions.length+' · '+SKILL_NAMES[q.skill]+' · '+run.answers.filter(x=>x!==null).length+' đã làm';
-  $('progressBar').style.width=((i+1)/run.questions.length*100)+'%';
-  const content=$('content');content.replaceChildren();
-  if(q.passage){const p=document.createElement('div');p.className='passage';p.textContent=q.passage;content.append(p)}
-  if(q.skill==='listening'){
-    const b=document.createElement('button');b.textContent='▶ Nghe đoạn hội thoại';b.onclick=()=>playAudio(q.audio);content.append(b);
-    const hint=document.createElement('p');hint.className='audio-note';hint.textContent='Bấm để nghe lại. Lời thoại sẽ hiện khi chữa bài.';content.append(hint);
-  }
-  const title=document.createElement('div');title.className='question';title.textContent=q.prompt;content.append(title);
-  const choices=document.createElement('div');choices.className='choices';
-  q.options.forEach((option,n)=>{
-    const label=document.createElement('label');label.className='choice';
-    const input=document.createElement('input');input.type='radio';input.name='answer';input.checked=run.answers[i]===n;
-    input.onchange=()=>{run.answers[i]=n;renderQuestionMap();$('counter').textContent='Câu '+(i+1)+'/'+run.questions.length+' · '+SKILL_NAMES[q.skill]+' · '+run.answers.filter(x=>x!==null).length+' đã làm'};
-    const span=document.createElement('span');span.textContent=String.fromCharCode(65+n)+'. '+option;
-    label.append(input,span);choices.append(label);
+function updateProgress(){
+  const answered=run.answers.filter(x=>x!==null).length;
+  $('counter').textContent=answered+'/'+run.questions.length+' câu đã trả lời';
+  $('progressBar').style.width=(answered/run.questions.length*100)+'%';
+  [...$('skillTabs').children].forEach((button,index)=>{
+    const name=run.sections[index],indexes=run.questions.flatMap((q,i)=>q.skill===name?[i]:[]);
+    button.textContent=SKILL_NAMES[name]+' · '+indexes.filter(i=>run.answers[i]!==null).length+'/'+indexes.length;
   });
-  content.append(choices);$('prev').disabled=i===0;$('next').disabled=i===run.questions.length-1;renderQuestionMap();
 }
-function renderQuestionMap(){
-  const map=$('questionMap');map.replaceChildren();
-  run.questions.forEach((_,i)=>{const button=document.createElement('button');button.type='button';button.textContent=i+1;button.setAttribute('aria-label','Câu '+(i+1)+(run.answers[i]===null?' chưa trả lời':' đã trả lời'));
-    button.className=(run.answers[i]!==null?'answered ':'')+(i===run.index?'current':'');button.setAttribute('aria-current',i===run.index?'step':'false');
-    button.onclick=()=>{run.index=i;renderQuestion()};map.append(button)});
+function renderSection(){
+  stopSpeech();
+  const skill=run.sections[run.sectionIndex],items=run.questions.flatMap((q,i)=>q.skill===skill?[{q,i}]:[]);
+  $('sectionHeading').textContent=SKILL_NAMES[skill]+' · '+items.length+' câu';
+  const tabs=$('skillTabs');tabs.replaceChildren();
+  run.sections.forEach((name,index)=>{
+    const button=document.createElement('button');button.type='button';button.className=index===run.sectionIndex?'current':'';
+    button.setAttribute('aria-current',index===run.sectionIndex?'step':'false');
+    button.onclick=()=>{run.sectionIndex=index;renderSection();window.scrollTo({top:0,behavior:'smooth'})};tabs.append(button);
+  });
+  const content=$('content');content.replaceChildren();
+  let previousPassage=null;
+  items.forEach(({q,i},localIndex)=>{
+    const block=document.createElement('article');block.className='question-block';
+    const number=document.createElement('div');number.className='question-number';number.textContent='Câu '+(localIndex+1);
+    block.append(number);
+    if(q.passage&&q.passage!==previousPassage){const p=document.createElement('div');p.className='passage';p.textContent=q.passage;block.append(p)}
+    previousPassage=q.passage||null;
+    if(q.skill==='listening'){
+      const b=document.createElement('button');b.type='button';b.textContent='▶ Nghe đoạn hội thoại';b.onclick=()=>playAudio(q.audio);block.append(b);
+      const hint=document.createElement('p');hint.className='audio-note';hint.textContent='Bấm để nghe lại. Lời thoại sẽ hiện khi chữa bài.';block.append(hint);
+    }
+    const title=document.createElement('div');title.className='question';title.textContent=q.prompt;block.append(title);
+    const choices=document.createElement('div');choices.className='choices';
+    q.options.forEach((option,n)=>{
+      const label=document.createElement('label');label.className='choice';
+      const input=document.createElement('input');input.type='radio';input.name='answer-'+i;input.checked=run.answers[i]===n;
+      input.onchange=()=>{run.answers[i]=n;updateProgress()};
+      const span=document.createElement('span');span.textContent=String.fromCharCode(65+n)+'. '+option;
+      label.append(input,span);choices.append(label);
+    });
+    block.append(choices);content.append(block);
+  });
+  $('prev').disabled=run.sectionIndex===0;$('next').disabled=run.sectionIndex===run.sections.length-1;
+  $('prev').textContent=run.sectionIndex?'← '+SKILL_NAMES[run.sections[run.sectionIndex-1]]:'← Kỹ năng trước';
+  $('next').textContent=run.sectionIndex<run.sections.length-1?SKILL_NAMES[run.sections[run.sectionIndex+1]]+' →':'Kỹ năng tiếp →';
+  updateProgress();
 }
-$('prev').onclick=()=>{if(run.index>0){run.index--;renderQuestion()}};
-$('next').onclick=()=>{if(run.index<run.questions.length-1){run.index++;renderQuestion()}};
+$('prev').onclick=()=>{if(run.sectionIndex>0){run.sectionIndex--;renderSection();window.scrollTo({top:0,behavior:'smooth'})}};
+$('next').onclick=()=>{if(run.sectionIndex<run.sections.length-1){run.sectionIndex++;renderSection();window.scrollTo({top:0,behavior:'smooth'})}};
 $('quit').onclick=()=>{if(confirm('Thoát bài đang làm? Câu trả lời sẽ không được lưu.'))home()};
 function home(){stopSpeech();clearInterval(tick);run=null;$('runner').classList.add('hidden');$('results').classList.add('hidden');$('home').classList.remove('hidden');renderHome();window.scrollTo({top:0,behavior:'smooth'})}
 $('submit').onclick=()=>{

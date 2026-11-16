@@ -2,11 +2,12 @@
 
 ## Luyện đề JLPT
 
-- Hai mục **Ôn tập từ vựng** và **Luyện đề JLPT** nằm song song trên thanh điều hướng.
-- Trang luyện đề có sẵn hai đề mô phỏng N4 (20 câu) và N5 (16 câu), chia thành từ vựng, chữ Hán, đọc hiểu và nghe hiểu. Có thể làm cả đề hoặc chọn riêng từng phần.
+- Trang chủ mở **Luyện đề JLPT**; thanh điều hướng cho phép chuyển sang **Ôn tập từ vựng** tại `vocabulary.html`.
+- Bộ JLPT Official Practice Workbook Vol. 2 (2018) N4 và N5 được liên kết trực tiếp đến PDF, đáp án và audio trên jlpt.jp. Phiếu trả lời trong web có thể làm toàn bộ đề hoặc từng phần chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe hiểu; chấm theo bảng đáp án chính thức và liệt kê câu sai. PDF/audio được mở từ website gốc, không sao chép vào repo.
+- Trang còn có hai đề mô phỏng N4 (20 câu) và N5 (16 câu) do Kanji Learn biên soạn để luyện thêm, chia thành từ vựng, chữ Hán, đọc hiểu và nghe hiểu.
 - Khi làm có đồng hồ đếm giờ; nộp bài hiện điểm, thời gian và lời giải từng câu. Phần nghe đọc bằng giọng tiếng Nhật của thiết bị, lời thoại chỉ hiện khi chữa bài.
 - Đáp án được xáo trộn mỗi lượt. Kết quả gần nhất lưu cục bộ trong trình duyệt.
-- Câu hỏi là nội dung luyện tập tự biên soạn theo dạng bài JLPT, không phải đề thi chính thức. Dạng bài đối chiếu từ https://www.jlpt.jp/e/samples/sampleindex.html.
+- Đề chính thức: https://www.jlpt.jp/e/samples/sampleindex.html. Đề mô phỏng không phải đề thi thật. Bản PDF riêng của người dùng cần được chuyển thành dữ liệu đáp án trước khi chấm tự động.
 
 ## Từ vựng N3 – Mimi kara Oboeru
 

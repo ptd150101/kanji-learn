@@ -24,7 +24,7 @@ function renderHome(){
   PRACTICE_EXAMS.filter(e=>e.level===selectedLevel).forEach(exam=>{
     const card=document.createElement('article');card.className='card';
     const title=document.createElement('h3');title.textContent=exam.title;
-    const desc=document.createElement('p');desc.className='muted';desc.textContent=exam.description;
+    const desc=document.createElement('p');desc.className='muted';desc.textContent=exam.questions.length+' câu · 5 phần · làm và chữa trên web';
     const chips=document.createElement('div');chips.className='chips';
     SKILLS.forEach(skill=>{const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;const chip=document.createElement('span');chip.className='chip';chip.textContent=SKILL_NAMES[skill]+' '+count;chips.append(chip)});
     const actions=document.createElement('div');actions.className='actions';

@@ -40,7 +40,7 @@ function renderHome(){
 let selectedExam=null;
 function openExamDialog(exam){
   selectedExam=exam;$('dialogTitle').textContent=exam.title;
-  $('dialogSummary').textContent=exam.questions.length+' câu trong '+SKILLS.filter(skill=>exam.questions.some(q=>q.skill===skill)).length+' phần · Thời gian toàn đề '+time(durationFor(exam.questions,exam.level));
+  $('dialogSummary').textContent=exam.questions.length+' câu trong '+SKILLS.filter(skill=>exam.questions.some(q=>q.skill===skill)).length+' phần';
   const choices=$('dialogSkills');choices.replaceChildren();
   SKILLS.forEach(skill=>{
     const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;
@@ -72,7 +72,7 @@ function start(exam,selectedSkills){
   const sections=SKILLS.filter(name=>selectedSkills.includes(name)&&questions.some(q=>q.skill===name));
   const skill=sections.length===SKILLS.length?null:sections.join('+');
   const duration=durationFor(questions,exam.level);
-  run={exam,skill,questions,sections,answers:Array(questions.length).fill(null),sectionIndex:0,started:Date.now(),duration};
+  run={exam,skill,questions,sections,answers:Array(questions.length).fill(null),sectionIndex:0,currentQuestion:0,started:Date.now(),duration};
   $('home').classList.add('hidden');$('results').classList.add('hidden');$('runner').classList.remove('hidden');
   $('runTitle').textContent=exam.title;$('runInfo').textContent=sections.map(name=>SKILL_NAMES[name]).join(' · ');
   clearInterval(tick);$('timeBudget').textContent='Tổng thời gian: '+time(duration);
@@ -144,7 +144,7 @@ function renderSection(){
   run.sections.forEach((name,index)=>{
     const button=document.createElement('button');button.type='button';button.className=index===run.sectionIndex?'current':'';
     button.setAttribute('aria-current',index===run.sectionIndex?'step':'false');
-    button.onclick=()=>{run.sectionIndex=index;renderSection();window.scrollTo({top:0,behavior:'smooth'})};tabs.append(button);
+    button.onclick=()=>{run.sectionIndex=index;run.currentQuestion=run.questions.findIndex(q=>q.skill===name);renderSection();window.scrollTo({top:0,behavior:'smooth'})};tabs.append(button);
   });
   renderQuestionNav();
   const content=$('content');content.replaceChildren();
@@ -191,18 +191,20 @@ function renderQuestionNav(){
     const title=document.createElement('h3');title.className='nav-group-title';title.textContent=SKILL_NAMES[skill];group.append(title);
     const grid=document.createElement('div');grid.className='nav-grid';
     run.questions.forEach((q,i)=>{if(q.skill!==skill)return;
-      const button=document.createElement('button');button.type='button';button.className='nav-question'+(sectionIndex===run.sectionIndex?' visible':'');
+      const button=document.createElement('button');button.type='button';button.className='nav-question'+(i===run.currentQuestion?' visible':'');
       button.dataset.question=i;button.textContent=run.questions.slice(0,i+1).filter(item=>item.skill===skill).length;
       button.onclick=()=>{
+        run.currentQuestion=i;
         if(run.sectionIndex!==sectionIndex){run.sectionIndex=sectionIndex;renderSection()}
+        else nav.querySelectorAll('.nav-question').forEach(item=>item.classList.toggle('visible',Number(item.dataset.question)===i));
         const target=$('exam-q-'+i);target.scrollIntoView({behavior:'smooth',block:'start'});
         target.classList.add('jump-focus');setTimeout(()=>target.classList.remove('jump-focus'),1700);
       };grid.append(button);
     });group.append(grid);nav.append(group);
   });
 }
-$('prev').onclick=()=>{if(run.sectionIndex>0){run.sectionIndex--;renderSection();window.scrollTo({top:0,behavior:'smooth'})}};
-$('next').onclick=()=>{if(run.sectionIndex<run.sections.length-1){run.sectionIndex++;renderSection();window.scrollTo({top:0,behavior:'smooth'})}};
+$('prev').onclick=()=>{if(run.sectionIndex>0){run.sectionIndex--;run.currentQuestion=run.questions.findIndex(q=>q.skill===run.sections[run.sectionIndex]);renderSection();window.scrollTo({top:0,behavior:'smooth'})}};
+$('next').onclick=()=>{if(run.sectionIndex<run.sections.length-1){run.sectionIndex++;run.currentQuestion=run.questions.findIndex(q=>q.skill===run.sections[run.sectionIndex]);renderSection();window.scrollTo({top:0,behavior:'smooth'})}};
 $('quit').onclick=()=>{if(confirm('Thoát bài đang làm? Câu trả lời sẽ không được lưu.'))home()};
 function home(){stopSpeech();clearInterval(tick);run=null;$('runner').classList.add('hidden');$('results').classList.add('hidden');$('home').classList.remove('hidden');renderHome();window.scrollTo({top:0,behavior:'smooth'})}
 $('submit').onclick=()=>submitRun(false);

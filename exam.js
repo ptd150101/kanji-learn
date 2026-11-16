@@ -115,7 +115,7 @@ $('backHome').onclick=home;
 const OFFICIAL_NAMES={kanji:'Chữ Hán',vocabulary:'Từ vựng',grammar:'Ngữ pháp',reading:'Đọc hiểu',listening:'Nghe hiểu'};
 let official=null,officialTick=null;
 function officialSections(exam){
-  function numbered(prefix,answers,from,to){return Array.from({length:to-from+1},(_,i)=>({id:prefix+(from+i),number:from+i,answer:answers[from+i-1],label:prefix+(from+i)}))}
+  function numbered(prefix,answers,from,to){return Array.from({length:to-from+1},(_,i)=>({id:prefix+(from+i),number:from+i,answer:answers[from+i-1],label:prefix+' · câu '+(from+i)}))}
   const listening=exam.l.flatMap((answers,i)=>answers.map((answer,j)=>({id:'L'+(i+1)+'-'+(j+1),number:j+1,answer,label:'Nghe · 問題'+(i+1)+' · câu '+(j+1),audio:officialUrl(exam,'Q'+(i+1),'mp3')})));
   return [
     {key:'kanji',name:'Chữ Hán',file:'V',items:numbered('V',exam.v,1,exam.splitV)},
@@ -148,9 +148,18 @@ function startOfficial(exam,skill){
     const block=document.createElement('section'),title=document.createElement('h3');title.className='section-title';title.textContent=section.name+' · '+section.items.length+' câu';block.append(title);
     const links=document.createElement('div');links.className='resource-links';links.append(resourceLink(officialUrl(exam,section.file),'📄 Mở PDF '+section.name));
     if(section.key==='listening'){
-      exam.l.forEach((_,i)=>{links.append(resourceLink(officialUrl(exam,'Q'+(i+1),'mp3'),'🔊 Audio 問題'+(i+1)))});
+      exam.l.forEach((_,i)=>{
+        const url=officialUrl(exam,'Q'+(i+1),'mp3');
+        links.append(resourceLink(url,'🔊 Audio 問題'+(i+1)));
+      });
     }
     block.append(links);
+    if(section.key==='listening')exam.l.forEach((_,i)=>{
+      const wrap=document.createElement('div');wrap.className='audio-note';
+      const name=document.createElement('strong');name.textContent='問題'+(i+1)+' · '+exam.l[i].length+' câu';
+      const player=document.createElement('audio');player.controls=true;player.preload='none';player.src=officialUrl(exam,'Q'+(i+1),'mp3');
+      wrap.append(name,document.createElement('br'),player);block.append(wrap);
+    });
     const grid=document.createElement('div');grid.className='answer-grid';
     section.items.forEach(item=>{
       const cell=document.createElement('div');cell.className='answer-cell';const strong=document.createElement('strong');strong.textContent=item.label;cell.append(strong);

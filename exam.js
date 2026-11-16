@@ -22,16 +22,16 @@ function renderHome(){
   });
   $('cards').replaceChildren();
   PRACTICE_EXAMS.filter(e=>e.level===selectedLevel).forEach(exam=>{
-    const card=document.createElement('article');card.className='card';
-    const title=document.createElement('h3');title.textContent=exam.title;
-    const desc=document.createElement('p');desc.className='muted';desc.textContent=exam.questions.length+' câu · 5 phần · làm và chữa trên web';
-    const chips=document.createElement('div');chips.className='chips';
-    SKILLS.forEach(skill=>{const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;const chip=document.createElement('span');chip.className='chip';chip.textContent=SKILL_NAMES[skill]+' · '+count;chips.append(chip)});
-    const actions=document.createElement('div');actions.className='actions';
-    const all=document.createElement('button');all.className='primary';all.textContent='Chọn đề →';all.onclick=()=>openExamDialog(exam);actions.append(all);
+    const card=document.createElement('button');card.type='button';card.className='card exam-card';
+    card.setAttribute('aria-label','Chọn '+exam.title+', '+exam.questions.length+' câu');
+    card.onclick=()=>openExamDialog(exam);
+    const level=document.createElement('span');level.className='exam-level';level.textContent=exam.level+' · ĐỀ LUYỆN';
+    const title=document.createElement('span');title.className='exam-card-title';title.textContent=exam.title;
+    const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=exam.questions.length+' câu hỏi · Chọn kỹ năng sau khi mở đề';
+    const affordance=document.createElement('span');affordance.className='exam-card-arrow';affordance.setAttribute('aria-hidden','true');affordance.textContent='↗';
     const previous=lastResult(exam.id,null);
-    card.append(title,desc,chips,actions);
-    if(previous){const p=document.createElement('p');p.className='muted';p.textContent='Lần làm gần nhất: '+previous.score+'/'+previous.total+' · '+time(previous.elapsed);card.append(p)}
+    card.append(level,title,desc,affordance);
+    if(previous){const p=document.createElement('span');p.className='exam-last';p.textContent='Lần gần nhất: '+previous.score+'/'+previous.total+' · '+time(previous.elapsed);card.append(p)}
     $('cards').append(card);
   });
 }

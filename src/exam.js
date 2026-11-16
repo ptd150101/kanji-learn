@@ -29,7 +29,7 @@ function renderHome(){
     card.onclick=()=>openExamDialog(exam);
     const level=document.createElement('span');level.className='exam-level';level.textContent=exam.level+' · ĐỀ LUYỆN';
     const title=document.createElement('span');title.className='exam-card-title';title.textContent=exam.title;
-    const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=exam.questions.length+' câu · '+time(durationFor(exam.questions,exam.level))+' phút';
+    const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=exam.questions.length+' câu · '+time(durationFor(exam.questions,exam.level)); 
     const affordance=document.createElement('span');affordance.className='exam-card-arrow';affordance.setAttribute('aria-hidden','true');affordance.textContent='↗';
     const previous=lastResult(exam.id,null);
     card.append(level,title,desc,affordance);
@@ -52,7 +52,7 @@ function openExamDialog(exam){
   });
   const update=()=>{const checked=[...choices.querySelectorAll('input:checked')];$('dialogStart').disabled=!checked.length;
     const questions=subset(exam,checked.map(input=>input.value));
-    $('dialogCount').textContent=checked.length+' phần · '+questions.length+' câu · '+time(durationFor(questions,exam.level))+' phút';
+    $('dialogCount').textContent=checked.length+' phần · '+questions.length+' câu · '+time(durationFor(questions,exam.level)); 
   };
   choices.onchange=update;update();$('examDialog').showModal();
 }
@@ -85,10 +85,32 @@ function updateTimer(){
   if(remaining<=0)submitRun(true);
 }
 function stopSpeech(){if('speechSynthesis' in window)speechSynthesis.cancel()}
-function audioSource(q){
-  if(q.audioUrl)return q.audioUrl;
-  if(!q.audio)return null;
-  return 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=ja&q='+encodeURIComponent(q.audio.replace(/\n/g,'。'));
+const audioCache=new Map();
+async function prepareAudio(q,player,button,status){
+  button.disabled=true;status.textContent='Đang tạo âm thanh tiếng Nhật…';
+  try{
+    let url=audioCache.get(q.audio);
+    if(!url){
+      const request='https://api.tts.quest/v3/voicevox/synthesis?text='+encodeURIComponent(q.audio.replace(/(?:女|男)：/g,'').replace(/\n/g,'。'))+'&speaker=1';
+      const response=await fetch(request);if(!response.ok)throw Error('Dịch vụ âm thanh không phản hồi');
+      const result=await response.json();if(!result.success)throw Error('Chưa thể tạo âm thanh');
+      for(let attempt=0;attempt<18;attempt++){
+        const state=await fetch(result.audioStatusUrl).then(r=>r.json());
+        if(state.isAudioReady){url=result.mp3DownloadUrl;break}
+        if(state.isAudioError)throw Error('Không tạo được âm thanh');
+        await new Promise(resolve=>setTimeout(resolve,1200));
+      }
+      if(!url)throw Error('Tạo âm thanh quá lâu');
+      audioCache.set(q.audio,url);
+    }
+    player.src=url;player.classList.remove('hidden');button.classList.add('hidden');
+    status.textContent='Có thể tạm dừng, tua và nghe lại câu này.';
+    player.load();player.play().catch(()=>{status.textContent='Âm thanh đã sẵn sàng. Bấm nút phát để nghe và tua.'});
+  }catch(error){
+    player.classList.add('hidden');button.classList.add('hidden');
+    status.textContent='Chưa tải được MP3. Dùng giọng đọc của trình duyệt để nghe lại.';
+    const fallback=button.nextElementSibling;fallback.classList.remove('hidden');
+  }finally{button.disabled=false}
 }
 function playAudio(script){
   if(!('speechSynthesis' in window)){alert('Trình duyệt này không hỗ trợ đọc tiếng Nhật. Hãy thử trình duyệt khác.');return}
@@ -140,13 +162,16 @@ function renderSection(){
     if(q.passage&&q.passage!==previousPassage){const p=document.createElement('div');p.className='passage';p.textContent=q.passage;block.append(p)}
     previousPassage=q.passage||null;
     if(q.skill==='listening'){
-      const player=document.createElement('audio');player.className='audio-player';player.controls=true;player.preload='none';player.src=audioSource(q);player.setAttribute('aria-label','Âm thanh câu '+(localIndex+1));block.append(player);
+      const status=document.createElement('p');status.className='audio-note';status.textContent='Âm thanh tiếng Nhật cho câu này · tạo một lần, nghe và tua lại tùy ý.';
+      const button=document.createElement('button');button.type='button';button.className='audio-generate';button.textContent='▶ Tạo âm thanh và nghe';
       const fallback=document.createElement('div');fallback.className='audio-fallback hidden';
       const play=document.createElement('button');play.type='button';play.textContent='▶ Nghe bằng giọng máy';play.onclick=()=>playAudio(q.audio);
       const replay=document.createElement('button');replay.type='button';replay.textContent='↺ Nghe lại từ đầu';replay.onclick=()=>playAudio(q.audio);
-      fallback.append(play,replay);block.append(fallback);
-      player.addEventListener('error',()=>{player.classList.add('hidden');fallback.classList.remove('hidden')});
-      const hint=document.createElement('p');hint.className='audio-note';hint.textContent='Có thể tạm dừng, tua và phát lại từng câu. Lời thoại sẽ hiện khi chữa bài.';block.append(hint);
+      fallback.append(play,replay);
+      const player=document.createElement('audio');player.className='audio-player hidden';player.controls=true;player.preload='none';player.setAttribute('aria-label','Âm thanh câu '+(localIndex+1));
+      player.addEventListener('error',()=>{player.classList.add('hidden');fallback.classList.remove('hidden');status.textContent='Không tải được MP3. Dùng giọng đọc của trình duyệt để nghe lại.'});
+      button.onclick=()=>prepareAudio(q,player,button,status);
+      block.append(button,player,fallback,status);
     }
     if(q.kanjiSentence){const guide=document.createElement('p');guide.className='muted';guide.textContent=q.kanjiWriting?'下線のことばを漢字で書くと、どれですか。':'下線のことばの読み方はどれですか。';block.append(guide)}
     block.append(questionStem(q));

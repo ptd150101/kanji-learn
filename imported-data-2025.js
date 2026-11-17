@@ -11,5 +11,19 @@ const lp1=[30,31,32,33,33,34,34,35],lp2=[37,37,38,38,39,39,40],lp3=[42,42,43,43,
 lp1.forEach((p,i)=>add('listening',i+1,1,[p]));lp2.forEach((p,i)=>add('listening',i+1,2,[p]));lp3.forEach((p,i)=>add('listening',i+1,3,[p]));
 for(let n=1;n<=8;n++)add('listening',n,4,[45]);
 if(questions.length!==85)throw Error('Expected 85 N4 July 2025 question slots');
-PRACTICE_EXAMS.push({id:'imported-2025-07-n4',title:'N4 · Đề 7/2025 (bản scan)',level:'N4',badge:'PDF ĐÃ NHẬP · CHỜ AUDIO',imported:true,description:'85 câu từ PDF người dùng cung cấp',source:'PDF do người dùng cung cấp. 28 câu chữ Hán/từ vựng, 29 câu ngữ pháp/đọc hiểu, 28 câu nghe. Chưa có đáp án và audio khớp bản scan; các câu này chưa được chấm.',questions});
+// July 2025 reference key matched to this scan by question wording and layout.
+// Answers are 1-based here; the quiz engine stores zero-based option indexes.
+const vocabulary=['3412231','23421','42132144','2233','1142'].join('');
+const grammarReading=['4332442121234','3411','1423','342','132','12'].join('');
+const listening=['14312212','3221421','31212','22132312'];
+if(vocabulary.length!==28||grammarReading.length!==29||listening.map(s=>s.length).join(',')!=='8,7,5,8')throw Error('Incomplete July 2025 reference key');
+questions.forEach((q,i)=>{
+  const key=i<28?vocabulary[i]:i<57?grammarReading[i-28]:listening[q.mondai-1][i-57-(q.mondai===1?0:q.mondai===2?8:q.mondai===3?15:20)];
+  if(q.skill==='listening'&&q.mondai>=3)q.options=['1','2','3'];
+  const answer=Number(key)-1;
+  if(!Number.isInteger(answer)||answer<0||answer>=q.options.length)throw Error('Invalid July 2025 answer at '+i);
+  q.answer=answer;
+  q.explanation='Đáp án tham khảo đối chiếu với đúng đề N4 tháng 7/2025. Phần nghe cần kiểm tra lại khi có audio gốc.';
+});
+PRACTICE_EXAMS.push({id:'imported-2025-07-n4',title:'N4 · Đề 7/2025 (bản scan)',level:'N4',badge:'ĐỀ 7/2025 · CHỜ AUDIO',imported:true,description:'85 câu từ PDF người dùng cung cấp',source:'PDF do người dùng cung cấp. Đáp án tham khảo tháng 7/2025 đã đối chiếu với câu chữ và thứ tự đề; không phải đáp án chính thức JLPT. Phần nghe chờ audio gốc để luyện và kiểm tra lại.',questions});
 })();

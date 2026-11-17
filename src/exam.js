@@ -196,10 +196,10 @@ function submitRun(expired){
   if(!expired&&blanks&&!confirm('Còn '+blanks+' câu chưa chọn đáp án. Bạn vẫn muốn nộp bài?'))return;
   document.querySelectorAll('.audio-player').forEach(player=>player.pause());clearInterval(tick);
   run.elapsed=Math.min(Date.now()-run.started,run.duration);
-  run.graded=run.questions.filter(q=>q.answer!==null&&q.answer!==undefined).length;
-  run.correct=run.questions.reduce((count,q,i)=>count+(q.answer!==null&&q.answer!==undefined&&run.answers[i]===q.answer?1:0),0);
+  run.graded=run.questions.filter(q=>q.answer!==null&&q.answer!==undefined&&!q.audioPending).length;
+  run.correct=run.questions.reduce((count,q,i)=>count+(q.answer!==null&&q.answer!==undefined&&!q.audioPending&&run.answers[i]===q.answer?1:0),0);
   saveResult();$('runner').classList.add('hidden');$('results').classList.remove('hidden');
-  $('score').textContent=run.graded?run.correct+'/'+run.graded+' câu đúng · '+Math.round(run.correct/run.graded*100)+'%':run.answers.filter(x=>x!==null).length+'/'+run.questions.length+' câu đã trả lời · Chưa có đáp án để chấm';
+  $('score').textContent=run.graded?run.correct+'/'+run.graded+' câu đúng · '+Math.round(run.correct/run.graded*100)+'%'+(run.exam.imported?' · Đáp án tham khảo, chưa tính nghe':''):run.answers.filter(x=>x!==null).length+'/'+run.questions.length+' câu đã trả lời · Chưa tính điểm phần nghe';
   $('duration').textContent=(expired?'Hết giờ · ':'')+'Thời gian làm bài: '+time(run.elapsed)+' / '+time(run.duration);
   $('review').replaceChildren();$('review').classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -215,7 +215,7 @@ $('showReview').onclick=()=>{
     article.append(questionStem(q));
     const answer=document.createElement('p');answer.className=run.answers[i]===q.answer?'good':'bad';
     answer.textContent='Bạn chọn: '+(run.answers[i]===null?'Chưa trả lời':(q.scanMode?'':String.fromCharCode(65+run.answers[i])+'. ')+q.options[run.answers[i]]);
-    const correct=document.createElement('p');correct.className='good';correct.textContent=q.answer===null||q.answer===undefined?'Đáp án: đang đối chiếu đúng bộ đề.':'Đáp án đúng: '+String.fromCharCode(65+q.answer)+'. '+q.options[q.answer];
+    const correct=document.createElement('p');correct.className='good';correct.textContent=q.answer===null||q.answer===undefined?'Đáp án: đang đối chiếu đúng bộ đề.':(run.exam.imported?'Đáp án tham khảo: ':'Đáp án đúng: ')+(q.scanMode?'':String.fromCharCode(65+q.answer)+'. ')+q.options[q.answer];
     const explanation=document.createElement('p');explanation.className='muted';explanation.textContent='Giải thích: '+q.explanation;
     article.append(answer,correct,explanation);box.append(article);
   });

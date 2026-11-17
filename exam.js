@@ -2,12 +2,19 @@ const SKILL_NAMES={vocabulary:'Từ vựng',kanji:'Chữ Hán',grammar:'Ngữ ph
 const SKILLS=Object.keys(SKILL_NAMES);
 PRACTICE_EXAMS.forEach(exam=>{
   let number=0;
-  exam.questions.forEach(q=>{if(q.skill==='listening')q.audioUrl='audio/'+exam.id+'-'+String(++number).padStart(2,'0')+'.mp3'});
+  exam.questions.forEach(q=>{if(q.skill==='listening'&&!q.audioUrl)q.audioUrl='audio/'+exam.id+'-'+String(++number).padStart(2,'0')+'.mp3'});
 });
 const $=id=>document.getElementById(id);
 let selectedLevel='N4',run=null,tick=null;
 function time(ms){let s=Math.max(0,Math.floor(ms/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
-function durationFor(questions,level){return questions.reduce((sum,q)=>sum+((level==='N4'?90:75)+(q.skill==='reading'?45:0)+(q.skill==='listening'?15:0))*1000,0)}
+function durationFor(questions,level,exam){
+  if(exam?.reconstructed){
+    const vocabulary=questions.filter(q=>q.skill==='kanji'||q.skill==='vocabulary').length;
+    const grammar=questions.filter(q=>q.skill==='grammar'||q.skill==='reading').length;
+    return Math.round((vocabulary*25/28+grammar*55/29)*60000);
+  }
+  return questions.reduce((sum,q)=>sum+((level==='N4'?90:75)+(q.skill==='reading'?45:0)+(q.skill==='listening'?15:0))*1000,0)
+}
 function subset(exam,skills){return exam.questions.filter(q=>skills.includes(q.skill))}
 function shuffle(question){
   const order=question.options.map((_,i)=>i);
@@ -31,9 +38,9 @@ function renderHome(){
     const card=document.createElement('button');card.type='button';card.className='card exam-card';
     card.setAttribute('aria-label','Chọn '+exam.title+', '+exam.questions.length+' câu');
     card.onclick=()=>openExamDialog(exam);
-    const level=document.createElement('span');level.className='exam-level';level.textContent=exam.level+' · '+(exam.official?'TRÍCH ĐỀ THẬT 2018':'ĐỀ LUYỆN');
+    const level=document.createElement('span');level.className='exam-level';level.textContent=exam.level+' · '+(exam.reconstructed?'BẢN TỔNG HỢP 7/2024':exam.official?'TRÍCH ĐỀ THẬT 2018':'ĐỀ LUYỆN');
     const title=document.createElement('span');title.className='exam-card-title';title.textContent=exam.title;
-    const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=exam.questions.length+' câu · '+time(durationFor(exam.questions,exam.level)); 
+    const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=exam.questions.length+' câu · '+time(durationFor(exam.questions,exam.level,exam));
     const affordance=document.createElement('span');affordance.className='exam-card-arrow';affordance.setAttribute('aria-hidden','true');affordance.textContent='↗';
     const previous=lastResult(exam.id,null);
     card.append(level,title,desc,affordance);
@@ -45,8 +52,8 @@ let selectedExam=null;
 function openExamDialog(exam){
   selectedExam=exam;$('dialogTitle').textContent=exam.title;
   $('dialogSummary').textContent=exam.questions.length+' câu trong '+SKILLS.filter(skill=>exam.questions.some(q=>q.skill===skill)).length+' phần';
-  $('dialogSource').textContent=exam.official?exam.source+' · Trích từ Workbook 2018; chưa gồm phần nghe.':'';
-  $('dialogSource').classList.toggle('hidden',!exam.official);
+  $('dialogSource').textContent=exam.source||'';
+  $('dialogSource').classList.toggle('hidden',!exam.source);
   const choices=$('dialogSkills');choices.replaceChildren();
   SKILLS.forEach(skill=>{
     const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;
@@ -58,7 +65,7 @@ function openExamDialog(exam){
   });
   const update=()=>{const checked=[...choices.querySelectorAll('input:checked')];$('dialogStart').disabled=!checked.length;
     const questions=subset(exam,checked.map(input=>input.value));
-    $('dialogCount').textContent=checked.length+' phần · '+questions.length+' câu · '+time(durationFor(questions,exam.level)); 
+    $('dialogCount').textContent=checked.length+' phần · '+questions.length+' câu · '+time(durationFor(questions,exam.level,exam));
   };
   choices.onchange=update;update();$('examDialog').showModal();
 }
@@ -73,15 +80,16 @@ $('dialogStart').onclick=()=>{
   $('examDialog').close();start(selectedExam,skills);
 };
 function start(exam,selectedSkills){
-  const questions=exam.questions.filter(q=>selectedSkills.includes(q.skill)).map(shuffle);
+  const questions=exam.questions.filter(q=>selectedSkills.includes(q.skill)).map(q=>exam.reconstructed?{...q}:shuffle(q));
   if(!questions.length)return;
   const sections=SKILLS.filter(name=>selectedSkills.includes(name)&&questions.some(q=>q.skill===name));
   const skill=sections.length===SKILLS.length?null:sections.join('+');
-  const duration=durationFor(questions,exam.level);
+  const duration=durationFor(questions,exam.level,exam);
   run={exam,skill,questions,sections,answers:Array(questions.length).fill(null),sectionIndex:0,currentQuestion:0,started:Date.now(),duration};
   $('home').classList.add('hidden');$('results').classList.add('hidden');$('runner').classList.remove('hidden');
   $('runTitle').textContent=exam.title;$('runInfo').textContent=sections.map(name=>SKILL_NAMES[name]).join(' · ');
-  $('runSource').classList.toggle('hidden',!exam.official);
+  $('runSource').classList.toggle('hidden',!exam.sourceUrl);
+  if(exam.sourceUrl){$('runSource').href=exam.sourceUrl;$('runSource').textContent=exam.reconstructed?'Nguồn: bản tổng hợp 7/2024 (không chính thức)':'Nguồn: JLPT Official Practice Workbook 2018'}
   clearInterval(tick);$('timeBudget').textContent='Tổng thời gian: '+time(duration);
   updateTimer();tick=setInterval(updateTimer,500);
   renderSection();window.scrollTo({top:0,behavior:'smooth'});
@@ -127,7 +135,7 @@ function renderSection(){
   let previousPassage=null;
   items.forEach(({q,i},localIndex)=>{
     const block=document.createElement('article');block.className='question-block';block.id='exam-q-'+i;
-    const number=document.createElement('div');number.className='question-number';number.textContent=(run.exam.official&&q.mondai?'問題 '+q.mondai+' · ':'')+'Câu '+(localIndex+1);
+    const number=document.createElement('div');number.className='question-number';number.textContent=((run.exam.official||run.exam.reconstructed)&&q.mondai?'問題 '+q.mondai+' · ':'')+'Câu '+(localIndex+1);
     block.append(number);
     if(q.passage&&q.passage!==previousPassage){const p=document.createElement('div');p.className='passage';p.textContent=q.passage;block.append(p)}
     previousPassage=q.passage||null;

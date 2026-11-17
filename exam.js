@@ -150,13 +150,13 @@ function renderSection(){
     }
     if(q.kanjiSentence){const guide=document.createElement('p');guide.className='muted';guide.textContent=q.kanjiWriting?'下線のことばを漢字で書くと、どれですか。':'下線のことばの読み方はどれですか。';block.append(guide)}
     block.append(questionStem(q));
-    if(q.imageUrls)q.imageUrls.forEach((url,index)=>{const img=document.createElement('img');img.className='question-scan';img.loading='lazy';img.src=url;img.alt='Bản scan câu '+q.originalNumber+(q.imageUrls.length>1?' · trang '+(index+1):'');block.append(img)});
+    if(q.imageUrls)q.imageUrls.forEach((url,index)=>{const img=document.createElement('img');img.className='question-scan';img.loading='lazy';img.src=url;img.alt='Bản scan chứa câu '+q.originalNumber+(q.imageUrls.length>1?' · trang '+(index+1):'');block.append(img)});
     const choices=document.createElement('div');choices.className='choices';
     q.options.forEach((option,n)=>{
       const label=document.createElement('label');label.className='choice';
       const input=document.createElement('input');input.type='radio';input.name='answer-'+i;input.checked=run.answers[i]===n;
       input.onchange=()=>{run.answers[i]=n;updateProgress()};
-      const span=document.createElement('span');span.textContent=String.fromCharCode(65+n)+'. '+option;
+      const span=document.createElement('span');span.textContent=q.scanMode?option:String.fromCharCode(65+n)+'. '+option;
       label.append(input,span);choices.append(label);
     });
     block.append(choices);content.append(block);
@@ -214,7 +214,7 @@ $('showReview').onclick=()=>{
     if(q.audio){const p=document.createElement('div');p.className='passage';p.textContent='Lời thoại: '+q.audio;article.append(p)}
     article.append(questionStem(q));
     const answer=document.createElement('p');answer.className=run.answers[i]===q.answer?'good':'bad';
-    answer.textContent='Bạn chọn: '+(run.answers[i]===null?'Chưa trả lời':String.fromCharCode(65+run.answers[i])+'. '+q.options[run.answers[i]]);
+    answer.textContent='Bạn chọn: '+(run.answers[i]===null?'Chưa trả lời':(q.scanMode?'':String.fromCharCode(65+run.answers[i])+'. ')+q.options[run.answers[i]]);
     const correct=document.createElement('p');correct.className='good';correct.textContent=q.answer===null||q.answer===undefined?'Đáp án: đang đối chiếu đúng bộ đề.':'Đáp án đúng: '+String.fromCharCode(65+q.answer)+'. '+q.options[q.answer];
     const explanation=document.createElement('p');explanation.className='muted';explanation.textContent='Giải thích: '+q.explanation;
     article.append(answer,correct,explanation);box.append(article);

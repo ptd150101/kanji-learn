@@ -2,7 +2,7 @@
 (function(){
 const page=n=>'exam-assets/n4-2025/page-'+String(n).padStart(2,'0')+'.webp';
 const questions=[];
-function add(skill,n,mondai,pages){questions.push({skill,mondai,originalNumber:n,prompt:'Câu '+n+' — xem nội dung và bốn lựa chọn trong ảnh đề bên dưới.',imageUrls:pages.map(page),options:['①','②','③','④'],answer:null,explanation:'Đang đối chiếu đáp án tham khảo đúng với bản scan này.',audioPending:skill==='listening'})}
+function add(skill,n,mondai,pages){questions.push({skill,mondai,originalNumber:n,scanMode:true,prompt:'Câu '+n+' — chọn phương án tương ứng trong ảnh đề.',imageUrls:pages.map(page),options:['1','2','3','4'],answer:null,explanation:'Đang đối chiếu đáp án tham khảo đúng với bản scan này.',audioPending:skill==='listening'})}
 const vp={1:3,2:3,3:3,4:3,5:3,6:3,7:3,8:4,9:4,10:4,11:4,12:4,13:5,14:5,15:5,16:5,17:5,18:5,19:5,20:6,21:7,22:7,23:7,24:8,25:9,26:9,27:9,28:10};
 for(let n=1;n<=28;n++)add(n<=12?'kanji':'vocabulary',n,n<=7?1:n<=12?2:n<=20?3:n<=24?4:5,[vp[n]]);
 const gp={1:13,2:13,3:13,4:13,5:13,6:13,7:14,8:14,9:14,10:14,11:14,12:15,13:15,14:16,15:16,16:16,17:17,18:18,19:18,20:18,21:18,22:20,23:21,24:22,25:24,26:25,27:25,28:26,29:26};

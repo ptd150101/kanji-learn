@@ -1,5 +1,5 @@
 const SKILL_NAMES={vocabulary:'Từ vựng',kanji:'Chữ Hán',grammar:'Ngữ pháp',reading:'Đọc hiểu',listening:'Nghe hiểu'};
-const SKILLS=Object.keys(SKILL_NAMES);
+const SKILLS=['kanji','vocabulary','grammar','reading','listening'];
 PRACTICE_EXAMS.forEach(exam=>{
   let number=0;
   exam.questions.forEach(q=>{if(q.skill==='listening'&&!q.audioUrl)q.audioUrl='audio/'+exam.id+'-'+String(++number).padStart(2,'0')+'.mp3'});

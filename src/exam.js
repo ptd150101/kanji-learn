@@ -6,6 +6,16 @@ PRACTICE_EXAMS.forEach(exam=>{
 });
 const $=id=>document.getElementById(id);
 let selectedLevel='N4',run=null,tick=null;
+const mobileSidebar=window.matchMedia('(max-width:830px)');
+function setSidebarOpen(open){
+  $('examSidebar').classList.toggle('is-open',open);
+  $('sidebarToggle').setAttribute('aria-expanded',String(open));
+  $('sidebarToggle').setAttribute('aria-label',open?'Thu gọn bảng câu hỏi':'Mở bảng câu hỏi');
+  $('sidebarBody').inert=mobileSidebar.matches&&!open;
+}
+$('sidebarToggle').onclick=()=>setSidebarOpen(!$('examSidebar').classList.contains('is-open'));
+mobileSidebar.addEventListener('change',()=>setSidebarOpen(false));
+setSidebarOpen(false);
 function time(ms){let s=Math.max(0,Math.floor(ms/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
 function durationFor(questions,level,exam){
   if(exam?.imported){const v=questions.filter(q=>q.skill==='kanji'||q.skill==='vocabulary').length,g=questions.filter(q=>q.skill==='grammar'||q.skill==='reading').length,l=questions.filter(q=>q.skill==='listening').length;return Math.round((v*25/28+g*55/29+l*35/28)*60000)}
@@ -88,6 +98,7 @@ function start(exam,selectedSkills){
   const skill=sections.length===SKILLS.length?null:sections.join('+');
   const duration=durationFor(questions,exam.level,exam);
   run={exam,skill,questions,sections,answers:Array(questions.length).fill(null),sectionIndex:0,currentQuestion:0,started:Date.now(),duration};
+  setSidebarOpen(false);
   $('home').classList.add('hidden');$('results').classList.add('hidden');$('runner').classList.remove('hidden');
   $('runTitle').textContent=exam.title;$('runInfo').textContent=sections.map(name=>SKILL_NAMES[name]).join(' · ');
   $('runSource').classList.toggle('hidden',!exam.sourceUrl);
@@ -179,8 +190,9 @@ function renderQuestionNav(){
         run.currentQuestion=i;
         if(run.sectionIndex!==sectionIndex){run.sectionIndex=sectionIndex;renderSection()}
         else nav.querySelectorAll('.nav-question').forEach(item=>item.classList.toggle('visible',Number(item.dataset.question)===i));
-        const target=$('exam-q-'+i);target.scrollIntoView({behavior:'smooth',block:'start'});
-        target.classList.add('jump-focus');setTimeout(()=>target.classList.remove('jump-focus'),1700);
+        if(mobileSidebar.matches)setSidebarOpen(false);
+        const target=$('exam-q-'+i);
+        setTimeout(()=>{if(!run)return;target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.add('jump-focus');setTimeout(()=>target.classList.remove('jump-focus'),1700)},mobileSidebar.matches?360:0);
       };grid.append(button);
     });group.append(grid);nav.append(group);
   });

@@ -75,5 +75,5 @@ questions.push(
  R(pizza,'ナムさんは大学の友達と3人で、作ったピザを店で食べます。何をサービスしてもらえますか。',['飲み物とサラダ','飲み物とサラダとアイスクリーム','アイスクリーム','500円チケット'],1,'飲み物とサラダ。アイスクリームは5人以上だけです。',6)
 );
 if(questions.length!==57)throw Error('Expected 57 transcribed N4 July 2024 questions');
-PRACTICE_EXAMS.push({id:'reconstructed-2024-07-n4',title:'N4 · Đề tổng hợp 7/2024',level:'N4',description:'57 câu · đối chiếu bản scan và đáp án tham khảo',reconstructed:true,source:'Bản tổng hợp của Yuuki Bui / JLPT Mogi. Không phải đề chính thức do JLPT công bố. Đáp án là bản tham khảo.',sourceUrl:source,questions});
+PRACTICE_EXAMS.push({id:'reconstructed-2024-07-n4',title:'N4 · Đề tổng hợp 7/2024',level:'N4',description:'57 câu · đối chiếu bản scan và đáp án tham khảo',reconstructed:true,source:'Đề tổng hợp tham khảo từ cộng đồng; đáp án không phải đáp án chính thức JLPT.',sourceUrl:source,questions});
 })();

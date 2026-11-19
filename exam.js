@@ -192,7 +192,7 @@ function renderQuestionNav(){
         else nav.querySelectorAll('.nav-question').forEach(item=>item.classList.toggle('visible',Number(item.dataset.question)===i));
         if(mobileSidebar.matches)setSidebarOpen(false);
         const target=$('exam-q-'+i);
-        setTimeout(()=>{if(!run)return;target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.add('jump-focus');setTimeout(()=>target.classList.remove('jump-focus'),1700)},mobileSidebar.matches?360:0);
+        setTimeout(()=>{if(!run)return;target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.add('jump-focus');setTimeout(()=>target.classList.remove('jump-focus'),1700)},mobileSidebar.matches?640:0);
       };grid.append(button);
     });group.append(grid);nav.append(group);
   });

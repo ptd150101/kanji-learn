@@ -6,10 +6,10 @@ import { buildEmbeddedVocab } from "../scripts/sync-new-vocab.mjs";
 const source = JSON.parse(
   readFileSync(new URL("../vocab_n4_26_31.json", import.meta.url), "utf8")
 );
-const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../vocabulary.html", import.meta.url), "utf8");
 const embeddedMatch = html.match(/const NEW_VOCAB = (\[[^\n]*\]);/);
 
-assert.ok(embeddedMatch, "Không tìm thấy NEW_VOCAB trong index.html");
+assert.ok(embeddedMatch, "Không tìm thấy NEW_VOCAB trong vocabulary.html");
 const embedded = JSON.parse(embeddedMatch[1]);
 
 test("dữ liệu nguồn và dữ liệu nhúng luôn đồng bộ", () => {

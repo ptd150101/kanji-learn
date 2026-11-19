@@ -251,13 +251,13 @@ function renderQuestionNav(){
 $('prev').onclick=()=>{if(run.sectionIndex>0){run.sectionIndex--;run.currentQuestion=run.questions.findIndex(q=>q.skill===run.sections[run.sectionIndex]);renderSection();saveRunSnapshot();window.scrollTo({top:0,behavior:'smooth'})}};
 $('next').onclick=()=>{if(run.sectionIndex<run.sections.length-1){run.sectionIndex++;run.currentQuestion=run.questions.findIndex(q=>q.skill===run.sections[run.sectionIndex]);renderSection();saveRunSnapshot();window.scrollTo({top:0,behavior:'smooth'})}};
 $('quit').onclick=()=>{saveRunSnapshot();home()};
-function home(){document.querySelectorAll('.audio-player').forEach(player=>player.pause());clearInterval(tick);run=null;$('runner').classList.add('hidden');$('results').classList.add('hidden');$('home').classList.remove('hidden');renderHome();window.scrollTo({top:0,behavior:'smooth'})}
+function home(){document.querySelectorAll('.audio-player').forEach(player=>player.pause());document.querySelectorAll('.listening-video iframe').forEach(frame=>frame.removeAttribute('src'));clearInterval(tick);run=null;$('runner').classList.add('hidden');$('results').classList.add('hidden');$('home').classList.remove('hidden');renderHome();window.scrollTo({top:0,behavior:'smooth'})}
 $('submit').onclick=()=>submitRun(false);
 function submitRun(expired){
   if(!run)return;
   const blanks=run.answers.filter(x=>x===null).length;
   if(!expired&&blanks&&!confirm('Còn '+blanks+' câu chưa chọn đáp án. Bạn vẫn muốn nộp bài?'))return;
-  document.querySelectorAll('.audio-player').forEach(player=>player.pause());clearInterval(tick);
+  document.querySelectorAll('.audio-player').forEach(player=>player.pause());document.querySelectorAll('.listening-video iframe').forEach(frame=>frame.removeAttribute('src'));clearInterval(tick);
   run.elapsed=Math.min(Date.now()-run.started,run.duration);
   run.graded=run.questions.filter(q=>q.answer!==null&&q.answer!==undefined&&!q.audioPending).length;
   run.correct=run.questions.reduce((count,q,i)=>count+(q.answer!==null&&q.answer!==undefined&&!q.audioPending&&run.answers[i]===q.answer?1:0),0);
@@ -278,6 +278,7 @@ function renderReview(filter){
     button.onclick=()=>renderReview(mode);toolbar.append(button);
   }
   box.append(toolbar);
+  if(run.questions.some(q=>q.videoId)){const link=document.createElement('a');link.className='audio-fallback';link.href='https://www.youtube.com/watch?v=f1sxDVCAvq4&t=1920s';link.target='_blank';link.rel='noopener noreferrer';link.textContent='Xem đoạn đáp án trong video ↗';box.append(link)}
   let shown=0,previousPassage=null;
   run.questions.forEach((q,i)=>{
     if(filter==='wrong'&&(q.answer===null||q.answer===undefined||q.audioPending||run.answers[i]===q.answer))return;

@@ -7,7 +7,7 @@ const n3 = readJSON("data_n3.json");
 const main = readJSON("data.json");
 const index = readJSON("data/n3/source_character_index.json");
 const han = readJSON("han_viet.json");
-const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../vocabulary.html", import.meta.url), "utf8");
 const inlineJSON = name => JSON.parse(html.match(new RegExp(`^const ${name} = (.*);$`, "m"))?.[1] || "null");
 const unique = rows => new Set(rows.map(v => [v.lesson, v.word, v.reading].join("\u0000")));
 

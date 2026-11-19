@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
-// Đồng bộ dữ liệu JSON vào trang offline, tránh dữ liệu N3/N4/N5 lệch với index.html.
+// Đồng bộ dữ liệu JSON vào trang offline, tránh dữ liệu N3/N4/N5 lệch với vocabulary.html.
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const readJSON = path => JSON.parse(readFileSync(join(root, path), "utf8"));
 const combined = readJSON("data.json");
@@ -37,7 +37,7 @@ for (const row of n3InMain) {
   }
 }
 
-const filename = join(root, "index.html");
+const filename = join(root, "vocabulary.html");
 let html = readFileSync(filename, "utf8");
 for (const [name, value] of Object.entries({
   VOCAB: combined.vocab,

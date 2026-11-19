@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const repoRoot = new URL("../", import.meta.url);
 const sourceUrl = new URL("vocab_n4_26_31.json", repoRoot);
-const indexUrl = new URL("index.html", repoRoot);
+const indexUrl = new URL("vocabulary.html", repoRoot);
 
 export function buildEmbeddedVocab(sourceRows) {
   if (!Array.isArray(sourceRows)) {
@@ -69,5 +69,5 @@ const isMain = process.argv[1]
 
 if (isMain) {
   const rows = syncNewVocab();
-  console.log(`Đã đồng bộ ${rows.length} từ mới vào index.html.`);
+  console.log(`Đã đồng bộ ${rows.length} từ mới vào vocabulary.html.`);
 }

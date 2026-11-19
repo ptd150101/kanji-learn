@@ -2,12 +2,12 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 
-const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../vocabulary.html", import.meta.url), "utf8");
 const start = html.indexOf("function normalizeKana");
 const end = html.indexOf("function hanVietForWord");
 
-assert.notEqual(start, -1, "Không tìm thấy normalizeKana trong index.html");
-assert.notEqual(end, -1, "Không tìm thấy hanVietForWord trong index.html");
+assert.notEqual(start, -1, "Không tìm thấy normalizeKana trong vocabulary.html");
+assert.notEqual(end, -1, "Không tìm thấy hanVietForWord trong vocabulary.html");
 
 const answerHelpers = new Function(`
   ${html.slice(start, end)}
@@ -31,7 +31,7 @@ const {
 } = answerHelpers;
 
 const newVocabMatch = html.match(/const NEW_VOCAB = (\[[^\n]*\]);/);
-assert.ok(newVocabMatch, "Không tìm thấy NEW_VOCAB trong index.html");
+assert.ok(newVocabMatch, "Không tìm thấy NEW_VOCAB trong vocabulary.html");
 const newVocab = JSON.parse(newVocabMatch[1]);
 
 test("bỏ ký hiệu chỗ trống khi so sánh cách đọc", () => {

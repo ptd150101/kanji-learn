@@ -7,7 +7,7 @@ const n3 = readJson("../data_n3.json");
 const combined = readJson("../data.json");
 const hanViet = readJson("../han_viet.json");
 const coverage = readJson("../data/source_coverage_n3.json");
-const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../vocabulary.html", import.meta.url), "utf8");
 
 function inlineJson(name) {
   const prefix = "const " + name + " = ";

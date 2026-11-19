@@ -101,5 +101,5 @@ const passages={
   56:'前山ガラス美術館・ガラス教室のご案内\n\n前山ガラス美術館では、お皿やアクセサリーを作る教室を開いています。\n① お皿：土曜日 10:00〜10:30、1,500円\n② グラス：日曜日 11:00〜11:40、1,800円\n③ アクセサリー：土曜日 10:00〜10:30、2,500円\n④ 花瓶：土曜日 11:00〜12:30、1,800円\n\nクラスを受ける人は、美術館の入館料はかかりません。受けたいクラスがある日の2日前の12時までに、電話で予約してください。クラス開始時刻の10分前までに受付に来てください。作った物はガラスの温度が下がるまで一晩かかるため、持ち帰りは次の日からです。別料金で家に送ることもできます。\n営業時間：8:30〜18:00'
 };
 for(const [index,passage] of Object.entries(passages))questions[Number(index)-1].passage=passage;
-PRACTICE_EXAMS.push({id:'imported-2025-07-n4',title:'N4 · Đề 7/2025',level:'N4',badge:'57 CÂU VĂN BẢN · CHỜ AUDIO NGHE',imported:true,description:'57 câu đã bóc tách thành văn bản, 28 câu nghe giữ ảnh scan',source:'Phần nghe hiện chỉ có ảnh đề, chưa có audio. Đáp án tham khảo, chưa phải đáp án chính thức JLPT.',questions});
+PRACTICE_EXAMS.push({id:'imported-2025-07-n4',title:'N4 · Đề 7/2025',level:'N4',badge:'PHẦN NGHE CHƯA CÓ AUDIO',imported:true,description:'57 câu đã bóc tách thành văn bản, 28 câu nghe giữ ảnh scan',source:'Phần nghe hiện chỉ có ảnh đề, chưa có audio. Đáp án tham khảo, chưa phải đáp án chính thức JLPT.',questions});
 })();

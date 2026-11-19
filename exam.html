@@ -42,12 +42,11 @@ button{transition:background .16s,border-color .16s,transform .16s}button:not(:d
 </style>
 </head>
 <body><main class="app">
-<header><div><span class="eyebrow">KANJI LEARN / JLPT PRACTICE</span><h1>Luyện đề JLPT</h1><p class="sub">Chọn trình độ và kỹ năng muốn luyện. Làm bài trên web, theo dõi thời gian và xem lời giải sau khi nộp.</p></div></header>
+<header><div><span class="eyebrow">KANJI LEARN / JLPT PRACTICE</span><h1>Luyện đề JLPT</h1><p class="sub">Luyện tập theo từng đề, chọn phần phù hợp và xem lại đáp án sau khi làm bài.</p></div></header>
 <nav class="nav" aria-label="Khu học tập"><a href="vocabulary.html">Ôn tập từ vựng</a><a class="active" aria-current="page" href="exam.html">Luyện đề JLPT</a></nav>
 <section id="home">
   <div id="resumePanel" class="panel resume-panel hidden"><span class="eyebrow">BÀI ĐANG LÀM</span><h2 id="resumeTitle"></h2><p id="resumeInfo"></p><div class="actions"><button class="primary" id="resumeButton" type="button">Tiếp tục làm bài</button><button id="discardButton" type="button">Bỏ bài này</button></div></div>
-  <div class="panel"><h2>Chọn đề luyện</h2><p class="muted">Chạm vào một đề để chọn kỹ năng và bắt đầu. Theo dõi số câu đã làm, thời gian còn lại và xem lời giải sau khi nộp.</p><div class="filter-label">Lọc theo trình độ</div><div id="levels" class="filters" aria-label="Cấp độ"></div><div id="cards" class="cards"></div></div>
-  <p class="source">Đề N4 7/2025 được bạn cung cấp. Phần chữ Hán, từ vựng, ngữ pháp và đọc hiểu đã bóc tách thành văn bản cùng lựa chọn riêng; phần nghe giữ ảnh scan và đang chờ audio gốc. <a href="https://aixinjp.com/a/lianxifangshi/zhentidaan/2025/0708/1214.html" target="_blank" rel="noopener noreferrer">Đáp án tham khảo tháng 7/2025</a> đã được đối chiếu theo câu chữ của đề; đây không phải đáp án chính thức. Đề 7/2024 là <a href="https://www.tiengnhatdongian.com/de-thi-jlpt-n4-thang-7-2024-bo-de-chuan-co-dap-an-va-file-nghe/" target="_blank" rel="noopener noreferrer">bản tổng hợp của bên thứ ba</a>, không phải đề chính thức được JLPT công bố. Đề có nhãn “Trích đề chính thức 2018” lấy từ <a href="https://www.jlpt.jp/e/samples/sampleindex.html" target="_blank" rel="noopener noreferrer">JLPT Official Practice Workbook</a>. Các đề còn lại là câu hỏi mô phỏng và phần nghe có audio thu sẵn.</p>
+  <div class="panel"><h2>Chọn đề luyện</h2><p class="muted">Chọn một đề bên dưới, rồi chọn phần bạn muốn luyện.</p><div class="filter-label">Lọc theo trình độ</div><div id="levels" class="filters" aria-label="Cấp độ"></div><div id="cards" class="cards"></div></div>
 </section>
 <dialog id="examDialog" class="exam-dialog" aria-labelledby="dialogTitle" aria-describedby="dialogSummary">
   <div class="dialog-head"><div><span class="eyebrow">CHUẨN BỊ LÀM BÀI</span><h2 id="dialogTitle"></h2></div><button type="button" id="dialogClose" class="dialog-close" aria-label="Đóng">×</button></div>

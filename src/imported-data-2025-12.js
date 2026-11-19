@@ -82,5 +82,5 @@ const passages={
 };
 for(const n of [22,23,24,25,26,27,28,29])questions[28+n-1].passage=passages[n]||passages[n<=27?25:28];
 if(questions.length!==57)throw Error('Expected 57 N4 December 2025 questions');
-PRACTICE_EXAMS.push({id:'imported-2025-12-n4',title:'N4 · Đề 12/2025',level:'N4',badge:'57 CÂU · CHỜ AUDIO NGHE',imported:true,source:'Bản đề N4 tháng 12/2025 do bạn cung cấp (bản hồi tưởng, không phải ấn bản chính thức). 57 câu ngoài phần nghe đã bóc tách và đối chiếu đáp án; phần nghe sẽ nhập khi nhận audio.',questions});
+PRACTICE_EXAMS.push({id:'imported-2025-12-n4',title:'N4 · Đề 12/2025',level:'N4',badge:'57 CÂU · CHỜ AUDIO NGHE',imported:true,source:'Bản đề tổng hợp tham khảo. Hiện chưa có phần nghe; đáp án không phải đáp án chính thức JLPT.',questions});
 })();

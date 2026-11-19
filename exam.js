@@ -75,7 +75,8 @@ function renderHome(){
     card.onclick=()=>openExamDialog(exam);
     const level=document.createElement('span');level.className='exam-level';level.textContent=exam.level+' · '+(exam.badge||(exam.reconstructed?'BẢN TỔNG HỢP 7/2024':exam.official?'TRÍCH ĐỀ THẬT 2018':'ĐỀ LUYỆN'));
     const title=document.createElement('span');title.className='exam-card-title';title.textContent=exam.title;
-    const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=exam.questions.length+' câu · '+time(durationFor(exam.questions,exam.level,exam));
+    const available=exam.questions.filter(q=>!q.audioPending);
+    const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=(available.length===exam.questions.length?available.length+' câu':available.length+' câu có thể chấm')+' · '+time(durationFor(available,exam.level,exam));
     const previous=lastResult(exam.id,null);
     card.append(level,title,desc);
     if(previous){const p=document.createElement('span');p.className='exam-last';p.textContent='Lần gần nhất: '+previous.score+'/'+previous.total+' · '+time(previous.elapsed);card.append(p)}
@@ -92,7 +93,7 @@ function openExamDialog(exam){
   SKILLS.forEach(skill=>{
     const count=exam.questions.filter(q=>q.skill===skill).length;if(!count)return;
     const label=document.createElement('label');label.className='skill-check';
-    const input=document.createElement('input');input.type='checkbox';input.value=skill;input.checked=true;
+    const input=document.createElement('input');input.type='checkbox';input.value=skill;input.checked=!(skill==='listening'&&exam.questions.filter(q=>q.skill===skill).every(q=>q.audioPending));
     const name=document.createElement('span');name.className='skill-check-name';name.textContent=SKILL_NAMES[skill];
     const number=document.createElement('span');number.className='skill-check-count';number.textContent=count+' câu';
     label.append(input,name,number);choices.append(label);

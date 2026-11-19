@@ -7,7 +7,7 @@ const mimi = get("vocab_n3_mimikara.json");
 const n3Kanji = get("data_n3.json");
 const n4 = get("vocab_n4_26_31.json");
 const han = get("han_viet.json");
-const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../vocabulary.html", import.meta.url), "utf8");
 const inline = name => JSON.parse(html.match(new RegExp("^const " + name + " = (.*);$", "m"))?.[1] || "null");
 const expected = [120,138,52,100,100,40,40,45,80,80,50,35];
 

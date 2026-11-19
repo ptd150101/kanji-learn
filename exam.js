@@ -124,7 +124,7 @@ function start(exam,selectedSkills){
   run={exam,skill,questions,sections,answers:Array(questions.length).fill(null),sectionIndex:0,currentQuestion:0,started:Date.now(),duration};
   showRun();saveRunSnapshot();
 }
-function showRun(){
+function showRun(restorePosition=false){
   const {exam,sections,duration}=run;
   setSidebarOpen(false);
   $('home').classList.add('hidden');$('results').classList.add('hidden');$('runner').classList.remove('hidden');
@@ -133,11 +133,13 @@ function showRun(){
   if(exam.sourceUrl){$('runSource').href=exam.sourceUrl;$('runSource').textContent=exam.reconstructed?'Nguồn: bản tổng hợp 7/2024 (không chính thức)':'Nguồn: JLPT Official Practice Workbook 2018'}
   clearInterval(tick);renderSection();updateTimer();
   if(run.graded===undefined)tick=setInterval(updateTimer,500);
-  window.scrollTo({top:0,behavior:'smooth'});
+  if(restorePosition&&run.graded===undefined){
+    requestAnimationFrame(()=>$('exam-q-'+run.currentQuestion)?.scrollIntoView({block:'start'}));
+  }else window.scrollTo({top:0,behavior:'smooth'});
 }
 function resumeRun(){
   const saved=readRunSnapshot();if(!saved)return renderHome();
-  run=saved;selectedLevel=saved.exam.level;showRun();
+  run=saved;selectedLevel=saved.exam.level;showRun(true);
 }
 $('resumeButton').onclick=resumeRun;
 $('discardButton').onclick=()=>{if(confirm('Bỏ bài đang làm và các câu trả lời đã chọn?')){try{localStorage.removeItem(ACTIVE_RUN_KEY)}catch{}renderHome()}};
@@ -229,7 +231,7 @@ function renderQuestionNav(){
         saveRunSnapshot();
         if(mobileSidebar.matches)setSidebarOpen(false);
         const target=$('exam-q-'+i);
-        setTimeout(()=>{if(!run)return;target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.add('jump-focus');setTimeout(()=>target.classList.remove('jump-focus'),1700)},mobileSidebar.matches?640:0);
+        requestAnimationFrame(()=>{if(!run||run.currentQuestion!==i)return;target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.add('jump-focus');setTimeout(()=>target.classList.remove('jump-focus'),1700)});
       };grid.append(button);
     });group.append(grid);nav.append(group);
   });
@@ -254,7 +256,7 @@ function submitRun(expired){
   $('duration').textContent=(expired?'Hết giờ · ':'')+'Thời gian làm bài: '+time(run.elapsed)+' / '+time(run.duration);
   $('review').replaceChildren();$('review').classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'});
 }
-$('showReview').onclick=()=>renderReview('wrong');
+$('showReview').onclick=()=>renderReview('all');
 function renderReview(filter){
   const box=$('review');box.replaceChildren();
   const toolbar=document.createElement('div');toolbar.className='review-toolbar';
@@ -276,6 +278,7 @@ function renderReview(filter){
     if(q.imageUrls)q.imageUrls.forEach(url=>{const img=document.createElement('img');img.className='question-scan';img.loading='lazy';img.src=url;img.alt='Bản scan câu '+q.originalNumber;article.append(img)});
     if(q.audio){const p=document.createElement('div');p.className='passage';p.textContent='Lời thoại: '+q.audio;article.append(p)}
     article.append(questionStem(q));
+    if(q.audioPending){const note=document.createElement('p');note.className='muted';note.textContent='Phần nghe chưa có audio nên chưa tính điểm câu này.';article.append(note);box.append(article);return}
     const answer=document.createElement('p');answer.className=run.answers[i]===q.answer?'good':'bad';
     answer.textContent='Bạn chọn: '+(run.answers[i]===null?'Chưa trả lời':(q.scanMode?'':String.fromCharCode(65+run.answers[i])+'. ')+q.options[run.answers[i]]);
     const correct=document.createElement('p');correct.className='good';correct.textContent=q.answer===null||q.answer===undefined?'Đáp án: đang đối chiếu đúng bộ đề.':(run.exam.imported?'Đáp án tham khảo: ':'Đáp án đúng: ')+(q.scanMode?'':String.fromCharCode(65+q.answer)+'. ')+q.options[q.answer];

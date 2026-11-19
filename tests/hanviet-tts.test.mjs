@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 
-const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../vocabulary.html", import.meta.url), "utf8");
 const vocabMatch = html.match(/const NEW_VOCAB = (\[[^\n]*\]);/);
 const hvMatch = html.match(/const HAN_VIET = (\{[^\n]*\});/);
 assert.ok(vocabMatch, "Không tìm thấy NEW_VOCAB");

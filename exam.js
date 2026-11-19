@@ -183,15 +183,27 @@ function renderSection(){
   });
   renderQuestionNav();
   const content=$('content');content.replaceChildren();
+  const videoId=skill==='listening'&&items.find(({q})=>q.videoId)?.q.videoId;
+  if(videoId){
+    const wrap=document.createElement('div');wrap.className='listening-video';
+    const title=document.createElement('strong');title.textContent='Bài nghe N4 · 7/2025';
+    const note=document.createElement('p');note.textContent='Phát video và chọn phần nghe. Đáp án trong video bắt đầu sau 32:00; hãy nộp bài trước khi xem.';
+    const frame=document.createElement('iframe');frame.title='Video nghe JLPT N4 tháng 7/2025';frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;
+    const chapters=[['問題 1',20],['問題 2',630],['問題 3',1390],['問題 4',1615]];
+    const buttons=document.createElement('div');buttons.className='listening-chapters';
+    const setChapter=(seconds,active)=>{frame.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(videoId)+'?start='+seconds+'&end=1920&rel=0';buttons.querySelectorAll('button').forEach((button,index)=>button.setAttribute('aria-pressed',String(index===active)))};
+    chapters.forEach(([label,seconds],index)=>{const button=document.createElement('button');button.type='button';button.textContent=label;button.onclick=()=>setChapter(seconds,index);buttons.append(button)});
+    setChapter(20,0);wrap.append(title,note,frame,buttons);content.append(wrap);
+  }
   let previousPassage=null;
   items.forEach(({q,i},localIndex)=>{
     const block=document.createElement('article');block.className='question-block';block.id='exam-q-'+i;
-    const number=document.createElement('div');number.className='question-number';number.textContent=((run.exam.official||run.exam.reconstructed)&&q.mondai?'問題 '+q.mondai+' · ':'')+'Câu '+(localIndex+1);
+    const number=document.createElement('div');number.className='question-number';number.textContent=((run.exam.official||run.exam.reconstructed||run.exam.imported)&&q.mondai?'問題 '+q.mondai+' · ':'')+'Câu '+(localIndex+1);
     block.append(number);
     if(q.passage&&q.passage!==previousPassage){const p=document.createElement('div');p.className='passage';p.textContent=q.passage;block.append(p)}
     previousPassage=q.passage||null;
     if(q.audioPending){const note=document.createElement('p');note.className='audio-note';note.textContent='Đang chờ audio của đúng bộ đề. Bạn có thể xem câu hỏi, nhưng phần này chưa thể chấm.';block.append(note)}
-    else if(q.skill==='listening'){
+    else if(q.skill==='listening'&&!q.videoId){
       const player=document.createElement('audio');player.className='audio-player';player.controls=true;player.preload='metadata';player.src=q.audioUrl;player.setAttribute('aria-label','Âm thanh câu '+(localIndex+1));
       const error=document.createElement('p');error.className='audio-note hidden';error.textContent='Không tải được âm thanh. Vui lòng thử tải lại trang.';
       player.addEventListener('error',()=>error.classList.remove('hidden'));

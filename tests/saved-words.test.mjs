@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 
-const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../vocabulary.html", import.meta.url), "utf8");
 
 test("có đầy đủ UI lưu từ và kiểm tra từ đã lưu", () => {
   for (const id of ["saveWordBtn", "savedReviewSection", "savedCountBadge", "reviewSavedBtn", "toggleSavedListBtn", "savedList"]) {

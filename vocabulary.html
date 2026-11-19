@@ -645,11 +645,11 @@ kbd{border:1px solid var(--border);background:#0d1724;border-bottom-width:2px;bo
         <label class="label" for="countSelect">5. Số câu</label>
         <select id="countSelect">
           <option value="10">10 câu</option>
-          <option value="20">20 câu</option>
+          <option value="20" selected>20 câu</option>
           <option value="30">30 câu</option>
           <option value="50">50 câu</option>
           <option value="100">100 câu</option>
-          <option value="all" selected>Toàn bộ từ đã chọn</option>
+          <option value="all">Toàn bộ từ đã chọn</option>
         </select>
       </div>
       <div class="field">
@@ -662,7 +662,7 @@ kbd{border:1px solid var(--border);background:#0d1724;border-bottom-width:2px;bo
     </div>
 
     <div>
-      <div class="label">6. Edge / Browser TTS</div>
+      <div class="label">6. Giọng đọc tiếng Nhật</div>
       <div class="tts-row">
         <select id="voiceSelect" aria-label="Giọng TTS tiếng Nhật">
           <option>Đang tải danh sách giọng…</option>
@@ -675,14 +675,14 @@ kbd{border:1px solid var(--border);background:#0d1724;border-bottom-width:2px;bo
         </select>
         <button class="secondary" id="testVoiceBtn" type="button">🔊 Nghe thử giọng</button>
       </div>
-      <div class="source-note">Dùng <code>window.speechSynthesis</code> với ngôn ngữ <b>ja-JP</b>. Website ưu tiên voice Nhật chất lượng tốt (Microsoft/Google/Nanami/Keita/Kyoko/Otoya); nếu trình duyệt chỉ cung cấp voice <b>Eloquence</b> thì mặc định để hệ thống tự chọn ja-JP thay vì ép voice đó. Khi đọc câu hỏi/đáp án, website phát <b>furigana chuẩn trong dữ liệu</b> để tránh tự đoán sai cách đọc Kanji.</div>
+      <div class="source-note">Giọng đọc có thể khác nhau tùy thiết bị. Hãy bấm “Nghe thử giọng” để chọn giọng và tốc độ phù hợp.</div>
     </div>
 
     <div class="actions">
       <button class="primary" id="startBtn">Bắt đầu kiểm tra</button>
       <button class="secondary" id="selectAllBtn">Chọn / bỏ chọn tất cả</button>
     </div>
-    <div class="source-note" id="dataNote">Có 3 bộ dữ liệu: <b>N5 gồm 38 bài</b>, <b>N4 gồm 37 bài</b> và <b>N3 gồm 20 chương</b>. Tên bài của cả hai cấp độ được hiển thị thống nhất bằng <b>tiếng Việt</b>. Từ vựng/cách đọc bám theo các ô On/Kun trong sách; nghĩa Việt và Hán Việt được bổ sung để phục vụ quiz.</div>
+    <div class="source-note" id="dataNote">Chọn một hoặc nhiều bài để bắt đầu.</div>
 
     <div class="saved-review" id="savedReviewSection">
       <div class="saved-review-head">
@@ -804,11 +804,11 @@ function updateHeaderSummary() {
     if (selectedLevel === "N3") {
       document.querySelector(".subtitle").textContent =
         `N3 Từ mới: ${rows.length} từ • 12 bài / ${MIMI_SECTIONS.length} phần`;
-      $("dataNote").innerHTML = `<b>Mimi kara Oboeru N3</b>: 880 mục từ chính, sắp theo số thứ tự 1–880, gồm 12 bài chính và 21 phần chọn riêng theo đúng khoảng số trong mục lục sách. Ví dụ: Bài 1, phần 1 (1–71), Bài 1, phần 2 (72–120). Giữ riêng hoàn toàn với <b>Kanji N3 (20 chương)</b>. Các từ cùng nghĩa được giữ nguyên theo từng mục từ nguồn.`;
+      $("dataNote").innerHTML = `Chọn một hoặc nhiều phần trong 12 bài từ mới N3 để luyện.`;
     } else {
       document.querySelector(".subtitle").textContent =
         `N4 Từ mới: ${rows.length} từ • Bài 26–48 + MR1–MR2`;
-      $("dataNote").innerHTML = `Bộ <b>từ mới N4 bài 26–48 + MR1–MR2</b> gồm <b>${rows.length} từ</b>. Giống kiểm tra Kanji, có 2 kiểu câu hỏi (<b>Tiếng Nhật / Tiếng Việt</b>) × 2 cách trả lời (<b>Trắc nghiệm / Tự luận</b>) = <b>4 chế độ</b>. Có thể chọn từng bài hoặc nhiều bài để kiểm tra.`;
+      $("dataNote").innerHTML = `Chọn một hoặc nhiều bài từ mới N4 để luyện.`;
     }
     return;
   }
@@ -816,7 +816,7 @@ function updateHeaderSummary() {
   const lessonCount = Object.keys(LESSON_NAMES[selectedLevel]).length;
   document.querySelector(".subtitle").textContent =
     `${selectedLevel} Kanji: ${count} từ • ${lessonCount} bài`;
-  $("dataNote").innerHTML = `Có 3 bộ dữ liệu: <b>N5 gồm 38 bài</b>, <b>N4 gồm 37 bài</b> và <b>N3 gồm 20 chương</b>. Tên bài của cả hai cấp độ được hiển thị thống nhất bằng <b>tiếng Việt</b>. Từ vựng/cách đọc bám theo các ô On/Kun trong sách; nghĩa Việt và Hán Việt được bổ sung để phục vụ quiz.`;
+  $("dataNote").innerHTML = `Chọn một hoặc nhiều bài để bắt đầu.`;
 }
 
 function renderLessonPicker() {

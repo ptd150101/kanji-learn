@@ -76,9 +76,8 @@ function renderHome(){
     const level=document.createElement('span');level.className='exam-level';level.textContent=exam.level+' · '+(exam.badge||(exam.reconstructed?'BẢN TỔNG HỢP 7/2024':exam.official?'TRÍCH ĐỀ THẬT 2018':'ĐỀ LUYỆN'));
     const title=document.createElement('span');title.className='exam-card-title';title.textContent=exam.title;
     const desc=document.createElement('span');desc.className='exam-card-desc';desc.textContent=exam.questions.length+' câu · '+time(durationFor(exam.questions,exam.level,exam));
-    const affordance=document.createElement('span');affordance.className='exam-card-arrow';affordance.setAttribute('aria-hidden','true');affordance.textContent='↗';
     const previous=lastResult(exam.id,null);
-    card.append(level,title,desc,affordance);
+    card.append(level,title,desc);
     if(previous){const p=document.createElement('span');p.className='exam-last';p.textContent='Lần gần nhất: '+previous.score+'/'+previous.total+' · '+time(previous.elapsed);card.append(p)}
     $('cards').append(card);
   });
